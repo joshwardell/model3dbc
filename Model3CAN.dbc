@@ -1,0 +1,645 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Receiver ChassisBus VehicleBus PartyBus
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ FrontAxleRPM___ : 0|16@1- (0.1,0) [-3276.8|3276.7] "RPM" Vector__XXX
+
+BO_ 341 ID155WheelAngles: 8 PartyBus
+ SG_ WheelAngleTicsRR155 : 24|8@1+ (1.40625,0) [0|358.59375] "deg" Receiver
+ SG_ WheelAngleTicsRL155 : 16|8@1+ (1.40625,0) [0|358.59375] "deg" Receiver
+ SG_ WheelAngleTicsFR155 : 8|8@1+ (1.40625,0) [0|358.59375] "deg" Receiver
+ SG_ WheelAngleTicsFL155 : 0|8@1+ (1.40625,0) [0|358.59375] "deg" Receiver
+
+BO_ 373 ID175WheelSpeed: 8 ChassisBus
+ SG_ WheelSpeedRR175 : 39|13@1+ (0.04,0) [0|327.64] "kph" Receiver
+ SG_ WheelSpeedRL175 : 26|13@1+ (0.04,0) [0|327.64] "kph" Receiver
+ SG_ WheelSpeedFR175 : 13|13@1+ (0.04,0) [0|327.64] "kph" Receiver
+ SG_ WheelSpeedFL175 : 0|13@1+ (0.04,0) [0|327.64] "kph" Receiver
+
+BO_ 468 ID1D4FrontTorque: 8 VehicleBus
+ SG_ RAWTorqueFront1D4 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
+
+BO_ 741 ID2E5FrontInverterPower: 8 VehicleBus
+ SG_ FrontPowerDissipation2E5 : 8|8@1+ (0.125,-0.5) [-0.5|31.375] "kW"  Receiver
+ SG_ FrontPower2E5 : 16|11@1- (0.5,0) [-512|511.5] "kW"  Receiver
+ SG_ FrontHeatPowerOptimal2E5 : 32|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ FrontHeatPowerMax2E5 : 40|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ FrontHeatPower2E5 : 48|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts"  Receiver
+
+BO_ 962 ID3C2VCLswitches: 8 VehicleBus
+
+BO_ 822 ID336MaxPowerRating: 3 VehicleBus
+ SG_ DriveRegenRating336 : 16|8@1+ (1,-100) [-100|155] "kW"  Receiver
+ SG_ DrivePowerRating336 : 0|9@1+ (1,0) [0|511] "kW"  Receiver
+
+BO_ 819 ID333UIcharging: 4 VehicleBus
+ SG_ UIchargeToSOC333 : 16|10@1+ (0.1,0) [0|102.3] "%"  Receiver
+ SG_ UIchargeCurrentLimit333 : 8|7@1+ (1,0) [0|127] "A"  Receiver
+
+BO_ 577 ID241Coolant: 7 VehicleBus
+ SG_ VCFPTCoolantFlow241 : 22|9@1+ (0.1,0) [0|51.1] "LPM"  Receiver
+ SG_ VCFbattCoolantFlow241 : 0|9@1+ (0.1,0) [0|51.1] "LPM"  Receiver
+
+BO_ 659 ID293chassisControls: 8 VehicleBus
+ SG_ UICCtrailerMode293 : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UICCWinchMode293 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UICCtrafficLightStopSigns293 : 46|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UICCtractionControlMode293 : 2|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UICCsteeringMode293 : 0|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UICCovertakeEnable293 : 18|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UICCnarrowGarages293 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UICCdebugEnable293 : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UICCUnits293 : 16|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UICCSuspensionLevel293 : 13|3@1+ (1,0) [0|7] ""  Receiver
+
+BO_ 616 ID268SystemPower: 8 VehicleBus
+ SG_ SystemRegenPowerMax268 : 32|8@1+ (1,-100) [-100|155] "kW"  Receiver
+ SG_ SystemHeatPowerMax268 : 0|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ SystemHeatPower268 : 8|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ SystemDrivePowerMax268 : 16|9@1+ (1,0) [0|511] "kW"  Receiver
+
+BO_ 79 ID04FGPSLatLong: 8 ChassisBus
+ SG_ GPSLongitude04F : 28|28@1- (1E-006,0) [-1342.17728|1342.17727] "Deg"  Receiver
+ SG_ GPSLattitude04F : 0|28@1- (1E-006,0) [-134.217728|134.217727] "Deg"  Receiver
+
+BO_ 978 ID3D2TotalChargeDischarge: 8 VehicleBus
+ SG_ TotalDischargeKWh3D2 : 0|32@1+ (0.001,0) [0|4294967.295] "kWh"  Receiver
+ SG_ TotalChargeKWh3D2 : 32|32@1+ (0.001,0) [0|4294967.295] "kWh"  Receiver
+
+BO_ 722 ID2D2BMSVAlimits: 8 VehicleBus
+ SG_ MinVoltage2D2 : 0|16@1+ (0.01,0) [0|655.35] "V"  Receiver
+ SG_ MaxDischargeCurrent2D2 : 48|14@1+ (0.128,0) [0|2097.024] "A"  Receiver
+ SG_ MaxChargeCurrent2D2 : 32|14@1+ (0.1,0) [0|1638.3] "A"  Receiver
+ SG_ MaxVoltage2D2 : 16|16@1+ (0.01,0) [0|655.35] "V"  Receiver
+
+BO_ 1345 ID541FastChargeMaxLimits: 8 VehicleBus
+ SG_ FCMaxPowerLimit541 : 0|13@1+ (0.062256,0) [0|509.938896] "kW"  Receiver
+ SG_ FCMaxCurrentLimit541 : 16|13@1+ (0.073242,0) [0|599.925222] "A"  Receiver
+
+BO_ 580 ID244FastChargeLimits: 8 VehicleBus
+ SG_ FCMinVlimit244 : 48|13@1+ (0.073242,0) [0|599.925222] "V"  Receiver
+ SG_ FCMaxVlimit244 : 32|13@1+ (0.073242,0) [0|599.925222] "V"  Receiver
+ SG_ FCCurrentLimit244 : 16|13@1+ (0.073242,0) [0|599.925222] "A"  Receiver
+ SG_ FCPowerLimit244 : 0|13@1+ (0.062256,0) [0|509.938896] "kW"  Receiver
+
+BO_ 532 ID214FastChargeVA: 8 VehicleBus
+ SG_ FCadapterLocked214 : 15|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ FCcurrentLimitAchieved214 : 12|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ FCCurrent214 : 32|14@1- (0.0732422,0) [-600.0001024|599.9268602] "A"  Receiver
+ SG_ FCVoltage214 : 48|13@1+ (0.0732422,0) [0|599.9268602] "V"  Receiver
+ SG_ FCminCurrentLimit214 : 16|13@1+ (0.1,0) [0|819.1] "A"  Receiver
+ SG_ FCpostID214 : 46|2@1+ (2,0) [0|6] ""  Receiver
+ SG_ FCpowerLimitAchieved214 : 13|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ FCprotocolVersion214 : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ FCstatusCode214 : 8|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ FCtype214 : 29|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ FCvoltageLimitAchieved214 : 14|1@1+ (1,0) [0|0] ""  Receiver
+
+BO_ 533 ID215FCisolation: 1 VehicleBus
+ SG_ FCIsolation215 : 0|8@1+ (40,0) [0|10200] "kOhm"  Receiver
+
+BO_ 535 ID217FCinfo: 8 VehicleBus
+ SG_ FCinfoMux217 M : 0|7@1+ (1,0) [0|127] ""  Receiver
+ SG_ FCclass217 m0 : 8|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ FCbrand217 m0 : 16|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ FCcoolingType217 m0 : 20|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ FCuiStopType217 m0 : 24|4@1+ (1,0) [0|15] ""  Receiver
+
+BO_ 801 ID321VCFrontTempsLevels: 8 VehicleBus
+ SG_ TempCoolantPTinlet321 : 10|10@1+ (0.125,-40) [-40|87.875] "C"  Receiver
+ SG_ TempCoolantBattInlet321 : 0|10@1+ (0.125,-40) [-40|87.875] "C"  Receiver
+ SG_ TempAmbientRaw321 : 24|8@1+ (0.5,-40) [-40|87.5] "C"  Receiver
+ SG_ TempAmbient321 : 40|8@1+ (0.5,-40) [-40|87.5] "C"  Receiver
+
+BO_ 984 ID3D8Elevation: 8 VehicleBus
+ SG_ Elevation3D8 : 0|16@1- (1,0) [-32768|32767] "M"  Receiver
+
+BO_ 609 ID261_12vBattStatus: 8 VehicleBus
+ SG_ v12vBattTemp261 : 16|16@1- (0.01,0) [-327.68|327.67] "C"  Receiver
+ SG_ v12vBattAH261 : 32|14@1+ (0.01,0) [0|163.83] "AH"  Receiver
+ SG_ v12vBattCurrent261 : 48|16@1- (0.005,0) [-163.84|163.835] "A"  Receiver
+ SG_ v12vBattVoltage261 : 0|12@1+ (0.00544368,0) [0|22.2918696] "V"  Receiver
+
+BO_ 297 ID129SteeringAngle: 8 VehicleBus
+ SG_ SteeringSensorC129 : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ SteeringSensorB129 : 48|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ SteeringSensorA129 : 46|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ SteeringSpeed129 : 32|14@1+ (0.5,-4096) [-4096|4095.5] "D/S"  Receiver
+ SG_ SteeringAngle129 : 16|14@1+ (0.1,-819.2) [-819.2|819.1] "Deg"  Receiver
+
+BO_ 612 ID264ChargeLineStatus: 8 VehicleBus
+ SG_ ChargeLinePower264 : 24|8@1+ (0.1,0) [0|25.5] "kW"  Receiver
+ SG_ ChargeLineCurrentLimit264 : 32|10@1+ (0.1,0) [0|102.3] "A"  Receiver
+ SG_ ChargeLineVoltage264 : 0|14@1+ (0.0333,0) [0|545.5539] "V"  Receiver
+ SG_ ChargeLineCurrent264 : 14|9@1+ (0.1,0) [0|51.1] "A"  Receiver
+
+BO_ 548 ID224PCSDCDCstatus: 8 VehicleBus
+ SG_ DCDCstate224 : 6|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DCDCoutputCurrentMax224 : 29|12@1+ (0.1,0) [0|409.5] "A"  Receiver
+ SG_ DCDCoutputCurrent224 : 16|12@1- (0.1,0) [-204.8|204.7] "A"  Receiver
+
+BO_ 280 ID118DriveSystemStatus: 8 VehicleBus
+ SG_ Immobilizer118 : 27|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ DriveState118 : 16|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ TractionControl118 : 40|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ ParkingBrake118 : 44|2@1+ (1,0) [0|15] ""  Receiver
+ SG_ BrakeState118 : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIgear118 : 21|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ BrakePedal118 : 19|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PedalPosition118 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ TrackMode118 : 48|2@1+ (1,0) [0|255] ""  Receiver
+
+BO_ 530 ID212BMSstatus: 8 VehicleBus
+ SG_ BMSstate212 : 11|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ BMSchargeStatus212 : 32|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ BMScontactors212 : 8|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ BMSchargePowerAvail212 : 38|11@1+ (0.125,0) [0|255.875] "kW"  Receiver
+ SG_ MinBattTemp212 : 56|8@1+ (0.5,-40) [-40|87.5] "C"  Receiver
+ SG_ IsolationR212 : 19|10@1+ (1,0) [0|1023] "kOhm"  Receiver
+
+BO_ 850 ID352BMSenergy: 8 VehicleBus
+ SG_ BtochargecompleteKWh352 : 40|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
+ SG_ BidealremainKWh352 : 30|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
+ SG_ BexpectedremainKWh352 : 20|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
+ SG_ BremainingKWhNom352 : 10|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
+ SG_ BfullKWhNom352 : 0|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
+ SG_ BbufferKWh352 : 50|8@1+ (0.1,0) [0|25.5] "kWh"  Receiver
+
+BO_ 594 ID252PowerLimits: 8 VehicleBus
+ SG_ HVACpowerMax252 : 50|10@1+ (0.02,0) [0|20.46] "kW"  Receiver
+ SG_ MaxHeatParked252 : 32|10@1+ (0.1,0) [0|102.3] "kW"  Receiver
+ SG_ MaxDischarge252 : 16|16@1+ (0.01,0) [0|655.35] "kW"  Receiver
+ SG_ MaxRegen252 : 0|16@1+ (0.01,0) [0|655.35] "kW"  Receiver
+
+BO_ 786 ID312BMSthermal: 8 VehicleBus
+ SG_ BMSdissipation312 : 0|10@1+ (0.02,0) [0|20.46] "kW"  Receiver
+
+BO_ 658 ID292BMS_SOC: 8 VehicleBus
+ SG_ SOCmax292 : 20|10@1+ (0.1,0) [0|102.3] ""  Receiver
+ SG_ SOCave292 : 30|10@1+ (0.1,0) [0|102.3] ""  Receiver
+ SG_ SOCUI292 : 0|10@1+ (0.1,0) [0|102.3] ""  Receiver
+ SG_ SOCmin292 : 10|10@1+ (0.1,0) [0|102.3] ""  Receiver
+
+BO_ 599 ID257UIspeed: 8 VehicleBus
+ SG_ UIspeedUnits257 : 32|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIspeed_signed257 : 12|12@1+ (0.05,-25) [-25|179.75] "MPHKPH"  Receiver
+ SG_ UIspeed_abs257 : 24|8@1+ (1,0) [0|255] "MPHKPH"  Receiver
+
+BO_ 1029 ID405VIN: 8 VehicleBus
+ SG_ VINB405 m17 : 8|56@1+ (1,0) [0|7.2057594038E+016] ""  Receiver
+ SG_ VINC405 m18 : 8|56@1+ (1,0) [0|7.2057594038E+016] ""  Receiver
+ SG_ VINA405 m16 : 8|56@1+ (1,0) [0|7.2057594038E+016] ""  Receiver
+ SG_ mux405 M : 0|8@1+ (1,0) [0|255] ""  Receiver
+
+BO_ 1310 ID51EChgConnectorInfo: 8 VehicleBus
+ SG_ CHGmodelA51E m25 : 8|56@1+ (1,0) [0|7.2057594038E+016] ""  Receiver
+ SG_ CHGmodelB51E m26 : 8|56@1+ (1,0) [0|7.20575940379279E+016] ""  Receiver
+ SG_ mux51E M : 0|8@1+ (1,0) [0|255] ""  Receiver
+
+BO_ 886 ID376InverterTemps: 8 VehicleBus
+ SG_ TempInvPCB376 : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ TempPctStator376 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ TempPctInverter376 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ TempInvCapbank376 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ TempStator376 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ TempInvHeatsink376 : 32|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ TempInverter376 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+
+BO_ 340 ID154RearTorque: 8 VehicleBus
+ SG_ RAWTorqueRear154 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
+
+BO_ 950 ID3B6odometer: 4 VehicleBus
+ SG_ Odometer3B6 : 0|32@1+ (0.001,0) [0|4294967.295] "KM"  Receiver
+
+BO_ 614 ID266RearInverterPower: 8 VehicleBus
+ SG_ RearHeatPowerOptimal266 : 32|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ RearHeatPowerMax266 : 40|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ RearHeatPower266 : 48|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ RearPowerDissipation266 : 8|8@1+ (0.125,-0.5) [-0.5|31.375] "kW"  Receiver
+ SG_ RearPower266 : 16|11@1- (0.5,0) [-512|511.5] "kW"  Receiver
+ SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts"  Receiver
+
+BO_ 264 ID108DriveTorqueRPM: 8 VehicleBus
+ SG_ TorqueActual108 : 27|13@1- (0.222222,0) [-910.221312|909.99909] "NM"  Receiver
+ SG_ TorqueRequest108 : 12|13@1- (0.222222,0) [-910.221312|909.99909] "NM"  Receiver
+ SG_ RearAxleRPM108 : 40|16@1- (0.1,0) [-3276.8|3276.7] "RPM"  Receiver
+
+BO_ 306 ID132HVBattAmpVolt: 8 VehicleBus
+ SG_ ChargeHoursRemaining132 : 48|12@1+ (1,0) [0|4095] "Min"  Receiver
+ SG_ BattVoltage132 : 0|16@1+ (0.01,0) [0|655.35] "V"  Receiver
+ SG_ RawBattCurrent132 : 32|16@1- (-0.05,1000) [-638.35|2638.4] "A"  Receiver
+ SG_ SmoothBattCurrent132 : 16|15@1- (-0.1,1000) [-638.3|2638.4] "A"  Receiver
+
+BO_ 294 ID126: 8 VehicleBus
+ SG_ Demand126 : 16|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ BattVoltage126 : 0|16@1+ (0.5,0) [0|32767.5] "Volts"  Receiver
+
+BO_ 799 ID31FTPMSsensors: 8 ChassisBus
+ SG_ TPMSFLpressure31F : 0|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ TPMSFRpressure31F : 16|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ TPMSRLpressure31F : 32|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ TPMSRRpressure31F : 48|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ TPMSFLtemp31F : 8|8@1+ (1,-40) [0|0] "degC"  Receiver
+ SG_ TPMSFRtemp31F : 24|8@1+ (1,-40) [0|0] "degC"  Receiver
+ SG_ TPMSRLtemp31F : 40|8@1+ (1,-40) [0|0] "degC"  Receiver
+ SG_ TPMSRRtemp31F : 56|8@1+ (1,-40) [0|0] "degC"  Receiver
+
+BO_ 1022 ID3FEbrakeTemps: 5 VehicleBus
+ SG_ BrakeTempFL3FE : 0|10@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ BrakeTempFR3FE : 10|10@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ BrakeTempRL3FE : 20|10@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ BrakeTempRR3FE : 30|10@1+ (1,-40) [0|0] "C"  Receiver
+
+BO_ 552 ID228EPBrightStatus: 8 VehicleBus
+ SG_ EPBR12VFilt228 : 37|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ EPBRcsmFaultReason228 : 21|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRdisconnected228 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRCDPQualified228 : 49|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBResmCaliperRequest228 : 18|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBResmOperationTrigger228 : 26|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRinternalCDPRequest228 : 51|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRinternalStatusChecksum228 : 56|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRinternalStatusCounter228 : 52|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRlocalServiceModeActive228 : 36|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRlockoutUnlockCount228 : 11|7@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRsummonFaultReason228 : 31|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRsummonState228 : 7|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRunitFaultStatus228 : 5|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBRunitStatus228 : 0|5@1+ (1,0) [0|0] ""  Receiver
+
+BO_ 648 ID288EPBleftStatus: 8 VehicleBus
+ SG_ EPBL12VFilt288 : 37|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ EPBLcsmFaultReason288 : 21|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLdisconnected288 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLCDPQualified288 : 49|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLesmCaliperRequest288 : 18|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLesmOperationTrigger288 : 26|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLinternalCDPRequest288 : 51|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLinternalStatusChecksum288 : 56|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLinternalStatusCounter288 : 52|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLlocalServiceModeActive288 : 36|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLlockoutUnlockCount288 : 11|7@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLsummonFaultReason288 : 31|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLsummonState288 : 7|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLunitFaultStatus288 : 5|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ EPBLunitStatus288 : 0|5@1+ (1,0) [0|0] ""  Receiver
+
+BO_ 2047 ID7FFcarConfig: 8 VehicleBus
+ SG_ CFGmuxindex7FF M : 0|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGairSuspension7FF m1 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGepasType7FF m1 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGdrivetrainType7FF m1 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGrightHandDrive7FF m1 : 11|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGcountry7FF m1 : 16|16@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGheatedWipers7FF m2 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGfrontSeatHeaters7FF m2 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGrearSeatHeaters7FF m2 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGpackEnergy7FF m2 : 11|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGbrakeHWType7FF m2 : 12|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGhomelinkType7FF m2 : 13|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGvdcType7FF m2 : 14|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGxcpIbst7FF m2 : 15|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGxcpESP7FF m2 : 16|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGmemoryMirrors7FF m2 : 17|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGpowerSteeringColumn7FF m2 : 18|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGinteriorLighting7FF m2 : 19|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGfrontFogLamps7FF m2 : 20|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGheadlamps7FF m2 : 21|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGaudioType7FF m2 : 22|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGlumbarECUType7FF m2 : 23|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGibstWakeType7FF m2 : 24|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGfrontSeatType7FF m2 : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CFGauxParkLamps7FF m2 : 26|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGpedestrianWarningSound7FF m2 : 27|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGhvacQuietSnorkelType7FF m2 : 28|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGhvacPanelVaneType7FF m2 : 29|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGCabinBlowerCtrlType7FF m2 : 30|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGperformancePackage7FF m2 : 31|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGeBuckConfig7FF m2 : 32|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGwindshieldType7FF m2 : 33|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGactiveHighBeam7FF m2 : 34|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGairbagCutoffSwitch7FF m2 : 35|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGintrusionSensorType7FF m2 : 36|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGspoilerType7FF m2 : 37|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGrearGlassType7FF m2 : 38|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGrearFogLamps7FF m2 : 39|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGroofType7FF m2 : 40|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGautopilot7FF m2 : 42|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGsuperchargingAccess7FF m2 : 44|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGwheelType7FF m2 : 46|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGexteriorColor7FF m2 : 48|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ CFGnumberHVILNodes7FF m2 : 51|3@1+ (1,1) [1|8] ""  Receiver
+ SG_ CFGrestraintsHardwareType7FF m2 : 56|5@1+ (1,0) [0|31] ""  Receiver
+
+BO_ 1025 ID401CellVoltages: 8 VehicleBus
+ SG_ MultiplexSelector M : 0|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ StatusFlags : 8|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ Cell0 m0 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell1 m0 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell2 m0 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell3 m1 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell4 m1 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell5 m1 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell6 m2 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell7 m2 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell8 m2 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell9 m3 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell10 m3 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell11 m3 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell12 m4 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell13 m4 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell14 m4 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell15 m5 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell16 m5 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell17 m5 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell18 m6 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell19 m6 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell20 m6 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell21 m7 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell22 m7 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell23 m7 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell24 m8 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell25 m8 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell26 m8 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell27 m9 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell28 m9 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell29 m9 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell30 m10 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell31 m10 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell32 m10 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell34 m11 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell33 m11 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell35 m11 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell36 m12 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell37 m12 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell38 m12 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell39 m13 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell40 m13 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell41 m13 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell42 m14 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell43 m14 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell44 m14 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell45 m15 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell46 m15 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell47 m15 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell48 m16 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell49 m16 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell50 m16 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell51 m17 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell52 m17 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell53 m17 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell54 m18 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell55 m18 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell56 m18 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell57 m19 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell58 m19 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell59 m19 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell60 m20 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell61 m20 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell62 m20 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell63 m21 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell64 m21 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell65 m21 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell66 m22 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell67 m22 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell68 m22 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell69 m23 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell70 m23 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell71 m23 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell72 m24 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell73 m24 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell74 m24 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell75 m25 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell76 m25 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell77 m25 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell78 m26 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell79 m26 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell80 m26 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell81 m27 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell82 m27 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell83 m27 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell84 m28 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell85 m28 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell86 m28 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell87 m29 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell88 m29 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell89 m29 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell90 m30 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell91 m30 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell92 m30 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell93 m31 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell94 m31 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell95 m31 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell96 m32 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell97 m32 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell98 m32 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell99 m33 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell100 m33 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell101 m33 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell102 m34 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell103 m34 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell104 m34 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell105 m35 : 16|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell106 m35 : 32|16@1+ (0.0001,0) [0|0] "V"  Receiver
+ SG_ Cell107 m35 : 48|16@1+ (0.0001,0) [0|0] "V"  Receiver
+
+
+
+EV_ MtoK: 0 [0|0] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MPH: 0 [0|0] "MPH" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Milage: 0 [0|0] "Mi" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
+CM_ SG_ 741 FrontPowerDissipation2E5 "should offset be there?";
+CM_ SG_ 722 MinVoltage2D2 "test";
+CM_ SG_ 612 ChargeLinePower264 "16 8 .08";
+CM_ SG_ 612 ChargeLineCurrentLimit264 "32 8 .5";
+CM_ SG_ 612 ChargeLineVoltage264 "0 12 .1";
+CM_ SG_ 612 ChargeLineCurrent264 "24 8 .5";
+CM_ SG_ 280 DIgear118 "20 4";
+CM_ SG_ 280 BrakePedal118 "19 1";
+CM_ SG_ 594 MaxHeatParked252 "test";
+CM_ SG_ 599 UIspeedUnits257 "0-mph 1-kph";
+CM_ SG_ 599 UIspeed_signed257 ".05 -25 x.08 -40 for kph";
+CM_ SG_ 1029 VINB405 "last 7 of VIN (ASCII)";
+CM_ SG_ 1029 VINC405 "part two of VIN (ASCII)";
+CM_ SG_ 1029 VINA405 "four zeros then first 3 characters of VIN";
+CM_ SG_ 886 TempInvPCB376 ".5 -20";
+CM_ SG_ 886 TempInvCapbank376 ".5 -20";
+CM_ SG_ 340 RAWTorqueRear154 "Axle torque 2 with 9/1 gearing";
+CM_ SG_ 614 RearPowerDissipation266 "should offset be there?";
+CM_ SG_ 264 TorqueActual108 "Axle torque 2 with 9/1 gearing";
+CM_ SG_ 264 TorqueRequest108 "Axle torque 2 with 9/1 gearing";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","SendType1","SendType2","SendType3","SendType4","SendType5","SendType6","SendType7","SendType8","SendType9";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgTimeoutTime" INT 0 10000;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "GenMsgAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ BU_  "GenNodAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_  "Modified" STRING ;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgTimeoutTime" 0;
+BA_DEF_DEF_  "ProtocolType" "0";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "GenMsgAutoGenSnd" "Yes";
+BA_DEF_DEF_  "GenMsgAutoGenDsp" "Yes";
+BA_DEF_DEF_  "GenSigAutoGenSnd" "";
+BA_DEF_DEF_  "GenSigAutoGenDsp" "";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenNodAutoGenSnd" "Yes";
+BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
+BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
+BA_DEF_DEF_  "Modified" "JW2019May24";
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 468 10;
+BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 741 1000;
+BA_ "GenMsgCycleTime" BO_ 962 50;
+BA_ "GenMsgCycleTime" BO_ 822 1000;
+BA_ "GenMsgCycleTime" BO_ 819 500;
+BA_ "GenMsgCycleTime" BO_ 577 100;
+BA_ "GenMsgCycleTime" BO_ 659 500;
+BA_ "GenMsgCycleTime" BO_ 616 100;
+BA_ "GenMsgSendType" BO_ 79 0;
+BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgCycleTime" BO_ 978 1000;
+BA_ "GenMsgCycleTime" BO_ 722 100;
+BA_ "GenMsgCycleTime" BO_ 1345 100;
+BA_ "GenMsgCycleTime" BO_ 580 100;
+BA_ "GenMsgCycleTime" BO_ 532 100;
+BA_ "GenMsgCycleTime" BO_ 533 1000;
+BA_ "GenMsgCycleTime" BO_ 535 1000;
+BA_ "GenMsgCycleTime" BO_ 801 1000;
+BA_ "GenMsgCycleTime" BO_ 984 1000;
+BA_ "GenMsgCycleTime" BO_ 609 100;
+BA_ "GenMsgSendType" BO_ 297 0;
+BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgCycleTime" BO_ 612 100;
+BA_ "GenMsgCycleTime" BO_ 548 100;
+BA_ "GenMsgSendType" BO_ 280 0;
+BA_ "GenMsgCycleTime" BO_ 280 10;
+BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 850 1000;
+BA_ "GenMsgCycleTime" BO_ 594 100;
+BA_ "GenMsgCycleTime" BO_ 786 1000;
+BA_ "GenMsgCycleTime" BO_ 658 100;
+BA_ "GenMsgCycleTime" BO_ 599 20;
+BA_ "GenMsgCycleTime" BO_ 1029 205;
+BA_ "GenMsgCycleTime" BO_ 886 1000;
+BA_ "GenMsgCycleTime" BO_ 340 10;
+BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 950 1000;
+BA_ "GenMsgCycleTime" BO_ 614 10;
+BA_ "GenMsgSendType" BO_ 264 0;
+BA_ "GenMsgCycleTime" BO_ 264 10;
+BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 306 0;
+BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgCycleTime" BO_ 799 1000;
+BA_ "GenMsgCycleTime" BO_ 1022 1000;
+BA_ "GenMsgSendType" BO_ 2047 0;
+BA_ "GenMsgCycleTime" BO_ 2047 100;
+VAL_ 659 UICCtractionControlMode293 1 "SlipStart" 0 "FullTraction" ;
+VAL_ 659 UICCsteeringMode293 2 "Sport" 1 "Standard" 0 "Comfort" ;
+VAL_ 532 FCtype214 7 "error" 6 "other" 5 "MCEVSE" 4 "Combo" 3 "CCS" 2 "GB" 1 "CHADEMO" 0 "Supercharger" ;
+VAL_ 535 FCclass217 2 "UrbanSC" 1 "Supercharger" 0 "err" ;
+VAL_ 535 FCbrand217 1 "Tesla" 0 "err" ;
+VAL_ 535 FCcoolingType217 2 "Liquid" 1 "Convection" 0 "err" ;
+VAL_ 548 DCDCstate224 6 "Error" 5 "Shutdown" 4 "HVactive" 3 "Precharge" 2 "PrechargeStart" 1 "12vChg" 0 "Idle" ;
+VAL_ 280 DriveState118 5 "Driving" 2 "Standby" 1 "Charging" 0 "Idle" ;
+VAL_ 280 TractionControl118 1 "SlipStart" 0 "Standard" ;
+VAL_ 280 ParkingBrake118 2 "Disengage" 1 "Engage" 0 "Idle" ;
+VAL_ 280 BrakeState118 1 "Hold" ;
+VAL_ 280 DIgear118 3 "Neutral" 7 "Idle" 1 "Park" 2 "Reverse" 4 "Drive" ;
+VAL_ 280 BrakePedal118 1 "Brake" ;
+VAL_ 530 BMSstate212 3 "Charge" 1 "Drive" 0 "Idle" ;
+VAL_ 530 BMSchargeStatus212 1 "Connected" 0 "Disconnected" ;
+VAL_ 530 BMScontactors212 6 "err" 5 "err" 4 "Closed" 3 "Closing" 2 "Opening" 1 "Open" 0 "err" ;
+VAL_ 599 UIspeedUnits257 1 "KPH" 0 "MPH" ;
+VAL_ 552 EPBResmCaliperRequest228 3 "disengaging" 2 "engaging" 1 "idle" ;
+VAL_ 552 EPBResmOperationTrigger228 22 "SuperPark" 6 "Released" 1 "ParkEngaged" ;
+VAL_ 552 EPBRunitStatus228 10 "Disengaging" 8 "Engaging" 3 "ParkEngaged" 1 "DriveReleased" ;
+VAL_ 648 EPBLesmCaliperRequest288 3 "disengaging" 2 "engaging" 1 "idle" ;
+VAL_ 648 EPBLesmOperationTrigger288 22 "SuperPark" 6 "Released" 1 "ParkEngaged" ;
+VAL_ 648 EPBLunitStatus288 10 "Disengaging" 8 "Engaging" 3 "ParkEngaged" 1 "DriveReleased" ;
+VAL_ 2047 CFGdrivetrainType7FF 1 "AWD" 0 "RWD" ;
+VAL_ 2047 CFGpackEnergy7FF 1 "74kWh" 0 "50kWh" ;
+VAL_ 2047 CFGinteriorLighting7FF 1 "Premium" 0 "Base" ;
+VAL_ 2047 CFGheadlamps7FF 1 "Premium" 0 "Base" ;
+VAL_ 2047 CFGaudioType7FF 1 "Premium" 0 "Base" ;
+VAL_ 2047 CFGfrontSeatType7FF 1 "Premium" 0 "Base" ;
+VAL_ 2047 CFGroofType7FF 2 "Panoramic Sunroof" 1 "Fixed Glass" 0 "Metal" ;
+VAL_ 2047 CFGautopilot7FF 3 "Full Self Driving" 2 "Enhanced" 1 "Highway" 0 "None" ;
+VAL_ 2047 CFGsuperchargingAccess7FF 2 "Pay as you go" 1 "Free" 0 "None" ;
+VAL_ 2047 CFGwheelType7FF 2 "20" 1 "19" 0 "18" ;
+VAL_ 2047 CFGexteriorColor7FF 6 "Pearl White" 5 "Deep Blue" 4 "4" 3 "Midnight Silver" 2 "Silver Metallic" 1 "Black" 0 "Red Multicoat" ;
+
