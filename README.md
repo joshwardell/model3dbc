@@ -10,3 +10,6 @@ Plus the excellent free tools from the Tesla community:
 https://github.com/amund7/CANBUS-Analyzer
 
 https://www.savvycan.com
+
+For discussion and help decoding:
+https://teslaownersonline.com/threads/diagnostic-port-and-data-access.7502/
