@@ -39,6 +39,7 @@ BU_: Receiver ChassisBus VehicleBus PartyBus
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ FrontAxleRPM___ : 0|16@1- (0.1,0) [-3276.8|3276.7] "RPM" Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
+ SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
 BO_ 1577 ID628UDSPCStoMCU: 8 VehicleBus
 
@@ -70,16 +71,19 @@ BO_ 373 ID175WheelSpeed: 8 ChassisBus
  SG_ WheelSpeedFR175 : 13|13@1+ (0.04,0) [0|327.64] "rpm"  Receiver
  SG_ WheelSpeedFL175 : 0|13@1+ (0.04,0) [0|327.64] "rpm"  Receiver
 
-BO_ 468 ID1D4FrontTorque: 8 VehicleBus
+BO_ 468 ID1D4FrontTorqueOld: 8 VehicleBus
  SG_ RAWTorqueFront1D4 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
 
+BO_ 469 ID1D5FrontTorque: 8 VehicleBus
+ SG_ FrontTorqueRequest1D5 : 8|15@1- (0.085,0) [-1392.64|1392.555] "NM"  Receiver
+ SG_ FrontTorque1D5 : 24|13@1- (0.25,0) [-1024|1023.75] "NM"  Receiver
+
 BO_ 741 ID2E5FrontInverterPower: 8 VehicleBus
- SG_ FrontPowerDissipation2E5 : 8|8@1+ (0.125,-0.5) [-0.5|31.375] "kW"  Receiver
- SG_ FrontPower2E5 : 16|11@1- (0.5,0) [-512|511.5] "kW"  Receiver
- SG_ FrontHeatPowerOptimal2E5 : 32|8@1+ (0.08,0) [0|31875] "kW"  Receiver
- SG_ FrontHeatPowerMax2E5 : 40|8@1+ (0.08,0) [0|31875] "kW"  Receiver
- SG_ FrontHeatPower2E5 : 48|8@1+ (0.08,0) [0|31875] "kW"  Receiver
- SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts"  Receiver
+ SG_ FrontPowerDissipation2E5 : 16|8@1+ (0.125,-0.5) [-0.5|31.375] "kW"  Receiver
+ SG_ FrontPower2E5 : 0|11@1- (0.5,0) [-512|511.5] "kW"  Receiver
+ SG_ FrontHeatPowerOptimal2E5 : 24|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ FrontHeatPowerMax2E5 : 32|8@1+ (0.08,0) [0|31875] "kW"  Receiver
+ SG_ FrontHeatPower2E5 : 48|9@1+ (0.08,0) [0|40.88] "kW"  Receiver
 
 BO_ 962 ID3C2VCLswitches: 8 VehicleBus
 
@@ -251,7 +255,7 @@ BO_ 1310 ID51EChgConnectorInfo: 8 VehicleBus
  SG_ CHGmodelB51E m26 : 8|56@1+ (1,0) [0|7.20575940379279E+016] ""  Receiver
  SG_ mux51E M : 0|8@1+ (1,0) [0|255] ""  Receiver
 
-BO_ 886 ID376InverterTemps: 8 VehicleBus
+BO_ 886 ID376FrontInverterTemps: 8 VehicleBus
  SG_ TempInvPCB376 : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ TempPctStator376 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
  SG_ TempPctInverter376 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
@@ -269,7 +273,7 @@ BO_ 789 ID315RearInverterTemps: 8 VehicleBus
  SG_ RearTempInvHeatsink315 : 32|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ RearTempInverter315 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
 
-BO_ 340 ID154RearTorque: 8 VehicleBus
+BO_ 340 ID154RearTorqueOld: 8 VehicleBus
  SG_ RAWTorqueRear154 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
 
 BO_ 950 ID3B6odometer: 4 VehicleBus
@@ -294,7 +298,7 @@ BO_ 306 ID132HVBattAmpVolt: 8 VehicleBus
  SG_ SmoothBattCurrent132 : 16|15@1- (-0.1,1000) [-638.3|2638.4] "A"  Receiver
 
 BO_ 294 ID126: 8 VehicleBus
- SG_ TestByte0126 : 0|8@1+ (1,0) [0|0] "" Receiver
+ SG_ TestByte0126 : 0|8@1+ (1,0) [0|0] ""  Receiver
  SG_ Demand126 : 24|16@1+ (1,0) [0|65535] ""  Receiver
  SG_ TestData126 : 8|16@1+ (0.1,0) [0|6553.5] ""  Receiver
 
@@ -599,7 +603,7 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2019Sep20";
+BA_DEF_DEF_  "Modified" "JW2019Sep24";
 BA_ "BusType" "CAN";
 BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 468 10;
