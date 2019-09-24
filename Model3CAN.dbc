@@ -45,9 +45,17 @@ BO_ 1577 ID628UDSPCStoMCU: 8 VehicleBus
 
 BO_ 1576 ID628UDSMCUtoPCS: 8 VehicleBus
 
+BO_ 390 ID186: 8 VehicleBus
+ SG_ Test186B : 27|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ Test186A : 12|8@1+ (1,0) [0|0] ""  Receiver
+
 BO_ 917 ID395: 8 VehicleBus
  SG_ Test395B : 40|16@1+ (1,0) [0|0] ""  Receiver
  SG_ Test395A : 8|16@1+ (1,0) [0|0] ""  Receiver
+
+BO_ 918 ID396: 8 VehicleBus
+ SG_ Test396B : 40|16@1+ (1,0) [0|0] ""  Receiver
+ SG_ Test396A : 8|16@1+ (1,0) [0|0] ""  Receiver
 
 BO_ 1493 ID5D5: 5 VehicleBus
  SG_ TestTemp5D5C : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
