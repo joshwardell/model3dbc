@@ -59,13 +59,25 @@ BO_ 390 ID186FrontDriveTorqueRPM: 8 VehicleBus
  SG_ FrontTorqueRequest186 : 12|13@1- (2,0) [-8192|8190] "NM"  Receiver
  SG_ FrontAxleRPM186 : 40|16@1- (0.1,0) [-3276.8|3276.7] "RPM"  Receiver
 
-BO_ 917 ID395: 8 VehicleBus
- SG_ Test395B : 40|16@1+ (1,0) [0|0] ""  Receiver
- SG_ Test395A : 8|16@1+ (1,0) [0|0] ""  Receiver
+BO_ 917 ID395FrontOilPump: 8 VehicleBus
+ SG_ FrontOilCurrent395 : 48|8@1+ (0.1,0) [0|0] "A" Receiver
+ SG_ FrontOilCurrentOffset395 : 56|8@1+ (0.005,0) [0|0] "A" Receiver
+ SG_ FrontOilFlowActual395 : 16|8@1+ (0.06,0) [0|0] "LPM" Receiver
+ SG_ FrontOilFlowTarget395 : 8|8@1+ (0.06,0) [0|0] "LPM" Receiver
+ SG_ FrontOilTemp395 : 32|8@1+ (1,-40) [0|0] "C" Receiver
+ SG_ FrontOilPCBtemp395 : 24|8@1+ (1,-40) [0|0] "C" Receiver
+ SG_ FrontOilPumpState395 : 0|3@1+ (1,0) [0|0] "" Receiver
+ SG_ FrontOilVoltage395 : 40|8@1+ (0.1,0) [0|0] "V" Receiver
 
-BO_ 918 ID396: 8 VehicleBus
- SG_ Test396B : 40|16@1+ (1,0) [0|0] ""  Receiver
- SG_ Test396A : 8|16@1+ (1,0) [0|0] ""  Receiver
+BO_ 918 ID396RearOilPump: 8 VehicleBus
+ SG_ RearOilCurrent396 : 48|8@1+ (0.1,0) [0|0] "A" Receiver
+ SG_ RearOilCurrentOffset396 : 56|8@1+ (0.005,0) [0|0] "A" Receiver
+ SG_ RearOilFlowActual396 : 16|8@1+ (0.06,0) [0|0] "LPM" Receiver
+ SG_ RearOilFlowTarget396 : 8|8@1+ (0.06,0) [0|0] "LPM" Receiver
+ SG_ RearOilTemp396 : 32|8@1+ (1,-40) [0|0] "C" Receiver
+ SG_ RearOilPCBtemp396 : 24|8@1+ (1,-40) [0|0] "C" Receiver
+ SG_ RearOilPumpState396 : 0|3@1+ (1,0) [0|0] "" Receiver
+ SG_ RearOilVoltage396 : 40|8@1+ (0.1,0) [0|0] "V" Receiver
 
 BO_ 1493 ID5D5: 5 VehicleBus
  SG_ TestTemp5D5C : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
@@ -551,13 +563,13 @@ EV_ MPH: 0 [0|0] "MPH" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
 EV_ Milage: 0 [0|0] "Mi" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
-CM_ SG_ 390 FrontTorqueActual186 "Torque at motor";
-CM_ SG_ 390 FrontTorqueRequest186 "Torque at motor";
-CM_ SG_ 472 RearTorqueRequest1D8 "Approx torque at wheels";
-CM_ SG_ 472 RearTorque1D8 "Approx torque at wheels";
+CM_ SG_ 390 FrontTorqueActual186 "Torque at axle";
+CM_ SG_ 390 FrontTorqueRequest186 "Torque at axle";
+CM_ SG_ 472 RearTorqueRequest1D8 "torque at motor";
+CM_ SG_ 472 RearTorque1D8 "torque at motor";
 CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
-CM_ SG_ 469 FrontTorqueRequest1D5 "Approx torque at wheels";
-CM_ SG_ 469 FrontTorque1D5 "Approx torque at wheels";
+CM_ SG_ 469 FrontTorqueRequest1D5 "torque at motor";
+CM_ SG_ 469 FrontTorque1D5 "torque at motor";
 CM_ SG_ 741 FrontPowerDissipation2E5 "should offset be there?";
 CM_ SG_ 722 MinVoltage2D2 "test";
 CM_ SG_ 612 ChargeLinePower264 "16 8 .08";
@@ -576,8 +588,9 @@ CM_ SG_ 886 TempInvPCB376 ".5 -20";
 CM_ SG_ 886 TempInvCapbank376 ".5 -20";
 CM_ SG_ 340 RAWTorqueRear154 "Axle torque 2 with 9/1 gearing";
 CM_ SG_ 614 RearPowerDissipation266 "should offset be there?";
-CM_ SG_ 264 RearTorqueActual108 "Torque at motor";
-CM_ SG_ 264 RearTorqueRequest108 "Torque at motor";
+CM_ SG_ 614 RearPower266 "electrical power";
+CM_ SG_ 264 RearTorqueActual108 "Torque at axle";
+CM_ SG_ 264 RearTorqueRequest108 "Torque at axle";
 BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","SendType1","SendType2","SendType3","SendType4","SendType5","SendType6","SendType7","SendType8","SendType9";
 BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
@@ -627,8 +640,8 @@ BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
 BA_DEF_DEF_  "Modified" "JW2019Oct01";
 BA_ "BusType" "CAN";
-BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
@@ -636,8 +649,8 @@ BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -648,14 +661,14 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 280 10;
-BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -663,20 +676,20 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgCycleTime" BO_ 264 10;
-BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgSendType" BO_ 306 0;
-BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
 BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
 VAL_ 553 GearLeverPosition229 4 "Full Up" 3 "Half Up" 2 "Full Down" 1 "Half Down" 0 "Center" ;
 VAL_ 585 LeftStalkFRpos249 2 "Push" 1 "Pull" 0 "Center" ;
