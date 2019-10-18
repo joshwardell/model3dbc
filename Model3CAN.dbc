@@ -41,6 +41,163 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
+BO_ 705 ID2C1VCFront10hz: 8 VehicleBus
+ SG_ VCFront10HzIndex M : 0|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ VCfrontpumpBatteryRPMActual m0 : 3|10@1+ (10,0) [0|10230] "rpm"  Receiver
+ SG_ VCfrontpumpBatteryRPMTarget m0 : 13|10@1+ (10,0) [0|0] "rpm"  Receiver
+ SG_ VCfrontpumpPowertrainRPMActual m0 : 23|10@1+ (10,0) [0|0] "rpm"  Receiver
+ SG_ VCfrontpumpPowertrainRPMTarget m0 : 33|10@1+ (10,0) [0|0] "rpm"  Receiver
+ SG_ VCfrontpumpBatteryOutVoltage m0 : 43|7@1+ (0.2,0) [0|0] "V"  Receiver
+ SG_ VCfrontpumpPowertrainOutVoltage m0 : 50|7@1+ (0.2,0) [0|0] "V"  Receiver
+ SG_ VCfrontpumpBatteryInitd m0 : 57|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpPowertrainInitd m0 : 58|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpBatteryEnabled m0 : 59|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpPowertrainEnabled m0 : 60|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpBatteryPowerOn m0 : 61|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpPowertrainPowerOn m0 : 62|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpsWake m0 : 63|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontradiatorFanOutVoltage m1 : 8|7@1+ (0.2,0) [0|0] "V"  Receiver
+ SG_ VCfrontradiatorFanRPMTarget m1 : 16|10@1+ (10,0) [0|0] "rpm"  Receiver
+ SG_ VCfrontradiatorFanRPMActual m1 : 26|10@1+ (10,0) [0|0] "rpm"  Receiver
+ SG_ VCfrontradiatorFanInitd m1 : 36|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontradiatorFanEnabled m1 : 37|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontradiatorFanPowerOn m1 : 38|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontradiatorFanPhaseCurrent m1 : 40|8@1+ (0.5,-25) [0|0] "A"  Receiver
+ SG_ VCfrontfiveWayValveMode m2 : 3|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcoolantTempBasedMode m2 : 4|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontfiveWayValveModeWrong m2 : 5|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontfiveWayValveAngleActual m2 : 6|10@1+ (0.25,-70) [0|0] "deg"  Receiver
+ SG_ VCfrontfiveWayValveAngleTarget m2 : 16|10@1+ (0.25,-10) [0|0] "deg"  Receiver
+ SG_ VCfrontfiveWayValveRadBypass m2 : 26|7@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCfrontfiveWayValveState m2 : 33|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontfiveWayValveDuty m2 : 35|8@1- (1,0) [0|0] "%"  Receiver
+ SG_ VCfrontfiveWayValveAngleTravel m2 : 43|10@1+ (5,0) [0|0] "deg"  Receiver
+ SG_ VCfrontfiveWayValveISense m2 : 53|6@1+ (0.01,0) [0|0] "A"  Receiver
+ SG_ VCfronttempRefrigSuction m3 : 8|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCfronttempRefrigDischarge m3 : 16|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCfronttempSuperheatActual m3 : 27|10@1+ (0.1,-20) [0|0] "C"  Receiver
+ SG_ VCfronttempSuperheatTarget m3 : 37|10@1+ (0.1,0) [0|0] "C"  Receiver
+ SG_ VCfrontpumpBatSpiError m3 : 47|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpumpPtSpiError m3 : 48|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontthmlFanSpiError m3 : 49|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronttempDischargeSimulated m3 : 50|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCfrontisOnlySuctTempNotReady m3 : 61|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontusingSimulatedDischTemp m3 : 62|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontusingSimulatedAmbTemp m3 : 63|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontrefrigerantHasBeenFilled m4 : 3|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompDemandChiller m4 : 8|7@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCfrontcompDemandEvap m4 : 16|7@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCfrontcompressorState m4 : 24|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitPresDischargeHi m4 : 26|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitTempDischargeHi m4 : 27|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitScrollSepRegion m4 : 28|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitNvh m4 : 29|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitScrollSepRamp m4 : 30|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitDeadband m4 : 31|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompStandbySelfNotReady m4 : 32|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompStandbyCommunication m4 : 33|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompStandbyHVNotReady m4 : 34|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompStandbyLowAmbient m4 : 35|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompStandbyLowDischPress m4 : 36|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompStandbyRefrigNotOk m4 : 37|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompLimitTempDischargeSim m4 : 38|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompRampRateUpMax m4 : 40|6@1+ (0.1,0) [0|0] "%/s"  Receiver
+ SG_ VCfrontrefrigerantValvesClosed m4 : 46|1@1+ (1,0) [0|0] ""  Receiver
+
+BO_ 737 ID2E1VCFrontStatus: 8 VehicleBus
+ SG_ VCFrontStatusIndex M : 0|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ VCfrontfrunkLatchStatus m0 : 3|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontwiperSpeed m0 : 8|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontwiperPosition m0 : 12|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontwiperState m0 : 16|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcrashDetectedType m0 : 20|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcrashState m0 : 22|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcrashUnlockOverrideSet m0 : 24|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontairCompressorStatus m0 : 25|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontheadlightLeftVPosition m0 : 28|10@1+ (1,0) [0|0] "ticks"  Receiver
+ SG_ VCfrontheadlightRightVPosition m0 : 38|10@1+ (1,0) [0|0] "ticks"  Receiver
+ SG_ VCfrontfrunkInteriorRelSwitch m0 : 48|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontanyClosureOpen m0 : 49|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontanyDoorOpen m0 : 50|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthornOn m0 : 51|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontwiperPositionDeg m0 : 52|8@1+ (1,0) [0|0] "deg"  Receiver
+ SG_ VCfrontheadlampLeftFanStatus m0 : 60|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontheadlampRightFanStatus m0 : 61|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfront5VARailStable m1 : 3|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfront5VBRailStable m1 : 4|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfront12VARailStable m1 : 5|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfront12VBRailStable m1 : 6|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontrailAState m1 : 7|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontrailBState m1 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontChargePumpVoltageStable m1 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontiBoosterWakeLine m1 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontepasWakeLine m1 : 11|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontiBoosterStateDBG m1 : 12|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontvehicleStatusDBG m1 : 16|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontreverseBatteryFault m1 : 21|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontbatterySMState m1 : 22|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronttimeSpentCharging m1 : 25|10@1+ (1,0) [0|0] "min"  Receiver
+ SG_ VCfronttimeSpentDischarging m1 : 35|10@1+ (1,0) [0|0] "min"  Receiver
+ SG_ VCfronttimeSpentSleeping m1 : 45|8@1+ (1,0) [0|0] "s"  Receiver
+ SG_ VCfrontsleepCurrent m1 : 53|10@1- (1,0) [0|0] "mA"  Receiver
+ SG_ VCfronthomelinkV2Response0 m2 : 8|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthomelinkV2Response1 m2 : 16|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthomelinkV2Response2 m2 : 24|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthomelinkV2Response3 m2 : 32|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthomelinkV2Response4 m2 : 40|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthomelinkCommStatus m2 : 48|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontmaxEvapHeatRejection m3 : 8|8@1+ (32,0) [0|0] "W"  Receiver
+ SG_ VCfrontminEvapHeatRejection m3 : 16|8@1+ (10,0) [0|0] "W"  Receiver
+ SG_ VCfrontfreezeEvapITerm m3 : 24|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontisEvapOperationAllowed m3 : 25|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontchillerDemandActive m3 : 26|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontcompPerfRecoveryLimited m3 : 27|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfronthasLowRefrigerant m3 : 29|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontpressureRefrigSuction m3 : 32|7@1+ (0.125,0) [0|0] "bar"  Receiver
+ SG_ VCfrontpressureRefrigDischarge m3 : 40|8@1+ (0.125,0) [0|0] "bar"  Receiver
+ SG_ VCfrontwiperCycles m3 : 48|16@1+ (100,0) [0|0] "Cycles"  Receiver
+ SG_ VCfronttempCompTargetVoltage m4 : 3|10@1+ (0.01,9) [0|0] "V"  Receiver
+ SG_ VCfrontAS8510Voltage m4 : 13|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ VCfrontcalibratedAS8510Volts m4 : 25|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ VCfrontchargeNeeded m4 : 37|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontPCSMia m4 : 38|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontDCDCNoop m4 : 39|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontIBSFault m4 : 40|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontPEResetLineState m4 : 41|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontHSDInitCompleteU13 m4 : 42|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontHSDInitCompleteU16 m4 : 43|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCfrontIBSUnfilteredTemperature m4 : 44|16@1- (0.01,0) [0|0] "C"  Receiver
+ SG_ VCfront12VOverchargeCounter m4 : 60|4@1+ (1,0) [0|0] ""  Receiver
+
+BO_ 897 ID381VCFront1Hz: 8 VehicleBus
+ SG_ VCFront1HzIndex M : 0|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ VCFrontmodeTransitionID m0 : 3|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontmodeDesired m0 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFronttargetPTActiveCool m0 : 16|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ VCFronttargetPTPassive m0 : 24|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ VCFronttargetBatActiveCool m0 : 32|7@1+ (1,0) [0|0] "C"  Receiver
+ SG_ VCFronttargetBatPassive m0 : 40|7@1+ (1,-20) [0|0] "C"  Receiver
+ SG_ VCFronttargetBatActiveHeat m0 : 48|7@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ VCFrontcondenserPressureLimit m1 : 8|7@1+ (0.1,10) [0|0] "bar"  Receiver
+ SG_ VCFrontactiveLouverAbnormalKT m1 : 15|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontactiveLouverOverCurrent m1 : 16|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontactiveLouverOverTemp m1 : 17|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontactiveLouverMotorState m1 : 18|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontactiveLouverState m2 : 3|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontactiveLouverIsCalibrated m2 : 6|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontactiveLouverMotorCounts m2 : 8|11@1+ (1,-100) [0|0] "ticks"  Receiver
+ SG_ VCFrontactiveLouverOpenPosTarg m2 : 24|7@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCFrontactiveLouverOpenPos m2 : 32|7@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCFrontpumpBatteryFETTemp m2 : 40|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ VCFrontpumpPowertrainFETTemp m2 : 48|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ VCFrontradiatorFanFETTemp m2 : 56|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ VCFrontfiveWayValveRecalReason m3 : 3|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontfiveWayValveCountRange m3 : 8|8@1+ (1,375) [0|0] "ticks"  Receiver
+ SG_ VCFrontfiveWayValveAngleDrift m3 : 16|10@1+ (0.25,-127) [0|0] "degrees"  Receiver
+ SG_ VCFrontfiveWayValveRecalCount m3 : 32|16@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontfiveWayValveWindupEstL m3 : 48|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFrontfiveWayValveWindupEstR m3 : 52|4@1+ (1,0) [0|0] ""  Receiver
+
 BO_ 792 ID318SystemTimeUTC: 8 VehicleBus
  SG_ UTCyear318 : 0|8@1+ (1,0) [0|0] "yr"  Receiver
  SG_ UTCmonth318 : 8|8@1+ (1,0) [0|0] "mo"  Receiver
@@ -171,6 +328,13 @@ BO_ 978 ID3D2TotalChargeDischarge: 8 VehicleBus
  SG_ TotalDischargeKWh3D2 : 0|32@1+ (0.001,0) [0|4294967.295] "kWh"  Receiver
  SG_ TotalChargeKWh3D2 : 32|32@1+ (0.001,0) [0|4294967.295] "kWh"  Receiver
 
+BO_ 1010 ID3F2BMSCounters: 8 VehicleBus
+ SG_ BMSCountersIndex3F2 M : 0|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ BMStotalACcharge3F2 m0 : 8|32@1+ (0.001,0) [0|4294967.295] "KWh"  Receiver
+ SG_ BMStotalDCcharge3F2 m1 : 8|32@1+ (0.001,0) [0|4294967.295] "KWh"  Receiver
+ SG_ BMStotalRegenCharge3F2 m2 : 8|32@1+ (0.001,0) [0|4294967.295] "KWh"  Receiver
+ SG_ BMStotalDriveDischarge3F2 m3 : 8|32@1+ (0.001,0) [0|4294967.295] "KWh"  Receiver
+
 BO_ 722 ID2D2BMSVAlimits: 8 VehicleBus
  SG_ MinVoltage2D2 : 0|16@1+ (0.01,0) [0|655.35] "V"  Receiver
  SG_ MaxDischargeCurrent2D2 : 48|14@1+ (0.128,0) [0|2097.024] "A"  Receiver
@@ -294,6 +458,12 @@ BO_ 594 ID252PowerLimits: 8 VehicleBus
 
 BO_ 786 ID312BMSthermal: 8 VehicleBus
  SG_ BMSdissipation312 : 0|10@1+ (0.02,0) [0|20.46] "kW"  Receiver
+ SG_ BMSflowRequest312 : 10|7@1+ (0.3,0) [0|38.1] "LPM"  Receiver
+ SG_ BMSinletActiveCoolTarget312 : 17|8@1+ (0.25,10) [10|73.75] "C"  Receiver
+ SG_ BMSinletActiveHeatTarget312 : 33|8@1+ (0.25,-25) [-25|38.75] "C"  Receiver
+ SG_ BMSinletPassiveTarget312 : 25|8@1+ (0.25,0) [0|63.75] "C"  Receiver
+ SG_ BMSnoFlowRequest312 : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMSpcsNoFlowRequest312 : 62|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 658 ID292BMS_SOC: 8 VehicleBus
  SG_ SOCmax292 : 20|10@1+ (0.1,0) [0|102.3] ""  Receiver
@@ -672,10 +842,10 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2019Oct16";
+BA_DEF_DEF_  "Modified" "JW2019Oct18";
 BA_ "BusType" "CAN";
-BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
@@ -683,8 +853,8 @@ BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -695,14 +865,14 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 280 10;
-BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -710,21 +880,40 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgCycleTime" BO_ 264 10;
-BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgSendType" BO_ 306 0;
-BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
 BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
+VAL_ 705 VCFront10HzIndex 0 "COOLANT_PUMPS" 1 "THERMAL_FAN" 2 "FIVE_WAY_VALVE" 3 "REFRIGERANT_LV8907" 4 "COMPRESSOR" 5 "EXV_EVAP_SOLENOID_AIRFLOW" 6 "END" ;
+VAL_ 705 VCfrontfiveWayValveMode 0 "SERIES" 1 "PARALLEL" ;
+VAL_ 705 VCfrontcoolantTempBasedMode 0 "SERIES" 1 "PARALLEL" ;
+VAL_ 705 VCfrontfiveWayValveState 0 "UNPOWERED" 1 "CALIBRATING" 2 "READY" 3 "FAULT" ;
+VAL_ 705 VCfrontcompressorState 0 "STANDBY" 1 "READY" 2 "RUNNING" 3 "FAULT" ;
+VAL_ 737 VCFrontStatusIndex 0 "BODY_CONTROLS" 1 "VEHICLE_AND_RAILS" 2 "HOMELINK" 3 "REFRIGERANT_SYSTEM" 4 "LV_BATTERY_DEBUG" 5 "INVALID" ;
+VAL_ 737 VCfrontwiperSpeed 0 "SNA" 1 "OFF" 2 "1" 3 "2" 4 "3" 5 "4" 6 "5" 7 "LOW" 8 "HIGH" ;
+VAL_ 737 VCfrontwiperPosition 0 "SNA" 1 "SERVICE" 2 "DEPRESSED_PARK" 3 "DELAYED_REST" 4 "WIPING" ;
+VAL_ 737 VCfrontwiperState 0 "SNA" 1 "SERVICE" 2 "FAULT" 3 "DELAYED_REST" 4 "PARK" 5 "WASH" 6 "MOMENTARY_WIPE" 7 "INTERMITTENT_HIGH" 8 "INTERMITTENT_LOW" 9 "CONT_FAST" 10 "CONT_SLOW" 11 "INT_AUTO_LOW" 12 "INT_AUTO_HIGH" ;
+VAL_ 737 VCfrontcrashDetectedType 0 "NONE" 1 "MINOR" 2 "SEVERE" ;
+VAL_ 737 VCfrontcrashState 0 "IDLE" 1 "MINOR" 2 "SEVERE" ;
+VAL_ 737 VCfrontairCompressorStatus 0 "OFF" 1 "ON" 2 "TURNING_OFF" 3 "TURNING_ON" 4 "FAULT" 5 "RETRY_AVAILABLE" 7 "SNA" ;
+VAL_ 737 VCfronthomelinkCommStatus 0 "SNA" 1 "OFF" 2 "ON" 3 "FAULT" ;
+VAL_ 897 VCFront1HzIndex 0 "COOLANT" 1 "CONDENSER_LOUVER_IC" 2 "ACTIVE_LOUVER_AND_BRUSHLESS_FETS" 3 "FIVE_WAY_VALVE" 4 "END" ;
+VAL_ 897 VCFrontmodeTransitionID 0 "PARALLEL_F1_noFlowRequest" 1 "SERIES_F2_faultPumps" 2 "SERIES_1_drive_batteryWantsCool" 3 "SERIES_2_drive_batteryNeedsHeat" 4 "SERIES_3_drive_batteryWantsHeat" 5 "PARALLEL_2_drive_batteryWantsHeat" 6 "PARALLEL_3_drive_batteryWantsCool" 7 "PARALLEL_4_drive_batteryNeedsCool" 8 "SERIES_4_charge_batteryNeedsHeat" 9 "SERIES_5_charge_batteryWantsHeat" 10 "PARALLEL_5_charge_batteryWantsHeat" 11 "PARALLEL_6_charge_batteryWantsCool" 12 "SERIES_6_fastCharge_batteryNeedsHeat" 13 "SERIES_7_fastCharge_batteryWantsCool" 14 "PARALLEL_7_fastCharge_batteryWantsCool" 15 "PARALLEL_8_fastCharge_batteryWantsHeat" 16 "SERIES_8_preConditioning_batteryNeedsHeat" 17 "SERIES_9_drive_driveUnitThermalLimiting" 18 "PARALLEL_9_drive_batteryThermalLimiting" 19 "INIT" 20 "OVERRIDE" 21 "UNDEFINED" ;
+VAL_ 897 VCFrontmodeDesired 0 "SERIES" 1 "PARALLEL" ;
+VAL_ 897 VCFrontactiveLouverMotorState 0 "UNPOWERED" 1 "INIT_I2C" 2 "INIT_EEPROM" 3 "I2C_ERROR" 4 "READY" 5 "BRAKE" 6 "STALL" 7 "FAULT_MOTOR_DISCONNECTED" 8 "DRIVER_FAULT" ;
+VAL_ 897 VCFrontactiveLouverState 0 "UNCALIBRATED" 1 "CALIB_CLOSE" 2 "CALIB_OPEN" 3 "READY" 4 "FAULTED" ;
+VAL_ 897 VCFrontfiveWayValveRecalReason 0 "UNDEFINED" 1 "MAX_TRAVEL" 2 "GENERAL_FAULT" 3 "CALIBRATION_FAULT_NO_TRAVEL" 4 "SELF_TEST" 5 "MOTOR_FEEDBACK_INTERRUPTED" ;
 VAL_ 553 GearLeverPosition229 4 "Full Up" 3 "Half Up" 2 "Full Down" 1 "Half Down" 0 "Center" ;
 VAL_ 585 LeftStalkFRpos249 2 "Push" 1 "Pull" 0 "Center" ;
 VAL_ 585 LeftStalkUDpos249 4 "Full Down" 3 "Half Down" 2 "Full Up" 1 "Half Up" 0 "Center" ;
