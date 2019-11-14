@@ -41,6 +41,121 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
+BO_ 579 ID243VCRIGHT_hvacFeedback: 8 VehicleBus
+ SG_ VCRIGHT_hvacACRunning : 54|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_hvacAirDistributionMode : 43|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ VCRIGHT_hvacBlowerSegment : 48|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ VCRIGHT_hvacCabinTempEst : 32|11@1+ (0.1,-40) [-40|164.7] "C"  Receiver
+ SG_ VCRIGHT_hvacPowerState : 56|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ VCRIGHT_hvacQdotLeft : 0|16@1+ (1,-32767) [-32767|32768] "W"  Receiver
+ SG_ VCRIGHT_hvacQdotRight : 16|16@1+ (1,-32767) [-32767|32768] "W"  Receiver
+ SG_ VCRIGHT_hvacRecirc : 52|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ VCRIGHT_hvacSecondRowState : 59|3@1+ (1,0) [0|7] ""  Receiver
+
+BO_ 524 ID20CVCRIGHT_hvacRequest: 6 VehicleBus
+ SG_ VCRIGHT_conditioningRequest : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_demandEvapSkipRateLimit : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_evapPerformanceLow : 43|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_hvacBlowerSpeedRPMReq : 32|10@1+ (5,0) [0|5115] "RPM"  Receiver
+ SG_ VCRIGHT_hvacEvapEnabled : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_tempEvaporator : 13|11@1+ (0.1,-40) [-40|164.7] "C"  Receiver
+ SG_ VCRIGHT_tempEvaporatorTarget : 24|8@1+ (0.2,0) [0|51] "C"  Receiver
+ SG_ VCRIGHT_wattsDemandEvap : 0|11@1+ (5,0) [0|10235] "W"  Receiver
+
+BO_ 691 ID2B3VCRIGHT_logging1Hz: 8 VehicleBus
+ SG_ VCRIGHT_logging1HzIndex M : 0|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_tempDuctLeft m0 : 4|9@1+ (0.3,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempDuctRight m0 : 13|9@1+ (0.3,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempIncarCabinProbe m0 : 24|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempIncarCabinMid m0 : 32|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempIncarCabinDeep m0 : 40|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempInteriorL2 m0 : 48|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempInteriorSunnyL2 m0 : 56|8@1+ (0.6,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempGlassRoof m1 : 8|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempWindshield m1 : 16|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempInterior m1 : 24|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempInteriorSunny m1 : 32|8@1+ (0.6,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempSideGlassLeft m1 : 40|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempSideGlassRight m1 : 48|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempBreathLevel m1 : 56|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_hvacEstimateWindshieldRH m2 : 4|8@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCRIGHT_hvacFoggingRiskLevel m2 : 12|8@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCRIGHT_hvacCabinHumidityLevel m2 : 20|8@1+ (1,0) [0|0] "%"  Receiver
+ SG_ VCRIGHT_wattsHeaterLeftTotal m2 : 28|10@1+ (5,0) [0|5115] "W"  Receiver
+ SG_ VCRIGHT_wattsHeaterRightTotal m2 : 38|10@1+ (5,0) [0|5115] "W"  Receiver
+ SG_ VCRIGHT_ptcHeaterPwrDemandLeft m2 : 48|8@1+ (20,0) [0|0] "W"  Receiver
+ SG_ VCRIGHT_ptcHeaterPwrDemandRight m2 : 56|8@1+ (20,0) [0|0] "W"  Receiver
+ SG_ VCRIGHT_hvacSetTempActualLeft m3 : 8|8@1+ (0.1,15) [0|0] "C"  Receiver
+ SG_ VCRIGHT_hvacSetTempActualRight m3 : 16|8@1+ (0.1,15) [0|0] "C"  Receiver
+ SG_ VCRIGHT_hvacAutoTransitionReason m3 : 24|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacAirFlowModeRow1 m3 : 29|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacAirFlowModeRow2 m3 : 32|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacMassflowTarget m3 : 40|8@1+ (1,0) [0|0] "g/s"  Receiver
+ SG_ VCRIGHT_hvacAirflowReason m3 : 48|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacQdotLimitedLeft m3 : 52|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacQdotLimitedRight m3 : 53|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_LHPanelAirflowBlocked m3 : 54|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_RHPanelAirflowBlocked m3 : 55|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_floorAirflowBlocked m3 : 56|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_defrostAirflowBlocked m3 : 57|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_convectionTargetLeft m4 : 8|8@1+ (2,-254) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_convectionTargetRight m4 : 16|8@1+ (2,-254) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_convectionDeliveredLeft m4 : 24|8@1+ (2,-254) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_convectionDeliveredRight m4 : 32|8@1+ (2,-254) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_solarLoadRightOccupant m4 : 40|7@1+ (2,0) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_solarLoadLeftOccupant m4 : 48|7@1+ (2,0) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_solarLoadOnVehicle m4 : 56|8@1+ (4,0) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_ptcHeaterTempDuctHigh m5 : 4|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterTempDuctFault m5 : 5|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterNoAirflow m5 : 6|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterHvacActNotReady m5 : 7|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterNoUiRequest m5 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterNoHighVoltage m5 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterLAirPathBlocked m5 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterRAirPathBlocked m5 : 11|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_ptcHeaterReqAirpathBlock m5 : 12|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacDuctTargetLeft m5 : 13|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_hvacDuctTargetRight m5 : 21|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_hvacQdotFeedforward m5 : 29|16@1+ (1,-32767) [-32767|32768] "W"  Receiver
+ SG_ VCRIGHT_evapLoadInFresh m5 : 45|8@1+ (35,0) [0|0] "W"  Receiver
+ SG_ VCRIGHT_evapLoadInRecirc m5 : 53|8@1+ (35,0) [0|0] "W"  Receiver
+ SG_ VCRIGHT_hvacLHBleedVoltage m6 : 8|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacRHBleedVoltage m6 : 16|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLHVaneVoltage m6 : 24|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacRHVaneVoltage m6 : 32|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacUpperModeVoltage m6 : 40|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLowerModeVoltage m6 : 48|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacIntakeVoltage m6 : 56|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLHBleedEndStop m7 : 8|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacRHBleedEndStop m7 : 16|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLHVaneEndStop m7 : 24|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacRHVaneEndStop m7 : 32|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacUpperModeEndStop m7 : 40|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLowerModeEndStop m7 : 48|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacIntakeEndStop m7 : 56|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLHBleedZeroStop m8 : 8|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacRHBleedZeroStop m8 : 16|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLHVaneZeroStop m8 : 24|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacRHVaneZeroStop m8 : 32|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacUpperModeZeroStop m8 : 40|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacLowerModeZeroStop m8 : 48|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_hvacIntakeZeroStop m8 : 56|8@1+ (0.02,0) [0|0] "V"  Receiver
+ SG_ VCRIGHT_timeLeftToCabinModelInit m9 : 8|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacFlashFoggingDetected m9 : 16|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_solarLoadOnVehFiltered m9 : 17|8@1+ (4,0) [0|0] "W/m2"  Receiver
+ SG_ VCRIGHT_hvacCabinPurgeActive m9 : 25|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacCabOvrheatProtActive m9 : 26|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacCabinPurgeAllowed m9 : 27|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_hvacCabOvrheatProtAllowe m9 : 28|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCRIGHT_cloudinessProbability m9 : 29|7@1+ (1,0) [0|127] "%"  Receiver
+ SG_ VCRIGHT_cabinTempInteriorL3 m9 : 36|8@1+ (0.5,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempInteriorSunnyL3 m9 : 44|8@1+ (0.6,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_cabinTempTopPadAir m9 : 52|8@1+ (0.6,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempDuctModeledLeft m10 : 4|9@1+ (0.3,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempDuctModeledRight m10 : 13|9@1+ (0.3,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempHtrSurfaceModeledL m10 : 22|9@1+ (0.3,-40) [0|0] "C"  Receiver
+ SG_ VCRIGHT_tempHtrSurfaceModeledR m10 : 31|9@1+ (0.3,-40) [0|0] "C"  Receiver
+
 BO_ 705 ID2C1VCFront10hz: 8 VehicleBus
  SG_ VCFront10HzIndex M : 0|3@1+ (1,0) [0|7] ""  Receiver
  SG_ VCfrontpumpBatteryRPMActual m0 : 3|10@1+ (10,0) [0|10230] "rpm"  Receiver
@@ -767,7 +882,7 @@ EV_ Milage: 0 [0|0] "Mi" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 CM_ SG_ 390 FrontTorqueActual186 "Torque at axle";
 CM_ SG_ 390 FrontTorqueRequest186 "Torque at axle";
-CM_ SG_ 472 RearTorqueRequest1D8 "torque at motor";
+CM_ SG_ 472 RearTorqueRequest1D8 "driver requested torque";
 CM_ SG_ 472 RearTorque1D8 "torque at motor";
 CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
 CM_ SG_ 469 FrontTorqueRequest1D5 "torque at motor";
@@ -819,6 +934,7 @@ BA_DEF_  "GenEnvVarEndingDsp" STRING ;
 BA_DEF_  "GenEnvVarEndingSnd" STRING ;
 BA_DEF_  "GenEnvVarPrefix" STRING ;
 BA_DEF_  "Modified" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
 BA_DEF_DEF_  "GenMsgDelayTime" 0;
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
@@ -842,10 +958,11 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2019Oct18";
+BA_DEF_DEF_  "Modified" "JW2019Nov14";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 468 10;
+BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
@@ -853,8 +970,8 @@ BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgSendType" BO_ 79 0;
+BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -865,14 +982,14 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgSendType" BO_ 297 0;
+BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgSendType" BO_ 280 0;
-BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 530 0;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -880,21 +997,67 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 340 10;
+BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgSendType" BO_ 264 0;
-BA_ "GenMsgSendType" BO_ 306 0;
+BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgCycleTime" BO_ 306 10;
-BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 306 0;
 BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 100;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgCycleTime" BO_ 2047 100;
 BA_ "GenMsgSendType" BO_ 2047 0;
+BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "SystemSignalLongSymbol" SG_ 691 VCRIGHT_ptcHeaterReqAirpathBlock "VCRIGHT_ptcHeaterReqAirpathBlocked";
+BA_ "SystemSignalLongSymbol" SG_ 691 VCRIGHT_hvacCabOvrheatProtAllowe "VCRIGHT_hvacCabOvrheatProtAllowed";
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
+VAL_ 579 VCRIGHT_hvacACRunning 0 "OFF" 1 "ON" ;
+VAL_ 579 VCRIGHT_hvacAirDistributionMode 0 "NONE" 1 "FLOOR" 2 "PANEL" 3 "PANEL_FLOOR" 4 "DEFROST" 5 "DEFROST_FLOOR" 6 "DEFROST_PANEL" 7 "DEFROST_PANEL_FLOOR" ;
+VAL_ 579 VCRIGHT_hvacBlowerSegment 0 "OFF" 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "7" 8 "8" 9 "9" 10 "10" 11 "11" ;
+VAL_ 579 VCRIGHT_hvacPowerState 0 "OFF" 1 "ON" 2 "PRECONDITION" 3 "OVERHEAT_PROTECT_FANONLY" 4 "OVERHEAT_PROTECT" ;
+VAL_ 579 VCRIGHT_hvacRecirc 0 "AUTO" 1 "RECIRC" 2 "FRESH" ;
+VAL_ 579 VCRIGHT_hvacSecondRowState 0 "AUTO" 1 "OFF" 2 "LOW" 3 "MED" 4 "HIGH" ;
+VAL_ 524 VCRIGHT_tempEvaporator 2047 "SNA" ;
+VAL_ 524 VCRIGHT_tempEvaporatorTarget 255 "SNA" ;
+VAL_ 691 VCRIGHT_logging1HzIndex 0 "HVAC_TEMP_SENSORS_AND_ESTIMATES_1" 1 "HVAC_TEMP_SENSORS_AND_ESTIMATES_2" 2 "HVAC_HUMIDITY_HEATER" 3 "HVAC_STATUS_AIRFLOW" 4 "HVAC_COMFORT_SOLAR" 5 "HEATER_AND_DUCT_TARGETS" 6 "HVAC_ACTUATOR_VOLTAGES" 7 "HVAC_ACTUATOR_ENDSTOP" 8 "HVAC_ACTUATOR_ZEROSTOP" 9 "HVAC_MISCELLANEOUS_1" 10 "HVAC_MISCELLANEOUS_2" 11 "END" ;
+VAL_ 691 VCRIGHT_tempDuctLeft 511 "SNA" ;
+VAL_ 691 VCRIGHT_tempDuctRight 511 "SNA" ;
+VAL_ 691 VCRIGHT_tempIncarCabinProbe 255 "SNA" ;
+VAL_ 691 VCRIGHT_tempIncarCabinMid 250 "SNA" ;
+VAL_ 691 VCRIGHT_tempIncarCabinDeep 255 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempInteriorL2 240 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempInteriorSunnyL2 240 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempGlassRoof 255 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempWindshield 255 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempInterior 240 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempInteriorSunny 240 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempSideGlassLeft 255 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempSideGlassRight 255 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempBreathLevel 255 "SNA" ;
+VAL_ 691 VCRIGHT_hvacAutoTransitionReason 0 "NONE" 1 "HUMIDITY_HIGH" 2 "HUMIDITY_MODERATE" 3 "HUMIDITY_LOW" 4 "TEMP_TARGET_BELOW_THRESHOLD" 5 "TEMP_TARGET_ABOVE_THRESHOLD" 6 "EXCESS_OCCUPANT_CONVECTION" 7 "OCCUPANT_CONVECTION_REQUIREMENT" 8 "TEMP_TARGET_LOW" 9 "DUCTS_COLD" 10 "BI_LEVEL_LANDING" 11 "DEFOG_OVERRIDE" 12 "SET_TEMP_LO" 13 "SET_TEMP_HI" 14 "CABIN_PURGE" 15 "EVAP_DRYING" 16 "HVAC_OFF" 17 "END" ;
+VAL_ 691 VCRIGHT_hvacAirFlowModeRow1 0 "NONE" 1 "FLOOR" 2 "PANEL" 3 "PANEL_FLOOR" 4 "DEFROST" 5 "DEFROST_FLOOR" 6 "DEFROST_PANEL" 7 "DEFROST_PANEL_FLOOR" ;
+VAL_ 691 VCRIGHT_hvacAirFlowModeRow2 0 "NONE" 1 "FLOOR" 2 "PANEL" 3 "PANEL_FLOOR" 4 "DEFROST" 5 "DEFROST_FLOOR" 6 "DEFROST_PANEL" 7 "DEFROST_PANEL_FLOOR" ;
+VAL_ 691 VCRIGHT_hvacAirflowReason 0 "HVAC_OFF" 1 "MANUAL_FAN_SPEED" 2 "UI_SHORTCUT" 3 "CABIN_TEMPERATURE_CONTROL" 4 "MINIMUM_AUTO_AIRFLOW" 5 "STRATIFICATION_GLASS_ROOF" 6 "STRATIFICATION_INTERIOR_SURFACES" 7 "OCCUPANT_CONVECTION_REQUIREMENT" 8 "COLD_DUCT_LOCKOUT" 9 "CABIN_PURGE" 10 "CABIN_OVERHEAT_PROTECT" 11 "SCREEN_PROTECTION" 12 "EVAP_DRYING" 13 "NONE" ;
+VAL_ 691 VCRIGHT_convectionTargetLeft 255 "SNA" ;
+VAL_ 691 VCRIGHT_convectionTargetRight 255 "SNA" ;
+VAL_ 691 VCRIGHT_convectionDeliveredLeft 255 "SNA" ;
+VAL_ 691 VCRIGHT_convectionDeliveredRight 255 "SNA" ;
+VAL_ 691 VCRIGHT_solarLoadRightOccupant 255 "SNA" ;
+VAL_ 691 VCRIGHT_solarLoadLeftOccupant 255 "SNA" ;
+VAL_ 691 VCRIGHT_solarLoadOnVehicle 255 "SNA" ;
+VAL_ 691 VCRIGHT_hvacDuctTargetLeft 255 "SNA" ;
+VAL_ 691 VCRIGHT_hvacDuctTargetRight 255 "SNA" ;
+VAL_ 691 VCRIGHT_solarLoadOnVehFiltered 255 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempInteriorL3 240 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempInteriorSunnyL3 240 "SNA" ;
+VAL_ 691 VCRIGHT_cabinTempTopPadAir 240 "SNA" ;
+VAL_ 691 VCRIGHT_tempDuctModeledLeft 511 "SNA" ;
+VAL_ 691 VCRIGHT_tempDuctModeledRight 511 "SNA" ;
+VAL_ 691 VCRIGHT_tempHtrSurfaceModeledL 511 "SNA" ;
+VAL_ 691 VCRIGHT_tempHtrSurfaceModeledR 511 "SNA" ;
 VAL_ 705 VCFront10HzIndex 0 "COOLANT_PUMPS" 1 "THERMAL_FAN" 2 "FIVE_WAY_VALVE" 3 "REFRIGERANT_LV8907" 4 "COMPRESSOR" 5 "EXV_EVAP_SOLENOID_AIRFLOW" 6 "END" ;
 VAL_ 705 VCfrontfiveWayValveMode 0 "SERIES" 1 "PARALLEL" ;
 VAL_ 705 VCfrontcoolantTempBasedMode 0 "SERIES" 1 "PARALLEL" ;
@@ -927,9 +1090,9 @@ VAL_ 548 DCDCstate224 6 "Error" 5 "Shutdown" 4 "HVactive" 3 "Precharge" 2 "Prech
 VAL_ 280 DriveState118 5 "Driving" 2 "Standby" 1 "Charging" 0 "Idle" ;
 VAL_ 280 TractionControl118 1 "SlipStart" 0 "Standard" ;
 VAL_ 280 ParkingBrake118 2 "Disengage" 1 "Engage" 0 "Idle" ;
-VAL_ 280 BrakeState118 1 "Hold" ;
+VAL_ 280 BrakeState118 1 "RegenBrake" ;
 VAL_ 280 DIgear118 3 "Neutral" 7 "Idle" 1 "Park" 2 "Reverse" 4 "Drive" ;
-VAL_ 280 BrakePedal118 1 "Brake" ;
+VAL_ 280 BrakePedal118 1 "PedalBrake" ;
 VAL_ 530 BMSstate212 3 "Charge" 1 "Drive" 0 "Idle" ;
 VAL_ 530 BMSchargeStatus212 1 "Connected" 0 "Disconnected" ;
 VAL_ 530 BMScontactors212 6 "err" 5 "err" 4 "Closed" 3 "Closing" 2 "Opening" 1 "Open" 0 "err" ;
