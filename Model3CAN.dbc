@@ -342,25 +342,25 @@ BO_ 390 ID186FrontDriveTorqueRPM: 8 VehicleBus
  SG_ FrontTorqueRequest186 : 12|13@1- (2,0) [-8192|8190] "NM"  Receiver
  SG_ FrontAxleRPM186 : 40|16@1- (0.1,0) [-3276.8|3276.7] "RPM"  Receiver
 
-BO_ 917 ID395FrontOilPump: 8 VehicleBus
- SG_ FrontOilCurrent395 : 48|8@1+ (0.1,0) [0|0] "A"  Receiver
- SG_ FrontOilCurrentOffset395 : 56|8@1+ (0.005,0) [0|0] "A"  Receiver
- SG_ FrontOilFlowActual395 : 16|8@1+ (0.06,0) [0|0] "LPM"  Receiver
- SG_ FrontOilFlowTarget395 : 8|8@1+ (0.06,0) [0|0] "LPM"  Receiver
- SG_ FrontOilTemp395 : 32|8@1+ (1,-40) [0|0] "C"  Receiver
- SG_ FrontOilPCBtemp395 : 24|8@1+ (1,-40) [0|0] "C"  Receiver
- SG_ FrontOilPumpState395 : 0|3@1+ (1,0) [0|0] ""  Receiver
- SG_ FrontOilVoltage395 : 40|8@1+ (0.1,0) [0|0] "V"  Receiver
+BO_ 918 ID396FrontOilPump: 8 VehicleBus
+ SG_ FrontOilCurrent396 : 48|8@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ FrontOilCurrentOffset396 : 56|8@1+ (0.005,0) [0|0] "A"  Receiver
+ SG_ FrontOilFlowActual396 : 16|8@1+ (0.06,0) [0|0] "LPM"  Receiver
+ SG_ FrontOilFlowTarget396 : 8|8@1+ (0.06,0) [0|0] "LPM"  Receiver
+ SG_ FrontOilTemp396 : 32|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ FrontOilPCBtemp396 : 24|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ FrontOilPumpState396 : 0|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ FrontOilVoltage396 : 40|8@1+ (0.1,0) [0|0] "V"  Receiver
 
-BO_ 918 ID396RearOilPump: 8 VehicleBus
- SG_ RearOilCurrent396 : 48|8@1+ (0.1,0) [0|0] "A"  Receiver
- SG_ RearOilCurrentOffset396 : 56|8@1+ (0.005,0) [0|0] "A"  Receiver
- SG_ RearOilFlowActual396 : 16|8@1+ (0.06,0) [0|0] "LPM"  Receiver
- SG_ RearOilFlowTarget396 : 8|8@1+ (0.06,0) [0|0] "LPM"  Receiver
- SG_ RearOilTemp396 : 32|8@1+ (1,-40) [0|0] "C"  Receiver
- SG_ RearOilPCBtemp396 : 24|8@1+ (1,-40) [0|0] "C"  Receiver
- SG_ RearOilPumpState396 : 0|3@1+ (1,0) [0|0] ""  Receiver
- SG_ RearOilVoltage396 : 40|8@1+ (0.1,0) [0|0] "V"  Receiver
+BO_ 917 ID395RearOilPump: 8 VehicleBus
+ SG_ RearOilCurrent395 : 48|8@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ RearOilCurrentOffset395 : 56|8@1+ (0.005,0) [0|0] "A"  Receiver
+ SG_ RearOilFlowActual395 : 16|8@1+ (0.06,0) [0|0] "LPM"  Receiver
+ SG_ RearOilFlowTarget395 : 8|8@1+ (0.06,0) [0|0] "LPM"  Receiver
+ SG_ RearOilTemp395 : 32|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ RearOilPCBtemp395 : 24|8@1+ (1,-40) [0|0] "C"  Receiver
+ SG_ RearOilPumpState395 : 0|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ RearOilVoltage395 : 40|8@1+ (0.1,0) [0|0] "V"  Receiver
 
 BO_ 1493 ID5D5RearTempReq: 5 VehicleBus
  SG_ TestTemp5D5C : 24|8@1+ (0.2,0) [0|0] "LPM"  Receiver
@@ -403,7 +403,60 @@ BO_ 741 ID2E5FrontInverterPower: 8 VehicleBus
  SG_ FrontHeatPowerMax2E5 : 32|8@1+ (0.08,0) [0|31875] "kW"  Receiver
  SG_ FrontHeatPower2E5 : 48|9@1+ (0.08,0) [0|40.88] "kW"  Receiver
 
-BO_ 962 ID3C2VCLswitches: 8 VehicleBus
+BO_ 962 ID3C2VCLeftswitches: 8 VehicleBus
+ SG_ VCLswitchStatusIndex3C2 M : 0|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLhornSwitchPressed3C2 m0 : 2|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLhazardButtonPressed3C2 m0 : 3|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLdriverPresent3C2 m0 : 4|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLrightMirrorTilt3C2 m0 : 5|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatTrackBack3C2 m0 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatTrackForward3C2 m0 : 10|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatTiltDown3C2 m0 : 12|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatTiltUp3C2 m0 : 14|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatLiftDown3C2 m0 : 16|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatLiftUp3C2 m0 : 18|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatBackrestBack3C2 m0 : 20|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatBackrestForward3C2 m0 : 22|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatLumbarDown3C2 m0 : 24|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatLumbarUp3C2 m0 : 26|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatLumbarIn3C2 m0 : 28|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontSeatLumbarOut3C2 m0 : 30|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackUpLF3C2 m0 : 32|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoUpLF3C2 m0 : 33|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackDownLF3C2 m0 : 34|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoDownLF3C2 m0 : 35|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackUpLR3C2 m0 : 36|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoUpLR3C2 m0 : 37|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackDownLR3C2 m0 : 38|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoDownLR3C2 m0 : 39|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackUpRF3C2 m0 : 40|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoUpRF3C2 m0 : 41|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackDownRF3C2 m0 : 42|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoDownRF3C2 m0 : 43|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackUpRR3C2 m0 : 44|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoUpRR3C2 m0 : 45|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackDownRR3C2 m0 : 46|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowSwPackAutoDownRR3C2 m0 : 47|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontBuckleSwitch3C2 m0 : 48|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLfrontOccupancySwitch3C2 m0 : 50|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLrearLeftBuckleSwitch3C2 m0 : 52|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLrearCenterOccupancySwitch3C2 m0 : 54|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLrearLeftOccupancySwitch3C2 m0 : 56|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLrearRightOccupancySwitch3C2 m0 : 58|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbrakePressed3C2 m0 : 60|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLrearHVACButtonPressed3C2 m0 : 61|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcLeftTiltRight3C2 m1 : 3|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcLeftPressed3C2 m1 : 5|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcRightTiltLeft3C2 m1 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcRightTiltRight3C2 m1 : 10|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcRightPressed3C2 m1 : 12|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcLeftTiltLeft3C2 m1 : 14|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLswcLeftScrollTicks3C2 m1 : 16|6@1- (1,0) [0|0] ""  Receiver
+ SG_ VCLswcRightScrollTicks3C2 m1 : 24|6@1- (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowUpLR3C2 m1 : 32|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowAutoUpLR3C2 m1 : 33|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowDownLR3C2 m1 : 34|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCLbtnWindowAutoDownLR3C2 m1 : 35|1@1+ (1,0) [0|0] ""  Receiver
 
 BO_ 822 ID336MaxPowerRating: 3 VehicleBus
  SG_ DriveRegenRating336 : 16|8@1+ (1,-100) [-100|155] "kW"  Receiver
@@ -882,6 +935,8 @@ EV_ Milage: 0 [0|0] "Mi" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 CM_ SG_ 390 FrontTorqueActual186 "Torque at axle";
 CM_ SG_ 390 FrontTorqueRequest186 "Torque at axle";
+CM_ BO_ 918 "Note Rear Oil was 396 in older firmware";
+CM_ BO_ 917 "Note Rear Oil was 396 in older firmware";
 CM_ SG_ 472 RearTorqueRequest1D8 "driver requested torque";
 CM_ SG_ 472 RearTorque1D8 "torque at motor";
 CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
@@ -958,7 +1013,7 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2019Nov14";
+BA_DEF_DEF_  "Modified" "JW2020Jan06";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
 BA_ "GenMsgCycleTime" BO_ 468 10;
