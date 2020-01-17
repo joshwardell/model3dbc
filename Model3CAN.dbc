@@ -41,6 +41,105 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
+BO_ 753 ID2F1VCFRONT_eFuseDebugStatus: 8 VehicleBus
+ SG_ VCFRONT_eFuseDebugStatusIndex M : 0|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_rightControllerState m0 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_rightControllerFault m0 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_vcrightSelfTestResult m0 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_rightControllerTemp m0 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_rightControllerVoltage m0 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_rightControllerCurrent m0 : 47|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_leftControllerState m1 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_leftControllerFault m1 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_vcleftSelfTestResult m1 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_leftControllerTemp m1 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_leftControllerVoltage m1 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_leftControllerCurrent m1 : 47|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_PCSState m2 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_PCSFault m2 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_pcsSelfTestResult m2 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_PCSTemp m2 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_PCSVoltage m2 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_PCSCurrent m2 : 47|16@1- (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_iBoosterState m3 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_iBoosterFault m3 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_iBoosterSelfTestResult m3 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_iBoosterTemp m3 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_iBoosterVoltage m3 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_iBoosterCurrent m3 : 47|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_EPAS3PState m4 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_EPAS3PFault m4 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_EPAS3PSelfTestResult m4 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_EPAS3PTemp m4 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_EPAS3PVoltage m4 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_EPAS3PCurrent m4 : 47|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_EPAS3SState m5 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_EPAS3SFault m5 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_EPAS3SSelfTestResult m5 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_EPAS3STemp m5 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_EPAS3SVoltage m5 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_EPAS3SCurrent m5 : 47|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_ESPMotorState m6 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_ESPMotorFault m6 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_ESPMotorSelfTestResult m6 : 11|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_ESPMotorTemp m6 : 15|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_ESPMotorVoltage m6 : 31|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_ESPMotorCurrent m6 : 47|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_ESPValveState m7 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_ESPValveFault m7 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_ESPValveTemp m7 : 12|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_ESPValveVoltage m7 : 28|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_ESPValveCurrent m7 : 44|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_autopilot1State m8 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_autopilot1Fault m8 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_autopilot1Temp m8 : 11|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_autopilot1Voltage m8 : 27|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_autopilot1Current m8 : 43|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_autopilot2State m9 : 8|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_autopilot2Fault m9 : 10|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_autopilot2Temp m9 : 11|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_autopilot2Voltage m9 : 27|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_autopilot2Current m9 : 43|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_sleepBypassState m10 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_sleepBypassFault m10 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_sleepBypassVoltage m10 : 10|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_sleepBypassCurrent m10 : 26|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_uiAudioState m11 : 5|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_uiAudioFault m11 : 6|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_uiAudioCurrent m11 : 8|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_uiState m11 : 24|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_uiFault m11 : 25|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_uiCurrent m11 : 32|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_headlampLeftState m12 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_headlampLeftFault m12 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_headlampLeftCurrent m12 : 10|10@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_headlampLeftVoltage m12 : 20|8@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_headlampRightState m12 : 28|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_headlampRightFault m12 : 29|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_headlampRightCurrent m12 : 30|10@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_headlampRightVoltage m12 : 40|8@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_headlampLeftTemperature m12 : 48|8@1- (1,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_headlampRightTemperature m12 : 56|8@1- (1,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_vbatFusedHighState m13 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_vbatFusedHighFault m13 : 9|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_vbatFusedSelfTestResult m13 : 10|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_vbatFusedHighTemp m13 : 14|11@1+ (0.125,-40) [0|0] "C"  Receiver
+ SG_ VCFRONT_vbatFusedHighVoltage m13 : 30|16@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_vbatFusedHighCurrent m13 : 46|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_pump1AndFanState m14 : 5|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_pump1AndFanCurrent m14 : 6|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ VCFRONT_pump1AndFanVoltage m14 : 22|12@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_pump2AndAirCompState m14 : 34|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ VCFRONT_pump2AndAirCompCurrent m14 : 35|16@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ VCFRONT_pump2AndAirCompVoltage m14 : 51|12@1+ (0.1,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_railA_12v m15 : 8|12@1+ (0.00544368,0) [0|22.2918696] "V"  Receiver
+ SG_ VCFRONT_railB_12v m15 : 20|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_railA_5v m15 : 32|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_railB_5v m15 : 44|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_eFuseLockoutVoltage m16 : 8|12@1+ (0.00544368,0) [0|22.2918696] "V"  Receiver
+ SG_ VCFRONT_ChargePumpVoltage m16 : 24|16@1+ (0.00544368,0) [0|0] "V"  Receiver
+ SG_ VCFRONT_vbatProt m16 : 40|12@1+ (0.00544368,0) [0|0] "V"  Receiver
+
 BO_ 579 ID243VCRIGHT_hvacFeedback: 8 VehicleBus
  SG_ VCRIGHT_hvacACRunning : 54|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCRIGHT_hvacAirDistributionMode : 43|3@1+ (1,0) [0|7] ""  Receiver
@@ -571,9 +670,23 @@ BO_ 612 ID264ChargeLineStatus: 8 VehicleBus
  SG_ ChargeLineCurrent264 : 14|9@1+ (0.1,0) [0|51.1] "A"  Receiver
 
 BO_ 548 ID224PCSDCDCstatus: 8 VehicleBus
- SG_ DCDCstate224 : 6|4@1+ (1,0) [0|15] ""  Receiver
- SG_ DCDCoutputCurrentMax224 : 29|12@1+ (0.1,0) [0|409.5] "A"  Receiver
- SG_ DCDCoutputCurrent224 : 16|12@1- (0.1,0) [-204.8|204.7] "A"  Receiver
+ SG_ DCDC12VSupportRtyCnt224 : 44|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDC12VSupportStatus224 : 2|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCDischargeRtyCnt224 : 48|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCFaulted224 : 15|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCHvBusDischargeStatus224 : 4|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCInitialPrechargeSubState224 : 59|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCoutputCurrent224 : 16|12@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ DCDCstate224 : 6|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCoutputCurrentMax224 : 29|12@1+ (0.1,0) [0|0] "A"  Receiver
+ SG_ DCDCOutputIsLimited224 : 28|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCPrechargeRestartCnt224 : 56|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCPrechargeRtyCnt224 : 41|3@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCPrechargeStatus224 : 0|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCPwmEnableLine224 : 52|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCSubState224 : 10|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ DCDCSupportingFixedLvTarget224 : 53|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ PCS_ecuLogUploadRequest224 : 54|2@1+ (1,0) [0|0] ""  Receiver
 
 BO_ 280 ID118DriveSystemStatus: 8 VehicleBus
  SG_ Immobilizer118 : 27|3@1+ (1,0) [0|0] ""  Receiver
@@ -1013,11 +1126,11 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Jan06";
+BA_DEF_DEF_  "Modified" "JW2020Jan17";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
@@ -1025,8 +1138,8 @@ BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -1037,14 +1150,14 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 280 10;
-BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -1052,23 +1165,24 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgCycleTime" BO_ 264 10;
-BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgSendType" BO_ 306 0;
-BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
 BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "SystemSignalLongSymbol" SG_ 691 VCRIGHT_ptcHeaterReqAirpathBlock "VCRIGHT_ptcHeaterReqAirpathBlocked";
 BA_ "SystemSignalLongSymbol" SG_ 691 VCRIGHT_hvacCabOvrheatProtAllowe "VCRIGHT_hvacCabOvrheatProtAllowed";
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
+VAL_ 753 VCFRONT_eFuseDebugStatusIndex 0 "VCRIGHT" 1 "VCLEFT" 2 "PCS" 3 "IBOOSTER" 4 "EPAS3P" 5 "EPAS3S" 6 "ESP_MOTOR" 7 "ESP_VALVE" 8 "AUTOPILOT_1" 9 "AUTOPILOT_2" 10 "SLEEP_BYPASS" 11 "UI" 12 "HEADLAMPS" 13 "VBAT_FUSED_HIGH_CURRENT" 14 "PUMPS" 15 "RAILS_A_B" 16 "MISC_RAILS" 17 "INVALID" ;
 VAL_ 579 VCRIGHT_hvacACRunning 0 "OFF" 1 "ON" ;
 VAL_ 579 VCRIGHT_hvacAirDistributionMode 0 "NONE" 1 "FLOOR" 2 "PANEL" 3 "PANEL_FLOOR" 4 "DEFROST" 5 "DEFROST_FLOOR" 6 "DEFROST_PANEL" 7 "DEFROST_PANEL_FLOOR" ;
 VAL_ 579 VCRIGHT_hvacBlowerSegment 0 "OFF" 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "7" 8 "8" 9 "9" 10 "10" 11 "11" ;
@@ -1142,6 +1256,7 @@ VAL_ 535 FCclass217 2 "UrbanSC" 1 "Supercharger" 0 "err" ;
 VAL_ 535 FCbrand217 1 "Tesla" 0 "err" ;
 VAL_ 535 FCcoolingType217 2 "Liquid" 1 "Convection" 0 "err" ;
 VAL_ 548 DCDCstate224 6 "Error" 5 "Shutdown" 4 "HVactive" 3 "Precharge" 2 "PrechargeStart" 1 "12vChg" 0 "Idle" ;
+VAL_ 548 DCDCSubState224 0 "PWR_UP_INIT" 1 "STANDBY" 2 "12V_SUPPORT_ACTIVE" 3 "DIS_HVBUS" 4 "PCHG_FAST_DIS_HVBUS" 5 "PCHG_SLOW_DIS_HVBUS" 6 "PCHG_DWELL_CHARGE" 7 "PCHG_DWELL_WAIT" 8 "PCHG_DI_RECOVERY_WAIT" 9 "PCHG_ACTIVE" 10 "PCHG_FLT_FAST_DIS_HVBUS" 11 "SHUTDOWN" 12 "12V_SUPPORT_FAULTED" 13 "DIS_HVBUS_FAULTED" 14 "PCHG_FAULTED" 15 "CLEAR_FAULTS" 16 "FAULTED" 17 "NUM" ;
 VAL_ 280 DriveState118 5 "Driving" 2 "Standby" 1 "Charging" 0 "Idle" ;
 VAL_ 280 TractionControl118 1 "SlipStart" 0 "Standard" ;
 VAL_ 280 ParkingBrake118 2 "Disengage" 1 "Engage" 0 "Idle" ;
