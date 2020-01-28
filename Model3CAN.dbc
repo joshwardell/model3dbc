@@ -505,6 +505,8 @@ BO_ 1366 ID556FrontTempReq: 5 VehicleBus
  SG_ TestTemp556A : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
 
 BO_ 472 ID1D8RearTorque: 8 VehicleBus
+ SG_ Checksum1D8 : 56|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ Counter1D8 : 53|3@1+ (1,0) [0|0] ""  Receiver
  SG_ RearTorqueRequest1D8 : 8|15@1- (0.1,0) [-1638.4|1638.3] "NM"  Receiver
  SG_ RearTorque1D8 : 24|13@1- (0.25,0) [-1024|1023.75] "NM"  Receiver
  SG_ TorqueFlags1D8 : 0|8@1+ (1,0) [0|0] ""  Receiver
@@ -529,11 +531,11 @@ BO_ 469 ID1D5FrontTorque: 8 VehicleBus
  SG_ FrontTorque1D5 : 24|13@1- (0.25,0) [-1024|1023.75] "NM"  Receiver
 
 BO_ 741 ID2E5FrontInverterPower: 8 VehicleBus
- SG_ FrontPowerDissipation2E5 : 16|8@1+ (0.125,-0.5) [-0.5|31.375] "kW"  Receiver
+ SG_ FrontPowerDissipation2E5 : 16|8@1+ (1,0) [0|255] "kW"  Receiver
  SG_ FrontPower2E5 : 0|11@1- (0.5,0) [-512|511.5] "kW"  Receiver
- SG_ FrontHeatPowerOptimal2E5 : 24|8@1+ (0.08,0) [0|31875] "kW"  Receiver
- SG_ FrontHeatPowerMax2E5 : 32|8@1+ (0.08,0) [0|31875] "kW"  Receiver
- SG_ FrontHeatPower2E5 : 48|9@1+ (0.08,0) [0|40.88] "kW"  Receiver
+ SG_ FrontHeatPowerOptimal2E5 : 32|8@1+ (1,0) [0|255] "kW"  Receiver
+ SG_ FrontHeatPowerMax2E5 : 48|9@1+ (0.25,165) [165|292.75] "kW"  Receiver
+ SG_ FrontHeatPower2E5 : 24|8@1+ (1,0) [0|255] "kW"  Receiver
 
 BO_ 962 ID3C2VCLeftswitches: 8 VehicleBus
  SG_ VCLswitchStatusIndex3C2 M : 0|2@1+ (1,0) [0|0] ""  Receiver
@@ -827,7 +829,7 @@ BO_ 950 ID3B6odometer: 4 VehicleBus
 
 BO_ 614 ID266RearInverterPower: 8 VehicleBus
  SG_ RearHeatPowerOptimal266 : 32|8@1+ (1,0) [0|255] "kW"  Receiver
- SG_ RearHeatPowerMax266 : 48|9@1+ (0.5,0) [0|255.5] "kW"  Receiver
+ SG_ RearPowerLimit266 : 48|9@1+ (0.25,165) [165|292.75] "kW"  Receiver
  SG_ RearHeatPower266 : 24|8@1+ (1,0) [0|255] "kW"  Receiver
  SG_ RearPowerDissipation266 : 16|8@1+ (1,0) [0|255] "kW"  Receiver
  SG_ RearPower266 : 0|11@1- (0.5,0) [-512|511.5] "kW"  Receiver
@@ -1088,7 +1090,7 @@ CM_ SG_ 472 RearTorque1D8 "torque at motor";
 CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
 CM_ SG_ 469 FrontTorqueRequest1D5 "torque at motor";
 CM_ SG_ 469 FrontTorque1D5 "torque at motor";
-CM_ SG_ 741 FrontPowerDissipation2E5 "should offset be there?";
+CM_ SG_ 741 FrontHeatPowerMax2E5 "offset approximate";
 CM_ SG_ 722 MinVoltage2D2 "test";
 CM_ SG_ 612 ChargeLinePower264 "16 8 .08";
 CM_ SG_ 612 ChargeLineCurrentLimit264 "32 8 .5";
@@ -1105,7 +1107,7 @@ CM_ SG_ 1029 VINA405 "four zeros then first 3 characters of VIN";
 CM_ SG_ 886 TempInvPCB376 ".5 -20";
 CM_ SG_ 886 TempInvCapbank376 ".5 -20";
 CM_ SG_ 340 RAWTorqueRear154 "Axle torque 2 with 9/1 gearing";
-CM_ SG_ 614 RearPowerDissipation266 "should offset be there?";
+CM_ SG_ 614 RearPowerLimit266 "offset approximate";
 CM_ SG_ 614 RearPower266 "electrical power";
 CM_ SG_ 264 RearTorqueActual108 "Torque at axle";
 CM_ SG_ 264 RearTorqueRequest108 "Torque at axle";
@@ -1159,11 +1161,11 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Jan24";
+BA_DEF_DEF_  "Modified" "JW2020Jan28";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 468 10;
+BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
@@ -1171,8 +1173,8 @@ BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgSendType" BO_ 79 0;
+BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -1183,14 +1185,14 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgSendType" BO_ 297 0;
+BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgSendType" BO_ 280 0;
-BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 530 0;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -1198,20 +1200,20 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 340 10;
+BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgSendType" BO_ 264 0;
-BA_ "GenMsgSendType" BO_ 306 0;
+BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgCycleTime" BO_ 306 10;
-BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 306 0;
 BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 100;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgCycleTime" BO_ 2047 100;
 BA_ "GenMsgSendType" BO_ 2047 0;
+BA_ "GenMsgCycleTime" BO_ 2047 100;
 BA_ "SystemSignalLongSymbol" SG_ 545 VCFrontvcrightHiCurrentLVState22 "VCFrontvcrightHiCurrentLVState221";
 BA_ "SystemSignalLongSymbol" SG_ 691 VCRightptcHeaterReqAirpathBlocke "VCRightptcHeaterReqAirpathBlocked";
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
