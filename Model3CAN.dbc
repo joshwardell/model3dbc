@@ -41,6 +41,20 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
+BO_ 644 ID284UIvehicleModes: 5 VehicleBus
+ SG_ UIfactoryMode284 : 0|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIhomelinkV2Command0284 : 8|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIhomelinkV2Command1284 : 16|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIhomelinkV2Command2284 : 24|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIserviceMode284 : 3|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIshowroomMode284 : 2|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UItransportMode284 : 1|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIgameMode284 : 34|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIisDelivered284 : 4|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIcarWashModeRequest284 : 32|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIvaletMode284 : 33|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ UIsentryMode284 : 5|1@1+ (1,0) [0|0] ""  Receiver
+
 BO_ 545 ID221VCFrontLVPowerState: 8 VehicleBus
  SG_ VCFrontLVPowerStateChecksum : 56|8@1+ (1,0) [0|0] ""  Receiver
  SG_ VCFrontLVPowerStateCounter : 52|4@1+ (1,0) [0|0] ""  Receiver
@@ -748,7 +762,7 @@ BO_ 280 ID118DriveSystemStatus: 8 VehicleBus
  SG_ BrakeState118 : 26|1@1+ (1,0) [0|1] ""  Receiver
  SG_ DIgear118 : 21|3@1+ (1,0) [0|7] ""  Receiver
  SG_ BrakePedal118 : 19|2@1+ (1,0) [0|3] ""  Receiver
- SG_ PedalPosition118 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ PedalPosition118 : 32|8@1+ (0.4,0) [0|100] "%"  Receiver
  SG_ TrackMode118 : 48|2@1+ (1,0) [0|255] ""  Receiver
  SG_ KeepAliveReq118 : 47|1@1+ (1,0) [0|0] ""  Receiver
  SG_ Proximity118 : 46|1@1+ (1,0) [0|0] ""  Receiver
@@ -803,10 +817,11 @@ BO_ 786 ID312BMSthermal: 8 VehicleBus
  SG_ BMSpcsNoFlowRequest312 : 62|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 658 ID292BMS_SOC: 8 VehicleBus
- SG_ SOCmax292 : 20|10@1+ (0.1,0) [0|102.3] ""  Receiver
- SG_ SOCave292 : 30|10@1+ (0.1,0) [0|102.3] ""  Receiver
- SG_ SOCUI292 : 0|10@1+ (0.1,0) [0|102.3] ""  Receiver
- SG_ SOCmin292 : 10|10@1+ (0.1,0) [0|102.3] ""  Receiver
+ SG_ BattBeginningOfLifeEnergy292 : 40|10@1+ (0.1,0) [0|102.3] "kWh" Vector__XXX
+ SG_ SOCmax292 : 20|10@1+ (0.1,0) [0|102.3] "%"  Receiver
+ SG_ SOCave292 : 30|10@1+ (0.1,0) [0|102.3] "%"  Receiver
+ SG_ SOCUI292 : 10|10@1+ (0.1,0) [0|102.3] "%"  Receiver
+ SG_ SOCmin292 : 0|10@1+ (0.1,0) [0|102.3] "%"  Receiver
 
 BO_ 599 ID257UIspeed: 8 VehicleBus
  SG_ UIspeedUnits257 : 32|1@1+ (1,0) [0|0] ""  Receiver
@@ -922,8 +937,9 @@ BO_ 648 ID288EPBleftStatus: 8 VehicleBus
  SG_ EPBLunitStatus288 : 0|5@1+ (1,0) [0|0] ""  Receiver
 
 BO_ 2047 ID7FFcarConfig: 8 VehicleBus
+ SG_ CFGrearDriveUnitType7FF m3 : 21|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGmuxindex7FF M : 0|8@1+ (1,0) [0|0] ""  Receiver
- SG_ CFGairSuspension7FF m1 : 8|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGairSuspension7FF m3 : 22|2@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGepasType7FF m1 : 9|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGdrivetrainType7FF m1 : 10|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGrightHandDrive7FF m1 : 11|1@1+ (1,0) [0|0] ""  Receiver
@@ -931,8 +947,8 @@ BO_ 2047 ID7FFcarConfig: 8 VehicleBus
  SG_ CFGheatedWipers7FF m2 : 8|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGfrontSeatHeaters7FF m2 : 9|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGrearSeatHeaters7FF m2 : 10|1@1+ (1,0) [0|0] ""  Receiver
- SG_ CFGpackEnergy7FF m2 : 11|1@1+ (1,0) [0|0] ""  Receiver
- SG_ CFGbrakeHWType7FF m2 : 12|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGpackEnergy7FF m3 : 32|5@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGbrakeHWType7FF m2 : 55|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGhomelinkType7FF m2 : 13|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGvdcType7FF m2 : 14|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGxcpIbst7FF m2 : 15|1@1+ (1,0) [0|0] ""  Receiver
@@ -942,16 +958,16 @@ BO_ 2047 ID7FFcarConfig: 8 VehicleBus
  SG_ CFGinteriorLighting7FF m2 : 19|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGfrontFogLamps7FF m2 : 20|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGheadlamps7FF m2 : 21|1@1+ (1,0) [0|0] ""  Receiver
- SG_ CFGaudioType7FF m2 : 22|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGaudioType7FF m3 : 30|2@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGlumbarECUType7FF m2 : 23|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGibstWakeType7FF m2 : 24|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGfrontSeatType7FF m2 : 25|1@1+ (1,0) [0|1] ""  Receiver
- SG_ CFGauxParkLamps7FF m2 : 26|1@1+ (1,0) [0|0] ""  Receiver
- SG_ CFGpedestrianWarningSound7FF m2 : 27|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGauxParkLamps7FF m2 : 26|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGpedestrianWarningSound7FF m2 : 54|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGhvacQuietSnorkelType7FF m2 : 28|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGhvacPanelVaneType7FF m2 : 29|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGCabinBlowerCtrlType7FF m2 : 30|1@1+ (1,0) [0|0] ""  Receiver
- SG_ CFGperformancePackage7FF m2 : 31|1@1+ (1,0) [0|0] ""  Receiver
+ SG_ CFGperformancePackage7FF m3 : 12|3@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGeBuckConfig7FF m2 : 32|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGwindshieldType7FF m2 : 33|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGactiveHighBeam7FF m2 : 34|1@1+ (1,0) [0|0] ""  Receiver
@@ -961,12 +977,30 @@ BO_ 2047 ID7FFcarConfig: 8 VehicleBus
  SG_ CFGrearGlassType7FF m2 : 38|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGrearFogLamps7FF m2 : 39|1@1+ (1,0) [0|0] ""  Receiver
  SG_ CFGroofType7FF m2 : 40|2@1+ (1,0) [0|3] ""  Receiver
- SG_ CFGautopilot7FF m2 : 42|2@1+ (1,0) [0|3] ""  Receiver
- SG_ CFGsuperchargingAccess7FF m2 : 44|2@1+ (1,0) [0|3] ""  Receiver
- SG_ CFGwheelType7FF m2 : 46|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGautopilot7FF m2 : 42|3@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGsuperchargingAccess7FF m2 : 45|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CFGwheelType7FF m3 : 48|7@1+ (1,0) [0|127] ""  Receiver
  SG_ CFGexteriorColor7FF m2 : 48|3@1+ (1,0) [0|7] ""  Receiver
  SG_ CFGnumberHVILNodes7FF m2 : 51|3@1+ (1,1) [1|8] ""  Receiver
- SG_ CFGrestraintsHardwareType7FF m2 : 56|5@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGrestraintsHardwareType7FF m1 : 48|8@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGeCallEnabled7FF m2 : 63|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGchassisType7FF m3 : 18|3@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGmapRegion7FF m3 : 8|4@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGpassengerOccupancySensorType7 m3 : 17|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGimmersiveAudio7FF m3 : 56|2@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGrearLightType7FF m3 : 16|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGtrackModePackage7FF m1 : 62|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGroofGlassType7FF m1 : 61|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGfrontSeatReclinerHardware7FF m3 : 37|2@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGrefrigerantType7FF m3 : 45|2@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGplcSupportType7FF m3 : 28|2@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGespValveType7FF m3 : 40|2@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGtowPackage7FF m3 : 15|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGsoftRange7FF m3 : 42|3@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGtireType7FF m1 : 32|3@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGdasHw7FF m1 : 40|3@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGconnectivityPackage7FF m3 : 27|1@1+ (1,0) [0|31] ""  Receiver
+ SG_ CFGtpmsType7FF m2 : 11|1@1+ (1,0) [0|31] ""  Receiver
 
 BO_ 818 ID332BattCellMinMax: 6 VehicleBus
  SG_ BattCellMultiplexer332 M : 0|2@1+ (1,0) [0|0] ""  Receiver
@@ -1182,7 +1216,7 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Jan29";
+BA_DEF_DEF_  "Modified" "JW2020Jan31";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
 BA_ "GenMsgSendType" BO_ 468 0;
@@ -1238,6 +1272,7 @@ BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "SystemSignalLongSymbol" SG_ 545 VCFrontvcrightHiCurrentLVState22 "VCFrontvcrightHiCurrentLVState221";
 BA_ "SystemSignalLongSymbol" SG_ 691 VCRightptcHeaterReqAirpathBlocke "VCRightptcHeaterReqAirpathBlocked";
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
+BA_ "SystemSignalLongSymbol" SG_ 2047 CFGpassengerOccupancySensorType7 "CFGpassengerOccupancySensorType7FF";
 VAL_ 545 VCFrontvehiclePowerState221 0 "Off" 1 "Conditioning" 2 "Accessory" 3 "Drive" ;
 VAL_ 753 VCFrontEFuseDebugStatusIndex 0 "VCRIGHT" 1 "VCLEFT" 2 "PCS" 3 "IBOOSTER" 4 "EPAS3P" 5 "EPAS3S" 6 "ESP_MOTOR" 7 "ESP_VALVE" 8 "AUTOPILOT_1" 9 "AUTOPILOT_2" 10 "SLEEP_BYPASS" 11 "UI" 12 "HEADLAMPS" 13 "VBAT_FUSED_HIGH_CURRENT" 14 "PUMPS" 15 "RAILS_A_B" 16 "MISC_RAILS" 17 "INVALID" ;
 VAL_ 579 VCRighthvacACRunning 0 "OFF" 1 "ON" ;
@@ -1321,7 +1356,7 @@ VAL_ 548 DCDCstate224 6 "Error" 5 "Shutdown" 4 "HVactive" 3 "Precharge" 2 "Prech
 VAL_ 548 DCDCSubState224 0 "PWR_UP_INIT" 1 "STANDBY" 2 "12V_SUPPORT_ACTIVE" 3 "DIS_HVBUS" 4 "PCHG_FAST_DIS_HVBUS" 5 "PCHG_SLOW_DIS_HVBUS" 6 "PCHG_DWELL_CHARGE" 7 "PCHG_DWELL_WAIT" 8 "PCHG_DI_RECOVERY_WAIT" 9 "PCHG_ACTIVE" 10 "PCHG_FLT_FAST_DIS_HVBUS" 11 "SHUTDOWN" 12 "12V_SUPPORT_FAULTED" 13 "DIS_HVBUS_FAULTED" 14 "PCHG_FAULTED" 15 "CLEAR_FAULTS" 16 "FAULTED" 17 "NUM" ;
 VAL_ 280 ImmobilizerState118 0 "Idle" 1 "Prepare" 2 "Begin Encrypt" 3 "Encrypt" 4 "Send Auth Response" 5 "Send No Go" ;
 VAL_ 280 DriveState118 5 "Driving" 4 "Abort" 3 "Fault?" 2 "Standby" 1 "ChargeHeat" 0 "Idle" ;
-VAL_ 280 TractionControl118 1 "SlipStart" 0 "Standard" ;
+VAL_ 280 TractionControl118 5 "Dyno Mode" 4 "Rolls Mode" 3 "Dev2" 2 "Dev1" 1 "Slip Start" 0 "Standard" ;
 VAL_ 280 ParkingBrake118 2 "Disengage" 1 "Engage" 0 "Idle" ;
 VAL_ 280 BrakeState118 1 "RegenBrake" ;
 VAL_ 280 DIgear118 3 "Neutral" 7 "Idle" 1 "Park" 2 "Reverse" 4 "Drive" ;
@@ -1336,15 +1371,35 @@ VAL_ 552 EPBRunitStatus228 10 "Disengaging" 8 "Engaging" 3 "ParkEngaged" 1 "Driv
 VAL_ 648 EPBLesmCaliperRequest288 3 "disengaging" 2 "engaging" 1 "idle" ;
 VAL_ 648 EPBLesmOperationTrigger288 22 "SuperPark" 6 "Released" 1 "ParkEngaged" ;
 VAL_ 648 EPBLunitStatus288 10 "Disengaging" 8 "Engaging" 3 "ParkEngaged" 1 "DriveReleased" ;
+VAL_ 2047 CFGrearDriveUnitType7FF 1 "Small Rear" 0 "Large Rear" ;
+VAL_ 2047 CFGairSuspension7FF 2 "Adaptive" 1 "Standard" 0 "None" ;
 VAL_ 2047 CFGdrivetrainType7FF 1 "AWD" 0 "RWD" ;
-VAL_ 2047 CFGpackEnergy7FF 1 "74kWh" 0 "50kWh" ;
+VAL_ 2047 CFGrightHandDrive7FF 1 "RHD" 0 "LHD" ;
+VAL_ 2047 CFGpackEnergy7FF 3 "100kWh" 2 "62kWh" 1 "74kWh" 0 "50kWh" ;
+VAL_ 2047 CFGbrakeHWType7FF 1 "BREMBO_P42_BREMBO_44MOC" 0 "BREMBO_P42_MANDO_43MOC" ;
 VAL_ 2047 CFGinteriorLighting7FF 1 "Premium" 0 "Base" ;
 VAL_ 2047 CFGheadlamps7FF 1 "Premium" 0 "Base" ;
-VAL_ 2047 CFGaudioType7FF 1 "Premium" 0 "Base" ;
+VAL_ 2047 CFGaudioType7FF 2 "BaseWithPremium200" 1 "Premium" 0 "Base" ;
 VAL_ 2047 CFGfrontSeatType7FF 1 "Premium" 0 "Base" ;
+VAL_ 2047 CFGperformancePackage7FF 3 "Base Plus" 2 "Ludicrous" 1 "Performance" 0 "Base" ;
+VAL_ 2047 CFGrearGlassType7FF 1 "TSA5_NOPET" 0 "NX" ;
 VAL_ 2047 CFGroofType7FF 2 "Panoramic Sunroof" 1 "Fixed Glass" 0 "Metal" ;
-VAL_ 2047 CFGautopilot7FF 3 "Full Self Driving" 2 "Enhanced" 1 "Highway" 0 "None" ;
+VAL_ 2047 CFGautopilot7FF 4 "Basic" 3 "Full Self Driving" 2 "Enhanced" 1 "Highway" 0 "None" ;
 VAL_ 2047 CFGsuperchargingAccess7FF 2 "Pay as you go" 1 "Free" 0 "None" ;
-VAL_ 2047 CFGwheelType7FF 2 "20" 1 "19" 0 "18" ;
+VAL_ 2047 CFGwheelType7FF 5 "Gemini 19 staggered" 4 "Gemini 19" 3 "Stiletto 20 staggered" 2 "Stiletto 20" 1 "Stiletto 19" 0 "Pinwheel 18" ;
 VAL_ 2047 CFGexteriorColor7FF 6 "Pearl White" 5 "Deep Blue" 4 "4" 3 "Midnight Silver" 2 "Silver Metallic" 1 "Black" 0 "Red Multicoat" ;
+VAL_ 2047 CFGrestraintsHardwareType7FF 23 "M3_EU_No_ECall" 22 "M3_EU_ECall" 21 "M3_NA" ;
+VAL_ 2047 CFGchassisType7FF 2 "Model 3" 1 "Model X" 0 "Model S" ;
+VAL_ 2047 CFGmapRegion7FF 8 "ME" 7 "KR" 6 "TW" 5 "JP" 4 "AU" 3 "CN" 2 "none" 1 "EU" 0 "US" ;
+VAL_ 2047 CFGimmersiveAudio7FF 2 "Premium" 1 "Base" 0 "Disabled" ;
+VAL_ 2047 CFGrearLightType7FF 1 "EU_CN" 0 "NA" ;
+VAL_ 2047 CFGtrackModePackage7FF 1 "Performance" 0 "None" ;
+VAL_ 2047 CFGroofGlassType7FF 1 "TSA5_NOPET" 0 "TSA3_PET" ;
+VAL_ 2047 CFGfrontSeatReclinerHardware7FF 3 "LeftRight Reduced" 2 "Left Reduced" 1 "Right Reduced" 0 "Standard" ;
+VAL_ 2047 CFGrefrigerantType7FF 2 "R1234YF" 1 "R134A" 0 "Default" ;
+VAL_ 2047 CFGplcSupportType7FF 2 "Native charge port" 1 "Adapter" 0 "None" ;
+VAL_ 2047 CFGsoftRange7FF 2 "93mi range" 1 "220mi range" 0 "Standard" ;
+VAL_ 2047 CFGtireType7FF 5 "MICHELIN_SUMMER_20" 4 "CONTI_ALL_SEASON_19" 3 "HANKOOK_SUMMER_19" 2 "MICHELIN_SUMMER_18" 1 "MICHELIN_ALL_SEASON_18" 0 "Unknown" ;
+VAL_ 2047 CFGdasHw7FF 4 "TESLA_AP3" 3 "PARKER_PASCAL_2_5" ;
+VAL_ 2047 CFGtpmsType7FF 1 "TESLA_BLE" 0 "CONTI_2" ;
 
