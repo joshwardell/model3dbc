@@ -1,7 +1,7 @@
 # model3dbc
 DBC file for Tesla Model 3 CAN messages
 
-Please downloaded the latest commit (not neccessarily latest release) from
+Please download the latest commit (not neccessarily latest release) from
 https://github.com/joshwardell/model3dbc
 
 See also google sheet:
