@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: Receiver ChassisBus VehicleBus PartyBus
+BU_: Receiver ChassisBus VehicleBus PartyBus ETH GTW
 VAL_TABLE_ OilPumpState 7 "OIL_PUMP_SNA" 6 "OIL_PUMP_FAULTED" 2 "OIL_PUMP_COLD_STARTUP" 1 "OIL_PUMP_ENABLE" 0 "OIL_PUMP_STANDBY" ;
 
 
@@ -41,6 +41,324 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ FrontAxleRPM___ : 0|16@1- (0.1,0) [-3276.8|3276.7] "RPM" Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
+
+BO_ 955 ID3BBUI_power: 2 VehicleBus
+ SG_ UI_powerExpected : 0|8@1+ (1,0) [0|100] "kW"  Receiver
+ SG_ UI_powerIdeal : 8|8@1+ (1,0) [0|100] "kW"  Receiver
+
+BO_ 1493 ID5D5RearTBD: 5 VehicleBus
+ SG_ RearFlow5D5 : 24|8@1+ (0.2,0) [0|0] "LPM"  Receiver
+ SG_ RearTemp5D5B : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ TestTemp5D5A : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
+
+BO_ 1366 ID556FrontTBD: 5 VehicleBus
+ SG_ FrontFlow556 : 24|8@1+ (0.2,0) [0|0] "LPM"  Receiver
+ SG_ FrontTemp556B : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ FrontTemp556A : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
+
+BO_ 1367 ID557FrontThermalControl: 3 VehicleBus
+ SG_ DIS_activeInletTempReq : 8|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DIS_coolantFlowReq : 16|8@1+ (0.2,0) [0|50] "LPM"  Receiver
+ SG_ DIS_passiveInletTempReq : 0|8@1+ (1,-40) [-40|120] "C"  Receiver
+
+BO_ 1495 ID5D7RearThermalControl: 3 VehicleBus
+ SG_ DI_activeInletTempReq : 8|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DI_coolantFlowReq : 16|8@1+ (0.2,0) [0|50] "LPM"  Receiver
+ SG_ DI_passiveInletTempReq : 0|8@1+ (1,-40) [-40|120] "C"  Receiver
+
+BO_ 2005 ID7D5DI_debug: 8 VehicleBus
+ SG_ DI_debugSelector M : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DI_aebCancelReason m45 : 32|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DI_aebFaultReason m45 : 16|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DI_aebUnavailableReason m45 : 24|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ DI_brakeCpScale m2 : 16|9@1- (0.01,0.5) [-1|2] "N/N"  Receiver
+ SG_ DI_brakeSwitchNC m42 : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_brakeSwitchNO m42 : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_brkStState m50 : 24|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ DI_busbarTemp m64 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_controlStack m67 : 56|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_cpu100HzAvg m66 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu100HzMax m66 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu100HzMin m66 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu10HzAvg m66 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu10HzMax m66 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu10HzMin m66 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu1HzAvg m128 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu1HzMax m128 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu1HzMin m128 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu1kHzAvg m67 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu1kHzMax m67 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu1kHzMin m67 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu20kHzAvg m67 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu20kHzMax m67 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpu20kHzMin m67 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_cpuIDWord0 m131 : 16|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DI_cpuIDWord1 m132 : 16|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DI_cpuIDWord2 m132 : 32|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DI_cpuIDWord3 m132 : 48|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DI_crc m131 : 32|32@1+ (1,0) [0|4294967295] ""  Receiver
+ SG_ DI_currentLimit m41 : 32|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DI_dcCableCurrentEst m37 : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_dcCableHeat m47 : 24|16@1+ (0.001,0) [0|65.535] "kA2s"  Receiver
+ SG_ DI_dcCapTemp m64 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_dcLinkCapTemp m70 : 32|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_decodeHardwareStack m68 : 24|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_driveUnitOdometer m69 : 32|32@1+ (10,0) [0|42949672950] "rev"  Receiver
+ SG_ DI_eepromStack m68 : 32|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_fluxState m42 : 16|4@1+ (1,0) [0|10] ""  Receiver
+ SG_ DI_gainScale m37 : 8|8@1+ (0.01,0) [0|2.55] "scale"  Receiver
+ SG_ DI_gateDriveState m50 : 10|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DI_gateDriveSupplyState m50 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DI_hvDcCableTemp m70 : 40|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_hwFaultCounter m69 : 8|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DI_idleStack m68 : 16|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_immobilizerCondition m64 : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_immobilizerStack m68 : 56|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_internalAngleFilt m37 : 48|16@1+ (0.0003,0) [0|8] "rad"  Receiver
+ SG_ DI_llrScale m42 : 32|8@1+ (0.015,0) [0|3.825] "scale"  Receiver
+ SG_ DI_llsScale m42 : 24|8@1+ (0.004,0) [0|1.02] "scale"  Receiver
+ SG_ DI_lmScale m36 : 8|8@1+ (0.004,0) [0|1.02] "scale"  Receiver
+ SG_ DI_loadAngle m42 : 40|16@1- (0.0003,0) [-4|4] "rad"  Receiver
+ SG_ DI_loadAngleMargin m37 : 32|16@1- (0.0003,0) [-4|4] "rad"  Receiver
+ SG_ DI_magnetTempEst m47 : 40|8@1+ (1,-40) [-40|180] "C"  Receiver
+ SG_ DI_module10HzStack m66 : 56|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_motorIA m32 : 16|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DI_motorIAavg m38 : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_motorIB m32 : 32|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DI_motorIBavg m38 : 48|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_motorIC m32 : 48|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DI_motorType m128 : 8|5@1+ (1,0) [0|26] ""  Receiver
+ SG_ DI_motorV m34 : 48|16@1+ (2E-005,0) [0|1.3107] "mindex"  Receiver
+ SG_ DI_muSurfHigh m2 : 8|8@1+ (0.005,0) [0|1.2] "N/N"  Receiver
+ SG_ DI_negDcBusbarTemp m70 : 48|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_offsetA m32 : 8|8@1- (0.1,0) [-12.8|12.7] "A"  Receiver
+ SG_ DI_offsetB m33 : 8|8@1- (0.1,0) [-12.8|12.7] "A"  Receiver
+ SG_ DI_oilPumpMotorSpeed m46 : 8|8@1+ (40,0) [0|10200] "RPM"  Receiver
+ SG_ DI_oilPumpPhaseAdvance m46 : 24|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_oilPumpPhaseVoltage m46 : 16|8@1+ (0.1,0) [0|25.4] "V"  Receiver
+ SG_ DI_oilPumpPressureEstimateMax m46 : 32|8@1+ (2,0) [0|500] "kPa"  Receiver
+ SG_ DI_oilPumpPressureExpectedMin m46 : 40|8@1+ (2,0) [0|500] "kPa"  Receiver
+ SG_ DI_opdUnavailableReason m45 : 40|4@1+ (1,0) [0|11] ""  Receiver
+ SG_ DI_pcsTemp m64 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_peakFlux m36 : 48|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DI_peakIQref m38 : 16|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DI_pedalPosFilt m2 : 32|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_phaseOutBusbarTemp m70 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_phaseOutBusbarWeldTemp m70 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_phaseOutLugTemp m70 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_posDcBusbarTemp m70 : 56|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_powerStageSafeState m50 : 13|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DI_pwrSatChargeCurrent m42 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_pwrSatDischargeCurrent m40 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_pwrSatMaxBusVoltage m39 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_pwrSatMaxDischargePower m39 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_pwrSatMaxRegenPower m39 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_pwrSatMinBusVoltage m39 : 56|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_resolverClaMIA m48 : 43|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_resolverCommonGain m48 : 32|8@1+ (0.025,0) [0|5] "1"  Receiver
+ SG_ DI_resolverCosFiltered m52 : 32|8@1- (0.01,0) [-1|1] "1"  Receiver
+ SG_ DI_resolverCosRmsSquared m52 : 16|8@1+ (0.005,0) [0|1] "1"  Receiver
+ SG_ DI_resolverErrorRmsSquared m52 : 48|8@1+ (0.005,0) [0|1] "1"  Receiver
+ SG_ DI_resolverNoCarrier m48 : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_resolverNoPhaseLock m48 : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_resolverOffsetCos m48 : 8|8@1+ (0.015,0) [0|3.3] "V"  Receiver
+ SG_ DI_resolverOffsetSin m48 : 16|8@1+ (0.015,0) [0|3.3] "V"  Receiver
+ SG_ DI_resolverPhaseOffset m48 : 24|8@1+ (0.1,7.5) [7.5|32.5] "us"  Receiver
+ SG_ DI_resolverReady m48 : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DI_resolverSinFiltered m52 : 40|8@1- (0.01,0) [-1|1] "1"  Receiver
+ SG_ DI_resolverSinRmsSquared m52 : 24|8@1+ (0.005,0) [0|1] "1"  Receiver
+ SG_ DI_rotorFlux m47 : 8|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DI_rotorMaxMagnetTemp m72 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_rotorOffsetEst m43 : 8|12@1- (0.01,0) [-20|20] "deg"  Receiver
+ SG_ DI_rotorOffsetLearningState m63 : 8|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ DI_rotorOffsetMean m43 : 20|12@1- (0.01,0) [-20|20] "deg"  Receiver
+ SG_ DI_rsScale m34 : 8|8@1+ (0.01,0) [0|2.55] "scale"  Receiver
+ SG_ DI_soptMaxCurrentMagSqrd m49 : 40|16@1+ (100,0) [0|6553500] "A2"  Receiver
+ SG_ DI_soptTimeToOff m49 : 24|11@1+ (0.05,0) [0|100] "ms"  Receiver
+ SG_ DI_soptTimeToTrip m49 : 8|8@1+ (0.05,0) [0|10] "ms"  Receiver
+ SG_ DI_soptTripDelay m49 : 16|8@1+ (0.05,0) [0|10] "ms"  Receiver
+ SG_ DI_ssmState m38 : 8|4@1+ (1,0) [0|8] ""  Receiver
+ SG_ DI_statorEndWindingTemp m72 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_statorFluxFdb m35 : 32|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DI_statorFluxRef m35 : 16|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DI_statorIDfdb m33 : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_statorIDref m33 : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_statorIQfdb m34 : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_statorIQref m34 : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DI_statorResistanceEst m47 : 48|11@1+ (5E-005,0) [0|0.10235] "Ohm"  Receiver
+ SG_ DI_statorTemp1 m64 : 32|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_statorTemp2 m64 : 40|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DI_statorVD m36 : 32|16@1- (4E-005,0) [-1.31072|1.31068] "mindex"  Receiver
+ SG_ DI_statorVDFiltered m63 : 16|16@1- (4E-005,0) [-1.31072|1.31068] "mindex"  Receiver
+ SG_ DI_statorVQ m36 : 16|16@1- (4E-005,0) [-1.31072|1.31068] "mindex"  Receiver
+ SG_ DI_statorVQFiltered m63 : 32|16@1- (4E-005,0) [-1.31072|1.31068] "mindex"  Receiver
+ SG_ DI_sysHeatPowerOptimal m50 : 16|8@1+ (0.08,0) [0|20] "kW"  Receiver
+ SG_ DI_sysPedalMaxTorque m44 : 22|14@1+ (0.1,0) [0|1638.3] "Nm"  Receiver
+ SG_ DI_sysPedalMinTorque m44 : 8|14@1+ (0.1,-1638.3) [-1638.3|0] "Nm"  Receiver
+ SG_ DI_sysPostPedalMaxTorque m44 : 50|14@1+ (0.1,0) [0|1638.3] "Nm"  Receiver
+ SG_ DI_sysPostPedalMinTorque m44 : 36|14@1+ (0.1,-1638.3) [-1638.3|0] "Nm"  Receiver
+ SG_ DI_systemStack m68 : 8|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_systemTorqueCommand m35 : 48|16@1- (0.035,0) [-1146.88|1146.845] "Nm"  Receiver
+ SG_ DI_tcMaxRequest m40 : 16|8@1+ (5,0) [0|1275] "Nm"  Receiver
+ SG_ DI_tcMinRequest m40 : 24|8@1+ (5,0) [0|1275] "Nm"  Receiver
+ SG_ DI_torquePedalMax m51 : 28|12@1+ (2,0) [0|7500] "Nm"  Receiver
+ SG_ DI_torquePedalMin m51 : 16|12@1+ (2,-7500) [-7500|0] "Nm"  Receiver
+ SG_ DI_torquePerAmp m33 : 48|16@1+ (0.0001,0) [0|6.5535] "Nm/A"  Receiver
+ SG_ DI_torquePostPedalMax m51 : 52|12@1+ (2,0) [0|7500] "Nm"  Receiver
+ SG_ DI_torquePostPedalMin m51 : 40|12@1+ (2,-7500) [-7500|0] "Nm"  Receiver
+ SG_ DI_tqSatMotorCurrent m39 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqSatMotorVoltage m39 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqSatThermal m39 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqSatUiDriveTorque m40 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqSatUiRegenTorque m40 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqScaleDifferential m35 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqScaleMaxMotorSpeed m40 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_tqScaleShift m40 : 56|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DI_udsStack m68 : 40|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DI_usmState m38 : 12|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DI_veMassInvRaw m41 : 8|12@1+ (1E-007,0.0001) [0.0001|0.0005] "1/kg"  Receiver
+ SG_ DI_veResForce m41 : 20|12@1- (0.0005,0) [-1.024|1.0235] "G"  Receiver
+ SG_ DI_velocityEstimatorState m65 : 8|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DI_wasteCurrentLimit m41 : 48|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DI_xcpStack m68 : 48|8@1+ (0.4,0) [0|100] "%"  Receiver
+
+BO_ 1879 ID757DIS_debug: 8 VehicleBus
+ SG_ DIS_debugSelector M : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DIS_brakeSwitchNC m42 : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIS_brakeSwitchNO m42 : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIS_busbarTemp m64 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_controlStack m67 : 56|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_cpu100HzAvg m66 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu100HzMax m66 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu100HzMin m66 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu10HzAvg m66 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu10HzMax m66 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu10HzMin m66 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu1HzAvg m128 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu1HzMax m128 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu1HzMin m128 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu1kHzAvg m67 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu1kHzMax m67 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu1kHzMin m67 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu20kHzAvg m67 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu20kHzMax m67 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpu20kHzMin m67 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_cpuIDWord0 m131 : 16|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DIS_cpuIDWord1 m132 : 16|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DIS_cpuIDWord2 m132 : 32|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DIS_cpuIDWord3 m132 : 48|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ DIS_crc m131 : 32|32@1+ (1,0) [0|4294967295] ""  Receiver
+ SG_ DIS_currentLimit m41 : 32|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DIS_dcCableCurrentEst m37 : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_dcCableHeat m47 : 24|16@1+ (0.001,0) [0|65.535] "kA2s"  Receiver
+ SG_ DIS_dcCapTemp m64 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_dcLinkCapTemp m70 : 32|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_decodeHardwareStack m68 : 24|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_driveUnitOdometer m69 : 32|32@1+ (10,0) [0|42949672950] "rev"  Receiver
+ SG_ DIS_eepromStack m68 : 32|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_fluxState m42 : 16|4@1+ (1,0) [0|10] ""  Receiver
+ SG_ DIS_gainScale m37 : 8|8@1+ (0.01,0) [0|2.55] "scale"  Receiver
+ SG_ DIS_gateDriveState m50 : 10|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DIS_gateDriveSupplyState m50 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DIS_hvDcCableTemp m70 : 40|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_hwFaultCounter m69 : 8|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DIS_idleStack m68 : 16|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_internalAngleFilt m37 : 48|16@1+ (0.0003,0) [0|8] "rad"  Receiver
+ SG_ DIS_llrScale m42 : 32|8@1+ (0.015,0) [0|3.825] "scale"  Receiver
+ SG_ DIS_llsScale m42 : 24|8@1+ (0.004,0) [0|1.02] "scale"  Receiver
+ SG_ DIS_lmScale m36 : 8|8@1+ (0.004,0) [0|1.02] "scale"  Receiver
+ SG_ DIS_loadAngle m42 : 40|16@1- (0.0003,0) [-4|4] "rad"  Receiver
+ SG_ DIS_loadAngleMargin m37 : 32|16@1- (0.0003,0) [-4|4] "rad"  Receiver
+ SG_ DIS_magnetTempEst m47 : 40|8@1+ (1,-40) [-40|180] "C"  Receiver
+ SG_ DIS_module10HzStack m66 : 56|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_motorIA m32 : 16|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DIS_motorIAavg m38 : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_motorIB m32 : 32|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DIS_motorIBavg m38 : 48|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_motorIC m32 : 48|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DIS_motorType m128 : 8|5@1+ (1,0) [0|26] ""  Receiver
+ SG_ DIS_motorV m34 : 48|16@1+ (2E-005,0) [0|1.3107] "mindex"  Receiver
+ SG_ DIS_negDcBusbarTemp m70 : 48|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_offsetA m32 : 8|8@1- (0.1,0) [-12.8|12.7] "A"  Receiver
+ SG_ DIS_offsetB m33 : 8|8@1- (0.1,0) [-12.8|12.7] "A"  Receiver
+ SG_ DIS_oilPumpMotorSpeed m46 : 8|8@1+ (40,0) [0|10200] "RPM"  Receiver
+ SG_ DIS_oilPumpPhaseAdvance m46 : 24|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_oilPumpPhaseVoltage m46 : 16|8@1+ (0.1,0) [0|25.4] "V"  Receiver
+ SG_ DIS_oilPumpPressureEstimateMax m46 : 32|8@1+ (2,0) [0|500] "kPa"  Receiver
+ SG_ DIS_oilPumpPressureExpectedMin m46 : 40|8@1+ (2,0) [0|500] "kPa"  Receiver
+ SG_ DIS_pcsTemp m64 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_peakFlux m36 : 48|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DIS_peakIQref m38 : 16|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DIS_phaseOutBusbarTemp m70 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_phaseOutBusbarWeldTemp m70 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_phaseOutLugTemp m70 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_posDcBusbarTemp m70 : 56|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_powerStageSafeState m50 : 13|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DIS_pwrSatChargeCurrent m42 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_pwrSatDischargeCurrent m40 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_pwrSatMaxBusVoltage m39 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_pwrSatMaxDischargePower m39 : 16|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_pwrSatMaxRegenPower m39 : 24|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_pwrSatMinBusVoltage m39 : 56|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_resolverClaMIA m48 : 43|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIS_resolverCommonGain m48 : 32|8@1+ (0.025,0) [0|5] "1"  Receiver
+ SG_ DIS_resolverCosFiltered m52 : 32|8@1- (0.01,0) [-1|1] "1"  Receiver
+ SG_ DIS_resolverCosRmsSquared m52 : 16|8@1+ (0.005,0) [0|1] "1"  Receiver
+ SG_ DIS_resolverErrorRmsSquared m52 : 48|8@1+ (0.005,0) [0|1] "1"  Receiver
+ SG_ DIS_resolverNoCarrier m48 : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIS_resolverNoPhaseLock m48 : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIS_resolverOffsetCos m48 : 8|8@1+ (0.015,0) [0|3.3] "V"  Receiver
+ SG_ DIS_resolverOffsetSin m48 : 16|8@1+ (0.015,0) [0|3.3] "V"  Receiver
+ SG_ DIS_resolverPhaseOffset m48 : 24|8@1+ (0.1,7.5) [7.5|32.5] "us"  Receiver
+ SG_ DIS_resolverReady m48 : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DIS_resolverSinFiltered m52 : 40|8@1- (0.01,0) [-1|1] "1"  Receiver
+ SG_ DIS_resolverSinRmsSquared m52 : 24|8@1+ (0.005,0) [0|1] "1"  Receiver
+ SG_ DIS_rotorFlux m47 : 8|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DIS_rotorMaxMagnetTemp m72 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_rsScale m34 : 8|8@1+ (0.01,0) [0|2.55] "scale"  Receiver
+ SG_ DIS_soptMaxCurrentMagSqrd m49 : 48|16@1+ (100,0) [0|6553500] "A2"  Receiver
+ SG_ DIS_soptTimeToOff m49 : 32|11@1+ (0.05,0) [0|100] "ms"  Receiver
+ SG_ DIS_soptTimeToTrip m49 : 8|8@1+ (0.05,0) [0|10] "ms"  Receiver
+ SG_ DIS_soptTripDelay m49 : 16|8@1+ (0.05,0) [0|10] "ms"  Receiver
+ SG_ DIS_statorEndWindingTemp m72 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_statorFluxFdb m35 : 32|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DIS_statorFluxRef m35 : 16|16@1+ (0.0001,0) [0|6.5535] "Wb"  Receiver
+ SG_ DIS_statorIDfdb m33 : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_statorIDref m33 : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_statorIQfdb m34 : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_statorIQref m34 : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
+ SG_ DIS_statorResistanceEst m47 : 48|11@1+ (5E-005,0) [0|0.10235] "Ohm"  Receiver
+ SG_ DIS_statorTemp1 m64 : 32|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_statorTemp2 m64 : 40|8@1+ (1,-40) [-40|215] "C"  Receiver
+ SG_ DIS_statorVD m36 : 32|16@1- (4E-005,0) [-1.31072|1.31068] "mindex"  Receiver
+ SG_ DIS_statorVQ m36 : 16|16@1- (4E-005,0) [-1.31072|1.31068] "mindex"  Receiver
+ SG_ DIS_systemStack m68 : 8|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_systemTorqueCommand m35 : 48|16@1- (0.035,0) [-1146.88|1146.845] "Nm"  Receiver
+ SG_ DIS_tcMaxRequest m40 : 16|8@1+ (5,0) [0|1275] "Nm"  Receiver
+ SG_ DIS_tcMinRequest m40 : 24|8@1+ (5,0) [0|1275] "Nm"  Receiver
+ SG_ DIS_torquePerAmp m33 : 48|16@1+ (0.0001,0) [0|6.5535] "Nm/A"  Receiver
+ SG_ DIS_tqSatMotorCurrent m39 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqSatMotorVoltage m39 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqSatThermal m39 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqSatUiDriveTorque m40 : 32|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqSatUiRegenTorque m40 : 40|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqScaleDifferential m35 : 8|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqScaleMaxMotorSpeed m40 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_tqScaleShift m40 : 56|8@1+ (0.4,0) [0|102] "%"  Receiver
+ SG_ DIS_udsStack m68 : 40|8@1+ (0.4,0) [0|100] "%"  Receiver
+ SG_ DIS_usmState m38 : 12|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DIS_velocityEstimatorState m65 : 8|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DIS_wasteCurrentLimit m41 : 48|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
+ SG_ DIS_xcpStack m68 : 48|8@1+ (0.4,0) [0|100] "%"  Receiver
+
+BO_ 694 ID2B6DI_chassisControlStatus2B6: 2 GTW
+ SG_ DI_btcStateUI : 9|1@1+ (1,0) [0|0] ""  ETH
+ SG_ DI_ptcStateUI : 7|2@1+ (1,0) [0|0] ""  ETH
+ SG_ DI_tcTelltaleFlash : 2|1@1+ (1,0) [0|0] ""  ETH
+ SG_ DI_tcTelltaleOn : 3|1@1+ (1,0) [0|0] ""  ETH
+ SG_ DI_tractionControlModeUI : 4|3@1+ (1,0) [0|7] ""  ETH
+ SG_ DI_vdcTelltaleFlash : 0|1@1+ (1,0) [0|0] ""  ETH
+ SG_ DI_vdcTelltaleOn : 1|1@1+ (1,0) [0|0] ""  ETH
 
 BO_ 644 ID284UIvehicleModes: 5 VehicleBus
  SG_ UIfactoryMode284 : 0|1@1+ (1,0) [0|0] ""  Receiver
@@ -1217,11 +1535,11 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Feb03";
+BA_DEF_DEF_  "Modified" "JW2020Feb09";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
@@ -1229,8 +1547,8 @@ BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -1241,14 +1559,14 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 280 10;
-BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -1256,26 +1574,63 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgCycleTime" BO_ 264 10;
-BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgSendType" BO_ 306 0;
-BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
 BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "SystemSignalLongSymbol" SG_ 545 VCFrontvcrightHiCurrentLVState22 "VCFrontvcrightHiCurrentLVState221";
 BA_ "SystemSignalLongSymbol" SG_ 691 VCRightptcHeaterReqAirpathBlocke "VCRightptcHeaterReqAirpathBlocked";
 BA_ "SystemSignalLongSymbol" SG_ 918 FrontOilPumpOilTempEstConfident3 "FrontOilPumpOilTempEstConfident39";
 BA_ "SystemSignalLongSymbol" SG_ 917 RearOilPumpOilTempEstConfident39 "RearOilPumpOilTempEstConfident395";
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
 BA_ "SystemSignalLongSymbol" SG_ 2047 CFGpassengerOccupancySensorType7 "CFGpassengerOccupancySensorType7FF";
+VAL_ 2005 DI_aebFaultReason 9 "DI_AEB_FAULT_ACCEL_OUT_OF_BOUNDS" 14 "DI_AEB_FAULT_ACCEL_REQ_INVALID" 5 "DI_AEB_FAULT_DAS_CONTROL_MIA" 15 "DI_AEB_FAULT_DAS_REQ_DI_UNAVAIL" 6 "DI_AEB_FAULT_DAS_SNA" 3 "DI_AEB_FAULT_EBR_FAULT" 1 "DI_AEB_FAULT_EPB_MIA" 10 "DI_AEB_FAULT_EPB_NOT_PARKED" 11 "DI_AEB_FAULT_ESP_FAULT" 12 "DI_AEB_FAULT_ESP_MIA" 13 "DI_AEB_FAULT_MIN_TIME_BTWN_EVENTS" 0 "DI_AEB_FAULT_NONE" 2 "DI_AEB_FAULT_PM_MIA" 8 "DI_AEB_FAULT_PM_REQUEST" 4 "DI_AEB_FAULT_SPEED_DELTA" 7 "DI_AEB_FAULT_VEL_EST_ABNORMAL" ;
+VAL_ 2005 DI_aebUnavailableReason 1 "DI_AEB_UNAVAILABLE_CLOSURE" 5 "DI_AEB_UNAVAILABLE_DI_STATE" 6 "DI_AEB_UNAVAILABLE_EBR_UNAVAILABLE" 7 "DI_AEB_UNAVAILABLE_EPB" 2 "DI_AEB_UNAVAILABLE_GEAR" 8 "DI_AEB_UNAVAILABLE_HYSTERESIS" 4 "DI_AEB_UNAVAILABLE_NEGATIVE_SPEED" 0 "DI_AEB_UNAVAILABLE_NONE" 3 "DI_AEB_UNAVAILABLE_SKID" 9 "DI_AEB_UNAVAILABLE_TRACK_MODE" ;
+VAL_ 2005 DI_brkStState 6 "BRKST_STATE_FINISHED" 1 "BRKST_STATE_IDLE" 5 "BRKST_STATE_INTERRUPTED" 4 "BRKST_STATE_RUNNING_PRESSED" 3 "BRKST_STATE_RUNNING_PRESSING" 2 "BRKST_STATE_RUNNING_UNPRESSED" 0 "BRKST_STATE_UNAVAILABLE" ;
+VAL_ 2005 DI_fluxState 5 "DI_FLUXSTATE_ENABLED" 9 "DI_FLUXSTATE_FAULT" 4 "DI_FLUXSTATE_FLUX_DOWN" 3 "DI_FLUXSTATE_FLUX_UP" 6 "DI_FLUXSTATE_ICONTROL" 2 "DI_FLUXSTATE_STANDBY" 0 "DI_FLUXSTATE_START" 10 "DI_FLUXSTATE_STATIONARY_WASTE" 1 "DI_FLUXSTATE_TEST" 7 "DI_FLUXSTATE_VCONTROL" ;
+VAL_ 2005 DI_gateDriveState 3 "PSTG_GD_STATE_CONFIGURED" 2 "PSTG_GD_STATE_CONFIGURING" 0 "PSTG_GD_STATE_INIT" 4 "PSTG_GD_STATE_NOT_CONFIGURED" 1 "PSTG_GD_STATE_SELFTEST" ;
+VAL_ 2005 DI_gateDriveSupplyState 0 "PSTG_GD_SUPPLY_DOWN" 3 "PSTG_GD_SUPPLY_FALLING" 1 "PSTG_GD_SUPPLY_RISING" 2 "PSTG_GD_SUPPLY_UP" ;
+VAL_ 2005 DI_immobilizerCondition 1 "DI_IMM_CONDITION_LEARNED" 0 "DI_IMM_CONDITION_VIRGIN_SNA" ;
+VAL_ 2005 DI_magnetTempEst 0 "SNA" ;
+VAL_ 2005 DI_motorType 8 "DI_MOTOR_F1A" 10 "DI_MOTOR_F1AC" 11 "DI_MOTOR_F2AB" 12 "DI_MOTOR_F2AC" 13 "DI_MOTOR_F2AD" 14 "DI_MOTOR_F2AE" 26 "DI_MOTOR_F2AE_AL" 15 "DI_MOTOR_F2APMSRM" 17 "DI_MOTOR_IM100A" 19 "DI_MOTOR_IM100B" 22 "DI_MOTOR_IM130C" 24 "DI_MOTOR_IM130D" 25 "DI_MOTOR_IM130D_AL" 20 "DI_MOTOR_IM216A" 3 "DI_MOTOR_M7M3" 4 "DI_MOTOR_M7M4" 5 "DI_MOTOR_M7M5" 7 "DI_MOTOR_M7M6" 6 "DI_MOTOR_M8A" 16 "DI_MOTOR_PM216A" 18 "DI_MOTOR_PM216B" 21 "DI_MOTOR_PM216C" 23 "DI_MOTOR_PM216D" 1 "DI_MOTOR_ROADSTER_BASE" 2 "DI_MOTOR_ROADSTER_SPORT" 0 "DI_MOTOR_SNA" 9 "DI_MOTOR_SSR1A" ;
+VAL_ 2005 DI_oilPumpPhaseAdvance 255 "SNA" ;
+VAL_ 2005 DI_oilPumpPhaseVoltage 255 "SNA" ;
+VAL_ 2005 DI_oilPumpPressureEstimateMax 255 "SNA" ;
+VAL_ 2005 DI_oilPumpPressureExpectedMin 255 "SNA" ;
+VAL_ 2005 DI_opdUnavailableReason 1 "DI_OPD_UNAVAILABLE_DISABLED" 3 "DI_OPD_UNAVAILABLE_DI_SYS_STATE" 5 "DI_OPD_UNAVAILABLE_EPB_FAULT" 2 "DI_OPD_UNAVAILABLE_GEAR" 9 "DI_OPD_UNAVAILABLE_GRADE_ESTIMATE" 0 "DI_OPD_UNAVAILABLE_NONE" 11 "DI_OPD_UNAVAILABLE_PARKED" 4 "DI_OPD_UNAVAILABLE_SKID" 10 "DI_OPD_UNAVAILABLE_TORQUE_LIMIT" 6 "DI_OPD_UNAVAILABLE_TRACK_MODE" 8 "DI_OPD_UNAVAILABLE_TRACTION_CONTROL" 7 "DI_OPD_UNAVAILABLE_VELOCITY_ESTIMATE" ;
+VAL_ 2005 DI_powerStageSafeState 2 "PSTG_SAFESTATE_3PS_HIGH" 3 "PSTG_SAFESTATE_3PS_LOW" 1 "PSTG_SAFESTATE_ALL_OFF" 0 "PSTG_SAFESTATE_NONE" ;
+VAL_ 2005 DI_rotorOffsetLearningState 9 "ROL_NUM_STATES" 2 "ROL_STATE_ACCELERATE" 5 "ROL_STATE_CORRECT" 8 "ROL_STATE_DONE" 0 "ROL_STATE_INIT" 4 "ROL_STATE_MEASURE" 3 "ROL_STATE_SHIFT" 6 "ROL_STATE_VERIFY" 1 "ROL_STATE_WAIT" 7 "ROL_STATE_WRITE" ;
+VAL_ 2005 DI_ssmState 5 "SSM_STATE_ABORT" 4 "SSM_STATE_ENABLE" 8 "SSM_STATE_FAULT" 2 "SSM_STATE_IDLE" 7 "SSM_STATE_RETRY" 3 "SSM_STATE_STANDBY" 0 "SSM_STATE_START" 1 "SSM_STATE_UNAVAILABLE" 6 "SSM_STATE_WAIT_FOR_RETRY" ;
+VAL_ 2005 DI_tcMaxRequest 255 "SNA" ;
+VAL_ 2005 DI_tcMinRequest 255 "SNA" ;
+VAL_ 2005 DI_usmState 3 "USM_STATE_ABORT" 4 "USM_STATE_ENABLE" 5 "USM_STATE_FAULT" 2 "USM_STATE_RETRY" 1 "USM_STATE_STANDBY" 0 "USM_STATE_START" 6 "USM_STATE_UNAVAILABLE" 7 "USM_STATE_WAIT_FOR_RETRY" ;
+VAL_ 2005 DI_velocityEstimatorState 4 "VE_STATE_BACKUP_MOTOR" 2 "VE_STATE_BACKUP_WHEELS_A" 3 "VE_STATE_BACKUP_WHEELS_B" 0 "VE_STATE_NOT_INITIALIZED" 1 "VE_STATE_WHEELS_NORMAL" ;
+VAL_ 1879 DIS_fluxState 5 "DI_FLUXSTATE_ENABLED" 9 "DI_FLUXSTATE_FAULT" 4 "DI_FLUXSTATE_FLUX_DOWN" 3 "DI_FLUXSTATE_FLUX_UP" 6 "DI_FLUXSTATE_ICONTROL" 2 "DI_FLUXSTATE_STANDBY" 0 "DI_FLUXSTATE_START" 10 "DI_FLUXSTATE_STATIONARY_WASTE" 1 "DI_FLUXSTATE_TEST" 7 "DI_FLUXSTATE_VCONTROL" ;
+VAL_ 1879 DIS_gateDriveState 3 "PSTG_GD_STATE_CONFIGURED" 2 "PSTG_GD_STATE_CONFIGURING" 0 "PSTG_GD_STATE_INIT" 4 "PSTG_GD_STATE_NOT_CONFIGURED" 1 "PSTG_GD_STATE_SELFTEST" ;
+VAL_ 1879 DIS_gateDriveSupplyState 0 "PSTG_GD_SUPPLY_DOWN" 3 "PSTG_GD_SUPPLY_FALLING" 1 "PSTG_GD_SUPPLY_RISING" 2 "PSTG_GD_SUPPLY_UP" ;
+VAL_ 1879 DIS_magnetTempEst 0 "SNA" ;
+VAL_ 1879 DIS_motorType 8 "DI_MOTOR_F1A" 10 "DI_MOTOR_F1AC" 11 "DI_MOTOR_F2AB" 12 "DI_MOTOR_F2AC" 13 "DI_MOTOR_F2AD" 14 "DI_MOTOR_F2AE" 26 "DI_MOTOR_F2AE_AL" 15 "DI_MOTOR_F2APMSRM" 17 "DI_MOTOR_IM100A" 19 "DI_MOTOR_IM100B" 22 "DI_MOTOR_IM130C" 24 "DI_MOTOR_IM130D" 25 "DI_MOTOR_IM130D_AL" 20 "DI_MOTOR_IM216A" 3 "DI_MOTOR_M7M3" 4 "DI_MOTOR_M7M4" 5 "DI_MOTOR_M7M5" 7 "DI_MOTOR_M7M6" 6 "DI_MOTOR_M8A" 16 "DI_MOTOR_PM216A" 18 "DI_MOTOR_PM216B" 21 "DI_MOTOR_PM216C" 23 "DI_MOTOR_PM216D" 1 "DI_MOTOR_ROADSTER_BASE" 2 "DI_MOTOR_ROADSTER_SPORT" 0 "DI_MOTOR_SNA" 9 "DI_MOTOR_SSR1A" ;
+VAL_ 1879 DIS_oilPumpPhaseAdvance 255 "SNA" ;
+VAL_ 1879 DIS_oilPumpPhaseVoltage 255 "SNA" ;
+VAL_ 1879 DIS_oilPumpPressureEstimateMax 255 "SNA" ;
+VAL_ 1879 DIS_oilPumpPressureExpectedMin 255 "SNA" ;
+VAL_ 1879 DIS_powerStageSafeState 2 "PSTG_SAFESTATE_3PS_HIGH" 3 "PSTG_SAFESTATE_3PS_LOW" 1 "PSTG_SAFESTATE_ALL_OFF" 0 "PSTG_SAFESTATE_NONE" ;
+VAL_ 1879 DIS_tcMaxRequest 255 "SNA" ;
+VAL_ 1879 DIS_tcMinRequest 255 "SNA" ;
+VAL_ 1879 DIS_usmState 3 "USM_STATE_ABORT" 4 "USM_STATE_ENABLE" 5 "USM_STATE_FAULT" 2 "USM_STATE_RETRY" 1 "USM_STATE_STANDBY" 0 "USM_STATE_START" 6 "USM_STATE_UNAVAILABLE" 7 "USM_STATE_WAIT_FOR_RETRY" ;
+VAL_ 1879 DIS_velocityEstimatorState 4 "VE_STATE_BACKUP_MOTOR" 2 "VE_STATE_BACKUP_WHEELS_A" 3 "VE_STATE_BACKUP_WHEELS_B" 0 "VE_STATE_NOT_INITIALIZED" 1 "VE_STATE_WHEELS_NORMAL" ;
+VAL_ 694 DI_ptcStateUI 0 "FAULTED" 1 "BACKUP" 2 "ON" 3 "SNA" ;
+VAL_ 694 DI_tractionControlModeUI 0 "NORMAL" 1 "SLIP_START" 2 "DEV_MODE_1" 3 "DEV_MODE_2" 4 "ROLLS_MODE" 5 "DYNO_MODE" ;
 VAL_ 545 VCFrontvehiclePowerState221 0 "Off" 1 "Conditioning" 2 "Accessory" 3 "Drive" ;
 VAL_ 753 VCFrontEFuseDebugStatusIndex 0 "VCRIGHT" 1 "VCLEFT" 2 "PCS" 3 "IBOOSTER" 4 "EPAS3P" 5 "EPAS3S" 6 "ESP_MOTOR" 7 "ESP_VALVE" 8 "AUTOPILOT_1" 9 "AUTOPILOT_2" 10 "SLEEP_BYPASS" 11 "UI" 12 "HEADLAMPS" 13 "VBAT_FUSED_HIGH_CURRENT" 14 "PUMPS" 15 "RAILS_A_B" 16 "MISC_RAILS" 17 "INVALID" ;
 VAL_ 579 VCRighthvacACRunning 0 "OFF" 1 "ON" ;
