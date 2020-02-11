@@ -42,6 +42,513 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
+BO_ 768 ID300BMS_info: 8 VehicleBus
+ SG_ BMS_infoIndex M : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ BMS_appCrc m13 : 32|32@1+ (1,0) [0|4294967295] ""  Receiver
+ SG_ BMS_assemblyId m11 : 24|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ BMS_bootCrc m20 : 32|32@1+ (1,0) [0|4294967295] ""  Receiver
+ SG_ BMS_bootUdsProtoVersion m20 : 8|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ BMS_buildConfigId m10 : 16|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ BMS_buildType m10 : 8|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ BMS_componentId m10 : 48|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ BMS_hardwareId m10 : 32|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ BMS_pcbaId m11 : 16|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ BMS_platformType m13 : 8|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ BMS_subUsageId m11 : 48|16@1+ (1,0) [0|65535] ""  Receiver
+ SG_ BMS_usageId m11 : 32|16@1+ (1,0) [0|65535] ""  Receiver
+
+BO_ 530 ID212BMS_status: 8 VehicleBus
+ SG_ BMS_activeHeatingWorthwhile : 5|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_chargeRequest : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_chargeRetryCount : 49|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ BMS_chgPowerAvailable : 38|11@1+ (0.125,0) [0|255.75] "kW"  Receiver
+ SG_ BMS_contactorState : 8|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ BMS_cpMiaOnHvs : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_diLimpRequest : 35|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_ecuLogUploadRequest : 14|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ BMS_hvState : 16|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ BMS_hvacPowerRequest : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_isolationResistance : 19|10@1+ (10,0) [0|10000] "kOhm"  Receiver
+ SG_ BMS_keepWarmRequest : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_minPackTemperature : 56|8@1+ (0.5,-40) [-40|87.5] "C"  Receiver
+ SG_ BMS_notEnoughPowerForDrive : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_notEnoughPowerForSupport : 2|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_okToShipByAir : 36|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_okToShipByLand : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_pcsPwmEnabled : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_preconditionAllowed : 3|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_smStateRequest : 52|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ BMS_state : 31|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ BMS_uiChargeStatus : 11|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ BMS_updateAllowed : 4|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 946 ID3B2BMS_log2: 8 VehicleBus
+ SG_ BMS_log2MuxId M : 0|6@1+ (1,0) [0|21] ""  Receiver
+ SG_ BMS_100HzTask_avgExecTime m9 : 6|14@1+ (1,0) [0|16383] "us"  Receiver
+ SG_ BMS_100HzTask_maxExecTime m9 : 32|14@1+ (1,0) [0|16383] "us"  Receiver
+ SG_ BMS_10HzTask_avgExecTime m8 : 6|17@1+ (1,0) [0|131071] "us"  Receiver
+ SG_ BMS_10HzTask_maxExecTime m8 : 32|17@1+ (1,0) [0|131071] "us"  Receiver
+ SG_ BMS_1HzTask_avgExecTime m7 : 6|20@1+ (1,0) [0|1048575] "us"  Receiver
+ SG_ BMS_1HzTask_maxExecTime m7 : 32|20@1+ (1,0) [0|1048575] "us"  Receiver
+ SG_ BMS_1kHzTask_avgExecTime m9 : 20|11@1+ (1,0) [0|2047] "us"  Receiver
+ SG_ BMS_1kHzTask_maxExecTime m9 : 48|11@1+ (1,0) [0|2047] "us"  Receiver
+ SG_ BMS_ahChargeTotal m6 : 8|24@1+ (0.1,0) [0|1677721.5] "Ah"  Receiver
+ SG_ BMS_ahDischargeTotal m6 : 32|24@1+ (0.1,0) [0|1677721.5] "Ah"  Receiver
+ SG_ BMS_cacAvg m0 : 6|13@1+ (0.1,0) [0|819.1] "Ah"  Receiver
+ SG_ BMS_cacMax m0 : 40|13@1+ (0.1,0) [0|819.1] "Ah"  Receiver
+ SG_ BMS_cacMaxBrickId m0 : 56|7@1+ (1,1) [1|128] ""  Receiver
+ SG_ BMS_cacMaxKalmanError m1 : 45|10@1+ (0.01,0) [0|10] "Ah"  Receiver
+ SG_ BMS_cacMin m0 : 19|13@1+ (0.1,0) [0|819.1] "Ah"  Receiver
+ SG_ BMS_cacMinBrickId m0 : 32|7@1+ (1,1) [1|128] ""  Receiver
+ SG_ BMS_cacMinLowerBoundEst m1 : 6|13@1+ (0.1,0) [0|819.1] "Ah"  Receiver
+ SG_ BMS_cacMinRawEstimate m1 : 19|13@1+ (0.1,0) [0|819.1] "Ah"  Receiver
+ SG_ BMS_cacMinUpperBoundEst m1 : 32|13@1+ (0.1,0) [0|819.1] "Ah"  Receiver
+ SG_ BMS_chargeCurrentLimitMode m5 : 32|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ BMS_chargeNeededReason m5 : 35|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ BMS_chgEndBatteryChargeRequest m3 : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_chgEndBmsHvChargeStatus m3 : 16|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ BMS_chgEndChargeState m3 : 12|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ BMS_chgEndCpHvChargeStatus m3 : 19|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ BMS_chgEndCpShutdownRequest m3 : 24|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ BMS_chgEndDcEvseCompatible m3 : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_chgEndDisableUnderFailure m3 : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_chgEndEvseChargeType m3 : 6|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ BMS_chgEndPcsHvChargeStatus m3 : 22|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ BMS_chgEndPcsShutdownRequest m3 : 26|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ BMS_chgRequestTerminatedCount m3 : 8|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ BMS_cpChargeStatus m5 : 60|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ BMS_currentReg_targetI m5 : 49|11@1+ (0.5,0) [0|1023.5] "A"  Receiver
+ SG_ BMS_energyReserveAvg m20 : 48|16@1+ (0.001,0) [0|65.535] "V"  Receiver
+ SG_ BMS_energyReserveMax m20 : 32|16@1+ (0.001,0) [0|65.535] "V"  Receiver
+ SG_ BMS_energyReserveMin m20 : 16|16@1+ (0.001,0) [0|65.535] "V"  Receiver
+ SG_ BMS_fcLinkTestDecayTime m21 : 8|10@1+ (2,0) [0|2044] "mS"  Receiver
+ SG_ BMS_fcLinkTestTimeSinceLastRun m21 : 18|12@1+ (0.01758241758,0) [0|71.99] "Hours"  Receiver
+ SG_ BMS_floodPortState1 m2 : 10|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ BMS_floodPortState2 m2 : 13|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ BMS_floodPortV1 m2 : 16|16@1+ (0.001,0) [0|65.535] "V"  Receiver
+ SG_ BMS_floodPortV2 m2 : 32|16@1+ (0.001,0) [0|65.535] "V"  Receiver
+ SG_ BMS_hvChain_iLimit m19 : 9|14@1+ (0.128,0) [0|2096.896] "A"  Receiver
+ SG_ BMS_hvChain_limitingState m19 : 24|5@1+ (1,0) [0|31] ""  Receiver
+ SG_ BMS_hvChain_limitingStateTempera m19 : 32|16@1- (0.01,0) [-327.68|327.67] "C"  Receiver
+ SG_ BMS_hvChain_useLeakyBucket m19 : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_loadReg_output m5 : 6|11@1- (0.1,0) [-102.4|102.3] "A"  Receiver
+ SG_ BMS_maxDcCurrentAvailable m5 : 38|11@1+ (0.5,0) [0|1023.5] "A"  Receiver
+ SG_ BMS_negCtrCommonModeRejError m18 : 6|13@1- (2.442592959E-005,0) [-0.1|0.1] "-"  Receiver
+ SG_ BMS_negCtrCommonModeRejErrorConf m18 : 19|13@1+ (1.22100107191684,0) [0|10000] "-"  Receiver
+ SG_ BMS_negCtrDeviationConfidenceMax m15 : 45|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_negCtrDeviationConfidenceMin m15 : 32|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_negCtrDeviationFiltConfMax m16 : 45|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_negCtrDeviationFiltConfMin m16 : 32|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_negCtrDeviationFiltMax m16 : 19|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDeviationFiltMin m16 : 6|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDeviationMax m15 : 19|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDeviationMin m15 : 6|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDropCorrectedFiltMax m17 : 45|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDropCorrectedFiltMin m17 : 32|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDropCorrectedMax m17 : 19|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrDropCorrectedMin m17 : 6|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrOffsetError m18 : 32|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_negCtrOffsetErrorConf m18 : 45|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_negCtrResistance m10 : 32|13@1- (2.442598329E-006,0) [-0.01|0.01] "Ohm"  Receiver
+ SG_ BMS_negCtrResistanceConfidence m10 : 45|13@1+ (12.2100107191684,0) [0|100000] "-"  Receiver
+ SG_ BMS_offsetReg_output m5 : 17|14@1- (0.1,0) [-819.2|819.1] "A"  Receiver
+ SG_ BMS_pcsPrechargeRequestActive m21 : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_pcsPrechargeTargetVoltage m21 : 32|16@1- (0.1,0) [-3276.8|3276.7] "V"  Receiver
+ SG_ BMS_posCtrCommonModeRejError m14 : 6|13@1- (2.4425983286E-005,0) [-0.1|0.1] "-"  Receiver
+ SG_ BMS_posCtrCommonModeRejErrorConf m14 : 19|13@1+ (1.22100107191684,0) [0|10000] "-"  Receiver
+ SG_ BMS_posCtrDeviationConfidenceMax m11 : 45|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_posCtrDeviationConfidenceMin m11 : 32|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_posCtrDeviationFiltConfMax m12 : 45|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_posCtrDeviationFiltConfMin m12 : 32|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_posCtrDeviationFiltMax m12 : 19|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDeviationFiltMin m12 : 6|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDeviationMax m11 : 19|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDeviationMin m11 : 6|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDropCorrectedFiltMax m13 : 45|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDropCorrectedFiltMin m13 : 32|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDropCorrectedMax m13 : 19|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrDropCorrectedMin m13 : 6|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrOffsetError m14 : 32|13@1- (0.001221299164314,0) [-5|5] "V"  Receiver
+ SG_ BMS_posCtrOffsetErrorConf m14 : 45|13@1+ (0.000122100107192,0) [0|1] "-"  Receiver
+ SG_ BMS_posCtrResistance m10 : 6|13@1- (2.442598329E-006,0) [-0.01|0.01] "Ohm"  Receiver
+ SG_ BMS_posCtrResistanceConfidence m10 : 19|13@1+ (12.2100107191684,0) [0|100000] "-"  Receiver
+ SG_ BMS_vshTestMaxDeltaV m4 : 16|8@1+ (0.002,0) [0|0.5] "V"  Receiver
+ SG_ BMS_vshTestMaxDeltaVBrickID m4 : 24|7@1+ (1,1) [1|128] ""  Receiver
+ SG_ BMS_vshTestMinDeltaV m4 : 32|8@1+ (0.002,0) [0|0.5] "V"  Receiver
+ SG_ BMS_vshTestMinDeltaVBrickID m4 : 40|7@1+ (1,1) [1|128] ""  Receiver
+
+BO_ 800 ID320BMS_alertMatrix: 8 VehicleBus
+ SG_ BMS_matrixIndex M : 0|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ BMS_a001_Pack_Config_Mismatch m0 : 4|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a017_SW_Brick_OV m0 : 20|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a018_SW_Brick_UV m0 : 21|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a019_SW_Module_OT m0 : 22|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a021_SW_Dr_Limits_Regulation m0 : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a022_SW_Over_Current m0 : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a023_SW_Stack_OV m0 : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a024_SW_Islanded_Brick m0 : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a025_SW_PwrBalance_Anomaly m0 : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a026_SW_HFCurrent_Anomaly m0 : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a034_SW_Passive_Isolation m0 : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a035_SW_Isolation m0 : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a036_SW_HvpHvilFault m0 : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a037_SW_Flood_Port_Open m0 : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a039_SW_DC_Link_Over_Voltage m0 : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a041_SW_Power_On_Reset m0 : 44|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a042_SW_MPU_Error m0 : 45|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a043_SW_Watch_Dog_Reset m0 : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a044_SW_Assertion m0 : 47|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a045_SW_Exception m0 : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a046_SW_Task_Stack_Usage m0 : 49|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a047_SW_Task_Stack_Overflow m0 : 50|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a048_SW_Log_Upload_Request m0 : 51|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a050_SW_Brick_Voltage_MIA m0 : 53|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a051_SW_HVC_Vref_Bad m0 : 54|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a052_SW_PCS_MIA m0 : 55|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a053_SW_ThermalModel_Sanity m0 : 56|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a054_SW_Ver_Supply_Fault m0 : 57|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a055_SW_HvChain_Model_Fault m0 : 58|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a059_SW_Pack_Voltage_Sensing m0 : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a060_SW_Leakage_Test_Failure m0 : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a062_SW_BrickV_Imbalance m1 : 5|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a063_SW_ChargePort_Fault m1 : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a064_SW_SOC_Imbalance m1 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a069_SW_Low_Power m1 : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a071_SW_SM_TransCon_Not_Met m1 : 14|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a075_SW_Chg_Disable_Failure m1 : 18|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a076_SW_Dch_While_Charging m1 : 19|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a077_SW_Charger_Regulation m1 : 20|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a081_SW_Ctr_Close_Blocked m1 : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a082_SW_Ctr_Force_Open m1 : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a083_SW_Ctr_Close_Failure m1 : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a084_SW_Sleep_Wake_Aborted m1 : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a087_SW_Feim_Test_Blocked m1 : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a088_SW_VcFront_MIA_InDrive m1 : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a089_SW_VcFront_MIA m1 : 32|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a090_SW_Gateway_MIA m1 : 33|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a091_SW_ChargePort_MIA m1 : 34|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a092_SW_ChargePort_Mia_On_Hv m1 : 35|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a094_SW_Drive_Inverter_MIA m1 : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a099_SW_BMB_Communication m1 : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a105_SW_One_Module_Tsense m1 : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a106_SW_All_Module_Tsense m1 : 49|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a107_SW_Stack_Voltage_MIA m1 : 50|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a121_SW_NVRAM_Config_Error m2 : 4|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a122_SW_BMS_Therm_Irrational m2 : 5|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a123_SW_Internal_Isolation m2 : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a126_SW_Thermistor_Failure m2 : 9|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a127_SW_shunt_SNA m2 : 10|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a128_SW_shunt_MIA m2 : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a129_SW_VSH_Failure m2 : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a130_IO_CAN_Error m2 : 13|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a131_Bleed_FET_Failure m2 : 14|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a132_HW_BMB_OTP_Uncorrctbl m2 : 15|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a134_SW_Delayed_Ctr_Off m2 : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a135_HW_BMB_Diagnostics_Fail m2 : 18|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a136_SW_Module_OT_Warning m2 : 19|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a137_SW_Brick_UV_Warning m2 : 20|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a138_SW_Brick_OV_Warning m2 : 21|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a139_SW_DC_Link_V_Irrational m2 : 22|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a141_SW_BMB_Status_Warning m2 : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a143_SW_CAC_Change m2 : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a144_Hvp_Config_Mismatch m2 : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a145_SW_SOC_Change m2 : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a146_SW_Brick_Overdischarged m2 : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a149_SW_Missing_Config_Block m2 : 32|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a151_SW_external_isolation m2 : 34|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a155_SW_Weak_short_impedence m2 : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a156_SW_BMB_Vref_bad m2 : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a157_SW_HVP_HVS_Comms m2 : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a158_SW_HVP_HVI_Comms m2 : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a159_SW_HVP_ECU_Error m2 : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a161_SW_DI_Open_Request m2 : 44|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a162_SW_No_Power_For_Support m2 : 45|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a163_SW_Contactor_Mismatch m2 : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a164_SW_Uncontrolled_Regen m2 : 47|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a165_SW_Pack_Partial_Weld m2 : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a166_SW_Pack_Full_Weld m2 : 49|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a167_SW_FC_Partial_Weld m2 : 50|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a168_SW_FC_Full_Weld m2 : 51|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a169_SW_FC_Pack_Weld m2 : 52|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a170_SW_Limp_Mode m2 : 53|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a171_SW_Stack_Voltage_Sense m2 : 54|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a173_SW_Charge_Component_Fau m2 : 56|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a174_SW_Charge_Failure m2 : 57|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a176_SW_GracefulPowerOff m2 : 59|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a178_SW_Uncontrolled_Regen_P m2 : 61|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a179_SW_Hvp_12V_Fault m2 : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_a180_SW_ECU_reset_blocked m2 : 63|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 796 ID31CCC_chgStatus: 8 VehicleBus
+ SG_ CC_currentLimit : 0|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CC_deltaTransformer : 28|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CC_gridGrounding : 26|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ CC_line1Voltage : 16|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ CC_line2Voltage : 33|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ CC_line3Voltage : 42|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ CC_numPhases : 10|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CC_numVehCharging : 30|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ CC_pilotState : 8|2@1+ (1,0) [0|3] ""  Receiver
+
+BO_ 797 ID31DCC_chgStatus2: 8 VehicleBus
+ SG_ CC_chgStatus2Index M : 0|8@1+ (1,0) [0|0] ""  Receiver
+ SG_ CC_buttonState m0 : 8|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 812 ID32CCC_logData: 8 VehicleBus
+ SG_ CC_logIndex M : 0|8@1+ (1,0) [0|13] ""  Receiver
+ SG_ CC_activeConnectorID m0 : 8|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ CC_conn1Current m1 : 8|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CC_conn2Current m2 : 8|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CC_conn3Current m3 : 8|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CC_conn4Current m4 : 8|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CC_contactor1Closed m0 : 40|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CC_contactor2Closed m0 : 42|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CC_lifetimeAlertCount m12 : 8|28@1+ (1,0) [0|268435455] ""  Receiver
+ SG_ CC_lifetimeAvgStartupTemp m13 : 36|28@1- (0.1,0) [-13421772.8|13421772.7] "C"  Receiver
+ SG_ CC_lifetimeCtrCycles m11 : 8|28@1+ (1,0) [0|268435455] ""  Receiver
+ SG_ CC_lifetimeCtrCyclesLoaded m11 : 36|28@1+ (1,0) [0|268435455] ""  Receiver
+ SG_ CC_lifetimeThermalFoldbacks m12 : 36|28@1+ (1,0) [0|268435455] ""  Receiver
+ SG_ CC_lifetimei2t m10 : 32|32@1+ (0.1,0) [0|429496729.5] "A2h"  Receiver
+ SG_ CC_temperature1 m0 : 16|8@1- (1,88) [-40|215] "C"  Receiver
+ SG_ CC_temperature2 m0 : 24|8@1- (1,88) [-40|215] "C"  Receiver
+ SG_ CC_temperature3 m0 : 32|8@1- (1,88) [-40|215] "C"  Receiver
+ SG_ CC_temperature4 m0 : 44|8@1- (1,88) [-40|215] "C"  Receiver
+
+BO_ 573 ID23DCP_chargeStatus: 4 VehicleBus
+ SG_ CP_acChargeCurrentLimit : 8|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CP_chargeShutdownRequest : 3|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ CP_hvChargeStatus : 0|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ CP_internalMaxCurrentLimit : 16|13@1+ (0.14650226,0) [0|1200] "A"  Receiver
+ SG_ CP_vehicleIsoCheckRequired : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_vehiclePrechargeRequired : 30|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 541 ID21DCP_evseStatus: 8 VehicleBus
+ SG_ CP_acChargeState : 53|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ CP_acNumRetries : 40|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CP_cableCurrentLimit : 24|7@1+ (1,0) [0|127] "A"  Receiver
+ SG_ CP_cableType : 16|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ CP_digitalCommsAttempts : 32|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CP_digitalCommsEstablished : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_evseAccept : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_evseChargeType : 38|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ CP_evseRequest : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_gbState : 42|4@1+ (1,0) [0|14] ""  Receiver
+ SG_ CP_gbdcChargeAttempts : 51|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CP_gbdcFailureReason : 49|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CP_gbdcStopChargeReason : 46|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ CP_iecComboState : 60|4@1+ (1,0) [0|12] ""  Receiver
+ SG_ CP_pilot : 4|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ CP_pilotCurrent : 8|8@1+ (0.5,0) [0|127.5] "A"  Receiver
+ SG_ CP_proximity : 2|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ CP_teslaDcState : 56|4@1+ (1,0) [0|10] ""  Receiver
+ SG_ CP_teslaSwcanState : 34|3@1+ (1,0) [0|6] ""  Receiver
+
+BO_ 1885 ID75DCP_sensorData: 8 VehicleBus
+ SG_ CP_sensorDataSelect M : 0|4@1+ (1,0) [0|11] ""  Receiver
+ SG_ CP_UHF_chipState m6 : 4|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ CP_UHF_fifoData m6 : 32|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ CP_UHF_rssi m6 : 8|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ CP_UHF_rxNumBytes m6 : 24|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ CP_UHF_rxOverflow m6 : 16|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_UHF_selfTestRssi m6 : 40|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ CP_doorCountsDebounced m0 : 24|16@1+ (0.00152590219,0) [0|100.00000002165] "%"  Receiver
+ SG_ CP_doorCountsFiltered m0 : 8|16@1+ (0.00152590219,0) [0|100.00000002165] "%"  Receiver
+ SG_ CP_doorI m2 : 16|12@1+ (0.0025,0) [0|10.2375] "A"  Receiver
+ SG_ CP_doorLastRequestMaxI m2 : 28|12@1+ (0.0025,0) [0|10.2375] "A"  Receiver
+ SG_ CP_doorPot m2 : 4|12@1+ (0.025,0) [0|100] "%"  Receiver
+ SG_ CP_faultLineV m5 : 4|12@1+ (0.00114,0) [0|4.65524] "V"  Receiver
+ SG_ CP_inductiveSensor_raw m4 : 4|28@1+ (1,0) [0|268435455] ""  Receiver
+ SG_ CP_latch2I m3 : 16|12@1+ (0.0025,0) [0|10.2375] "A"  Receiver
+ SG_ CP_latchI m3 : 4|12@1+ (0.0025,0) [0|10.2375] "A"  Receiver
+ SG_ CP_pilotHighValue m9 : 40|12@1- (0.01,0) [-20.48|20.47] "V"  Receiver
+ SG_ CP_pilotHighValue_intervalMax10s m10 : 28|12@1- (0.01,0) [-20.48|20.47] "V"  Receiver
+ SG_ CP_pilotHighValue_intervalMin10s m10 : 40|12@1- (0.01,0) [-20.48|20.47] "V"  Receiver
+ SG_ CP_pilotLowValue m9 : 28|12@1- (0.01,0) [-20.48|20.47] "V"  Receiver
+ SG_ CP_pilotLowValue_intervalMax10s m10 : 4|12@1- (0.01,0) [-20.48|20.47] "V"  Receiver
+ SG_ CP_pilotLowValue_intervalMin10s m10 : 16|12@1- (0.01,0) [-20.48|20.47] "V"  Receiver
+ SG_ CP_pilotPeriod m9 : 16|12@1+ (1,0) [0|4095] ""  Receiver
+ SG_ CP_pilotPulseWidth m9 : 4|12@1+ (1,0) [0|4095] ""  Receiver
+ SG_ CP_pinTemperature1 m1 : 8|8@1+ (0.8039215686,-55) [-55|149.99] "C"  Receiver
+ SG_ CP_pinTemperature2 m1 : 16|8@1+ (0.8039215686,-55) [-55|149.99] "C"  Receiver
+ SG_ CP_pinTemperature3 m1 : 24|8@1+ (0.8039215686,-55) [-55|149.99] "C"  Receiver
+ SG_ CP_proxConn1Sense m8 : 56|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_proxEn m8 : 57|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ CP_proximityV m8 : 8|16@1+ (0.0001,0) [0|6.5535] "V"  Receiver
+ SG_ CP_proximityV_GBCC1 m11 : 8|14@1+ (0.001,0) [0|13.3] "V"  Receiver
+ SG_ CP_proximityV_GBCC2 m11 : 24|14@1+ (0.001,0) [0|13.3] "V"  Receiver
+ SG_ CP_proximityV_intervalMax10s m8 : 40|16@1+ (0.0001,0) [0|6.5535] "V"  Receiver
+ SG_ CP_proximityV_intervalMin10s m8 : 24|16@1+ (0.0001,0) [0|6.5535] "V"  Receiver
+ SG_ CP_refVoltage m7 : 8|8@1+ (0.0070588235,0) [0|1.7999999925] "V"  Receiver
+
+BO_ 647 ID287PTCcabinHeatSensorStatus: 8 VehicleBus
+ SG_ PTC_leftCurrentHV : 48|8@1+ (0.2,0) [0|50] "A"  Receiver
+ SG_ PTC_leftTempIGBT : 0|8@1+ (1,-40) [-40|200] "C"  Receiver
+ SG_ PTC_rightCurrentHV : 56|8@1+ (0.2,0) [0|50] "A"  Receiver
+ SG_ PTC_rightTempIGBT : 16|8@1+ (1,-40) [-40|200] "C"  Receiver
+ SG_ PTC_tempOCP : 8|8@1+ (1,-40) [-40|200] "C"  Receiver
+ SG_ PTC_tempPCB : 24|8@1+ (1,-40) [-40|200] "C"  Receiver
+ SG_ PTC_voltageHV : 32|10@1+ (0.5,0) [0|511.5] "V"  Receiver
+
+BO_ 819 ID333UI_chargeRequest: 4 VehicleBus
+ SG_ UI_acChargeCurrentLimit : 8|7@1+ (1,0) [0|127] "A"  Receiver
+ SG_ UI_chargeEnableRequest : 2|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_chargeTerminationPct : 16|10@1+ (0.1,0) [25|100] "%"  Receiver
+ SG_ UI_closeChargePortDoorRequest : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_openChargePortDoorRequest : 0|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 826 ID33AUI_rangeSOC: 8 VehicleBus
+ SG_ UI_idealRange : 16|10@1+ (1,0) [0|1023] "mi"  Receiver
+ SG_ UI_Range : 0|10@1+ (1,0) [0|1023] "mi"  Receiver
+ SG_ UI_SOC : 48|7@1+ (1,0) [0|127] "%"  Receiver
+ SG_ UI_uSOE : 56|7@1+ (1,0) [0|127] "%"  Receiver
+ SG_ UI_ratedWHpM : 32|10@1+ (1,0) [0|1023] "WHpM"  Receiver
+
+BO_ 577 ID241VCFRONT_coolant: 7 VehicleBus
+ SG_ VCFRONT_coolantAirPurgeBatState : 48|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCFRONT_coolantFlowBatActual : 0|9@1+ (0.1,0) [0|40] "LPM"  Receiver
+ SG_ VCFRONT_coolantFlowBatReason : 18|4@1+ (1,0) [0|13] ""  Receiver
+ SG_ VCFRONT_coolantFlowBatTarget : 9|9@1+ (0.1,0) [0|40] "LPM"  Receiver
+ SG_ VCFRONT_coolantFlowPTActual : 22|9@1+ (0.1,0) [0|40] "LPM"  Receiver
+ SG_ VCFRONT_coolantFlowPTReason : 40|4@1+ (1,0) [0|13] ""  Receiver
+ SG_ VCFRONT_coolantFlowPTTarget : 31|9@1+ (0.1,0) [0|40] "LPM"  Receiver
+ SG_ VCFRONT_coolantHasBeenFilled : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCFRONT_radiatorIneffective : 47|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCFRONT_wasteHeatRequestType : 44|2@1+ (1,0) [0|2] ""  Receiver
+
+BO_ 708 ID2C4PCS_logging: 8 VehicleBus
+ SG_ PCS_logMessageSelect M : 0|5@1+ (1,0) [0|26] ""  Receiver
+ SG_ PCS_1V2Max10s m9 : 43|11@1+ (0.001,0) [0|2.047] "V"  Receiver
+ SG_ PCS_1V2Min10s m9 : 32|11@1+ (0.001,0) [0|2.047] "V"  Receiver
+ SG_ PCS_1V5Max10s m9 : 19|11@1+ (0.001,0) [0|2.047] "V"  Receiver
+ SG_ PCS_1V5Min10s m9 : 8|11@1+ (0.001,0) [0|2.047] "V"  Receiver
+ SG_ PCS_5VNMax10s m9 : 54|10@1+ (0.01,0) [0|10.23] "V"  Receiver
+ SG_ PCS_acChargeSelfTestState m9 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chg5VL1Enable m5 : 61|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chgCurrentSensorOutOfBandUs m20 : 32|10@1+ (0.01,0) [0|10.23] "us"  Receiver
+ SG_ PCS_chgInputFrequencyL1N m4 : 5|12@1+ (0.01,40) [40|80.95] "Hz"  Receiver
+ SG_ PCS_chgInputFrequencyL2N m4 : 17|12@1+ (0.01,40) [40|80.95] "Hz"  Receiver
+ SG_ PCS_chgInputFrequencyL3N m4 : 29|12@1+ (0.01,40) [40|80.95] "Hz"  Receiver
+ SG_ PCS_chgInputL1L2Vdc m21 : 36|10@1- (1,0) [-512|511] "V"  Receiver
+ SG_ PCS_chgInputL1L2Vrms m3 : 41|12@1+ (0.2,0) [0|819] "V"  Receiver
+ SG_ PCS_chgInputL1NVdc m21 : 5|10@1- (1,0) [-512|511] "V"  Receiver
+ SG_ PCS_chgInputL1NVrms m3 : 5|12@1+ (0.2,0) [0|819] "V"  Receiver
+ SG_ PCS_chgInputL2NVdc m21 : 16|10@1- (1,0) [-512|511] "V"  Receiver
+ SG_ PCS_chgInputL2NVrms m3 : 17|12@1+ (0.2,0) [0|819] "V"  Receiver
+ SG_ PCS_chgInputL3NVdc m21 : 26|10@1- (1,0) [-512|511] "V"  Receiver
+ SG_ PCS_chgInputL3NVrms m3 : 29|12@1+ (0.2,0) [0|819] "V"  Receiver
+ SG_ PCS_chgInputNGVdc m21 : 46|10@1- (1,0) [-512|511] "V"  Receiver
+ SG_ PCS_chgInputNGVrms m3 : 53|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgInternalPhaseConfig m4 : 41|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ PCS_chgL1L2PllLocked m5 : 57|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chgL1NPllLocked m5 : 54|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chgL2NPllLocked m5 : 55|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chgL3NPllLocked m5 : 56|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chgNgPllLocked m5 : 58|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ PCS_chgOutputV m4 : 51|12@1+ (0.146484375,0) [0|599.853515625] "V"  Receiver
+ SG_ PCS_chgPHAInputVPeak10s m13 : 5|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPHBInputVPeak10s m13 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPHCInputVPeak10s m13 : 23|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhAInputFreqWobble m13 : 32|8@1+ (0.001,0) [0|0.255] "Hz"  Receiver
+ SG_ PCS_chgPhAInputIrms m0 : 5|9@1+ (0.1,0) [0|51.1] "A"  Receiver
+ SG_ PCS_chgPhAIntBusV m0 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhAIntBusVMax10s m10 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhAIntBusVMin10s m10 : 5|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhAIntBusVTarget m0 : 23|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhALastShutdownReason m5 : 17|5@1+ (1,0) [0|17] ""  Receiver
+ SG_ PCS_chgPhALifetimekWh m10 : 31|24@1+ (0.01,0) [0|167772.15] "kWh"  Receiver
+ SG_ PCS_chgPhANoFlowBucket m20 : 5|9@1+ (0.01,0) [0|5.11] "-"  Receiver
+ SG_ PCS_chgPhAOutputI m0 : 32|8@1+ (0.1,0) [0|25.5] "A"  Receiver
+ SG_ PCS_chgPhAPchgVoltDeltaMax10s m10 : 23|8@1+ (0.5,0) [0|127.5] "V"  Receiver
+ SG_ PCS_chgPhARetryCount m5 : 32|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ PCS_chgPhAState m5 : 5|4@1+ (1,0) [0|6] ""  Receiver
+ SG_ PCS_chgPhATransientRetryCount m10 : 55|9@1+ (0.1,0) [0|51.1] "-"  Receiver
+ SG_ PCS_chgPhBInputFreqWobble m13 : 40|8@1+ (0.001,0) [0|0.255] "Hz"  Receiver
+ SG_ PCS_chgPhBInputIrms m1 : 5|9@1+ (0.1,0) [0|51.1] "A"  Receiver
+ SG_ PCS_chgPhBIntBusV m1 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhBIntBusVMax10s m11 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhBIntBusVMin10s m11 : 5|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhBIntBusVTarget m1 : 23|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhBLastShutdownReason m5 : 22|5@1+ (1,0) [0|17] ""  Receiver
+ SG_ PCS_chgPhBLifetimekWh m11 : 31|24@1+ (0.01,0) [0|167772.15] "kWh"  Receiver
+ SG_ PCS_chgPhBNoFlowBucket m20 : 14|9@1+ (0.01,0) [0|5.11] "-"  Receiver
+ SG_ PCS_chgPhBOutputI m1 : 32|8@1+ (0.1,0) [0|25.5] "A"  Receiver
+ SG_ PCS_chgPhBPchgVoltDeltaMax10s m11 : 23|8@1+ (0.5,0) [0|127.5] "V"  Receiver
+ SG_ PCS_chgPhBRetryCount m5 : 35|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ PCS_chgPhBState m5 : 9|4@1+ (1,0) [0|6] ""  Receiver
+ SG_ PCS_chgPhBTransientRetryCount m11 : 55|9@1+ (0.1,0) [0|51.1] "-"  Receiver
+ SG_ PCS_chgPhCInputFreqWobble m13 : 48|8@1+ (0.001,0) [0|0.255] "Hz"  Receiver
+ SG_ PCS_chgPhCInputIrms m2 : 5|9@1+ (0.1,0) [0|51.1] "A"  Receiver
+ SG_ PCS_chgPhCIntBusV m2 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhCIntBusVMax10s m12 : 14|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhCIntBusVMin10s m12 : 5|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhCIntBusVTarget m2 : 23|9@1+ (1,0) [0|511] "V"  Receiver
+ SG_ PCS_chgPhCLastShutdownReason m5 : 27|5@1+ (1,0) [0|17] ""  Receiver
+ SG_ PCS_chgPhCLifetimekWh m12 : 31|24@1+ (0.01,0) [0|167772.15] "kWh"  Receiver
+ SG_ PCS_chgPhCNoFlowBucket m20 : 23|9@1+ (0.01,0) [0|5.11] "-"  Receiver
+ SG_ PCS_chgPhCOutputI m2 : 32|8@1+ (0.1,0) [0|25.5] "A"  Receiver
+ SG_ PCS_chgPhCPchgVoltDeltaMax10s m12 : 23|8@1+ (0.5,0) [0|127.5] "V"  Receiver
+ SG_ PCS_chgPhCRetryCount m5 : 38|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ PCS_chgPhCState m5 : 13|4@1+ (1,0) [0|6] ""  Receiver
+ SG_ PCS_chgPhCTransientRetryCount m12 : 55|9@1+ (0.1,0) [0|51.1] "-"  Receiver
+ SG_ PCS_chgPhManCurrentToDist m5 : 44|10@1+ (0.1,0) [0|100] "A"  Receiver
+ SG_ PCS_chgPhManOptimalPhsToUse m5 : 59|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_chgPhasesPriority m4 : 45|6@1+ (1,0) [0|36] ""  Receiver
+ SG_ PCS_chgPwmEnableLineErrorCount m22 : 32|10@1+ (1,0) [0|1023] ""  Receiver
+ SG_ PCS_chgRetryCount m5 : 41|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ PCS_cpu2BootState m9 : 5|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhAChannel1Content m14 : 5|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhAChannel1Data m14 : 16|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhAChannel2Content m15 : 5|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhAChannel2Data m15 : 16|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhAChannel3Content m16 : 5|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhAChannel3Data m16 : 16|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhAChannel4Content m17 : 5|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhAChannel4Data m17 : 16|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhBChannel1Content m14 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhBChannel1Data m14 : 32|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhBChannel2Content m15 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhBChannel2Data m15 : 32|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhBChannel3Content m16 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhBChannel3Data m16 : 32|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhBChannel4Content m17 : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhBChannel4Data m17 : 32|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhCChannel1Content m14 : 10|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhCChannel1Data m14 : 48|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhCChannel2Content m15 : 10|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhCChannel2Data m15 : 48|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhCChannel3Content m16 : 10|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhCChannel3Data m16 : 48|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dLogPhCChannel4Content m17 : 10|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PCS_dLogPhCChannel4Data m17 : 48|16@1- (0.02,0) [-655.36|655.34] "-"  Receiver
+ SG_ PCS_dcdc12vSupportLifetimekWh m22 : 8|24@1+ (0.01,0) [0|167772.15] "kWh"  Receiver
+ SG_ PCS_dcdcCLAControllerOutput m7 : 16|10@1+ (0.001,0) [0|1] "1"  Receiver
+ SG_ PCS_dcdcClaCurrentFreq m7 : 48|12@1+ (0.09765625,0) [0|399.9] "kHz"  Receiver
+ SG_ PCS_dcdcCurrentLimit m6 : 40|12@1+ (0.1,0) [0|400] "A"  Receiver
+ SG_ PCS_dcdcHalfPeriodUs m8 : 40|16@1+ (0.00048828125,0) [0|31.9995] "us"  Receiver
+ SG_ PCS_dcdcHvBusEstimated_C_uF m25 : 5|10@1+ (7.82013685239492,0) [0|8000] "uF"  Receiver
+ SG_ PCS_dcdcHvBusEstimated_R_kOhm m25 : 16|10@1+ (0.0488758553274682,0) [0|50] "kOhm"  Receiver
+ SG_ PCS_dcdcHvBusVolt m6 : 16|12@1+ (0.146484375,0) [0|599.853515625] "V"  Receiver
+ SG_ PCS_dcdcIntervalMaxFrequency m18 : 8|12@1+ (1,0) [0|400] "kHz"  Receiver
+ SG_ PCS_dcdcIntervalMaxHvBusVolt m18 : 24|13@1+ (0.1,0) [0|600] "V"  Receiver
+ SG_ PCS_dcdcIntervalMaxLvBusVolt m18 : 37|9@1+ (0.1,0) [0|40] "V"  Receiver
+ SG_ PCS_dcdcIntervalMaxLvOutputCurr m18 : 48|12@1+ (1,0) [0|400] "A"  Receiver
+ SG_ PCS_dcdcIntervalMinFrequency m19 : 8|12@1+ (1,0) [0|400] "kHz"  Receiver
+ SG_ PCS_dcdcIntervalMinHvBusVolt m19 : 24|13@1+ (0.1,0) [0|600] "V"  Receiver
+ SG_ PCS_dcdcIntervalMinLvBusVolt m19 : 37|9@1+ (0.1,0) [0|40] "V"  Receiver
+ SG_ PCS_dcdcIntervalMinLvOutputCurr m19 : 48|12@1+ (1,0) [0|400] "A"  Receiver
+ SG_ PCS_dcdcLvBusVolt m6 : 5|10@1+ (0.0390625,0) [0|39.9609375] "V"  Receiver
+ SG_ PCS_dcdcLvOutputCurrentTempLimit m6 : 52|12@1+ (0.1,0) [0|400] "A"  Receiver
+ SG_ PCS_dcdcMaxLvOutputCurrent m6 : 28|12@1+ (0.1,0) [0|400] "A"  Receiver
+ SG_ PCS_dcdcPchgStartHvBusVolt m24 : 16|12@1+ (0.146484375,0) [0|599.853515625] "V"  Receiver
+ SG_ PCS_dcdcPchgStartLvBusVolt m24 : 5|10@1+ (0.0390625,0) [0|39.9609375] "V"  Receiver
+ SG_ PCS_dcdcPwmEnableLineErrorCount m22 : 42|10@1+ (1,0) [0|1023] ""  Receiver
+ SG_ PCS_dcdcShortTimeUs m8 : 24|16@1+ (0.00048828125,0) [0|31.9995] "us"  Receiver
+ SG_ PCS_dcdcTCommMeasured m8 : 8|16@1- (0.001953125,0) [-64|63.998] "us"  Receiver
+ SG_ PCS_dcdcTankVoltage m7 : 26|11@1- (1,0) [-1024|1023] "V"  Receiver
+ SG_ PCS_dcdcTankVoltageTarget m7 : 37|10@1+ (1,0) [0|1023] "V"  Receiver
+ SG_ PCS_dcdcUnifiedCommand m7 : 5|10@1+ (0.001,0) [0|1] "1"  Receiver
+ SG_ PCS_numAlertsSet m22 : 56|7@1+ (1,0) [0|127] ""  Receiver
+
 BO_ 955 ID3BBUI_power: 2 VehicleBus
  SG_ UI_powerExpected : 0|8@1+ (1,0) [0|100] "kW"  Receiver
  SG_ UI_powerIdeal : 8|8@1+ (1,0) [0|100] "kW"  Receiver
@@ -923,14 +1430,6 @@ BO_ 822 ID336MaxPowerRating: 3 VehicleBus
  SG_ DriveRegenRating336 : 16|8@1+ (1,-100) [-100|155] "kW"  Receiver
  SG_ DrivePowerRating336 : 0|9@1+ (1,0) [0|511] "kW"  Receiver
 
-BO_ 819 ID333UIcharging: 4 VehicleBus
- SG_ UIchargeToSOC333 : 16|10@1+ (0.1,0) [0|102.3] "%"  Receiver
- SG_ UIchargeCurrentLimit333 : 8|7@1+ (1,0) [0|127] "A"  Receiver
-
-BO_ 577 ID241Coolant: 7 VehicleBus
- SG_ VCFPTCoolantFlow241 : 22|9@1+ (0.1,0) [0|51.1] "LPM"  Receiver
- SG_ VCFbattCoolantFlow241 : 0|9@1+ (0.1,0) [0|51.1] "LPM"  Receiver
-
 BO_ 659 ID293chassisControls: 8 VehicleBus
  SG_ UICCtrailerMode293 : 12|1@1+ (1,0) [0|1] ""  Receiver
  SG_ UICCWinchMode293 : 8|2@1+ (1,0) [0|3] ""  Receiver
@@ -1082,30 +1581,6 @@ BO_ 280 ID118DriveSystemStatus: 8 VehicleBus
  SG_ DriveSystemStatusChecksum118 : 0|8@1+ (1,0) [0|0] ""  Receiver
  SG_ DriveSystemStatusCounter118 : 8|4@1+ (1,0) [0|0] ""  Receiver
 
-BO_ 530 ID212BMSstatus: 8 VehicleBus
- SG_ BMSstate212 : 11|4@1+ (1,0) [0|15] ""  Receiver
- SG_ BMSchargeStatus212 : 32|3@1+ (1,0) [0|7] ""  Receiver
- SG_ BMScontactors212 : 8|3@1+ (1,0) [0|7] ""  Receiver
- SG_ BMSchargePowerAvailable212 : 38|11@1+ (0.125,0) [0|255.875] "kW"  Receiver
- SG_ MinBattTemp212 : 56|8@1+ (0.5,-40) [-40|87.5] "C"  Receiver
- SG_ IsolationR212 : 19|10@1+ (1,0) [0|1023] "kOhm"  Receiver
- SG_ BMSactiveHeatingWorthwhile212 : 5|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSchargeRequest212 : 29|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSchargeRetryCount212 : 49|4@1+ (1,0) [0|0] ""  Receiver
- SG_ BMScpMiaOnHvs212 : 6|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSdiLimpRequest212 : 35|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSecuLogUploadRequest212 : 54|2@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSHVstate212 : 16|3@1+ (1,0) [0|0] ""  Receiver
- SG_ BMShvacPowerRequest212 : 0|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSkeepWarmRequest212 : 30|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSnotEnoughPowerForDrive212 : 1|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSnotEnoughPowerForSupport212 : 2|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSokToShipByAir212 : 36|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSokToShipByLand212 : 37|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSpcsPwmEnabled212 : 53|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSpreconditionAllowed212 : 3|1@1+ (1,0) [0|0] ""  Receiver
- SG_ BMSupdateAllowed212 : 4|1@1+ (1,0) [0|0] ""  Receiver
-
 BO_ 850 ID352BMSenergy: 8 VehicleBus
  SG_ BtochargecompleteKWh352 : 40|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
  SG_ BidealremainKWh352 : 30|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
@@ -1113,6 +1588,8 @@ BO_ 850 ID352BMSenergy: 8 VehicleBus
  SG_ BremainingKWhNom352 : 10|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
  SG_ BfullKWhNom352 : 0|10@1+ (0.1,0) [0|102.3] "kWh"  Receiver
  SG_ BbufferKWh352 : 50|8@1+ (0.1,0) [0|25.5] "kWh"  Receiver
+ SG_ BMS_energyCounter : 58|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ BMS_fullChargeComplete : 62|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 594 ID252PowerLimits: 8 VehicleBus
  SG_ HVACpowerMax252 : 50|10@1+ (0.02,0) [0|20.46] "kW"  Receiver
@@ -1455,10 +1932,14 @@ EV_ MPH: 0 [0|0] "MPH" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
 EV_ Milage: 0 [0|0] "Mi" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 1367 "swapped with 5D7 in old firmware";
+CM_ BO_ 1495 "swapped with 557 in old firmware";
+CM_ BO_ 2005 "swapped with 757in old firmware";
+CM_ BO_ 1879 "swapped with 7D5in old firmware";
 CM_ SG_ 390 FrontTorqueActual186 "Torque at axle";
 CM_ SG_ 390 FrontTorqueRequest186 "Torque at axle";
-CM_ BO_ 918 "Note Rear Oil was 396 in older firmware";
-CM_ BO_ 917 "Note Rear Oil was 396 in older firmware";
+CM_ BO_ 918 "swapped with 395 in old firmware";
+CM_ BO_ 917 "swapped with 396 in old firmware";
 CM_ SG_ 472 RearTorqueRequest1D8 "driver requested torque";
 CM_ SG_ 472 RearTorque1D8 "torque at motor";
 CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
@@ -1535,20 +2016,22 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Feb09";
+BA_DEF_DEF_  "Modified" "JW2020Feb10";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 819 500;
+BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 468 10;
+BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
-BA_ "GenMsgCycleTime" BO_ 819 500;
-BA_ "GenMsgCycleTime" BO_ 577 100;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgSendType" BO_ 79 0;
+BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -1559,14 +2042,12 @@ BA_ "GenMsgCycleTime" BO_ 535 1000;
 BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgSendType" BO_ 297 0;
+BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgSendType" BO_ 280 0;
-BA_ "GenMsgSendType" BO_ 530 0;
-BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -1574,26 +2055,151 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 340 10;
+BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgSendType" BO_ 264 0;
-BA_ "GenMsgSendType" BO_ 306 0;
+BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgCycleTime" BO_ 306 10;
-BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 306 0;
 BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 100;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgCycleTime" BO_ 2047 100;
 BA_ "GenMsgSendType" BO_ 2047 0;
+BA_ "GenMsgCycleTime" BO_ 2047 100;
 BA_ "SystemSignalLongSymbol" SG_ 545 VCFrontvcrightHiCurrentLVState22 "VCFrontvcrightHiCurrentLVState221";
 BA_ "SystemSignalLongSymbol" SG_ 691 VCRightptcHeaterReqAirpathBlocke "VCRightptcHeaterReqAirpathBlocked";
 BA_ "SystemSignalLongSymbol" SG_ 918 FrontOilPumpOilTempEstConfident3 "FrontOilPumpOilTempEstConfident39";
 BA_ "SystemSignalLongSymbol" SG_ 917 RearOilPumpOilTempEstConfident39 "RearOilPumpOilTempEstConfident395";
 BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
 BA_ "SystemSignalLongSymbol" SG_ 2047 CFGpassengerOccupancySensorType7 "CFGpassengerOccupancySensorType7FF";
+VAL_ 530 BMS_chgPowerAvailable 2047 "SNA" ;
+VAL_ 530 BMS_contactorState 6 "BMS_CTRSET_BLOCKED" 4 "BMS_CTRSET_CLOSED" 3 "BMS_CTRSET_CLOSING" 1 "BMS_CTRSET_OPEN" 2 "BMS_CTRSET_OPENING" 0 "BMS_CTRSET_SNA" 5 "BMS_CTRSET_WELDED" ;
+VAL_ 530 BMS_diLimpRequest 0 "LIMP_REQUEST_NONE" 1 "LIMP_REQUEST_WELDED" ;
+VAL_ 530 BMS_ecuLogUploadRequest 1 "REQUEST_PRIORITY_1" 2 "REQUEST_PRIORITY_2" 3 "REQUEST_PRIORITY_3" 0 "REQUEST_PRIORITY_NONE" ;
+VAL_ 530 BMS_hvState 1 "HV_COMING_UP" 0 "HV_DOWN" 2 "HV_GOING_DOWN" 6 "HV_UP" 4 "HV_UP_FOR_CHARGE" 5 "HV_UP_FOR_DC_CHARGE" 3 "HV_UP_FOR_DRIVE" ;
+VAL_ 530 BMS_isolationResistance 1023 "SNA" ;
+VAL_ 530 BMS_smStateRequest 3 "BMS_CHARGE" 5 "BMS_CLEAR_FAULT" 1 "BMS_DRIVE" 6 "BMS_FAULT" 4 "BMS_FEIM" 9 "BMS_SNA" 0 "BMS_STANDBY" 2 "BMS_SUPPORT" 8 "BMS_TEST" 7 "BMS_WELD" ;
+VAL_ 530 BMS_state 3 "BMS_CHARGE" 5 "BMS_CLEAR_FAULT" 1 "BMS_DRIVE" 6 "BMS_FAULT" 4 "BMS_FEIM" 9 "BMS_SNA" 0 "BMS_STANDBY" 2 "BMS_SUPPORT" 8 "BMS_TEST" 7 "BMS_WELD" ;
+VAL_ 530 BMS_uiChargeStatus 2 "BMS_ABOUT_TO_CHARGE" 4 "BMS_CHARGE_COMPLETE" 5 "BMS_CHARGE_STOPPED" 3 "BMS_CHARGING" 0 "BMS_DISCONNECTED" 1 "BMS_NO_POWER" ;
+VAL_ 946 BMS_chargeCurrentLimitMode 1 "BMS_CHG_I_LIMIT_BRICK_TEMP_AND_V" 2 "BMS_CHG_I_LIMIT_CAC_IMBALANCE" 5 "BMS_CHG_I_LIMIT_CONFIG" 6 "BMS_CHG_I_LIMIT_HV_CHAIN" 3 "BMS_CHG_I_LIMIT_LEAKY_BUCKET" 0 "BMS_CHG_I_LIMIT_NONE" 4 "BMS_CHG_I_LIMIT_TETHERING" ;
+VAL_ 946 BMS_chargeNeededReason 5 "BMS_AUTO_TOP_OFF_COUNTER" 6 "BMS_BRICKV_LESS_THAN_FULL_CHARGE" 4 "BMS_CABLE_CYCLE_TOP_OFF" 3 "BMS_CHARGE_TARGET_INCREASED" 2 "BMS_DCH_KWH_THRESHOLD" 0 "BMS_NO_CHARGE_REASON" 1 "BMS_SOC_LESS_THAN_UI_THRESHOLD" ;
+VAL_ 946 BMS_chgEndBmsHvChargeStatus 4 "BMS_CHARGE_ENABLED" 3 "BMS_CHARGE_ENABLING" 7 "BMS_CHARGE_FAULTED" 0 "BMS_CHARGE_STANDBY" 6 "BMS_EMERGENCY_SHUTDOWN" 1 "BMS_EXT_EVSE_TEST_ALLOWED" 2 "BMS_EXT_PRECHARGE_ALLOWED" 5 "BMS_GRACEFUL_SHUTDOWN" ;
+VAL_ 946 BMS_chgEndChargeState 7 "CHARGE_STATE_AC_DISABLE_PCS" 4 "CHARGE_STATE_AC_ENABLE_PCS" 5 "CHARGE_STATE_CHARGING_ACTIVE" 6 "CHARGE_STATE_DC_DISABLING_CHARGER" 3 "CHARGE_STATE_DC_ENABLE_FCLINK" 2 "CHARGE_STATE_DC_EXT_ISO_CHECK" 1 "CHARGE_STATE_ENABLE_DCLINK" 15 "CHARGE_STATE_FAULT" 0 "CHARGE_STATE_INACTIVE" ;
+VAL_ 946 BMS_chgEndCpHvChargeStatus 1 "CP_CHARGE_CONNECTED" 5 "CP_CHARGE_ENABLED" 6 "CP_CHARGE_FAULTED" 0 "CP_CHARGE_INACTIVE" 2 "CP_CHARGE_STANDBY" 4 "CP_EVSE_TEST_PASSED" 3 "CP_EXT_EVSE_TEST_ACTIVE" ;
+VAL_ 946 BMS_chgEndCpShutdownRequest 2 "EMERGENCY_SHUTDOWN_REQUESTED" 1 "GRACEFUL_SHUTDOWN_REQUESTED" 0 "NO_SHUTDOWN_REQUESTED" ;
+VAL_ 946 BMS_chgEndEvseChargeType 2 "AC_CHARGER_PRESENT" 1 "DC_CHARGER_PRESENT" 0 "NO_CHARGER_PRESENT" ;
+VAL_ 946 BMS_chgEndPcsHvChargeStatus 1 "PCS_CHARGE_BLOCKED" 2 "PCS_CHARGE_ENABLED" 3 "PCS_CHARGE_FAULTED" 0 "PCS_CHARGE_STANDBY" ;
+VAL_ 946 BMS_chgEndPcsShutdownRequest 2 "EMERGENCY_SHUTDOWN_REQUESTED" 1 "GRACEFUL_SHUTDOWN_REQUESTED" 0 "NO_SHUTDOWN_REQUESTED" ;
+VAL_ 946 BMS_cpChargeStatus 1 "BMS_CHARGING_ACTIVE" 2 "BMS_CHARGING_COMPLETE" 4 "BMS_CHARGING_ENABLING" 3 "BMS_CHARGING_FAULT" 0 "BMS_CHARGING_INACTIVE" 5 "BMS_CHARGING_UPDATE_IN_PROGRESS" ;
+VAL_ 946 BMS_fcLinkTestDecayTime 1023 "SNA" ;
+VAL_ 946 BMS_floodPortState1 2 "FLOOD_PORT_STATE_CLOSED" 4 "FLOOD_PORT_STATE_ERROR_HIGH" 1 "FLOOD_PORT_STATE_ERROR_LOW" 3 "FLOOD_PORT_STATE_OPEN" 0 "FLOOD_PORT_STATE_SNA" ;
+VAL_ 946 BMS_floodPortState2 2 "FLOOD_PORT_STATE_CLOSED" 4 "FLOOD_PORT_STATE_ERROR_HIGH" 1 "FLOOD_PORT_STATE_ERROR_LOW" 3 "FLOOD_PORT_STATE_OPEN" 0 "FLOOD_PORT_STATE_SNA" ;
+VAL_ 946 BMS_negCtrCommonModeRejError -4096 "SNA" ;
+VAL_ 946 BMS_negCtrCommonModeRejErrorConf 8191 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationConfidenceMax 8191 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationConfidenceMin 8191 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationFiltConfMax 8191 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationFiltConfMin 8191 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationFiltMax -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationFiltMin -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationMax -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDeviationMin -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDropCorrectedFiltMax -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDropCorrectedFiltMin -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDropCorrectedMax -4096 "SNA" ;
+VAL_ 946 BMS_negCtrDropCorrectedMin -4096 "SNA" ;
+VAL_ 946 BMS_negCtrOffsetError -4096 "SNA" ;
+VAL_ 946 BMS_negCtrOffsetErrorConf 8191 "SNA" ;
+VAL_ 946 BMS_negCtrResistance -4096 "SNA" ;
+VAL_ 946 BMS_negCtrResistanceConfidence 8191 "SNA" ;
+VAL_ 946 BMS_posCtrCommonModeRejError -4096 "SNA" ;
+VAL_ 946 BMS_posCtrCommonModeRejErrorConf 8191 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationConfidenceMax 8191 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationConfidenceMin 8191 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationFiltConfMax 8191 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationFiltConfMin 8191 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationFiltMax -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationFiltMin -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationMax -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDeviationMin -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDropCorrectedFiltMax -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDropCorrectedFiltMin -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDropCorrectedMax -4096 "SNA" ;
+VAL_ 946 BMS_posCtrDropCorrectedMin -4096 "SNA" ;
+VAL_ 946 BMS_posCtrOffsetError -4096 "SNA" ;
+VAL_ 946 BMS_posCtrOffsetErrorConf 8191 "SNA" ;
+VAL_ 946 BMS_posCtrResistance -4096 "SNA" ;
+VAL_ 946 BMS_posCtrResistanceConfidence 8191 "SNA" ;
+VAL_ 796 CC_gridGrounding 1 "CC_GRID_GROUNDING_IT_SplitPhase" 2 "CC_GRID_GROUNDING_SNA" 0 "CC_GRID_GROUNDING_TN_TT" ;
+VAL_ 796 CC_line1Voltage 511 "SNA" ;
+VAL_ 796 CC_line2Voltage 511 "SNA" ;
+VAL_ 796 CC_line3Voltage 511 "SNA" ;
+VAL_ 796 CC_numPhases 0 "SNA" ;
+VAL_ 796 CC_pilotState 2 "CC_PILOT_STATE_FAULTED" 1 "CC_PILOT_STATE_IDLE" 0 "CC_PILOT_STATE_READY" 3 "CC_PILOT_STATE_SNA" ;
+VAL_ 797 CC_chgStatus2Index 0 "Mux0" ;
+VAL_ 797 CC_buttonState 1 "CC_BUTTON_PRESSED" 0 "CC_BUTTON_RELEASED" ;
+VAL_ 812 CC_activeConnectorID 255 "SNA" ;
+VAL_ 812 CC_conn1Current 255 "SNA" ;
+VAL_ 812 CC_conn2Current 255 "SNA" ;
+VAL_ 812 CC_conn3Current 255 "SNA" ;
+VAL_ 812 CC_conn4Current 255 "SNA" ;
+VAL_ 812 CC_contactor1Closed 1 "CC_CONTACTOR_CLOSED" 0 "CC_CONTACTOR_OPEN" 3 "CC_CONTACTOR_SNA" ;
+VAL_ 812 CC_contactor2Closed 1 "CC_CONTACTOR_CLOSED" 0 "CC_CONTACTOR_OPEN" 3 "CC_CONTACTOR_SNA" ;
+VAL_ 812 CC_temperature1 127 "SNA" ;
+VAL_ 812 CC_temperature2 127 "SNA" ;
+VAL_ 812 CC_temperature3 127 "SNA" ;
+VAL_ 812 CC_temperature4 127 "SNA" ;
+VAL_ 573 CP_chargeShutdownRequest 2 "EMERGENCY_SHUTDOWN_REQUESTED" 1 "GRACEFUL_SHUTDOWN_REQUESTED" 0 "NO_SHUTDOWN_REQUESTED" ;
+VAL_ 573 CP_hvChargeStatus 1 "CP_CHARGE_CONNECTED" 5 "CP_CHARGE_ENABLED" 6 "CP_CHARGE_FAULTED" 0 "CP_CHARGE_INACTIVE" 2 "CP_CHARGE_STANDBY" 4 "CP_EVSE_TEST_PASSED" 3 "CP_EXT_EVSE_TEST_ACTIVE" ;
+VAL_ 541 CP_acChargeState 1 "AC_CHARGE_CONNECTED_CHARGE_BLOCKED" 3 "AC_CHARGE_ENABLED" 6 "AC_CHARGE_FAULT" 0 "AC_CHARGE_INACTIVE" 4 "AC_CHARGE_ONBOARD_CHARGER_SHUTDOWN" 2 "AC_CHARGE_STANDBY" 5 "AC_CHARGE_VEH_SHUTDOWN" ;
+VAL_ 541 CP_cableType 2 "CHG_CABLE_TYPE_GB_AC" 3 "CHG_CABLE_TYPE_GB_DC" 0 "CHG_CABLE_TYPE_IEC" 1 "CHG_CABLE_TYPE_SAE" 4 "CHG_CABLE_TYPE_SNA" ;
+VAL_ 541 CP_evseChargeType 2 "AC_CHARGER_PRESENT" 1 "DC_CHARGER_PRESENT" 0 "NO_CHARGER_PRESENT" ;
+VAL_ 541 CP_gbState 10 "GBDC_CHARGE_DISABLING" 5 "GBDC_CHARGE_PARAM_CONFIG" 8 "GBDC_CHARGING" 2 "GBDC_COMMS_RECEIVED" 11 "GBDC_END_OF_CHARGE" 12 "GBDC_ERROR_HANDLING" 14 "GBDC_FAULTED" 3 "GBDC_HANDSHAKING_EXT_ISO" 0 "GBDC_INACTIVE" 7 "GBDC_READY_TO_CHARGE" 4 "GBDC_RECOGNITION" 13 "GBDC_RETRY_CHARGE" 9 "GBDC_STOP_CHARGE_REQUESTED" 6 "GBDC_VEH_PACK_PRECHARGE" 1 "GBDC_WAIT_FOR_COMMS" ;
+VAL_ 541 CP_gbdcFailureReason 1 "GBDC_ATTEMPTS_EXPIRED" 3 "GBDC_CRITICAL_FAILURE" 0 "GBDC_FAILURE_NONE" 2 "GBDC_SHUTDOWN_FAILURE" ;
+VAL_ 541 CP_gbdcStopChargeReason 3 "GBDC_COMMS_TIMEOUT" 5 "GBDC_EVSE_CRITICAL_FAULT" 4 "GBDC_EVSE_FAULT" 2 "GBDC_EVSE_REQUESTED" 6 "GBDC_LIVE_DISCONNECT" 0 "GBDC_STOP_REASON_NONE" 1 "GBDC_VEH_REQUESTED" ;
+VAL_ 541 CP_iecComboState 6 "IEC_COMBO_CABLE_CHECK" 5 "IEC_COMBO_CHARGE_PARAM_DISCOVERY" 1 "IEC_COMBO_CONNECTED" 8 "IEC_COMBO_ENABLED" 10 "IEC_COMBO_END_OF_CHARGE" 11 "IEC_COMBO_FAULT" 0 "IEC_COMBO_INACTIVE" 4 "IEC_COMBO_PAYMENT_SELECTION" 7 "IEC_COMBO_PRECHARGE" 3 "IEC_COMBO_SERVICE_DISCOVERY" 9 "IEC_COMBO_SHUTDOWN" 2 "IEC_COMBO_V2G_SESSION_SETUP" 12 "IEC_COMBO_WAIT_RESTART" ;
+VAL_ 541 CP_pilot 3 "CHG_PILOT_FAST_CHARGE" 1 "CHG_PILOT_FAULTED" 4 "CHG_PILOT_IDLE" 5 "CHG_PILOT_INVALID" 2 "CHG_PILOT_LINE_CHARGE" 0 "CHG_PILOT_NONE" 7 "CHG_PILOT_SNA" 6 "CHG_PILOT_UNUSED_6" ;
+VAL_ 541 CP_proximity 1 "CHG_PROXIMITY_DISCONNECTED" 3 "CHG_PROXIMITY_LATCHED" 0 "CHG_PROXIMITY_SNA" 2 "CHG_PROXIMITY_UNLATCHED" ;
+VAL_ 541 CP_teslaDcState 1 "TESLA_DC_CONNECTED_CHARGE_BLOCKED" 9 "TESLA_DC_EMERGENCY_SHUTDOWN" 6 "TESLA_DC_ENABLED" 7 "TESLA_DC_EVSE_SHUTDOWN" 5 "TESLA_DC_EXT_PRECHARGE_ACTIVE" 3 "TESLA_DC_EXT_TESTS_ENABLED" 4 "TESLA_DC_EXT_TEST_ACTIVE" 10 "TESLA_DC_FAULT" 0 "TESLA_DC_INACTIVE" 2 "TESLA_DC_STANDBY" 8 "TESLA_DC_VEH_SHUTDOWN" ;
+VAL_ 541 CP_teslaSwcanState 1 "TESLA_SWCAN_ACCEPT" 3 "TESLA_SWCAN_ESTABLISHED" 4 "TESLA_SWCAN_FAULT" 5 "TESLA_SWCAN_GO_TO_SLEEP" 0 "TESLA_SWCAN_INACTIVE" 6 "TESLA_SWCAN_OFFBOARD_UPDATE_IN_PROGRESS" 2 "TESLA_SWCAN_RECEIVE" ;
+VAL_ 1885 CP_sensorDataSelect 2 "CP_SENSOR_DOOR" 0 "CP_SENSOR_DOOR_COUNTS" 5 "CP_SENSOR_FAULT_LINE" 4 "CP_SENSOR_INDUCTIVE_DOOR" 3 "CP_SENSOR_LATCH" 9 "CP_SENSOR_PILOT" 10 "CP_SENSOR_PILOT2" 1 "CP_SENSOR_PIN_TEMP" 8 "CP_SENSOR_PROX" 11 "CP_SENSOR_PROX_GB" 7 "CP_SENSOR_RAILS" 6 "CP_SENSOR_UHF" ;
+VAL_ 577 VCFRONT_coolantAirPurgeBatState 1 "AIR_PURGE_STATE_ACTIVE" 2 "AIR_PURGE_STATE_COMPLETE" 0 "AIR_PURGE_STATE_INACTIVE" 3 "AIR_PURGE_STATE_INTERRUPTED" 4 "AIR_PURGE_STATE_PENDING" ;
+VAL_ 577 VCFRONT_coolantFlowBatReason 4 "ACTIVE_MANAGER_BATT" 9 "ACTIVE_MANAGER_PT" 6 "BMS_FLOW_REQ" 1 "COOLANT_AIR_PURGE" 7 "DAS_FLOW_REQ" 13 "DIS_FLOW_REQ" 12 "DI_FLOW_REQ" 0 "NONE" 2 "NO_FLOW_REQ" 3 "OVERRIDE_BATT" 8 "OVERRIDE_PT" 5 "PASSIVE_MANAGER_BATT" 10 "PASSIVE_MANAGER_PT" 11 "PCS_FLOW_REQ" ;
+VAL_ 577 VCFRONT_coolantFlowPTReason 4 "ACTIVE_MANAGER_BATT" 9 "ACTIVE_MANAGER_PT" 6 "BMS_FLOW_REQ" 1 "COOLANT_AIR_PURGE" 7 "DAS_FLOW_REQ" 13 "DIS_FLOW_REQ" 12 "DI_FLOW_REQ" 0 "NONE" 2 "NO_FLOW_REQ" 3 "OVERRIDE_BATT" 8 "OVERRIDE_PT" 5 "PASSIVE_MANAGER_BATT" 10 "PASSIVE_MANAGER_PT" 11 "PCS_FLOW_REQ" ;
+VAL_ 577 VCFRONT_wasteHeatRequestType 2 "WASTE_TYPE_FULL" 0 "WASTE_TYPE_NONE" 1 "WASTE_TYPE_PARTIAL" ;
+VAL_ 708 PCS_logMessageSelect 3 "PCS_LOG_CHG_1" 4 "PCS_LOG_CHG_2" 5 "PCS_LOG_CHG_3" 13 "PCS_LOG_CHG_4" 21 "PCS_LOG_CHG_LINE_OFFSET" 20 "PCS_LOG_CHG_NO_FLOW" 23 "PCS_LOG_CHG_STATISTICS" 6 "PCS_LOG_DCDC_1" 7 "PCS_LOG_DCDC_2" 8 "PCS_LOG_DCDC_3" 18 "PCS_LOG_DCDC_4" 19 "PCS_LOG_DCDC_5" 24 "PCS_LOG_DCDC_HVBUS_PCHG_DATA" 25 "PCS_LOG_DCDC_IMPEDANCE_EST" 22 "PCS_LOG_DCDC_STATISTICS" 14 "PCS_LOG_DLOG_1" 15 "PCS_LOG_DLOG_2" 16 "PCS_LOG_DLOG_3" 17 "PCS_LOG_DLOG_4" 26 "PCS_LOG_NUM_MSGS" 0 "PCS_LOG_PHA_1" 10 "PCS_LOG_PHA_2" 1 "PCS_LOG_PHB_1" 11 "PCS_LOG_PHB_2" 2 "PCS_LOG_PHC_1" 12 "PCS_LOG_PHC_2" 9 "PCS_LOG_SYSTEM_1" ;
+VAL_ 708 PCS_acChargeSelfTestState 0 "PCS_SELF_TEST_IDLE" 1 "PCS_SELF_TEST_STARTED" ;
+VAL_ 708 PCS_chgInputFrequencyL1N 0 "FREQUENCY_UNKNOWN" ;
+VAL_ 708 PCS_chgInputFrequencyL2N 0 "FREQUENCY_UNKNOWN" ;
+VAL_ 708 PCS_chgInputFrequencyL3N 0 "FREQUENCY_UNKNOWN" ;
+VAL_ 708 PCS_chgInternalPhaseConfig 5 "PHASE_CONFIG_MFG_TEST_CONFIG_1" 6 "PHASE_CONFIG_MFG_TEST_CONFIG_2" 7 "PHASE_CONFIG_RELIABILITY_SINGLE_PHASE" 1 "PHASE_CONFIG_SINGLE_PHASE" 8 "PHASE_CONFIG_SINGLE_PHASE_EVSE_PARALLEL" 4 "PHASE_CONFIG_SINGLE_PHASE_IEC_GB" 0 "PHASE_CONFIG_SNA" 2 "PHASE_CONFIG_THREE_PHASE" 3 "PHASE_CONFIG_THREE_PHASE_DELTA" 9 "PHASE_CONFIG_TOTAL_NUM" ;
+VAL_ 708 PCS_chgPhAInputFreqWobble 0 "FREQUENCY_UNKNOWN" ;
+VAL_ 708 PCS_chgPhALastShutdownReason 12 "PCS_PH_SHUTDOWN_CONTROL_REGULATION_FAULT" 16 "PCS_PH_SHUTDOWN_FREQ_OUT_OF_RANGE" 2 "PCS_PH_SHUTDOWN_HW_ENABLE" 4 "PCS_PH_SHUTDOWN_HW_FAULT" 7 "PCS_PH_SHUTDOWN_INPUT_OV" 6 "PCS_PH_SHUTDOWN_INPUT_UV" 11 "PCS_PH_SHUTDOWN_INT_BUS_UV" 17 "PCS_PH_SHUTDOWN_LINE_TRANSIENT_FAULT" 9 "PCS_PH_SHUTDOWN_OUTPUT_OV" 8 "PCS_PH_SHUTDOWN_OUTPUT_UV" 13 "PCS_PH_SHUTDOWN_OVER_TEMPERATURE" 5 "PCS_PH_SHUTDOWN_PLL_NOT_LOCKED" 10 "PCS_PH_SHUTDOWN_PRECHARGE_TIMEOUT" 0 "PCS_PH_SHUTDOWN_REASON_NONE" 15 "PCS_PH_SHUTDOWN_SENSOR_IRRATIONAL" 1 "PCS_PH_SHUTDOWN_SW_ENABLE" 3 "PCS_PH_SHUTDOWN_SW_FAULT" 14 "PCS_PH_SHUTDOWN_TEMP_IRRATIONAL" ;
+VAL_ 708 PCS_chgPhAState 5 "PCS_PH_STATE_CLEAR_FAULTS" 3 "PCS_PH_STATE_ENABLE" 4 "PCS_PH_STATE_FAULT" 1 "PCS_PH_STATE_IDLE" 0 "PCS_PH_STATE_INIT" 2 "PCS_PH_STATE_PRECHARGE" 6 "PCS_PH_STATE_SHUTTING_DOWN" ;
+VAL_ 708 PCS_chgPhBInputFreqWobble 0 "FREQUENCY_UNKNOWN" ;
+VAL_ 708 PCS_chgPhBLastShutdownReason 12 "PCS_PH_SHUTDOWN_CONTROL_REGULATION_FAULT" 16 "PCS_PH_SHUTDOWN_FREQ_OUT_OF_RANGE" 2 "PCS_PH_SHUTDOWN_HW_ENABLE" 4 "PCS_PH_SHUTDOWN_HW_FAULT" 7 "PCS_PH_SHUTDOWN_INPUT_OV" 6 "PCS_PH_SHUTDOWN_INPUT_UV" 11 "PCS_PH_SHUTDOWN_INT_BUS_UV" 17 "PCS_PH_SHUTDOWN_LINE_TRANSIENT_FAULT" 9 "PCS_PH_SHUTDOWN_OUTPUT_OV" 8 "PCS_PH_SHUTDOWN_OUTPUT_UV" 13 "PCS_PH_SHUTDOWN_OVER_TEMPERATURE" 5 "PCS_PH_SHUTDOWN_PLL_NOT_LOCKED" 10 "PCS_PH_SHUTDOWN_PRECHARGE_TIMEOUT" 0 "PCS_PH_SHUTDOWN_REASON_NONE" 15 "PCS_PH_SHUTDOWN_SENSOR_IRRATIONAL" 1 "PCS_PH_SHUTDOWN_SW_ENABLE" 3 "PCS_PH_SHUTDOWN_SW_FAULT" 14 "PCS_PH_SHUTDOWN_TEMP_IRRATIONAL" ;
+VAL_ 708 PCS_chgPhBState 5 "PCS_PH_STATE_CLEAR_FAULTS" 3 "PCS_PH_STATE_ENABLE" 4 "PCS_PH_STATE_FAULT" 1 "PCS_PH_STATE_IDLE" 0 "PCS_PH_STATE_INIT" 2 "PCS_PH_STATE_PRECHARGE" 6 "PCS_PH_STATE_SHUTTING_DOWN" ;
+VAL_ 708 PCS_chgPhCInputFreqWobble 0 "FREQUENCY_UNKNOWN" ;
+VAL_ 708 PCS_chgPhCLastShutdownReason 12 "PCS_PH_SHUTDOWN_CONTROL_REGULATION_FAULT" 16 "PCS_PH_SHUTDOWN_FREQ_OUT_OF_RANGE" 2 "PCS_PH_SHUTDOWN_HW_ENABLE" 4 "PCS_PH_SHUTDOWN_HW_FAULT" 7 "PCS_PH_SHUTDOWN_INPUT_OV" 6 "PCS_PH_SHUTDOWN_INPUT_UV" 11 "PCS_PH_SHUTDOWN_INT_BUS_UV" 17 "PCS_PH_SHUTDOWN_LINE_TRANSIENT_FAULT" 9 "PCS_PH_SHUTDOWN_OUTPUT_OV" 8 "PCS_PH_SHUTDOWN_OUTPUT_UV" 13 "PCS_PH_SHUTDOWN_OVER_TEMPERATURE" 5 "PCS_PH_SHUTDOWN_PLL_NOT_LOCKED" 10 "PCS_PH_SHUTDOWN_PRECHARGE_TIMEOUT" 0 "PCS_PH_SHUTDOWN_REASON_NONE" 15 "PCS_PH_SHUTDOWN_SENSOR_IRRATIONAL" 1 "PCS_PH_SHUTDOWN_SW_ENABLE" 3 "PCS_PH_SHUTDOWN_SW_FAULT" 14 "PCS_PH_SHUTDOWN_TEMP_IRRATIONAL" ;
+VAL_ 708 PCS_chgPhCState 5 "PCS_PH_STATE_CLEAR_FAULTS" 3 "PCS_PH_STATE_ENABLE" 4 "PCS_PH_STATE_FAULT" 1 "PCS_PH_STATE_IDLE" 0 "PCS_PH_STATE_INIT" 2 "PCS_PH_STATE_PRECHARGE" 6 "PCS_PH_STATE_SHUTTING_DOWN" ;
+VAL_ 708 PCS_chgPhasesPriority 36 "PHASES_PRIORITY_ABC" 24 "PHASES_PRIORITY_ACB" 33 "PHASES_PRIORITY_BAC" 9 "PHASES_PRIORITY_BCA" 18 "PHASES_PRIORITY_CAB" 6 "PHASES_PRIORITY_CBA" 0 "UNDEFINED_PHASES_PRIORITY" ;
+VAL_ 708 PCS_cpu2BootState 2 "CPU2_STATE_APPLICATION" 1 "CPU2_STATE_BOOTLOADER" 0 "CPU2_STATE_BOOTROM" 3 "CPU2_STATE_ERROR" ;
+VAL_ 708 PCS_dLogPhAChannel1Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhAChannel2Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhAChannel3Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhAChannel4Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhBChannel1Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhBChannel2Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhBChannel3Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhBChannel4Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhCChannel1Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhCChannel2Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhCChannel3Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dLogPhCChannel4Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
+VAL_ 708 PCS_dcdcTankVoltage -1024 "TANK_VOLTAGE_SNA" ;
 VAL_ 2005 DI_aebFaultReason 9 "DI_AEB_FAULT_ACCEL_OUT_OF_BOUNDS" 14 "DI_AEB_FAULT_ACCEL_REQ_INVALID" 5 "DI_AEB_FAULT_DAS_CONTROL_MIA" 15 "DI_AEB_FAULT_DAS_REQ_DI_UNAVAIL" 6 "DI_AEB_FAULT_DAS_SNA" 3 "DI_AEB_FAULT_EBR_FAULT" 1 "DI_AEB_FAULT_EPB_MIA" 10 "DI_AEB_FAULT_EPB_NOT_PARKED" 11 "DI_AEB_FAULT_ESP_FAULT" 12 "DI_AEB_FAULT_ESP_MIA" 13 "DI_AEB_FAULT_MIN_TIME_BTWN_EVENTS" 0 "DI_AEB_FAULT_NONE" 2 "DI_AEB_FAULT_PM_MIA" 8 "DI_AEB_FAULT_PM_REQUEST" 4 "DI_AEB_FAULT_SPEED_DELTA" 7 "DI_AEB_FAULT_VEL_EST_ABNORMAL" ;
 VAL_ 2005 DI_aebUnavailableReason 1 "DI_AEB_UNAVAILABLE_CLOSURE" 5 "DI_AEB_UNAVAILABLE_DI_STATE" 6 "DI_AEB_UNAVAILABLE_EBR_UNAVAILABLE" 7 "DI_AEB_UNAVAILABLE_EPB" 2 "DI_AEB_UNAVAILABLE_GEAR" 8 "DI_AEB_UNAVAILABLE_HYSTERESIS" 4 "DI_AEB_UNAVAILABLE_NEGATIVE_SPEED" 0 "DI_AEB_UNAVAILABLE_NONE" 3 "DI_AEB_UNAVAILABLE_SKID" 9 "DI_AEB_UNAVAILABLE_TRACK_MODE" ;
 VAL_ 2005 DI_brkStState 6 "BRKST_STATE_FINISHED" 1 "BRKST_STATE_IDLE" 5 "BRKST_STATE_INTERRUPTED" 4 "BRKST_STATE_RUNNING_PRESSED" 3 "BRKST_STATE_RUNNING_PRESSING" 2 "BRKST_STATE_RUNNING_UNPRESSED" 0 "BRKST_STATE_UNAVAILABLE" ;
@@ -1721,9 +2327,6 @@ VAL_ 280 ParkingBrake118 2 "Disengage" 1 "Engage" 0 "Idle" ;
 VAL_ 280 BrakeState118 1 "RegenBrake" ;
 VAL_ 280 DIgear118 3 "Neutral" 7 "Idle" 1 "Park" 2 "Reverse" 4 "Drive" ;
 VAL_ 280 BrakePedal118 1 "PedalBrake" ;
-VAL_ 530 BMSstate212 3 "Charge" 1 "Drive" 0 "Idle" ;
-VAL_ 530 BMSchargeStatus212 1 "Connected" 0 "Disconnected" ;
-VAL_ 530 BMScontactors212 6 "err" 5 "err" 4 "Closed" 3 "Closing" 2 "Opening" 1 "Open" 0 "err" ;
 VAL_ 599 UIspeedUnits257 1 "KPH" 0 "MPH" ;
 VAL_ 552 EPBResmCaliperRequest228 3 "disengaging" 2 "engaging" 1 "idle" ;
 VAL_ 552 EPBResmOperationTrigger228 22 "SuperPark" 6 "Released" 1 "ParkEngaged" ;
