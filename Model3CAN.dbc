@@ -42,6 +42,174 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Rear12vInverter266 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
  SG_ Front12vInverter2E5 : 0|8@1+ (0.1,0) [0|25.5] "Volts" Vector__XXX
 
+BO_ 12 ID00CUI_status: 8 VehicleBus
+ SG_ UI_audioActive : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_autopilotTrial : 12|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_bluetoothActive : 2|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_cameraActive : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_cellActive : 3|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_cellConnected : 10|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_cellNetworkTechnology : 19|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ UI_cellReceiverPower : 24|8@1+ (1,-128) [-128|127] "dB"  Receiver
+ SG_ UI_cellSignalBars : 42|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UI_cpuTemperature : 56|8@1- (1,40) [-20|100] "degC"  Receiver
+ SG_ UI_developmentCar : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_displayOn : 5|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_displayReady : 4|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_factoryReset : 14|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_falseTouchCounter : 32|8@1+ (1,0) [0|255] "1"  Receiver
+ SG_ UI_gpsActive : 16|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_pcbTemperature : 48|8@1- (1,40) [-20|100] "degC"  Receiver
+ SG_ UI_radioActive : 18|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_readyForDrive : 9|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_screenshotActive : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_systemActive : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_touchActive : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_vpnActive : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_wifiActive : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_wifiConnected : 7|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 130 ID082UI_tripPlanning: 8 VehicleBus
+ SG_ UI_energyAtDestination : 48|16@1- (0.01,0) [-327.67|327.67] "kWh"  Receiver
+ SG_ UI_hindsightEnergy : 32|16@1- (0.01,0) [-327.67|327.67] "kWh"  Receiver
+ SG_ UI_navToSupercharger : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_predictedEnergy : 16|16@1- (0.01,0) [-327.67|327.67] "kWh"  Receiver
+ SG_ UI_requestActiveBatteryHeating : 2|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_tripPlanningActive : 0|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 258 ID102VCLEFT_doorStatus: 8 VehicleBus
+ SG_ VCLEFT_frontHandlePWM : 16|7@1+ (1,0) [0|100] "%"  Receiver
+ SG_ VCLEFT_frontHandlePulled : 10|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_frontHandlePulledPersist : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_frontIntSwitchPressed : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_frontLatchStatus : 0|4@1+ (1,0) [0|8] ""  Receiver
+ SG_ VCLEFT_frontLatchSwitch : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_frontRelActuatorSwitch : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_mirrorDipped : 61|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_mirrorFoldState : 52|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCLEFT_mirrorHeatState : 58|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCLEFT_mirrorRecallState : 55|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ VCLEFT_mirrorState : 49|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCLEFT_mirrorTiltXPosition : 33|8@1+ (0.02,0) [0|5] "V"  Receiver
+ SG_ VCLEFT_mirrorTiltYPosition : 41|8@1+ (0.02,0) [0|5] "V"  Receiver
+ SG_ VCLEFT_rearHandlePWM : 24|7@1+ (1,0) [0|100] "%"  Receiver
+ SG_ VCLEFT_rearHandlePulled : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_rearIntSwitchPressed : 32|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_rearLatchStatus : 4|4@1+ (1,0) [0|8] ""  Receiver
+ SG_ VCLEFT_rearLatchSwitch : 9|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCLEFT_rearRelActuatorSwitch : 13|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 259 ID103VCRIGHT_doorStatus: 8 VehicleBus
+ SG_ VCRIGHT_frontHandlePWM : 14|7@1+ (1,0) [0|100] "%"  Receiver
+ SG_ VCRIGHT_frontHandlePulled : 10|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_frontHandlePulledPersist : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_frontIntSwitchPressed : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_frontLatchStatus : 0|4@1+ (1,0) [0|8] ""  Receiver
+ SG_ VCRIGHT_frontLatchSwitch : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_frontRelActuatorSwitch : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_mirrorDipped : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_mirrorFoldState : 52|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCRIGHT_mirrorRecallState : 60|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ VCRIGHT_mirrorState : 49|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCRIGHT_mirrorTiltXPosition : 33|8@1+ (0.02,0) [0|5] "V"  Receiver
+ SG_ VCRIGHT_mirrorTiltYPosition : 41|8@1+ (0.02,0) [0|5] "V"  Receiver
+ SG_ VCRIGHT_rearHandlePWM : 21|7@1+ (1,0) [0|100] "%"  Receiver
+ SG_ VCRIGHT_rearHandlePulled : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_rearIntSwitchPressed : 32|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_rearLatchStatus : 4|4@1+ (1,0) [0|8] ""  Receiver
+ SG_ VCRIGHT_rearLatchSwitch : 9|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_rearRelActuatorSwitch : 13|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ VCRIGHT_reservedForBackCompat : 28|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ VCRIGHT_trunkLatchStatus : 56|4@1+ (1,0) [0|8] ""  Receiver
+
+BO_ 291 ID123UI_alertMatrix1: 8 VehicleBus
+ SG_ UI_a001_DriverDoorOpen : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a002_DoorOpen : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a003_TrunkOpen : 2|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a004_FrunkOpen : 3|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a005_HeadlightsOnDoorOpen : 4|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a006_RemoteServiceAlert : 5|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a007_SoftPackConfigMismatch : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a008_TouchScreenError : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a009_SquashfsError : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a010_MapsMissing : 9|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a011_IncorrectMap : 10|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a012_NotOnPrivateProperty : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a013_TPMSHardWarning : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a014_TPMSSoftWarning : 13|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a015_TPMSOverPressureWarning : 14|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a016_TPMSTemperatureWarning : 15|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a017_TPMSSystemFault : 16|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a018_SlipStartOn : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a019_ParkBrakeFault : 18|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a020_SteeringReduced : 19|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a021_RearSeatbeltUnbuckled : 20|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a022_ApeFusesEtc : 21|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a023_CellInternetCheckFailed : 22|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a024_WifiInternetCheckFailed : 23|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a025_WifiOnlineCheckFailed : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a026_ModemResetLoopDetected : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a027_AutoSteerMIA : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a028_FrontTrunkPopupClosed : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a029_ModemMIA : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a030_ModemVMCrash : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a031_BrakeFluidLow : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a032_CellModemRecoveryResets : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a033_ApTrialExpired : 32|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a034_WakeupProblem : 33|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a035_AudioWatchdogKernelError : 34|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a036_AudioWatchdogHfpError : 35|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a037_AudioWatchdogXrunStormEr : 36|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a038_AudioWatchdogA2bI2cLocku : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a039_AudioA2bNeedRediscovery : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a040_HomelinkTransmit : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a041_AudioDmesgXrun : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a042_AudioDmesgRtThrottling : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a043_InvalidMapDataOverride : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a044_AudioDmesgDspException : 43|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a045_ECallNeedsService : 44|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a046_BackupCameraStreamError : 45|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a047_CellRoamingDisallowed : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a048_AudioPremiumAmpCheckFail : 47|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a049_BrakeShiftRequired : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a050_BackupCameraIPUTimeout : 49|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a051_BackupCameraFrameTimeout : 50|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a052_KernelPanicReported : 51|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a053_QtCarExitError : 52|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a054_AudioBoostPowerBad : 53|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a055_ManualECallDisabled : 54|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a056_ManualECallButtonDisconn : 55|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a057_CellAntennaDisconnected : 56|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a058_GPSAntennaDisconnected : 57|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a059_ECallSpeakerDisconnected : 58|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a060_ECallMicDisconnected : 59|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a061_SIMTestFailed : 60|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a062_ENSTestFailed : 61|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a063_CellularTestFailed : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_a064_ModemFirmwareTestFailed : 63|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 583 ID247DAS_autopilotDebug: 8 VehicleBus
+ SG_ DAS_alcInternalState : 12|4@1+ (1,0) [0|12] ""  Receiver
+ SG_ DAS_autopilotAbortReason : 32|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DAS_behaviorReport : 16|6@1+ (1,0) [1|38] ""  Receiver
+ SG_ DAS_constructionZone : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_controlDistance : 25|6@1+ (2,0) [0|126] "m"  Receiver
+ SG_ DAS_controllerHealth : 22|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_controllerRef : 9|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ DAS_forkState : 45|5@1+ (1,0) [0|27] ""  Receiver
+ SG_ DAS_laneChangeState : 50|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DAS_lastWatchdogCode : 56|7@1+ (1,0) [0|79] ""  Receiver
+ SG_ DAS_localizerHealth : 4|4@1+ (1,0) [0|8] ""  Receiver
+ SG_ DAS_mapAvailability : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_missionPlan : 0|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_roadEstimator : 2|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_rqstedBehaviorStatus : 40|5@1+ (1,0) [0|22] ""  Receiver
+
+BO_ 692 ID2B4PCS_dcdcRailStatus: 5 VehicleBus
+ SG_ PCS_dcdcHvBusVolt : 10|12@1+ (0.146484375,0) [0|599.853515625] "V"  Receiver
+ SG_ PCS_dcdcLvBusVolt : 0|10@1+ (0.0390625,0) [0|39.9609375] "V"  Receiver
+ SG_ PCS_dcdcLvOutputCurrent : 24|12@1+ (0.1,0) [0|400] "A"  Receiver
+
 BO_ 1013 ID3F5VCFRONT_lighting: 8 VehicleBus
  SG_ VCFRONT_DRLLeftStatus : 36|2@1+ (1,0) [0|3] ""  Receiver
  SG_ VCFRONT_DRLRightStatus : 38|2@1+ (1,0) [0|3] ""  Receiver
@@ -1109,40 +1277,40 @@ BO_ 753 ID2F1VCFRONT_eFuseDebugStatus: 8 VehicleBus
  SG_ VCFRONT_EPAS3PFault m4 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_EPAS3PSelfTestResult m4 : 11|4@1+ (1,0) [0|11] ""  Receiver
  SG_ VCFRONT_EPAS3PState m4 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_EPAS3PTemp m4 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_EPAS3PTemp m4 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_EPAS3PVoltage m4 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_EPAS3SCurrent m5 : 47|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_EPAS3SFault m5 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_EPAS3SSelfTestResult m5 : 11|4@1+ (1,0) [0|11] ""  Receiver
  SG_ VCFRONT_EPAS3SState m5 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_EPAS3STemp m5 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_EPAS3STemp m5 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_EPAS3SVoltage m5 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_ESPMotorCurrent m6 : 47|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_ESPMotorFault m6 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_ESPMotorSelfTestResult m6 : 11|4@1+ (1,0) [0|11] ""  Receiver
  SG_ VCFRONT_ESPMotorState m6 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_ESPMotorTemp m6 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_ESPMotorTemp m6 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_ESPMotorVoltage m6 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_ESPValveCurrent m7 : 44|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_ESPValveFault m7 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_ESPValveState m7 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_ESPValveTemp m7 : 12|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_ESPValveTemp m7 : 12|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_ESPValveVoltage m7 : 28|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
- SG_ VCFRONT_IBSUnfilteredTemperature m17 : 40|16@1- (0.01,0) [-327.68|327.67] "degC"  Receiver
+ SG_ VCFRONT_IBSUnfilteredTemperature m17 : 40|16@1- (0.01,0) [-327.68|327.67] "C"  Receiver
  SG_ VCFRONT_PCSCurrent m2 : 47|16@1- (0.1,0) [-3276.8|3276.7] "A"  Receiver
  SG_ VCFRONT_PCSFault m2 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_PCSState m2 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_PCSTemp m2 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_PCSTemp m2 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_PCSVoltage m2 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_autopilot1Current m8 : 43|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_autopilot1Fault m8 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_autopilot1State m8 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_autopilot1Temp m8 : 11|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_autopilot1Temp m8 : 11|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_autopilot1Voltage m8 : 27|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_autopilot2Current m9 : 43|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_autopilot2Fault m9 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_autopilot2State m9 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_autopilot2Temp m9 : 11|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_autopilot2Temp m9 : 11|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_autopilot2Voltage m9 : 27|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_chargedIBSAmpHours m17 : 8|16@1+ (1,0) [0|65535] "Ah"  Receiver
  SG_ VCFRONT_dischargedIBSAmpHours m17 : 24|16@1+ (1,0) [0|65535] "Ah"  Receiver
@@ -1150,23 +1318,23 @@ BO_ 753 ID2F1VCFRONT_eFuseDebugStatus: 8 VehicleBus
  SG_ VCFRONT_headlampLeftCurrent m12 : 10|10@1+ (0.1,0) [0|102.3] "A"  Receiver
  SG_ VCFRONT_headlampLeftFault m12 : 9|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_headlampLeftState m12 : 8|1@1+ (1,0) [0|1] ""  Receiver
- SG_ VCFRONT_headlampLeftTemperature m12 : 48|8@1- (1,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_headlampLeftTemperature m12 : 48|8@1- (1,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_headlampLeftVoltage m12 : 20|8@1+ (0.1,0) [0|25.4] "V"  Receiver
  SG_ VCFRONT_headlampRightCurrent m12 : 30|10@1+ (0.1,0) [0|102.3] "A"  Receiver
  SG_ VCFRONT_headlampRightFault m12 : 29|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_headlampRightState m12 : 28|1@1+ (1,0) [0|1] ""  Receiver
- SG_ VCFRONT_headlampRightTemperature m12 : 56|8@1- (1,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_headlampRightTemperature m12 : 56|8@1- (1,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_headlampRightVoltage m12 : 40|8@1+ (0.1,0) [0|25.4] "V"  Receiver
  SG_ VCFRONT_iBoosterCurrent m3 : 47|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_iBoosterFault m3 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_iBoosterSelfTestResult m3 : 11|4@1+ (1,0) [0|11] ""  Receiver
  SG_ VCFRONT_iBoosterState m3 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_iBoosterTemp m3 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_iBoosterTemp m3 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_iBoosterVoltage m3 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_leftControllerCurrent m1 : 47|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_leftControllerFault m1 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_leftControllerState m1 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_leftControllerTemp m1 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_leftControllerTemp m1 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_leftControllerVoltage m1 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_pcsSelfTestResult m2 : 11|4@1+ (1,0) [0|11] ""  Receiver
  SG_ VCFRONT_pump1AndFanCurrent m14 : 6|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
@@ -1182,7 +1350,7 @@ BO_ 753 ID2F1VCFRONT_eFuseDebugStatus: 8 VehicleBus
  SG_ VCFRONT_rightControllerCurrent m0 : 47|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_rightControllerFault m0 : 10|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_rightControllerState m0 : 8|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_rightControllerTemp m0 : 15|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_rightControllerTemp m0 : 15|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_rightControllerVoltage m0 : 31|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_sleepBypassCurrent m10 : 26|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_sleepBypassFault m10 : 9|1@1+ (1,0) [0|1] ""  Receiver
@@ -1197,7 +1365,7 @@ BO_ 753 ID2F1VCFRONT_eFuseDebugStatus: 8 VehicleBus
  SG_ VCFRONT_vbatFusedHighCurrent m13 : 46|16@1+ (0.1,0) [0|6553.5] "A"  Receiver
  SG_ VCFRONT_vbatFusedHighFault m13 : 9|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_vbatFusedHighState m13 : 8|1@1+ (1,0) [0|1] ""  Receiver
- SG_ VCFRONT_vbatFusedHighTemp m13 : 14|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_vbatFusedHighTemp m13 : 14|11@1+ (0.125,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_vbatFusedHighVoltage m13 : 30|16@1+ (0.1,0) [0|6553.5] "V"  Receiver
  SG_ VCFRONT_vbatFusedSelfTestResult m13 : 10|4@1+ (1,0) [0|11] ""  Receiver
  SG_ VCFRONT_vcleftSelfTestResult m1 : 11|4@1+ (1,0) [0|11] ""  Receiver
@@ -1454,18 +1622,18 @@ BO_ 897 ID381VCFRONT_logging1Hz: 8 VehicleBus
  SG_ VCFRONT_CCQdotActual m9 : 24|7@1+ (80,0) [0|10100] "W"  Receiver
  SG_ VCFRONT_CCQdotFdFrwrdTarget m9 : 8|7@1+ (80,0) [0|10100] "W"  Receiver
  SG_ VCFRONT_CCQdotFdbk m9 : 16|7@1- (80,0) [-5000|5000] "W"  Receiver
- SG_ VCFRONT_CMPDischargeSuperheat m8 : 16|5@1- (1,6) [-10|21] "degC"  Receiver
+ SG_ VCFRONT_CMPDischargeSuperheat m8 : 16|5@1- (1,6) [-10|21] "C"  Receiver
  SG_ VCFRONT_DIQdotA m9 : 48|7@1+ (80,0) [0|10000] "W"  Receiver
- SG_ VCFRONT_HCML_bladeTemp m3 : 32|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCML_diffuseTemp m3 : 40|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCML_highBeamTemp m3 : 16|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCML_lowBeamSpotTemp m3 : 8|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCML_turnTemp m3 : 24|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCMR_bladeTemp m4 : 32|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCMR_diffuseTemp m4 : 40|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCMR_highBeamTemp m4 : 16|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCMR_lowBeamSpotTemp m4 : 8|8@1- (1,67) [-60|194] "degC"  Receiver
- SG_ VCFRONT_HCMR_turnTemp m4 : 24|8@1- (1,67) [-60|194] "degC"  Receiver
+ SG_ VCFRONT_HCML_bladeTemp m3 : 32|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCML_diffuseTemp m3 : 40|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCML_highBeamTemp m3 : 16|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCML_lowBeamSpotTemp m3 : 8|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCML_turnTemp m3 : 24|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCMR_bladeTemp m4 : 32|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCMR_diffuseTemp m4 : 40|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCMR_highBeamTemp m4 : 16|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCMR_lowBeamSpotTemp m4 : 8|8@1- (1,67) [-60|194] "C"  Receiver
+ SG_ VCFRONT_HCMR_turnTemp m4 : 24|8@1- (1,67) [-60|194] "C"  Receiver
  SG_ VCFRONT_cabinHeatEnergyDuringDri m8 : 41|7@1+ (150,0) [0|19000] "Wh"  Receiver
  SG_ VCFRONT_calibratedPositionHCML m6 : 4|10@1+ (1,0) [0|1023] "Steps"  Receiver
  SG_ VCFRONT_calibratedPositionHCMR m6 : 14|10@1+ (1,0) [0|1023] "Steps"  Receiver
@@ -1483,9 +1651,9 @@ BO_ 897 ID381VCFRONT_logging1Hz: 8 VehicleBus
  SG_ VCFRONT_estPressureLiq m10 : 4|7@1+ (0.2,0) [0|25.4] "bar"  Receiver
  SG_ VCFRONT_estPressureSuct m10 : 11|7@1+ (0.125,0) [0|11.5] "bar"  Receiver
  SG_ VCFRONT_estQLift m10 : 53|7@1+ (60,0) [0|7600] "W"  Receiver
- SG_ VCFRONT_estTempDisch m10 : 39|8@1- (0.8,68.8) [-34|170] "degC"  Receiver
- SG_ VCFRONT_estTempLiq m10 : 25|8@1- (0.8,68.8) [-34|170] "degC"  Receiver
- SG_ VCFRONT_estTempSuct m10 : 33|6@1- (1,2) [-30|33] "degC"  Receiver
+ SG_ VCFRONT_estTempDisch m10 : 39|8@1- (0.8,68.8) [-34|170] "C"  Receiver
+ SG_ VCFRONT_estTempLiq m10 : 25|8@1- (0.8,68.8) [-34|170] "C"  Receiver
+ SG_ VCFRONT_estTempSuct m10 : 33|6@1- (1,2) [-30|33] "C"  Receiver
  SG_ VCFRONT_evapExvRange m7 : 13|9@1+ (1,750) [750|1250] "ticks"  Receiver
  SG_ VCFRONT_evapFdFrwrdTarget m9 : 32|7@1+ (80,0) [0|10100] "W"  Receiver
  SG_ VCFRONT_evapFdbk m9 : 40|7@1- (80,0) [-5000|5000] "W"  Receiver
@@ -1500,26 +1668,26 @@ BO_ 897 ID381VCFRONT_logging1Hz: 8 VehicleBus
  SG_ VCFRONT_fiveWayValveWindupEstL m2 : 48|4@1+ (1,0) [0|15] ""  Receiver
  SG_ VCFRONT_fiveWayValveWindupEstR m2 : 52|4@1+ (1,0) [0|15] ""  Receiver
  SG_ VCFRONT_homelinkRegionCode m5 : 4|4@1+ (1,0) [0|9] ""  Receiver
- SG_ VCFRONT_hpBattStagTarget m8 : 27|7@1+ (1,-40) [-40|80] "degC"  Receiver
+ SG_ VCFRONT_hpBattStagTarget m8 : 27|7@1+ (1,-40) [-40|80] "C"  Receiver
  SG_ VCFRONT_hpCOP m8 : 21|6@1+ (0.1,0) [0|6] "-"  Receiver
- SG_ VCFRONT_hpSubcoolTarget m8 : 11|5@1+ (1,0) [0|31] "degC"  Receiver
+ SG_ VCFRONT_hpSubcoolTarget m8 : 11|5@1+ (1,0) [0|31] "C"  Receiver
  SG_ VCFRONT_lccExvRange m7 : 31|9@1+ (1,750) [750|1250] "ticks"  Receiver
  SG_ VCFRONT_lowSideLiftEnergyDrive m8 : 48|7@1+ (150,0) [0|19000] "Wh"  Receiver
  SG_ VCFRONT_lowSideWattsLift m8 : 55|7@1+ (60,0) [0|7600] "W"  Receiver
  SG_ VCFRONT_modeDesired m0 : 13|2@1+ (1,0) [0|3] ""  Receiver
  SG_ VCFRONT_modeTransitionID m0 : 8|5@1+ (1,0) [0|29] ""  Receiver
  SG_ VCFRONT_passiveCoolingState m9 : 62|2@1+ (1,0) [0|2] ""  Receiver
- SG_ VCFRONT_pumpBatteryFETTemp m1 : 40|8@1+ (1,-40) [-40|150] "degC"  Receiver
- SG_ VCFRONT_pumpPowertrainFETTemp m1 : 48|8@1+ (1,-40) [-40|150] "degC"  Receiver
- SG_ VCFRONT_radiatorFanFETTemp m1 : 56|8@1+ (1,-40) [-40|150] "degC"  Receiver
+ SG_ VCFRONT_pumpBatteryFETTemp m1 : 40|8@1+ (1,-40) [-40|150] "C"  Receiver
+ SG_ VCFRONT_pumpPowertrainFETTemp m1 : 48|8@1+ (1,-40) [-40|150] "C"  Receiver
+ SG_ VCFRONT_radiatorFanFETTemp m1 : 56|8@1+ (1,-40) [-40|150] "C"  Receiver
  SG_ VCFRONT_recircExvRange m7 : 22|9@1+ (1,750) [750|1250] "ticks"  Receiver
- SG_ VCFRONT_subcoolActual m8 : 4|7@1- (0.4,15.2) [-10|40] "degC"  Receiver
- SG_ VCFRONT_targetBatActiveCool m0 : 32|7@1+ (1,0) [0|100] "degC"  Receiver
- SG_ VCFRONT_targetBatActiveHeat m0 : 48|7@1+ (1,-40) [-40|60] "degC"  Receiver
- SG_ VCFRONT_targetBatPassive m0 : 40|7@1+ (1,-20) [-20|80] "degC"  Receiver
- SG_ VCFRONT_targetPTActiveCool m0 : 16|8@1+ (1,-40) [-40|120] "degC"  Receiver
- SG_ VCFRONT_targetPTPassive m0 : 24|8@1+ (1,-40) [-40|120] "degC"  Receiver
- SG_ VCFRONT_tempRefrigSuction m1 : 32|8@1+ (0.5,-40) [-40|85] "degC"  Receiver
+ SG_ VCFRONT_subcoolActual m8 : 4|7@1- (0.4,15.2) [-10|40] "C"  Receiver
+ SG_ VCFRONT_targetBatActiveCool m0 : 32|7@1+ (1,0) [0|100] "C"  Receiver
+ SG_ VCFRONT_targetBatActiveHeat m0 : 48|7@1+ (1,-40) [-40|60] "C"  Receiver
+ SG_ VCFRONT_targetBatPassive m0 : 40|7@1+ (1,-20) [-20|80] "C"  Receiver
+ SG_ VCFRONT_targetPTActiveCool m0 : 16|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ VCFRONT_targetPTPassive m0 : 24|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ VCFRONT_tempRefrigSuction m1 : 32|8@1+ (0.5,-40) [-40|85] "C"  Receiver
 
 BO_ 792 ID318SystemTimeUTC: 8 VehicleBus
  SG_ UTCyear318 : 0|8@1+ (1,0) [0|0] "yr"  Receiver
@@ -1606,6 +1774,7 @@ BO_ 741 ID2E5FrontInverterPower: 8 VehicleBus
  SG_ FrontHeatPowerMax2E5 : 24|8@1+ (0.08,0) [0|20.4] "kW"  Receiver
  SG_ FrontPowerLimit2E5 : 48|9@1+ (1,0) [0|400] "kW"  Receiver
  SG_ FrontHeatPower2E5 : 32|8@1+ (0.08,0) [0|20.4] "kW"  Receiver
+ SG_ FrontExcessHeatCmd : 40|8@1+ (0.08,0) [0|20] "kW"  Receiver
 
 BO_ 962 ID3C2VCLeftswitches: 8 VehicleBus
  SG_ VCLswitchStatusIndex3C2 M : 0|2@1+ (1,0) [0|0] ""  Receiver
@@ -1760,7 +1929,7 @@ BO_ 801 ID321VCFRONT_sensors: 8 VehicleBus
  SG_ VCFRONT_brakeFluidLevel : 22|2@1+ (1,0) [0|2] ""  Receiver
  SG_ VCFRONT_coolantLevel : 21|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCFRONT_ptSensorIrrational : 49|1@1+ (1,0) [0|1] ""  Receiver
- SG_ VCFRONT_tempAmbient : 24|8@1+ (0.5,-40) [-40|80] "degC"  Receiver
+ SG_ VCFRONT_tempAmbient : 24|8@1+ (0.5,-40) [-40|80] "C"  Receiver
  SG_ VCFRONT_tempAmbientFiltered : 40|8@1+ (0.5,-40) [-40|80] "C"  Receiver
  SG_ VCFRONT_tempCoolantBatInlet : 0|10@1+ (0.125,-40) [-40|85] "C"  Receiver
  SG_ VCFRONT_tempCoolantPTInlet : 10|11@1+ (0.125,-40) [-40|200] "C"  Receiver
@@ -1821,10 +1990,10 @@ BO_ 513 ID201VCFRONT_loggingAndVitals10H: 8 VehicleBus
  SG_ VCFRONT_pumpPowertrainRPMActual m0 : 13|10@1+ (10,0) [0|10000] "rpm"  Receiver
  SG_ VCFRONT_radiatorFanRPMActual m0 : 24|10@1+ (10,0) [0|10000] "rpm"  Receiver
  SG_ VCFRONT_solenoidEvapState m2 : 36|2@1+ (1,0) [0|3] ""  Receiver
- SG_ VCFRONT_tempRefrigDischarge m2 : 3|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
- SG_ VCFRONT_tempRefrigLiquid m1 : 24|11@1+ (0.125,-40) [-40|150] "degC"  Receiver
- SG_ VCFRONT_tempSuperheatActual m0 : 34|10@1+ (0.1,-20) [-20|80] "degC"  Receiver
- SG_ VCFRONT_tempSuperheatTarget m0 : 44|10@1+ (0.1,0) [0|60] "degC"  Receiver
+ SG_ VCFRONT_tempRefrigDischarge m2 : 3|11@1+ (0.125,-40) [-40|150] "C"  Receiver
+ SG_ VCFRONT_tempRefrigLiquid m1 : 24|11@1+ (0.125,-40) [-40|150] "C"  Receiver
+ SG_ VCFRONT_tempSuperheatActual m0 : 34|10@1+ (0.1,-20) [-20|80] "C"  Receiver
+ SG_ VCFRONT_tempSuperheatTarget m0 : 44|10@1+ (0.1,0) [0|60] "C"  Receiver
 
 BO_ 984 ID3D8Elevation: 8 VehicleBus
  SG_ Elevation3D8 : 0|16@1- (1,0) [-32768|32767] "M"  Receiver
@@ -1895,11 +2064,12 @@ BO_ 850 ID352BMSenergy: 8 VehicleBus
  SG_ BMS_energyCounter : 58|4@1+ (1,0) [0|15] ""  Receiver
  SG_ BMS_fullChargeComplete : 62|1@1+ (1,0) [0|1] ""  Receiver
 
-BO_ 594 ID252PowerLimits: 8 VehicleBus
- SG_ HVACpowerMax252 : 50|10@1+ (0.02,0) [0|20.46] "kW"  Receiver
- SG_ MaxHeatParked252 : 32|10@1+ (0.1,0) [0|102.3] "kW"  Receiver
- SG_ MaxDischarge252 : 16|16@1+ (0.01,0) [0|655.35] "kW"  Receiver
- SG_ MaxRegen252 : 0|16@1+ (0.01,0) [0|655.35] "kW"  Receiver
+BO_ 594 ID252BMS_powerAvailable: 8 VehicleBus
+ SG_ BMS_hvacPowerBudget : 50|10@1+ (0.02,0) [0|20.46] "kW"  Receiver
+ SG_ BMS_maxDischargePower : 16|16@1+ (0.01,0) [0|655.35] "kW"  Receiver
+ SG_ BMS_maxRegenPower : 0|16@1+ (0.01,0) [0|655.35] "kW"  Receiver
+ SG_ BMS_maxStationaryHeatPower : 32|10@1+ (0.01,0) [0|10.23] "kW"  Receiver
+ SG_ BMS_powerLimitsState : 48|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 786 ID312BMSthermal: 8 VehicleBus
  SG_ BMSdissipation312 : 0|10@1+ (0.02,0) [0|20] "kW"  Receiver
@@ -1921,7 +2091,7 @@ BO_ 658 ID292BMS_SOC: 8 VehicleBus
 
 BO_ 599 ID257UIspeed: 8 VehicleBus
  SG_ UIspeedUnits257 : 32|1@1+ (1,0) [0|0] ""  Receiver
- SG_ UIspeed_signed257 : 12|12@1+ (0.05,-25) [-25|179.75] "MPHKPH"  Receiver
+ SG_ UIspeed_signed257 : 12|12@1+ (0.08,-40) [-40|287.6] "KPH"  Receiver
  SG_ UIspeed_abs257 : 24|8@1+ (1,0) [0|255] "MPHKPH"  Receiver
  SG_ UIspeedChecksum257 : 0|8@1+ (1,0) [0|0] ""  Receiver
  SG_ UIspeedCounter257 : 8|4@1+ (1,0) [0|0] ""  Receiver
@@ -2288,41 +2458,119 @@ EV_ MPH: 0 [0|0] "MPH" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
 EV_ Milage: 0 [0|0] "Mi" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
 
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 692 PCS_dcdcHvBusVolt "DCDC HV Voltage";
+CM_ SG_ 692 PCS_dcdcLvBusVolt "DCDC 12v Voltage";
+CM_ SG_ 692 PCS_dcdcLvOutputCurrent "DCDC 12v Output Current";
+CM_ SG_ 647 PTC_leftCurrentHV "Heater Left Current";
+CM_ SG_ 647 PTC_rightCurrentHV "Heater Right Current";
+CM_ SG_ 647 PTC_voltageHV "Heater Voltage";
+CM_ SG_ 819 UI_acChargeCurrentLimit "UI Charge Current Limit";
+CM_ SG_ 826 UI_Range "Range";
+CM_ SG_ 826 UI_SOC "State of Charge UI";
+CM_ SG_ 826 UI_ratedWHpM "Rating";
 CM_ BO_ 1367 "swapped with 5D7 in old firmware";
 CM_ BO_ 1495 "swapped with 557 in old firmware";
 CM_ BO_ 2005 "swapped with 757in old firmware";
 CM_ BO_ 1879 "swapped with 7D5in old firmware";
-CM_ SG_ 390 FrontTorqueActual186 "Torque at axle";
-CM_ SG_ 390 FrontTorqueRequest186 "Torque at axle";
+CM_ SG_ 737 VCFRONT_wiperPositionDeg "Wiper Angle";
+CM_ SG_ 792 UTCyear318 "Year";
+CM_ SG_ 792 UTCmonth318 "Month";
+CM_ SG_ 792 UTCseconds318 "Seconds";
+CM_ SG_ 792 UTChour318 "Hour";
+CM_ SG_ 792 UTCday318 "Day";
+CM_ SG_ 792 UTCminutes318 "Minute";
+CM_ SG_ 390 FrontTorqueActual186 "Front Axle Torque";
+CM_ SG_ 390 FrontTorqueRequest186 "Front Axle Torque Request";
+CM_ SG_ 390 FrontAxleRPM186 "Front Axle Speed";
 CM_ BO_ 918 "swapped with 395 in old firmware";
 CM_ BO_ 917 "swapped with 396 in old firmware";
-CM_ SG_ 472 RearTorqueRequest1D8 "driver requested torque";
-CM_ SG_ 472 RearTorque1D8 "torque at motor";
-CM_ SG_ 468 RAWTorqueFront1D4 "Axle torque 2 with 9/1 gearing";
-CM_ SG_ 469 FrontTorqueRequest1D5 "torque at motor";
-CM_ SG_ 469 FrontTorque1D5 "torque at motor";
-CM_ SG_ 741 FrontPowerLimit2E5 "offset approximate";
-CM_ SG_ 722 MinVoltage2D2 "test";
-CM_ SG_ 612 ChargeLinePower264 "16 8 .08";
-CM_ SG_ 612 ChargeLineCurrentLimit264 "32 8 .5";
-CM_ SG_ 612 ChargeLineVoltage264 "0 12 .1";
-CM_ SG_ 612 ChargeLineCurrent264 "24 8 .5";
-CM_ SG_ 280 DriveState118 "Verify charge heat and fault";
-CM_ SG_ 594 MaxHeatParked252 "test";
-CM_ SG_ 599 UIspeedUnits257 "0-mph 1-kph";
-CM_ SG_ 599 UIspeed_signed257 ".05 -25 x.08 -40 for kph";
-CM_ SG_ 1029 VINB405 "last 7 of VIN (ASCII)";
-CM_ SG_ 1029 VINC405 "part two of VIN (ASCII)";
-CM_ SG_ 1029 VINA405 "four zeros then first 3 characters of VIN";
-CM_ SG_ 886 TempInvPCB376 ".5 -20";
-CM_ SG_ 886 TempInvCapbank376 ".5 -20";
-CM_ SG_ 340 RAWTorqueRear154 "Axle torque 2 with 9/1 gearing";
-CM_ SG_ 614 RearPowerLimit266 "approx offset Orig scale 1";
-CM_ SG_ 614 RearPower266 "electrical power";
-CM_ SG_ 264 RearTorqueActual108 "Torque at axle";
-CM_ SG_ 264 RearTorqueRequest108 "Torque at axle";
-CM_ SG_ 306 RawBattCurrent132 "old offset 1000";
-CM_ SG_ 306 SmoothBattCurrent132 "old offset 1000";
+CM_ SG_ 472 RearTorqueRequest1D8 "Rear Motor Torque Request";
+CM_ SG_ 472 RearTorque1D8 "Rear Motor Torque";
+CM_ SG_ 468 RAWTorqueFront1D4 "Front Torque Old, Axle torque 2 with 9/1 gearing";
+CM_ SG_ 469 FrontTorqueRequest1D5 "Front Motor Torque Request";
+CM_ SG_ 469 FrontTorque1D5 "Front Motor Torque";
+CM_ SG_ 741 FrontPower2E5 "Front Motor Power";
+CM_ SG_ 741 FrontPowerLimit2E5 "Front Power Limit, approx offset Orig scale 1";
+CM_ SG_ 741 FrontHeatPower2E5 "Rear Waste Heat Power";
+CM_ SG_ 822 DriveRegenRating336 "Regen Rating";
+CM_ SG_ 822 DrivePowerRating336 "Power Rating";
+CM_ SG_ 616 SystemRegenPowerMax268 "Max Regen Power";
+CM_ SG_ 616 SystemHeatPowerMax268 "System Max Waste Heat Power";
+CM_ SG_ 616 SystemHeatPower268 "System Waste Heat Power";
+CM_ SG_ 616 SystemDrivePowerMax268 "Max Drive Power";
+CM_ SG_ 79 GPSLongitude04F "Longitude";
+CM_ SG_ 79 GPSLattitude04F "Lattitude";
+CM_ SG_ 722 MinVoltage2D2 "BMS Min Voltage";
+CM_ SG_ 722 MaxDischargeCurrent2D2 "BMS Max Discharge Current";
+CM_ SG_ 722 MaxChargeCurrent2D2 "BMS Max Charge Current";
+CM_ SG_ 722 MaxVoltage2D2 "BMS Max Voltage";
+CM_ SG_ 580 FCMinVlimit244 "Supercharger Min Voltage";
+CM_ SG_ 580 FCMaxVlimit244 "Supercharger Max Voltage";
+CM_ SG_ 580 FCCurrentLimit244 "Supercharger Max Current";
+CM_ SG_ 580 FCPowerLimit244 "Supercharger Max Power";
+CM_ SG_ 801 VCFRONT_tempAmbientFiltered "Outside Temperature";
+CM_ SG_ 513 VCFRONT_fiveWayValveMode "Five Way Valve Mode";
+CM_ SG_ 984 Elevation3D8 "Elevation";
+CM_ SG_ 609 v12vBattTemp261 "12V Battery Temp";
+CM_ SG_ 609 v12vBattCurrent261 "12V Battery Current";
+CM_ SG_ 609 v12vBattVoltage261 "12V Battery Voltage";
+CM_ SG_ 297 SteeringSpeed129 "Steering Speed";
+CM_ SG_ 297 SteeringAngle129 "Steering Angle";
+CM_ SG_ 612 ChargeLinePower264 "Charger Line Power";
+CM_ SG_ 612 ChargeLineCurrentLimit264 "Charge Connector Current Limit";
+CM_ SG_ 612 ChargeLineVoltage264 "Charger Line Voltage";
+CM_ SG_ 612 ChargeLineCurrent264 "Charger Line Current";
+CM_ SG_ 548 DCDCoutputCurrent224 "DCDC Output Current";
+CM_ SG_ 280 DriveState118 "Drive State, Verify charge heat and fault";
+CM_ SG_ 280 TractionControl118 "Traction Control Mode";
+CM_ SG_ 280 BrakeState118 "Regen Brake";
+CM_ SG_ 280 DIgear118 "Gear";
+CM_ SG_ 280 BrakePedal118 "Brake Pedal";
+CM_ SG_ 280 PedalPosition118 "Pedal Position";
+CM_ SG_ 850 BtochargecompleteKWh352 "Charge Remaining kWh";
+CM_ SG_ 850 BremainingKWhNom352 "Batt Remaining kWh";
+CM_ SG_ 850 BfullKWhNom352 "Batt Full kWh";
+CM_ SG_ 850 BbufferKWh352 "Battery Buffer kWh";
+CM_ SG_ 850 BMS_fullChargeComplete "Charge Complete";
+CM_ SG_ 594 BMS_hvacPowerBudget "BMS Max HVAC Power";
+CM_ SG_ 594 BMS_maxDischargePower "BMS Max Discharge Power";
+CM_ SG_ 594 BMS_maxRegenPower "BMS Max Regen Power";
+CM_ SG_ 594 BMS_maxStationaryHeatPower "BMS Max Waste Heat Power";
+CM_ SG_ 786 BMSdissipation312 "Battery Dissipation";
+CM_ SG_ 786 BMSinletActiveCoolTarget312 "Battery Cool Target";
+CM_ SG_ 786 BMSinletActiveHeatTarget312 "Battery Heat Target";
+CM_ SG_ 786 BMSmaxPackTemperature "Max Battery Temp";
+CM_ SG_ 786 BMSminPackTemperature2 "Min Battery Temp 2";
+CM_ SG_ 658 BattBeginningOfLifeEnergy292 "HV Battery Original Energy";
+CM_ SG_ 658 SOCmax292 "BMS Max SOC";
+CM_ SG_ 658 SOCave292 "BMS Ave SOC";
+CM_ SG_ 658 SOCmin292 "BMS Min SOC";
+CM_ SG_ 599 UIspeedUnits257 "Speed Units, 0-mph 1-kph";
+CM_ SG_ 599 UIspeed_signed257 "Vehicle Speed, .05 -25 for mph";
+CM_ SG_ 599 UIspeed_abs257 "UI Speed";
+CM_ SG_ 1029 VINB405 "VIN3, last 7 of VIN (ASCII)";
+CM_ SG_ 1029 VINC405 "VIN2, part two of VIN (ASCII)";
+CM_ SG_ 1029 VINA405 "VIN1, four zeros then first 3 characters of VIN";
+CM_ SG_ 886 TempStator376 "Front Stator Temp";
+CM_ SG_ 789 RearTempStator315 "Rear Stator Temp";
+CM_ SG_ 340 RAWTorqueRear154 "Rear Torque Old, Axle torque 2 with 9/1 gearing";
+CM_ SG_ 950 Odometer3B6 "Odometer";
+CM_ SG_ 614 RearPowerLimit266 "Rear Power Limit, approx offset Orig scale 1";
+CM_ SG_ 614 RearHeatPower266 "Rear Waste Heat Power";
+CM_ SG_ 614 RearPower266 "Rear Motor Power";
+CM_ SG_ 264 RearTorqueActual108 "Rear Axle Torque";
+CM_ SG_ 264 RearTorqueRequest108 "Rear Axle Torque Request";
+CM_ SG_ 264 RearAxleRPM108 "Rear Axle Speed";
+CM_ SG_ 306 ChargeHoursRemaining132 "Charge Time Remaining";
+CM_ SG_ 306 BattVoltage132 "HV Battery Voltage";
+CM_ SG_ 306 RawBattCurrent132 "HV Raw Current, old offset 1000";
+CM_ SG_ 306 SmoothBattCurrent132 "HV Battery Current";
+CM_ SG_ 294 RearHighVoltage126 "Rear Motor Voltage";
+CM_ SG_ 294 RearMotorCurrent126 "Rear Motor Current";
+CM_ SG_ 421 FrontHighVoltage1A5 "Front Motor Voltage";
+CM_ SG_ 421 FrontMotorCurrent1A5 "Front Motor Current";
+CM_ SG_ 2047 GTW_chassisType "Model";
+CM_ SG_ 2047 GTW_packEnergy "Battery Pack Size";
 BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","SendType1","SendType2","SendType3","SendType4","SendType5","SendType6","SendType7","SendType8","SendType9";
 BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
@@ -2372,7 +2620,7 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Feb12";
+BA_DEF_DEF_  "Modified" "JW2020Feb17";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_DEF_DEF_  "SystemMessageLongSymbol" "";
 BA_ "BusType" "CAN";
@@ -2427,6 +2675,10 @@ BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
 BA_ "GenMsgSendType" BO_ 2047 0;
+BA_ "SystemSignalLongSymbol" SG_ 291 UI_a037_AudioWatchdogXrunStormEr "UI_a037_AudioWatchdogXrunStormError";
+BA_ "SystemSignalLongSymbol" SG_ 291 UI_a038_AudioWatchdogA2bI2cLocku "UI_a038_AudioWatchdogA2bI2cLockupError";
+BA_ "SystemSignalLongSymbol" SG_ 291 UI_a048_AudioPremiumAmpCheckFail "UI_a048_AudioPremiumAmpCheckFailed";
+BA_ "SystemSignalLongSymbol" SG_ 291 UI_a056_ManualECallButtonDisconn "UI_a056_ManualECallButtonDisconnected";
 BA_ "SystemSignalLongSymbol" SG_ 946 BMS_hvChain_limitingStateTempera "BMS_hvChain_limitingStateTemperature";
 BA_ "SystemSignalLongSymbol" SG_ 946 BMS_vChangeWindowNumOutlierChang "BMS_vChangeWindowNumOutlierChanges";
 BA_ "SystemSignalLongSymbol" SG_ 800 BMS_a040_SW_Watch_Dog_HW_Trigger "BMS_a040_SW_Watch_Dog_HW_Triggered";
@@ -2446,6 +2698,38 @@ BA_ "GenSigEnvVarType" SG_ 472 TorqueFlags1D8 2;
 BA_ "SystemSignalLongSymbol" SG_ 513 VCFRONT_loggingAndVitals10HzInde "VCFRONT_loggingAndVitals10HzIndex";
 BA_ "SystemSignalLongSymbol" SG_ 513 VCFRONT_pressureRefrigDischargeV "VCFRONT_pressureRefrigDischargeVitals";
 BA_ "SystemSignalLongSymbol" SG_ 513 VCFRONT_pressureRefrigSuctionVit "VCFRONT_pressureRefrigSuctionVitals";
+VAL_ 12 UI_autopilotTrial 3 "ACTIVE" 0 "NONE" 1 "START" 2 "STOP" ;
+VAL_ 12 UI_cellNetworkTechnology 9 "CELL_NETWORK_CDMA" 2 "CELL_NETWORK_EDGE" 1 "CELL_NETWORK_GPRS" 8 "CELL_NETWORK_GSM" 4 "CELL_NETWORK_HSDPA" 6 "CELL_NETWORK_HSPA" 5 "CELL_NETWORK_HSUPA" 7 "CELL_NETWORK_LTE" 0 "CELL_NETWORK_NONE" 15 "CELL_NETWORK_SNA" 3 "CELL_NETWORK_UMTS" 10 "CELL_NETWORK_WCDMA" ;
+VAL_ 12 UI_cellSignalBars 5 "FIVE" 4 "FOUR" 1 "ONE" 7 "SNA" 3 "THREE" 2 "TWO" 0 "ZERO" ;
+VAL_ 12 UI_factoryReset 3 "CUSTOMER" 1 "DEVELOPER" 2 "DIAGNOSTIC" 0 "NONE_SNA" ;
+VAL_ 130 UI_energyAtDestination -32768 "SNA" -32767 "TRIP_TOO_LONG" ;
+VAL_ 130 UI_hindsightEnergy -32768 "SNA" -32767 "TRIP_TOO_LONG" ;
+VAL_ 130 UI_predictedEnergy -32768 "SNA" -32767 "TRIP_TOO_LONG" ;
+VAL_ 258 VCLEFT_frontLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
+VAL_ 258 VCLEFT_mirrorFoldState 1 "MIRROR_FOLD_STATE_FOLDED" 3 "MIRROR_FOLD_STATE_FOLDING" 2 "MIRROR_FOLD_STATE_UNFOLDED" 4 "MIRROR_FOLD_STATE_UNFOLDING" 0 "MIRROR_FOLD_STATE_UNKNOWN" ;
+VAL_ 258 VCLEFT_mirrorHeatState 4 "HEATER_STATE_FAULT" 2 "HEATER_STATE_OFF" 3 "HEATER_STATE_OFF_UNAVAILABLE" 1 "HEATER_STATE_ON" 0 "HEATER_STATE_SNA" ;
+VAL_ 258 VCLEFT_mirrorRecallState 0 "MIRROR_RECALL_STATE_INIT" 1 "MIRROR_RECALL_STATE_RECALLING_AXIS_1" 2 "MIRROR_RECALL_STATE_RECALLING_AXIS_2" 3 "MIRROR_RECALL_STATE_RECALLING_COMPLETE" 4 "MIRROR_RECALL_STATE_RECALLING_FAILED" 5 "MIRROR_RECALL_STATE_RECALLING_STOPPED" ;
+VAL_ 258 VCLEFT_mirrorState 3 "MIRROR_STATE_FOLD_UNFOLD" 0 "MIRROR_STATE_IDLE" 4 "MIRROR_STATE_RECALL" 1 "MIRROR_STATE_TILT_X" 2 "MIRROR_STATE_TILT_Y" ;
+VAL_ 258 VCLEFT_rearLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
+VAL_ 259 VCRIGHT_frontLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
+VAL_ 259 VCRIGHT_mirrorFoldState 1 "MIRROR_FOLD_STATE_FOLDED" 3 "MIRROR_FOLD_STATE_FOLDING" 2 "MIRROR_FOLD_STATE_UNFOLDED" 4 "MIRROR_FOLD_STATE_UNFOLDING" 0 "MIRROR_FOLD_STATE_UNKNOWN" ;
+VAL_ 259 VCRIGHT_mirrorRecallState 0 "MIRROR_RECALL_STATE_INIT" 1 "MIRROR_RECALL_STATE_RECALLING_AXIS_1" 2 "MIRROR_RECALL_STATE_RECALLING_AXIS_2" 3 "MIRROR_RECALL_STATE_RECALLING_COMPLETE" 4 "MIRROR_RECALL_STATE_RECALLING_FAILED" 5 "MIRROR_RECALL_STATE_RECALLING_STOPPED" ;
+VAL_ 259 VCRIGHT_mirrorState 3 "MIRROR_STATE_FOLD_UNFOLD" 0 "MIRROR_STATE_IDLE" 4 "MIRROR_STATE_RECALL" 1 "MIRROR_STATE_TILT_X" 2 "MIRROR_STATE_TILT_Y" ;
+VAL_ 259 VCRIGHT_rearLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
+VAL_ 259 VCRIGHT_trunkLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
+VAL_ 583 DAS_alcInternalState 2 "ALC_ABORTING" 8 "ALC_ACTIVE_ACC_LEFT" 9 "ALC_ACTIVE_ACC_RIGHT" 6 "ALC_ACTIVE_LEFT" 7 "ALC_ACTIVE_RIGHT" 3 "ALC_BEHAVIOR_CHECK" 0 "ALC_DISABLED" 1 "ALC_IDLE" 4 "ALC_PRE_ACTIVE_LEFT" 5 "ALC_PRE_ACTIVE_RIGHT" 12 "ALC_RETRY" 10 "ALC_SOFT_ABORTING_LEFT" 11 "ALC_SOFT_ABORTING_RIGHT" ;
+VAL_ 583 DAS_autopilotAbortReason 21 "ABORT_ACC_CANCEL_GENERIC" 22 "ABORT_ACC_CANCEL_SILENT" 23 "ABORT_ACC_FAULT" 33 "ABORT_AEB" 18 "ABORT_CAMERA_CALIBRATION" 17 "ABORT_CAMERA_FAILSAFES" 32 "ABORT_CONTROLLER_BAD_REF_UPDATE" 27 "ABORT_CONTROLLER_NOT_ALLOWED" 25 "ABORT_CONTROLLER_REFERENCE" 34 "ABORT_CONTROLLER_REF_TOO_SHORT" 26 "ABORT_CONTROLLER_SOLVER" 31 "ABORT_CONTROLLER_STALE_LOCALIZATION" 30 "ABORT_CONTROLLER_STALE_REFERENCE" 10 "ABORT_CRUISE_FAULT" 11 "ABORT_CRUISE_NOT_ACTIVE" 2 "ABORT_DI_MIA" 16 "ABORT_EPAS_EAC_ERROR" 15 "ABORT_EPAS_EAC_NOT_ACTIVE" 4 "ABORT_EPAS_MIA" 39 "ABORT_EPAS_STEERING_ANGLE_INVALID" 3 "ABORT_ESP_MIA" 36 "ABORT_GORE_INCURSION" 5 "ABORT_GTW_MIA" 46 "ABORT_INTEGRATOR_HEALTH_CRITICAL" 41 "ABORT_INVALID_DI_PEDAL_POS" 42 "ABORT_INVALID_VEHICLE_SPEED" 29 "ABORT_MAP_HEALTH" 35 "ABORT_MISSION_PLANNER_NO_VISION_LANES_FOUND" 0 "ABORT_NONE" 43 "ABORT_PERCEPTION_HEALTH_VISION" 19 "ABORT_RADAR_BLIND" 20 "ABORT_RADAR_FAULT" 7 "ABORT_RADAR_MIA" 37 "ABORT_REACHED_END_OF_NAV_STOP" 63 "ABORT_REASON_MAX" 24 "ABORT_ROAD_ESTIMATOR_HEALTH" 6 "ABORT_SCCM_MIA" 44 "ABORT_SEATBELT_UNBUCKLED" 38 "ABORT_STEERING_SATURATED_LANE_DEPARTURE" 28 "ABORT_THERMAL_ISSUE" 13 "ABORT_TRAILER_MODE_ACTIVE" 12 "ABORT_USER_DISABLED" 45 "ABORT_USER_OVERRIDE_STRIKEOUT" 8 "ABORT_VCFRONT_MIA" 9 "ABORT_VCRIGHT_MIA" 14 "ABORT_VEHICLE_SPEED_ABOVE_MAX" 40 "ABORT_W048_FEATURES_DISABLED" 1 "ABORT_WATCHDOG_HEALTH" ;
+VAL_ 583 DAS_behaviorReport 30 "BEHAVIOR_ACTIVE_SAFETY_SLOWDOWN" 2 "BEHAVIOR_CURVE_SPEED_ADAPTATION" 35 "BEHAVIOR_CUTIN_VEHICLE" 21 "BEHAVIOR_CUTIN_VEHICLE_LEFT" 22 "BEHAVIOR_CUTIN_VEHICLE_RIGHT" 14 "BEHAVIOR_DRIVABLE_SPACE_VIOLATION" 32 "BEHAVIOR_END_OF_NAV_ROUTE" 5 "BEHAVIOR_FLEET_SPEEDS" 8 "BEHAVIOR_IN_LANE_VEHICLE" 4 "BEHAVIOR_KEEP_CALM" 33 "BEHAVIOR_LANE_SPEED_DIFF" 13 "BEHAVIOR_MAP_LANE_GEOMETRY" 19 "BEHAVIOR_MERGE_VEHICLE_LEFT" 20 "BEHAVIOR_MERGE_VEHICLE_RIGHT" 29 "BEHAVIOR_MP_AP_INACTIVE" 23 "BEHAVIOR_MP_AP_RESTRICTION" 26 "BEHAVIOR_MP_AP_STATE_MACHINE" 27 "BEHAVIOR_MP_DI_CRUISE" 25 "BEHAVIOR_MP_DRIVER_MONITOR" 24 "BEHAVIOR_MP_NOT_BUCKLED" 28 "BEHAVIOR_MP_ULC" 17 "BEHAVIOR_NAV_FLEET_SPEEDS" 18 "BEHAVIOR_NAV_PATH_CSA" 3 "BEHAVIOR_RADAR_ONLY_BRAKING" 38 "BEHAVIOR_RISK_MANAGER" 15 "BEHAVIOR_SLOWING_FOR_TARGET_LANE" 34 "BEHAVIOR_STATIC_OBJECT" 36 "BEHAVIOR_STATIC_OBJECT_MERGE_LEFT" 37 "BEHAVIOR_STATIC_OBJECT_MERGE_RIGHT" 31 "BEHAVIOR_STEERING_SATURATED" 9 "BEHAVIOR_TARGET_LANE_VEHICLE" 11 "BEHAVIOR_TRAFFIC_CONTROL" 6 "BEHAVIOR_TRAFFIC_CONTROL_STOPPED_STATE" 7 "BEHAVIOR_UNDERTAKE_ASSIST_KEEP_CALM" 10 "BEHAVIOR_UNDERTAKE_VEHICLE" 1 "BEHAVIOR_VIEW_RANGE" 12 "BEHAVIOR_VISION_LANE_GEOMETRY" 16 "BEHAVIOR_VISION_SPEEDS" ;
+VAL_ 583 DAS_controllerHealth 2 "CONTROLLER_CRITICAL" 1 "CONTROLLER_DEGRADED" 0 "CONTROLLER_HEALTHY" 3 "CONTROLLER_SOLVER_FAILURE" ;
+VAL_ 583 DAS_controllerRef 4 "CONTROLLER_REFERENCE_BAD_REF_UPDATE" 0 "CONTROLLER_REFERENCE_HEALTHY" 6 "CONTROLLER_REFERENCE_INDETERMINATE" 5 "CONTROLLER_REFERENCE_REF_TOO_SHORT" 3 "CONTROLLER_REFERENCE_STALE_LOCALIZATION" 2 "CONTROLLER_REFERENCE_STALE_REFERENCE" 1 "CONTROLLER_REFERENCE_UNHEALTHY" ;
+VAL_ 583 DAS_forkState 18 "FORK_ABORT_BLINKER_CHANGE" 17 "FORK_ABORT_CONTROL_INACTIVE" 21 "FORK_ABORT_DISALLOW" 19 "FORK_ABORT_NOT_LEFT_LANE" 20 "FORK_ABORT_NOT_RIGHT_LANE" 22 "FORK_ABORT_OTHER" 12 "FORK_ACTIVE_LEFT_NAV" 13 "FORK_ACTIVE_LEFT_USER" 14 "FORK_ACTIVE_RIGHT_NAV" 15 "FORK_ACTIVE_RIGHT_USER" 16 "FORK_FORK_COMPLETE" 8 "FORK_IDLE_BOTH_FORKS_AVAILABLE" 9 "FORK_IDLE_LEFT_FORK_AVAILABLE" 11 "FORK_IDLE_NO_FORKS_AVAILABLE" 10 "FORK_IDLE_RIGHT_FORK_AVAILABLE" 0 "FORK_INVALID" 25 "FORK_PRE_ACTIVE_LEFT_NAV" 26 "FORK_PRE_ACTIVE_RIGHT_NAV" 2 "FORK_UNAVAILABLE_AP_INACTIVE" 3 "FORK_UNAVAILABLE_CONSTRUCTION" 4 "FORK_UNAVAILABLE_CONTROLLED_ACCESS_TOO_FAR" 1 "FORK_UNAVAILABLE_DISABLED" 5 "FORK_UNAVAILABLE_DON_INACTIVE" 27 "FORK_UNAVAILABLE_INTERSECTION_ACTIVE" 7 "FORK_UNAVAILABLE_OTHER" 23 "FORK_UNAVAILABLE_TIGHT_TURN_RADIUS" 6 "FORK_UNAVAILABLE_TOLL_BOOTH" 24 "FORK_UNAVAILABLE_WEATHER" ;
+VAL_ 583 DAS_laneChangeState 19 "LANE_CHANGE_ABORTING_ACC_AUTOSTEER_ACTIVATED" 26 "LANE_CHANGE_ABORTING_ALC_REQUEST_BEFORE_ULC_CONFIRM" 23 "LANE_CHANGE_ABORTING_BEHAVIOR_CHANGED" 22 "LANE_CHANGE_ABORTING_BELOW_MIN_SPEED" 14 "LANE_CHANGE_ABORTING_BLIND_SPOT_OCCUPIED" 12 "LANE_CHANGE_ABORTING_BLINKER" 32 "LANE_CHANGE_ABORTING_CONSTRUCTION_DETECTED" 17 "LANE_CHANGE_ABORTING_FORK_AVAILABLE" 31 "LANE_CHANGE_ABORTING_GORE_POINT" 24 "LANE_CHANGE_ABORTING_HIGH_ALC_PROGRESS_ERROR" 11 "LANE_CHANGE_ABORTING_INACTIVE" 21 "LANE_CHANGE_ABORTING_INVALID_BEHAVIOR" 15 "LANE_CHANGE_ABORTING_INVALID_MODE" 16 "LANE_CHANGE_ABORTING_LINE_TYPE" 18 "LANE_CHANGE_ABORTING_LOST_VISION_POSE" 37 "LANE_CHANGE_ABORTING_NO_HANDS_ON" 40 "LANE_CHANGE_ABORTING_SNOOZED" 39 "LANE_CHANGE_ABORTING_SOURCE_AND_TARGET_LANES_MERGED" 34 "LANE_CHANGE_ABORTING_TIGHT_TURN_RADIUS" 13 "LANE_CHANGE_ABORTING_TIMEOUT" 33 "LANE_CHANGE_ABORTING_TOLL_BOOTH_DETECTED" 20 "LANE_CHANGE_ABORTING_ULC_BLINKER_TIMEOUT" 25 "LANE_CHANGE_ABORTING_ULC_CONFIRMATION_TIMEOUT" 35 "LANE_CHANGE_ABORTING_WEATHER" 10 "LANE_CHANGE_AVAILABLE_BOTH" 8 "LANE_CHANGE_AVAILABLE_LEFT_ONLY" 9 "LANE_CHANGE_AVAILABLE_RIGHT_ONLY" 29 "LANE_CHANGE_BLOCKED_LEFT" 30 "LANE_CHANGE_BLOCKED_RIGHT" 27 "LANE_CHANGE_IN_PROGRESS_LEFT" 28 "LANE_CHANGE_IN_PROGRESS_RIGHT" 42 "LANE_CHANGE_UNAVAILABLE_AUTOPILOT_ABORTING" 36 "LANE_CHANGE_UNAVAILABLE_BLINDSPOT_RESTRICTED" 41 "LANE_CHANGE_UNAVAILABLE_BLINKER_LATCHED" 0 "LANE_CHANGE_UNAVAILABLE_DISABLED" 5 "LANE_CHANGE_UNAVAILABLE_FORK_MODE" 4 "LANE_CHANGE_UNAVAILABLE_INACTIVE" 7 "LANE_CHANGE_UNAVAILABLE_INVALID_MODE" 3 "LANE_CHANGE_UNAVAILABLE_NO_LANES" 38 "LANE_CHANGE_UNAVAILABLE_NO_REAR_OBJECT" 1 "LANE_CHANGE_UNAVAILABLE_ROAD_NOT_APPROPRIATE" 2 "LANE_CHANGE_UNAVAILABLE_SPEED" 6 "LANE_CHANGE_UNAVAILABLE_ULTRASONICS_NOT_READY" 63 "LANE_CHANGE_UNKNOWN" ;
+VAL_ 583 DAS_lastWatchdogCode 68 "ACTIVE_SAFETY_FAILED" 51 "AP_STATE_MACHINE_FAILED" 50 "ARBITER_FAILED" 57 "ATLAS_FAILED" 79 "BEV_GRAPH_FAILED" 77 "BRIDGE_FAILED" 67 "CAMERA_FAILED" 45 "CAN_RX_FAILED" 46 "CAN_TX_FAILED" 78 "CITY_STREETS_BEHAVIOR_FAILED" 74 "CLIP_LOGGER_FAILED" 52 "CONTROLLER_FAILED" 75 "DRIVABLE_SPACE_TRACKER_FAILED" 65 "DRIVER_MONITOR_FAILED" 70 "DYNAMICS_FAILED" 71 "FIELD_CALIBRATION_FAILED" 49 "GPS_FAILED" 61 "IMU_FAILED" 48 "INERTIATOR_FAILED" 73 "KMSG_MONITOR_FAILED" 63 "LANE_CHANGE_BEHAVIOR_FAILED" 43 "LEGACY_FAILED" 53 "LOCALIZER_FAILED" 66 "MAP_MANAGER_FAILED" 54 "MISSION_PLANNER_FAILED" 0 "NO_TASK_FAILED" 72 "PARKING_BEHAVIOR_FAILED" 55 "PERCEPTION_FAILED" 60 "RAIN_LIGHT_SENSING_FAILED" 56 "ROAD_ESTIMATOR_FAILED" 76 "SCHEDULER_FAILED" 41 "SNAPSHOT_FAILED" 59 "SNAPSHOT_TRIGGER_CLIENT_FAILED" 58 "STAY_IN_LANE_BEHAVIOR_FAILED" 40 "TELEMETRY_FAILED" 39 "TELEMETRY_PACKAGER_FAILED" 47 "TEMPERATURE_MONITOR_FAILED" 62 "UBX_LOG_FAILED" 69 "UI_SERVER_FAILED" 30 "UNKNOWN_TASK_FAILED" 42 "VISION_FAILED" 44 "WATCHDOG_FAILED" ;
+VAL_ 583 DAS_localizerHealth 0 "LOCALIZER_CRITICAL" 1 "LOCALIZER_DEGRADED" 8 "LOCALIZER_FINE_LOCALIZED_CONFIRMED" 7 "LOCALIZER_FINE_LOCALIZED_STICKING" 6 "LOCALIZER_LANE_LOCALIZED" 5 "LOCALIZER_NEAR_LANE_LOCALIZED" 3 "LOCALIZER_NO_LANE_LOCALIZED" 2 "LOCALIZER_RECOVERING" 4 "LOCALIZER_SHADOW" ;
+VAL_ 583 DAS_mapAvailability 1 "APM_MAP_AVAILABLE" 0 "APM_MAP_NOT_AVAILABLE" ;
+VAL_ 583 DAS_missionPlan 3 "MISSION_PLAN_INVALID" 2 "MISSION_PLAN_MAP_AND_VISION" 0 "MISSION_PLAN_MAP_ONLY" 1 "MISSION_PLAN_VISION_ONLY" ;
+VAL_ 583 DAS_roadEstimator 3 "ROAD_ESTIMATOR_CRITICAL" 2 "ROAD_ESTIMATOR_DEGRADED" 0 "ROAD_ESTIMATOR_HEALTHY" 1 "ROAD_ESTIMATOR_UNSTABLE_MEASUREMENTS" ;
+VAL_ 583 DAS_rqstedBehaviorStatus 19 "RQST_BEHAVIOR_BAD_ORIGIN_UPDATE" 9 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_INVALID_L" 14 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_INVALID_R" 8 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_L" 13 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_R" 11 "RQST_BEHAVIOR_BLOCKED_BY_LANE_TYPE_L" 16 "RQST_BEHAVIOR_BLOCKED_BY_LANE_TYPE_R" 20 "RQST_BEHAVIOR_BLOCKED_BY_SLOW_TARGET_L" 21 "RQST_BEHAVIOR_BLOCKED_BY_SLOW_TARGET_R" 10 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_AND_CAMERA_L" 15 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_AND_CAMERA_R" 7 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_L" 12 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_R" 6 "RQST_BEHAVIOR_BUILD_ARGUMENT_FAIL" 22 "RQST_BEHAVIOR_INVALID_PLAN" 3 "RQST_BEHAVIOR_MAP_NOT_INITIALIZED" 2 "RQST_BEHAVIOR_NO_DEST_POLYLANE" 4 "RQST_BEHAVIOR_NO_SOURCE_LANE_ON_MAP" 1 "RQST_BEHAVIOR_NO_SRC_POLYLANE" 5 "RQST_BEHAVIOR_NO_TARGET_LANE_ON_MAP" 18 "RQST_BEHAVIOR_OUT_OF_DATE" 17 "RQST_BEHAVIOR_ROAD_NOT_APPROPRIATE" 0 "RQST_BEHAVIOR_VALID" ;
 VAL_ 1013 VCFRONT_DRLLeftStatus 2 "LIGHT_FAULT" 0 "LIGHT_OFF" 1 "LIGHT_ON" 3 "LIGHT_SNA" ;
 VAL_ 1013 VCFRONT_DRLRightStatus 2 "LIGHT_FAULT" 0 "LIGHT_OFF" 1 "LIGHT_ON" 3 "LIGHT_SNA" ;
 VAL_ 1013 VCFRONT_ambientLightingBrightnes 255 "SNA" ;
@@ -2885,6 +3169,7 @@ VAL_ 280 BrakeState118 1 "RegenBrake" ;
 VAL_ 280 DIgear118 3 "Neutral" 7 "Idle" 1 "Park" 2 "Reverse" 4 "Drive" ;
 VAL_ 280 BrakePedal118 1 "PedalBrake" ;
 VAL_ 280 TrackMode118 1 "TRACK_MODE_AVAILABLE" 2 "TRACK_MODE_ON" 0 "TRACK_MODE_UNAVAILABLE" ;
+VAL_ 594 BMS_powerLimitsState 1 "POWER_CALCULATED_FOR_DRIVE" 0 "POWER_NOT_CALCULATED_FOR_DRIVE" ;
 VAL_ 599 UIspeedUnits257 1 "KPH" 0 "MPH" ;
 VAL_ 950 Odometer3B6 4294967 "SNA" ;
 VAL_ 552 EPBResmCaliperRequest228 3 "disengaging" 2 "engaging" 1 "idle" ;
