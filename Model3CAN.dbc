@@ -2168,7 +2168,7 @@ BO_ 513 ID201VCFRONT_loggingAndVitals10H: 8 VehicleBus
  SG_ VCFRONT_tempSuperheatTarget m0 : 44|10@1+ (0.1,0) [0|60] "C"  Receiver
 
 BO_ 984 ID3D8Elevation: 2 VehicleBus
- SG_ Elevation3D8 : 0|16@1- (1,0) [-32768|32767] "M"  Receiver
+ SG_ Elevation3D8 : 0|14@1- (1,0) [-8192|8191] "M"  Receiver
 
 BO_ 609 ID261_12vBattStatus: 8 VehicleBus
  SG_ v12vBattTemp261 : 16|16@1- (0.01,0) [-327.68|327.67] "C"  Receiver
