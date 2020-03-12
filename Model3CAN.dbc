@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: Receiver ChassisBus VehicleBus PartyBus ETH GTW
+BU_: Receiver ChassisBus VehicleBus PartyBus ETH GTW ui
 VAL_TABLE_ OilPumpState 7 "OIL_PUMP_SNA" 6 "OIL_PUMP_FAULTED" 2 "OIL_PUMP_COLD_STARTUP" 1 "OIL_PUMP_ENABLE" 0 "OIL_PUMP_STANDBY" ;
 
 
@@ -289,7 +289,7 @@ BO_ 611 ID263VCRIGHT_logging10Hz: 8 VehicleBus
 BO_ 615 ID267DI_vehicleEstimates: 8 VehicleBus
  SG_ DI_gradeEst : 33|7@1- (1,0) [-40|40] "%"  Receiver
  SG_ DI_gradeEstInternal : 48|7@1- (1,0) [-40|40] "%"  Receiver
- SG_ DI_mass : 0|10@1+ (5.3,1588.1) [1588.1|7010] "kg"  Receiver
+ SG_ DI_mass : 0|10@1+ (5,1900) [1900|7010] "kg"  Receiver
  SG_ DI_massConfidence : 32|1@1+ (1,0) [0|1] ""  Receiver
  SG_ DI_steeringAngleOffset : 56|8@1- (0.2,0) [-25.6|25.4] "Deg"  Receiver
  SG_ DI_tireFitment : 10|2@1+ (1,0) [0|3] ""  Receiver
@@ -482,25 +482,24 @@ BO_ 768 ID300BMS_info: 8 VehicleBus
 BO_ 530 ID212BMS_status: 8 VehicleBus
  SG_ BMS_activeHeatingWorthwhile : 5|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMS_chargeRequest : 29|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_chargeRetryCount : 49|3@1+ (1,0) [0|7] ""  Receiver
- SG_ BMS_chgPowerAvailable : 38|11@1+ (0.125,0) [0|255.75] "kW"  Receiver
+ SG_ BMS_chargeRetryCount : 51|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ BMS_chgPowerAvailable : 40|11@1+ (0.125,0) [0|255.75] "kW"  Receiver
  SG_ BMS_contactorState : 8|3@1+ (1,0) [0|6] ""  Receiver
  SG_ BMS_cpMiaOnHvs : 6|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_diLimpRequest : 35|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_diLimpRequest : 36|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMS_ecuLogUploadRequest : 14|2@1+ (1,0) [0|3] ""  Receiver
  SG_ BMS_hvState : 16|3@1+ (1,0) [0|6] ""  Receiver
  SG_ BMS_hvacPowerRequest : 0|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMS_isolationResistance : 19|10@1+ (10,0) [0|10000] "kOhm"  Receiver
  SG_ BMS_keepWarmRequest : 30|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_minPackTemperature : 56|8@1+ (0.5,-40) [-40|87.5] "C"  Receiver
  SG_ BMS_notEnoughPowerForDrive : 1|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMS_notEnoughPowerForSupport : 2|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_okToShipByAir : 36|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_okToShipByLand : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_okToShipByAir : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_okToShipByLand : 38|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMS_pcsPwmEnabled : 7|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMS_preconditionAllowed : 3|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_smStateRequest : 52|4@1+ (1,0) [0|9] ""  Receiver
- SG_ BMS_state : 31|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ BMS_smStateRequest : 56|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ BMS_state : 32|4@1+ (1,0) [0|10] ""  Receiver
  SG_ BMS_uiChargeStatus : 11|3@1+ (1,0) [0|5] ""  Receiver
  SG_ BMS_updateAllowed : 4|1@1+ (1,0) [0|1] ""  Receiver
 
@@ -875,6 +874,7 @@ BO_ 820 ID334UI_powertrainControl: 8 VehicleBus
  SG_ UI_systemTorqueLimit : 8|6@1+ (100,4000) [4000|10300] "Nm"  Receiver
  SG_ UI_wasteMode : 36|2@1+ (1,0) [0|2] ""  Receiver
  SG_ UI_wasteModeRegenLimit : 38|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_closureConfirmed : 14|2@1+ (1,0) [0|2] ""  Receiver
 
 BO_ 826 ID33AUI_rangeSOC: 8 VehicleBus
  SG_ UI_idealRange : 16|10@1+ (1,0) [0|1023] "mi"  Receiver
@@ -1876,10 +1876,13 @@ BO_ 553 ID229GearLever: 3 VehicleBus
  SG_ GearLeverPosition229 : 12|3@1+ (1,0) [0|7] ""  Receiver
  SG_ GearLeverButton229 : 16|2@1+ (1,0) [0|3] ""  Receiver
 
-BO_ 585 ID249LeftStalk: 3 VehicleBus
- SG_ LeftStalkFRpos249 : 12|2@1+ (1,0) [0|3] ""  Receiver
- SG_ LeftStalkUDpos249 : 16|3@1+ (1,0) [0|7] ""  Receiver
- SG_ LeftStalkButton249 : 14|2@1+ (1,0) [0|3] ""  Receiver
+BO_ 585 ID249SCCMLeftStalk: 4 VehicleBus
+ SG_ SCCM_highBeamStalkStatus : 12|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ SCCM_leftStalkCounter : 8|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ SCCM_leftStalkCrc : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ SCCM_leftStalkReserved1 : 24|5@1+ (1,0) [0|31] ""  Receiver
+ SG_ SCCM_turnIndicatorStalkStatus : 16|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ SCCM_washWipeButtonStatus : 14|2@1+ (1,0) [0|3] ""  Receiver
 
 BO_ 1577 ID628UDSPCStoMCU: 8 VehicleBus
 
@@ -2252,7 +2255,7 @@ BO_ 786 ID312BMSthermal: 8 VehicleBus
  SG_ BMSnoFlowRequest312 : 63|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMSpcsNoFlowRequest312 : 62|1@1+ (1,0) [0|1] ""  Receiver
  SG_ BMSmaxPackTemperature : 53|9@1+ (0.25,-25) [-25|100] "C"  Receiver
- SG_ BMSminPackTemperature2 : 44|9@1+ (0.25,-25) [-25|100] "C"  Receiver
+ SG_ BMSminPackTemperature : 44|9@1+ (0.25,-25) [-25|100] "C"  Receiver
 
 BO_ 658 ID292BMS_SOC: 8 VehicleBus
  SG_ BattBeginningOfLifeEnergy292 : 40|10@1+ (0.1,0) [0|102.3] "kWh" Vector__XXX
@@ -2260,6 +2263,7 @@ BO_ 658 ID292BMS_SOC: 8 VehicleBus
  SG_ SOCave292 : 30|10@1+ (0.1,0) [0|102.3] "%"  Receiver
  SG_ SOCUI292 : 10|10@1+ (0.1,0) [0|102.3] "%"  Receiver
  SG_ SOCmin292 : 0|10@1+ (0.1,0) [0|102.3] "%"  Receiver
+ SG_ BMS_battTempPct : 50|8@1+ (0.4,0) [0|100] "%"  Receiver
 
 BO_ 599 ID257UIspeed: 8 VehicleBus
  SG_ UIspeedUnits257 : 32|1@1+ (1,0) [0|0] ""  Receiver
@@ -2491,10 +2495,11 @@ BO_ 2047 ID7FFcarConfig: 8 VehicleBus
  SG_ GTW_trackModePackage m2 : 62|1@1+ (1,0) [0|1] ""  Receiver
  SG_ GTW_twelveVBatteryType m3 : 63|1@1+ (1,0) [0|1] ""  Receiver
  SG_ GTW_vdcType m2 : 14|1@1+ (1,0) [0|1] ""  Receiver
- SG_ GTW_wheelType m3 : 48|7@1+ (1,0) [0|18] ""  Receiver
+ SG_ GTW_wheelType m3 : 48|7@1+ (1,0) [0|19] ""  Receiver
  SG_ GTW_windshieldType m2 : 33|1@1+ (1,0) [0|1] ""  Receiver
  SG_ GTW_xcpESP m2 : 16|1@1+ (1,0) [0|1] ""  Receiver
  SG_ GTW_xcpIbst m2 : 15|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ GTW_birthday m4 : 8|32@1+ (1,0) [0|0] ""  ui
 
 BO_ 818 ID332BattCellMinMax: 6 VehicleBus
  SG_ BattCellMultiplexer332 M : 0|2@1+ (1,0) [0|0] ""  Receiver
@@ -2718,7 +2723,7 @@ CM_ SG_ 786 BMSdissipation312 "Battery Dissipation";
 CM_ SG_ 786 BMSinletActiveCoolTarget312 "Battery Cool Target";
 CM_ SG_ 786 BMSinletActiveHeatTarget312 "Battery Heat Target";
 CM_ SG_ 786 BMSmaxPackTemperature "Max Battery Temp";
-CM_ SG_ 786 BMSminPackTemperature2 "Min Battery Temp 2";
+CM_ SG_ 786 BMSminPackTemperature "Min Battery Temp";
 CM_ SG_ 658 BattBeginningOfLifeEnergy292 "HV Battery Original Energy";
 CM_ SG_ 658 SOCmax292 "BMS Max SOC";
 CM_ SG_ 658 SOCave292 "BMS Ave SOC";
@@ -2801,23 +2806,23 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Mar09";
+BA_DEF_DEF_  "Modified" "JW2020Mar12";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_DEF_DEF_  "SystemMessageLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
-BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -2829,12 +2834,12 @@ BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "SystemMessageLongSymbol" BO_ 513 "ID201VCFRONT_loggingAndVitals10Hz";
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 280 10;
+BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -2842,20 +2847,20 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgCycleTime" BO_ 264 10;
-BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgSendType" BO_ 306 0;
-BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
 BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "SystemSignalLongSymbol" SG_ 291 UI_a037_AudioWatchdogXrunStormEr "UI_a037_AudioWatchdogXrunStormError";
 BA_ "SystemSignalLongSymbol" SG_ 291 UI_a038_AudioWatchdogA2bI2cLocku "UI_a038_AudioWatchdogA2bI2cLockupError";
 BA_ "SystemSignalLongSymbol" SG_ 291 UI_a048_AudioPremiumAmpCheckFail "UI_a048_AudioPremiumAmpCheckFailed";
@@ -3034,8 +3039,7 @@ VAL_ 530 BMS_diLimpRequest 0 "LIMP_REQUEST_NONE" 1 "LIMP_REQUEST_WELDED" ;
 VAL_ 530 BMS_ecuLogUploadRequest 1 "REQUEST_PRIORITY_1" 2 "REQUEST_PRIORITY_2" 3 "REQUEST_PRIORITY_3" 0 "REQUEST_PRIORITY_NONE" ;
 VAL_ 530 BMS_hvState 1 "HV_COMING_UP" 0 "HV_DOWN" 2 "HV_GOING_DOWN" 6 "HV_UP" 4 "HV_UP_FOR_CHARGE" 5 "HV_UP_FOR_DC_CHARGE" 3 "HV_UP_FOR_DRIVE" ;
 VAL_ 530 BMS_isolationResistance 1023 "SNA" ;
-VAL_ 530 BMS_smStateRequest 3 "BMS_CHARGE" 5 "BMS_CLEAR_FAULT" 1 "BMS_DRIVE" 6 "BMS_FAULT" 4 "BMS_FEIM" 9 "BMS_SNA" 0 "BMS_STANDBY" 2 "BMS_SUPPORT" 8 "BMS_TEST" 7 "BMS_WELD" ;
-VAL_ 530 BMS_state 3 "BMS_CHARGE" 5 "BMS_CLEAR_FAULT" 1 "BMS_DRIVE" 6 "BMS_FAULT" 4 "BMS_FEIM" 9 "BMS_SNA" 0 "BMS_STANDBY" 2 "BMS_SUPPORT" 8 "BMS_TEST" 7 "BMS_WELD" ;
+VAL_ 530 BMS_smStateRequest 3 "BMS_CHARGE" 5 "BMS_CLEAR_FAULT" 10 "BMS_DIAG" 1 "BMS_DRIVE" 6 "BMS_FAULT" 4 "BMS_FEIM" 9 "BMS_SNA" 0 "BMS_STANDBY" 2 "BMS_SUPPORT" 8 "BMS_TEST" 7 "BMS_WELD" ;
 VAL_ 530 BMS_uiChargeStatus 2 "BMS_ABOUT_TO_CHARGE" 4 "BMS_CHARGE_COMPLETE" 5 "BMS_CHARGE_STOPPED" 3 "BMS_CHARGING" 0 "BMS_DISCONNECTED" 1 "BMS_NO_POWER" ;
 VAL_ 946 BMS_log2MuxId 9 "BMS_LOG2_100HZ_1KHZ_TASK_STATS" 8 "BMS_LOG2_10HZ_TASK_STATS" 7 "BMS_LOG2_1HZ_TASK_STATS" 6 "BMS_LOG2_AHR_COUNTER" 24 "BMS_LOG2_BRICK_VOLTAGE_CHANGE" 0 "BMS_LOG2_CAC1" 1 "BMS_LOG2_CAC2" 23 "BMS_LOG2_CAC3" 3 "BMS_LOG2_CHARGE_TERMINATION" 5 "BMS_LOG2_CHARGING" 10 "BMS_LOG2_CTR_RESISTANCE" 22 "BMS_LOG2_ENERGY_AND_REST_DATA" 20 "BMS_LOG2_ENERGY_RESERVE" 21 "BMS_LOG2_FC_LINK_LEAKAGE_TEST" 2 "BMS_LOG2_FLOOD_PORT" 19 "BMS_LOG2_HV_CHAIN_MODEL" 15 "BMS_LOG2_NEG_CTR_HEALTH_1" 16 "BMS_LOG2_NEG_CTR_HEALTH_2" 17 "BMS_LOG2_NEG_CTR_HEALTH_3" 18 "BMS_LOG2_NEG_CTR_HEALTH_4" 11 "BMS_LOG2_POS_CTR_HEALTH_1" 12 "BMS_LOG2_POS_CTR_HEALTH_2" 13 "BMS_LOG2_POS_CTR_HEALTH_3" 14 "BMS_LOG2_POS_CTR_HEALTH_4" 4 "BMS_LOG2_VSH_TEST" ;
 VAL_ 946 BMS_chargeCurrentLimitMode 1 "BMS_CHG_I_LIMIT_BRICK_TEMP_AND_V" 2 "BMS_CHG_I_LIMIT_CAC_IMBALANCE" 5 "BMS_CHG_I_LIMIT_CONFIG" 6 "BMS_CHG_I_LIMIT_HV_CHAIN" 3 "BMS_CHG_I_LIMIT_LEAKY_BUCKET" 0 "BMS_CHG_I_LIMIT_NONE" 4 "BMS_CHG_I_LIMIT_TETHERING" ;
@@ -3141,6 +3145,7 @@ VAL_ 820 UI_systemPowerLimit 31 "SNA" ;
 VAL_ 820 UI_systemTorqueLimit 63 "SNA" ;
 VAL_ 820 UI_wasteMode 2 "WASTE_TYPE_FULL" 0 "WASTE_TYPE_NONE" 1 "WASTE_TYPE_PARTIAL" ;
 VAL_ 820 UI_wasteModeRegenLimit 3 "MAX_REGEN_CURRENT_0A" 2 "MAX_REGEN_CURRENT_10A" 1 "MAX_REGEN_CURRENT_30A" 0 "MAX_REGEN_CURRENT_MAX" ;
+VAL_ 820 UI_closureConfirmed 1 "CONFIRMED_FRUNK" 0 "CONFIRMED_NONE" 2 "CONFIRMED_PROX" ;
 VAL_ 577 VCFRONT_coolantAirPurgeBatState 1 "AIR_PURGE_STATE_ACTIVE" 2 "AIR_PURGE_STATE_COMPLETE" 0 "AIR_PURGE_STATE_INACTIVE" 3 "AIR_PURGE_STATE_INTERRUPTED" 4 "AIR_PURGE_STATE_PENDING" ;
 VAL_ 577 VCFRONT_coolantFlowBatReason 4 "ACTIVE_MANAGER_BATT" 9 "ACTIVE_MANAGER_PT" 6 "BMS_FLOW_REQ" 1 "COOLANT_AIR_PURGE" 7 "DAS_FLOW_REQ" 13 "DIS_FLOW_REQ" 12 "DI_FLOW_REQ" 14 "HP_FLOW_REQ" 0 "NONE" 2 "NO_FLOW_REQ" 3 "OVERRIDE_BATT" 8 "OVERRIDE_PT" 5 "PASSIVE_MANAGER_BATT" 10 "PASSIVE_MANAGER_PT" 11 "PCS_FLOW_REQ" ;
 VAL_ 577 VCFRONT_coolantFlowPTReason 4 "ACTIVE_MANAGER_BATT" 9 "ACTIVE_MANAGER_PT" 6 "BMS_FLOW_REQ" 1 "COOLANT_AIR_PURGE" 7 "DAS_FLOW_REQ" 13 "DIS_FLOW_REQ" 12 "DI_FLOW_REQ" 14 "HP_FLOW_REQ" 0 "NONE" 2 "NO_FLOW_REQ" 3 "OVERRIDE_BATT" 8 "OVERRIDE_PT" 5 "PASSIVE_MANAGER_BATT" 10 "PASSIVE_MANAGER_PT" 11 "PCS_FLOW_REQ" ;
@@ -3358,8 +3363,9 @@ VAL_ 897 VCFRONT_pumpPowertrainFETTemp 255 "SNA" ;
 VAL_ 897 VCFRONT_radiatorFanFETTemp 255 "SNA" ;
 VAL_ 897 VCFRONT_tempRefrigSuction 255 "SNA" ;
 VAL_ 553 GearLeverPosition229 4 "Full Up" 3 "Half Up" 2 "Full Down" 1 "Half Down" 0 "Center" ;
-VAL_ 585 LeftStalkFRpos249 2 "Push" 1 "Pull" 0 "Center" ;
-VAL_ 585 LeftStalkUDpos249 4 "Full Down" 3 "Half Down" 2 "Full Up" 1 "Half Up" 0 "Center" ;
+VAL_ 585 SCCM_highBeamStalkStatus 0 "IDLE" 1 "PULL" 2 "PUSH" 3 "SNA" ;
+VAL_ 585 SCCM_turnIndicatorStalkStatus 5 "DOWN_0_5" 6 "DOWN_1" 7 "DOWN_1_5" 8 "DOWN_2" 0 "IDLE" 9 "SNA" 1 "UP_0_5" 2 "UP_1" 3 "UP_1_5" 4 "UP_2" ;
+VAL_ 585 SCCM_washWipeButtonStatus 1 "1ST_DETENT" 2 "2ND_DETENT" 0 "NOT_PRESSED" 3 "SNA" ;
 VAL_ 918 FrontOilPumpState396 7 "OIL_PUMP_SNA" 6 "OIL_PUMP_FAULTED" 2 "OIL_PUMP_COLD_STARTUP" 1 "OIL_PUMP_ENABLE" 0 "OIL_PUMP_STANDBY" ;
 VAL_ 917 RearOilPumpState395 7 "OIL_PUMP_SNA" 6 "OIL_PUMP_FAULTED" 2 "OIL_PUMP_COLD_STARTUP" 1 "OIL_PUMP_ENABLE" 0 "OIL_PUMP_STANDBY" ;
 VAL_ 659 UI_accOvertakeEnable 0 "ACC_OVERTAKE_OFF" 1 "ACC_OVERTAKE_ON" 3 "SNA" ;
@@ -3505,7 +3511,7 @@ VAL_ 2047 GTW_tpmsType 0 "CONTI_2" 1 "TESLA_BLE" ;
 VAL_ 2047 GTW_trackModePackage 0 "NONE" 1 "PERFORMANCE" ;
 VAL_ 2047 GTW_twelveVBatteryType 0 "ATLASBX_B24_FLOODED" 1 "CLARIOS_B24_FLOODED" ;
 VAL_ 2047 GTW_vdcType 0 "BOSCH_VDC" 1 "TESLA_VDC" ;
-VAL_ 2047 GTW_wheelType 4 "GEMINI_19_SQUARE" 5 "GEMINI_19_STAGGERED" 0 "PINWHEEL_18" 18 "PINWHEEL_18_CAP_KIT" 1 "STILETTO_19" 2 "STILETTO_20" 14 "STILETTO_20_DARK_SQUARE" 3 "STILETTO_20_DARK_STAGGERED" ;
+VAL_ 2047 GTW_wheelType 4 "GEMINI_19_SQUARE" 5 "GEMINI_19_STAGGERED" 0 "PINWHEEL_18" 18 "PINWHEEL_18_CAP_KIT" 1 "STILETTO_19" 2 "STILETTO_20" 14 "STILETTO_20_DARK_SQUARE" 3 "STILETTO_20_DARK_STAGGERED" 19 "ZEROG_20_GUNPOWDER" ;
 VAL_ 2047 GTW_windshieldType 1 "EASTMAN_ACOUSTIC" 0 "SEKISUI_ACOUSTIC" ;
 VAL_ 2047 GTW_xcpESP 0 "FALSE" 1 "TRUE" ;
 VAL_ 2047 GTW_xcpIbst 0 "FALSE" 1 "TRUE" ;
