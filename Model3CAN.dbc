@@ -71,6 +71,16 @@ BO_ 130 ID082UI_tripPlanning: 8 VehicleBus
  SG_ UI_requestActiveBatteryHeating : 2|1@1+ (1,0) [0|1] ""  Receiver
  SG_ UI_tripPlanningActive : 0|1@1+ (1,0) [0|1] ""  Receiver
 
+BO_ 257 ID101RCM_inertial1: 8 ChassisBus
+ SG_ RCM_inertial1Checksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ RCM_inertial1Counter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ RCM_pitchRate : 16|15@1- (0.00025,0) [-4.096|4.09575] "rad/s"  Receiver
+ SG_ RCM_pitchRateQF : 50|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ RCM_rollRate : 31|15@1- (0.00025,0) [-4.096|4.09575] "rad/s"  Receiver
+ SG_ RCM_rollRateQF : 46|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ RCM_yawRate : 0|16@1- (0.0001,0) [-3.2766|3.2766] "rad/s"  Receiver
+ SG_ RCM_yawRateQF : 48|1@1+ (1,0) [0|1] ""  Receiver
+
 BO_ 258 ID102VCLEFT_doorStatus: 8 VehicleBus
  SG_ VCLEFT_frontHandlePWM : 16|7@1+ (1,0) [0|100] "%"  Receiver
  SG_ VCLEFT_frontHandlePulled : 10|1@1+ (1,0) [0|1] ""  Receiver
@@ -182,6 +192,32 @@ BO_ 291 ID123UI_alertMatrix1: 8 VehicleBus
  SG_ UI_a063_CellularTestFailed : 62|1@1+ (1,0) [0|1] ""  Receiver
  SG_ UI_a064_ModemFirmwareTestFailed : 63|1@1+ (1,0) [0|1] ""  Receiver
 
+BO_ 325 ID145ESP_status: 8 ChassisBus
+ SG_ ESP_absBrakeEvent2 : 22|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_absFaultLamp : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_brakeApply : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_brakeDiscWipingActive : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_brakeLamp : 21|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_brakeTorqueTarget : 51|13@1+ (2,0) [0|16382] "Nm"  Receiver
+ SG_ ESP_btcTargetState : 38|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_cdpStatus : 34|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_driverBrakeApply : 29|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_ebdFaultLamp : 16|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_ebrStandstillSkid : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_ebrStatus : 49|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_espFaultLamp : 18|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_espLampFlash : 20|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_espModeActive : 12|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_hydraulicBoostEnabled : 19|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_lateralAccelQF : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_longitudinalAccelQF : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_ptcTargetState : 36|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_stabilityControlSts2 : 14|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_statusChecksum : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ ESP_statusCounter : 8|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ ESP_steeringAngleQF : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_yawRateQF : 26|1@1+ (1,0) [0|1] ""  Receiver
+
 BO_ 522 ID20AHVP_contactorState: 6 VehicleBus
  SG_ HVP_dcLinkAllowedToEnergize : 36|1@1+ (1,0) [0|1] ""  Receiver
  SG_ HVP_fcContNegativeAuxOpen : 7|1@1+ (1,0) [0|1] ""  Receiver
@@ -206,6 +242,97 @@ BO_ 522 ID20AHVP_contactorState: 6 VehicleBus
  SG_ HVP_packCtrsResetRequestRequired : 32|1@1+ (1,0) [0|1] ""  Receiver
  SG_ HVP_pyroTestInProgress : 37|1@1+ (1,0) [0|1] ""  Receiver
 
+BO_ 526 ID20EPARK_sdiFront: 8 ChassisBus
+ SG_ PARK_sdiFrontChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ PARK_sdiFrontCounter : 54|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PARK_sdiSensor1RawDistData : 0|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor2RawDistData : 9|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor3RawDistData : 18|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor4RawDistData : 27|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor5RawDistData : 36|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor6RawDistData : 45|9@1+ (1,0) [0|511] "cm"  Receiver
+
+BO_ 537 ID219VCSEC_TPMSData: 6 ChassisBus
+ SG_ VCSEC_TPMSDataIndex M : 0|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ VCSEC_TPMSBatVoltage0 m0 : 32|8@1+ (0.01,1.5) [0|0] "V"  Receiver
+ SG_ VCSEC_TPMSBatVoltage1 m1 : 32|8@1+ (0.01,1.5) [0|0] "V"  Receiver
+ SG_ VCSEC_TPMSBatVoltage2 m2 : 32|8@1+ (0.01,1.5) [0|0] "V"  Receiver
+ SG_ VCSEC_TPMSBatVoltage3 m3 : 32|8@1+ (0.01,1.5) [0|0] "V"  Receiver
+ SG_ VCSEC_TPMSDataIndex M : 0|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ VCSEC_TPMSPressure0 m0 : 16|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ VCSEC_TPMSPressure1 m1 : 16|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ VCSEC_TPMSPressure2 m2 : 16|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ VCSEC_TPMSPressure3 m3 : 16|8@1+ (0.025,0) [0|0] "bar"  Receiver
+ SG_ VCSEC_TPMSRSSI0 m0 : 40|8@1- (1,0) [-127|0] "dBm"  Receiver
+ SG_ VCSEC_TPMSRSSI1 m1 : 40|8@1- (1,0) [-127|0] "dBm"  Receiver
+ SG_ VCSEC_TPMSRSSI2 m2 : 40|8@1- (1,0) [-127|0] "dBm"  Receiver
+ SG_ VCSEC_TPMSRSSI3 m3 : 40|8@1- (1,0) [-127|0] "dBm"  Receiver
+ SG_ VCSEC_TPMSSensorState0 m0 : 2|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCSEC_TPMSSensorState1 m1 : 2|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCSEC_TPMSSensorState2 m2 : 2|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCSEC_TPMSSensorState3 m3 : 2|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ VCSEC_TPMSTemperature0 m0 : 24|8@1+ (1,-40) [-40|214] "C"  Receiver
+ SG_ VCSEC_TPMSTemperature1 m1 : 24|8@1+ (1,-40) [-40|214] "C"  Receiver
+ SG_ VCSEC_TPMSTemperature2 m2 : 24|8@1+ (1,-40) [-40|214] "C"  Receiver
+ SG_ VCSEC_TPMSTemperature3 m3 : 24|8@1+ (1,-40) [-40|214] "C"  Receiver
+
+BO_ 558 ID22EPARK_sdiRear: 8 ChassisBus
+ SG_ PARK_sdiRearChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ PARK_sdiRearCounter : 54|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ PARK_sdiSensor10RawDistData : 27|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor11RawDistData : 36|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor12RawDistData : 45|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor7RawDistData : 0|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor8RawDistData : 9|9@1+ (1,0) [0|511] "cm"  Receiver
+ SG_ PARK_sdiSensor9RawDistData : 18|9@1+ (1,0) [0|511] "cm"  Receiver
+
+BO_ 568 ID238UI_driverAssistMapData: 8 ChassisBus
+ SG_ UI_acceptBottsDots : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_autosteerRestricted : 49|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_controlledAccess : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_countryCode : 16|10@1+ (1,0) [0|1023] ""  Receiver
+ SG_ UI_gpsRoadMatch : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_inSuperchargerGeofence : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_mapDataChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ UI_mapDataCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ UI_mapSpeedLimit : 8|5@1+ (1,0) [0|31] ""  Receiver
+ SG_ UI_mapSpeedLimitDependency : 0|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UI_mapSpeedLimitType : 13|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UI_mapSpeedUnits : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_navRouteActive : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_nextBranchDist : 32|5@1+ (10,0) [0|300] "m"  Receiver
+ SG_ UI_nextBranchLeftOffRamp : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_nextBranchRightOffRamp : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_parallelAutoparkEnabled : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_perpendicularAutoparkEnabled : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_pmmEnabled : 50|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectAutosteer : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectHPP : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectHandsOn : 47|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectLeftFreeSpace : 44|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectLeftLane : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectNav : 43|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectRightFreeSpace : 45|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_rejectRightLane : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_roadClass : 3|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ UI_scaEnabled : 51|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_streetCount : 26|2@1+ (1,0) [0|3] ""  Receiver
+
+BO_ 569 ID239DAS_lanes: 8 ChassisBus
+ SG_ DAS_lanesCounter : 60|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_leftFork : 52|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_leftLaneExists : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_leftLineUsage : 48|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_rightFork : 54|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_rightLaneExists : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_rightLineUsage : 50|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_virtualLaneC0 : 16|8@1+ (0.035,-3.5) [-3.5|3.5] "m"  Receiver
+ SG_ DAS_virtualLaneC1 : 24|8@1+ (0.0016,-0.2) [-0.2|0.2] "rad"  Receiver
+ SG_ DAS_virtualLaneC2 : 32|8@1+ (2E-005,-0.0025) [-0.0025|0.0025] "m-1"  Receiver
+ SG_ DAS_virtualLaneC3 : 40|8@1+ (2.4E-007,-3E-005) [-3E-005|3E-005] "m-2"  Receiver
+ SG_ DAS_virtualLaneViewRange : 8|8@1+ (1,0) [0|160] "m"  Receiver
+ SG_ DAS_virtualLaneWidth : 4|4@1+ (0.3125,2) [2|6.6875] "m"  Receiver
+
 BO_ 583 ID247DAS_autopilotDebug: 8 VehicleBus
  SG_ DAS_alcInternalState : 12|4@1+ (1,0) [0|12] ""  Receiver
  SG_ DAS_autopilotAbortReason : 32|6@1+ (1,0) [0|63] ""  Receiver
@@ -223,10 +350,204 @@ BO_ 583 ID247DAS_autopilotDebug: 8 VehicleBus
  SG_ DAS_roadEstimator : 2|2@1+ (1,0) [0|3] ""  Receiver
  SG_ DAS_rqstedBehaviorStatus : 40|5@1+ (1,0) [0|22] ""  Receiver
 
+BO_ 586 ID24ADAS_visualDebug: 8 ChassisBus
+ SG_ DAS_accSmartSpeedActive : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_accSmartSpeedState : 49|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_autosteerBottsDotsUsage : 12|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_autosteerHPPUsage : 6|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_autosteerHealthAnomalyLevel : 18|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_autosteerHealthState : 21|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_autosteerModelUsage : 10|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_autosteerNavigationUsage : 8|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_autosteerVehiclesUsage : 4|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_behaviorType : 56|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_devAppInterfaceEnabled : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_lastAutosteerAbortReason : 32|6@1+ (1,0) [0|34] ""  Receiver
+ SG_ DAS_lastLinePreferenceReason : 24|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_navAvailable : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_navDistance : 40|8@1+ (100,0) [0|25500] "km"  Receiver
+ SG_ DAS_offsetSide : 14|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_plannerState : 28|4@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_rearLeftVehDetectedCurrent : 61|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_rearLeftVehDetectedTrip : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_rearRightVehDetectedTrip : 62|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_rearVehDetectedThisCycle : 60|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_roadSurfaceType : 16|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_ulcInProgress : 52|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_ulcType : 58|2@1+ (1,0) [0|2] ""  Receiver
+
+BO_ 603 ID25BAPP_environment: 1 ChassisBus
+ SG_ APP_environmentRainy : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ APP_environmentSnowy : 1|1@1+ (1,0) [0|1] ""  Receiver
+
 BO_ 692 ID2B4PCS_dcdcRailStatus: 5 VehicleBus
  SG_ PCS_dcdcHvBusVolt : 10|12@1+ (0.146484375,0) [0|599.853515625] "V"  Receiver
  SG_ PCS_dcdcLvBusVolt : 0|10@1+ (0.0390625,0) [0|39.9609375] "V"  Receiver
  SG_ PCS_dcdcLvOutputCurrent : 24|12@1+ (0.1,0) [0|400] "A"  Receiver
+
+BO_ 697 ID2B9DAS_control: 8 ChassisBus
+ SG_ DAS_accState : 12|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_accelMax : 44|9@1+ (0.04,-15) [-15|5.44] "m/s^2"  Receiver
+ SG_ DAS_accelMin : 35|9@1+ (0.04,-15) [-15|5.44] "m/s^2"  Receiver
+ SG_ DAS_aebEvent : 16|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_controlChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DAS_controlCounter : 53|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_jerkMax : 27|8@1+ (0.059,0) [0|15.045] "m/s^3"  Receiver
+ SG_ DAS_jerkMin : 18|9@1+ (0.03,-15.232) [-15.232|0.098] "m/s^3"  Receiver
+ SG_ DAS_setSpeed : 0|12@1+ (0.1,0) [0|409.4] "kph"  Receiver
+
+BO_ 723 ID2D3UI_solarData: 8 ChassisBus
+ SG_ UI_isSunUp : 25|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_minsToSunrise : 56|8@1+ (10,0) [0|2550] "min"  Receiver
+ SG_ UI_minsToSunset : 48|8@1+ (10,0) [0|2550] "min"  Receiver
+ SG_ UI_screenPCBTemperature : 40|8@1- (0.5,40) [-20|100] "C"  Receiver
+ SG_ UI_solarAzimuthAngle : 0|16@1- (1,0) [-32767|32767] "deg"  Receiver
+ SG_ UI_solarAzimuthAngleCarRef : 16|9@1- (1,0) [-256|254] "deg"  Receiver
+ SG_ UI_solarElevationAngle : 32|8@1- (1,0) [-128|126] "deg"  Receiver
+
+BO_ 777 ID309DAS_object: 8 VehicleBus
+ SG_ DAS_objectId M : 0|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_cutinVehDx m3 : 8|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_cutinVehDy m3 : 20|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_cutinVehHeading m5 : 56|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_cutinVehId m3 : 27|7@1+ (1,0) [0|127] ""  Receiver
+ SG_ DAS_cutinVehRelevantForControl m3 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_cutinVehType m3 : 3|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_cutinVehVxRel m3 : 16|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_leadVeh2Dx m0 : 39|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_leadVeh2Dy m0 : 51|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_leadVeh2Heading m5 : 16|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_leadVeh2Id m0 : 58|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DAS_leadVeh2RelevantForControl m0 : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_leadVeh2Type m0 : 34|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_leadVeh2VxRel m0 : 47|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_leadVehDx m0 : 8|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_leadVehDy m0 : 20|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_leadVehHeading m5 : 8|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_leadVehId m0 : 27|7@1+ (1,0) [0|127] ""  Receiver
+ SG_ DAS_leadVehRelevantForControl m0 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_leadVehType m0 : 3|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ DAS_leadVehVxRel m0 : 16|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_leftVeh2Dx m1 : 39|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_leftVeh2Dy m1 : 51|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_leftVeh2Heading m5 : 32|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_leftVeh2Id m1 : 58|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DAS_leftVeh2RelevantForControl m1 : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_leftVeh2Type m1 : 34|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_leftVeh2VxRel m1 : 47|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_leftVehDx m1 : 8|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_leftVehDy m1 : 20|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_leftVehHeading m5 : 24|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_leftVehId m1 : 27|7@1+ (1,0) [0|127] ""  Receiver
+ SG_ DAS_leftVehRelevantForControl m1 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_leftVehType m1 : 3|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_leftVehVxRel m1 : 16|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_rightVeh2Dx m2 : 39|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_rightVeh2Dy m2 : 51|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_rightVeh2Heading m5 : 48|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_rightVeh2Id m2 : 58|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DAS_rightVeh2RelevantForControl m2 : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_rightVeh2Type m2 : 34|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_rightVeh2VxRel m2 : 47|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_rightVehDx m2 : 8|8@1+ (0.5,0) [0|127] "m"  Receiver
+ SG_ DAS_rightVehDy m2 : 20|7@1+ (0.35,-22.05) [-22.05|22.4] "m"  Receiver
+ SG_ DAS_rightVehHeading m5 : 40|8@1+ (0.0245437,-3.1415936) [-3.1415936|3.0925062] "rad"  Receiver
+ SG_ DAS_rightVehId m2 : 27|7@1+ (1,0) [0|127] ""  Receiver
+ SG_ DAS_rightVehRelevantForControl m2 : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_rightVehType m2 : 3|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_rightVehVxRel m2 : 16|4@1+ (4,-30) [-30|26] "m/s"  Receiver
+ SG_ DAS_roadSignArrow m4 : 27|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DAS_roadSignColor m4 : 3|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DAS_roadSignControlActive m4 : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_roadSignId m4 : 6|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DAS_roadSignOrientation m4 : 30|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_roadSignSource m4 : 25|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_roadSignStopLineDist m4 : 14|10@1+ (0.2,-20) [-20|184.4] "m"  Receiver
+
+BO_ 905 ID389DAS_status2: 8 ChassisBus
+ SG_ DAS_ACC_report : 26|5@1+ (1,0) [0|24] ""  Receiver
+ SG_ DAS_accSpeedLimit : 0|10@1+ (0.2,0) [0|204.6] "mph"  Receiver
+ SG_ DAS_activationFailureStatus : 14|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_csaState : 32|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_driverInteractionLevel : 38|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_longCollisionWarning : 48|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_pmmCameraFaultReason : 24|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_pmmLoggingRequest : 13|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_pmmObstacleSeverity : 10|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_pmmRadarFaultReason : 19|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_pmmSysFaultReason : 21|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_pmmUltrasonicsFaultReason : 16|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DAS_ppOffsetDesiredRamp : 40|8@1+ (0.01,-1.28) [-1.28|1.27] "m"  Receiver
+ SG_ DAS_radarTelemetry : 34|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_relaxCruiseLimits : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_robState : 36|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_status2Checksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DAS_status2Counter : 52|4@1+ (1,0) [0|15] ""  Receiver
+
+BO_ 921 ID399DAS_status: 8 ChassisBus
+ SG_ DAS_autoLaneChangeState : 46|5@1+ (1,0) [0|31] ""  Receiver
+ SG_ DAS_autoParked : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_autoparkReady : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_autoparkWaitingForBrake : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_autopilotHandsOnState : 42|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_autopilotState : 0|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_blindSpotRearLeft : 4|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_blindSpotRearRight : 6|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_fleetSpeedState : 40|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_forwardCollisionWarning : 22|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_fusedSpeedLimit : 8|5@1+ (5,0) [0|150] "kph/mph"  Receiver
+ SG_ DAS_heaterState : 21|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_laneDepartureWarning : 37|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_lssState : 29|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ DAS_sideCollisionAvoid : 32|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_sideCollisionInhibit : 36|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_sideCollisionWarning : 34|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_statusChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DAS_statusCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_summonAvailable : 51|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_summonClearedGate : 15|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_summonFwdLeashReached : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_summonObstacle : 14|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_summonRvsLeashReached : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_suppressSpeedWarning : 13|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_visionOnlySpeedLimit : 16|5@1+ (5,0) [0|150] "kph/mph"  Receiver
+
+BO_ 925 ID39DIBST_status: 5 ChassisBus
+ SG_ IBST_driverBrakeApply : 16|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ IBST_iBoosterStatus : 12|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ IBST_internalState : 18|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ IBST_sInputRodDriver : 21|12@1+ (0.015625,-5) [-5|47] "mm"  Receiver
+ SG_ IBST_statusChecksum : 0|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ IBST_statusCounter : 8|4@1+ (1,0) [0|15] ""  Receiver
+
+BO_ 985 ID3D9UI_gpsVehicleSpeed: 8 ChassisBus
+ SG_ UI_conditionalLimitActive : 55|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_conditionalSpeedLimit : 56|5@1+ (5,0) [0|155] "kph/mph"  Receiver
+ SG_ UI_gpsAntennaDisconnected : 54|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_gpsHDOP : 0|8@1+ (0.1,0) [0|25.5] ""  Receiver
+ SG_ UI_gpsNmeaMIA : 53|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_gpsVehicleHeading : 8|16@1+ (0.0078125,0) [0|511.9921875] "deg"  Receiver
+ SG_ UI_gpsVehicleSpeed : 24|16@1+ (0.00390625,0) [0|250.996] "kph"  Receiver
+ SG_ UI_mapSpeedLimitUnits : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_mppSpeedLimit : 48|5@1+ (5,0) [0|155] "kph/mph"  Receiver
+ SG_ UI_userSpeedOffset : 40|6@1+ (1,-30) [-30|33] "kph/mph"  Receiver
+ SG_ UI_userSpeedOffsetUnits : 47|1@1+ (1,0) [0|1] ""  Receiver
+
+BO_ 1001 ID3E9DAS_bodyControls: 8 VehicleBus
+ SG_ DAS_bodyControlsChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ DAS_bodyControlsCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ DAS_dynamicBrakeLightRequest : 22|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ DAS_hazardLightRequest : 2|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_headlightRequest : 0|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_heaterRequest : 13|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ DAS_highLowBeamDecision : 11|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DAS_highLowBeamOffReason : 15|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ DAS_turnIndicatorRequest : 8|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ DAS_turnIndicatorRequestReason : 18|4@1+ (1,0) [0|12] ""  Receiver
+ SG_ DAS_wiperSpeed : 4|4@1+ (1,0) [0|15] ""  Receiver
+
+BO_ 1011 ID3F3UI_odo: 3 ChassisBus
+ SG_ UI_odometer : 0|24@1+ (0.1,0) [0|1677721.5] "km"  Receiver
 
 BO_ 1013 ID3F5VCFRONT_lighting: 8 VehicleBus
  SG_ VCFRONT_DRLLeftStatus : 36|2@1+ (1,0) [0|3] ""  Receiver
@@ -258,18 +579,87 @@ BO_ 1013 ID3F5VCFRONT_lighting: 8 VehicleBus
  SG_ VCFRONT_turnSignalLeftStatus : 50|2@1+ (1,0) [0|3] ""  Receiver
  SG_ VCFRONT_turnSignalRightStatus : 52|2@1+ (1,0) [0|3] ""  Receiver
 
-BO_ 1001 ID3E9DAS_bodyControls: 8 VehicleBus
- SG_ DAS_bodyControlsChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
- SG_ DAS_bodyControlsCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
- SG_ DAS_dynamicBrakeLightRequest : 22|1@1+ (1,0) [0|1] ""  Receiver
- SG_ DAS_hazardLightRequest : 2|2@1+ (1,0) [0|3] ""  Receiver
- SG_ DAS_headlightRequest : 0|2@1+ (1,0) [0|3] ""  Receiver
- SG_ DAS_heaterRequest : 13|2@1+ (1,0) [0|2] ""  Receiver
- SG_ DAS_highLowBeamDecision : 11|2@1+ (1,0) [0|3] ""  Receiver
- SG_ DAS_highLowBeamOffReason : 15|3@1+ (1,0) [0|5] ""  Receiver
- SG_ DAS_turnIndicatorRequest : 8|3@1+ (1,0) [0|4] ""  Receiver
- SG_ DAS_turnIndicatorRequestReason : 18|4@1+ (1,0) [0|12] ""  Receiver
- SG_ DAS_wiperSpeed : 4|4@1+ (1,0) [0|15] ""  Receiver
+BO_ 1016 ID3F8UI_driverAssistControl: 8 ChassisBus
+ SG_ UI_accFollowDistanceSetting : 45|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UI_adaptiveSetSpeedEnable : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_alcOffHighwayEnable : 56|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_autoSummonEnable : 10|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_autopilotControlRequest : 0|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_coastToCoast : 9|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_curvSpeedAdaptDisable : 4|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_curvatureDatabaseOnly : 22|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_dasDeveloper : 5|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_driveOnMapsEnable : 13|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_drivingSide : 40|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ UI_enableBrakeLightPulse : 63|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableClipTelemetry : 42|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableRoadSegmentTelemetry : 44|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableTripTelemetry : 43|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableVinAssociation : 6|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableVisionOnlyStops : 60|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_exceptionListEnable : 11|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_followNavRouteEnable : 49|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_fuseHPPDisable : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_fuseLanesDisable : 16|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_fuseVehiclesDisable : 18|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_handsOnRequirementDisable : 14|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_hasDriveOnNav : 48|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_lssElkEnabled : 23|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_lssLdwEnabled : 8|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_lssLkaEnabled : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_roadCheckDisable : 12|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_selfParkRequest : 28|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ UI_smartSummonType : 58|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ UI_source3D : 61|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ UI_summonEntryType : 26|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_summonExitType : 24|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_summonHeartbeat : 2|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_summonReverseDist : 32|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ UI_ulcBlindSpotConfig : 52|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ UI_ulcOffHighway : 15|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_ulcSpeedConfig : 50|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ UI_ulcStalkConfirm : 1|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_undertakeAssistEnable : 38|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_validationLoop : 57|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_visionSpeedType : 20|2@1+ (1,0) [0|3] ""  Receiver
+
+BO_ 1021 ID3FDUI_autopilotControl: 8 ChassisBus
+ SG_ UI_autopilotControlIndex M : 0|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UI_apmv3Branch m1 : 40|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ UI_applyEceR79 m1 : 19|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_blindspotDistance m0 : 15|3@1+ (1,0) [0|5] ""  Receiver
+ SG_ UI_blindspotMinSpeed m0 : 11|4@1+ (1,0) [0|10] ""  Receiver
+ SG_ UI_blindspotTTC m0 : 18|3@1+ (1,0) [0|7] ""  Receiver
+ SG_ UI_disableBackup m1 : 30|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableFisheye m1 : 25|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableLeftPillar m1 : 26|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableLeftRepeater m1 : 28|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableMain m1 : 23|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableNarrow m1 : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableRadar m1 : 31|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableRightPillar m1 : 27|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_disableRightRepeater m1 : 29|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_donAlcProgGoreAbortThres m0 : 29|4@1+ (1,0) [0|9] ""  Receiver
+ SG_ UI_donDisableAutoWiperDuration m0 : 4|3@1+ (1,0) [0|6] ""  Receiver
+ SG_ UI_donDisableCutin m0 : 24|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_donDisableOnAutoWiperSpeed m0 : 7|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ UI_donMinGoreWidthForAbortMap m0 : 25|4@1+ (1,0) [0|11] ""  Receiver
+ SG_ UI_donMinGoreWidthForAbortNotMap m0 : 33|4@1+ (1,0) [0|11] ""  Receiver
+ SG_ UI_donStopEndOfRampBuffer m0 : 21|3@1+ (1,0) [0|4] ""  Receiver
+ SG_ UI_driverMonitorConfirmation m1 : 17|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableAutopilotStopWarning m1 : 44|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_enableMapStops m1 : 20|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_factorySummonEnable m1 : 39|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_fsdVisualizationEnabled m0 : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_hardCoreSummon m1 : 47|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_homelinkNearby m0 : 45|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_hovEnabled m0 : 3|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_noStalkConfirmAlertChime m1 : 37|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_noStalkConfirmAlertHaptic m1 : 32|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_showLaneGraph m1 : 45|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_showTrackLabels m1 : 46|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_ulcSnooze m1 : 36|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ UI_visualizeCuboids m1 : 22|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 611 ID263VCRIGHT_logging10Hz: 8 VehicleBus
  SG_ VCRIGHT_logging10HzIndex M : 0|2@1+ (1,0) [0|3] ""  Receiver
@@ -1924,7 +2314,7 @@ BO_ 897 ID381VCFRONT_logging1Hz: 8 VehicleBus
  SG_ VCFRONT_evapQdotActual m9 : 55|7@1+ (80,0) [0|10000] "W"  Receiver
  SG_ VCFRONT_fanDemandCondenser m1 : 16|7@1+ (1,0) [0|100] "%"  Receiver
  SG_ VCFRONT_fanDemandRadiator m1 : 24|7@1+ (1,0) [0|100] "%"  Receiver
- SG_ VCFRONT_fiveWayValveAngleDrift m2 : 18|10@1+ (0.25,-127) [-127|127] "degrees"  Receiver
+ SG_ VCFRONT_fiveWayValveAngleDrift m2 : 18|10@1+ (0.25,-127) [-127|127] "deg"  Receiver
  SG_ VCFRONT_fiveWayValveCountRange m2 : 8|10@1+ (1,375) [375|1375] "ticks"  Receiver
  SG_ VCFRONT_fiveWayValveRadBypass m2 : 56|7@1+ (1,0) [0|100] "%"  Receiver
  SG_ VCFRONT_fiveWayValveRecalCount m2 : 32|16@1+ (1,0) [0|65535] ""  Receiver
@@ -2138,8 +2528,9 @@ BO_ 616 ID268SystemPower: 5 VehicleBus
  SG_ DI_primaryUnitSiliconType : 26|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 79 ID04FGPSLatLong: 8 ChassisBus
- SG_ GPSLongitude04F : 28|28@1- (1E-006,0) [-1342.17728|1342.17727] "Deg"  Receiver
- SG_ GPSLattitude04F : 0|28@1- (1E-006,0) [-134.217728|134.217727] "Deg"  Receiver
+ SG_ GPSAccuracy04F : 57|7@1+ (0.2,0) [0|25.2] "m"  Receiver
+ SG_ GPSLongitude04F : 28|28@1- (1E-006,0) [-134.217728|134.217727] "Deg"  Receiver
+ SG_ GPSLatitude04F : 0|28@1- (1E-006,0) [-134.217728|134.217727] "Deg"  Receiver
 
 BO_ 978 ID3D2TotalChargeDischarge: 8 VehicleBus
  SG_ TotalDischargeKWh3D2 : 0|32@1+ (0.001,0) [0|4294967.295] "kWh"  Receiver
@@ -2153,10 +2544,10 @@ BO_ 1010 ID3F2BMSCounters: 8 VehicleBus
  SG_ BMStotalDriveDischarge3F2 m3 : 8|32@1+ (0.001,0) [0|4294967.295] "KWh"  Receiver
 
 BO_ 722 ID2D2BMSVAlimits: 8 VehicleBus
- SG_ MinVoltage2D2 : 0|16@1+ (0.01,0) [0|655.35] "V"  Receiver
- SG_ MaxDischargeCurrent2D2 : 48|14@1+ (0.128,0) [0|2097.024] "A"  Receiver
- SG_ MaxChargeCurrent2D2 : 32|14@1+ (0.1,0) [0|1638.3] "A"  Receiver
- SG_ MaxVoltage2D2 : 16|16@1+ (0.01,0) [0|655.35] "V"  Receiver
+ SG_ MinVoltage2D2 : 0|16@1+ (0.01,0) [0|430] "V"  Receiver
+ SG_ MaxDischargeCurrent2D2 : 48|14@1+ (0.128,0) [0|2096.896] "A"  Receiver
+ SG_ MaxChargeCurrent2D2 : 32|14@1+ (0.1,0) [0|1638.2] "A"  Receiver
+ SG_ MaxVoltage2D2 : 16|16@1+ (0.01,0) [0|430] "V"  Receiver
 
 BO_ 1345 ID541FastChargeMaxLimits: 8 VehicleBus
  SG_ FCMaxPowerLimit541 : 0|13@1+ (0.062256,0) [0|509.938896] "kW"  Receiver
@@ -2771,7 +3162,7 @@ CM_ SG_ 616 SystemHeatPowerMax268 "System Max Waste Heat Power";
 CM_ SG_ 616 SystemHeatPower268 "System Waste Heat Power";
 CM_ SG_ 616 SystemDrivePowerMax268 "Max Drive Power";
 CM_ SG_ 79 GPSLongitude04F "Longitude";
-CM_ SG_ 79 GPSLattitude04F "Lattitude";
+CM_ SG_ 79 GPSLatitude04F "Latitude";
 CM_ SG_ 978 TotalDischargeKWh3D2 "Lifetime Discharge";
 CM_ SG_ 978 TotalChargeKWh3D2 "Lifetime Charge";
 CM_ SG_ 722 MinVoltage2D2 "BMS Min Voltage";
@@ -2899,7 +3290,7 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020Mar13";
+BA_DEF_DEF_  "Modified" "JW2020Apr02";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_DEF_DEF_  "SystemMessageLongSymbol" "";
 BA_ "BusType" "CAN";
@@ -2990,6 +3381,12 @@ VAL_ 12 UI_factoryReset 3 "CUSTOMER" 1 "DEVELOPER" 2 "DIAGNOSTIC" 0 "NONE_SNA" ;
 VAL_ 130 UI_energyAtDestination -32768 "SNA" -32767 "TRIP_TOO_LONG" ;
 VAL_ 130 UI_hindsightEnergy -32768 "SNA" -32767 "TRIP_TOO_LONG" ;
 VAL_ 130 UI_predictedEnergy -32768 "SNA" -32767 "TRIP_TOO_LONG" ;
+VAL_ 257 RCM_pitchRate -16384 "SNA" ;
+VAL_ 257 RCM_pitchRateQF 3 "FAULTED" 0 "INIT" 2 "TEMP_INVALID" 1 "VALID" ;
+VAL_ 257 RCM_rollRate -16384 "SNA" ;
+VAL_ 257 RCM_rollRateQF 3 "FAULTED" 0 "INIT" 2 "TEMP_INVALID" 1 "VALID" ;
+VAL_ 257 RCM_yawRate -32768 "SNA" ;
+VAL_ 257 RCM_yawRateQF 0 "FAULTED" 1 "NOT_FAULTED" ;
 VAL_ 258 VCLEFT_frontLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
 VAL_ 258 VCLEFT_mirrorFoldState 1 "MIRROR_FOLD_STATE_FOLDED" 3 "MIRROR_FOLD_STATE_FOLDING" 2 "MIRROR_FOLD_STATE_UNFOLDED" 4 "MIRROR_FOLD_STATE_UNFOLDING" 0 "MIRROR_FOLD_STATE_UNKNOWN" ;
 VAL_ 258 VCLEFT_mirrorHeatState 4 "HEATER_STATE_FAULT" 2 "HEATER_STATE_OFF" 3 "HEATER_STATE_OFF_UNAVAILABLE" 1 "HEATER_STATE_ON" 0 "HEATER_STATE_SNA" ;
@@ -3002,6 +3399,27 @@ VAL_ 259 VCRIGHT_mirrorRecallState 0 "MIRROR_RECALL_STATE_INIT" 1 "MIRROR_RECALL
 VAL_ 259 VCRIGHT_mirrorState 3 "MIRROR_STATE_FOLD_UNFOLD" 0 "MIRROR_STATE_IDLE" 4 "MIRROR_STATE_RECALL" 1 "MIRROR_STATE_TILT_X" 2 "MIRROR_STATE_TILT_Y" ;
 VAL_ 259 VCRIGHT_rearLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
 VAL_ 259 VCRIGHT_trunkLatchStatus 5 "LATCH_AJAR" 2 "LATCH_CLOSED" 3 "LATCH_CLOSING" 7 "LATCH_DEFAULT" 8 "LATCH_FAULT" 1 "LATCH_OPENED" 4 "LATCH_OPENING" 0 "LATCH_SNA" 6 "LATCH_TIMEOUT" ;
+VAL_ 325 ESP_absBrakeEvent2 2 "ABS_EVENT_ACTIVE_FRONT" 1 "ABS_EVENT_ACTIVE_FRONT_REAR" 3 "ABS_EVENT_ACTIVE_REAR" 0 "ABS_EVENT_NOT_ACTIVE" ;
+VAL_ 325 ESP_absFaultLamp 0 "ABS_FAULT_LAMP_OFF" 1 "ABS_FAULT_LAMP_ON" ;
+VAL_ 325 ESP_brakeApply 1 "BLS_ACTIVE" 0 "BLS_INACTIVE" ;
+VAL_ 325 ESP_brakeDiscWipingActive 1 "BDW_ACTIVE" 0 "BDW_INACTIVE" ;
+VAL_ 325 ESP_brakeLamp 0 "LAMP_OFF" 1 "LAMP_ON" ;
+VAL_ 325 ESP_brakeTorqueTarget 8191 "SNA" ;
+VAL_ 325 ESP_btcTargetState 1 "BACKUP" 0 "OFF" 2 "ON" 3 "SNA" ;
+VAL_ 325 ESP_cdpStatus 2 "ACTUATING_EPB_CDP" 3 "CDP_COMMAND_INVALID" 1 "CDP_IS_AVAILABLE" 0 "CDP_IS_NOT_AVAILABLE" ;
+VAL_ 325 ESP_driverBrakeApply 2 "Driver_applying_brakes" 3 "Faulty_SNA" 0 "NotInit_orOff" 1 "Not_Applied" ;
+VAL_ 325 ESP_ebdFaultLamp 0 "EBD_FAULT_LAMP_OFF" 1 "EBD_FAULT_LAMP_ON" ;
+VAL_ 325 ESP_ebrStandstillSkid 0 "NO_STANDSTILL_SKID" 1 "STANDSTILL_SKID_DETECTED" ;
+VAL_ 325 ESP_ebrStatus 2 "ACTUATING_DI_EBR" 3 "EBR_COMMAND_INVALID" 1 "EBR_IS_AVAILABLE" 0 "EBR_IS_NOT_AVAILABLE" ;
+VAL_ 325 ESP_espFaultLamp 0 "ESP_FAULT_LAMP_OFF" 1 "ESP_FAULT_LAMP_ON" ;
+VAL_ 325 ESP_espLampFlash 1 "ESP_LAMP_FLASH" 0 "ESP_LAMP_OFF" ;
+VAL_ 325 ESP_espModeActive 0 "ESP_MODE_00_NORMAL" 1 "ESP_MODE_01" 2 "ESP_MODE_02" 3 "ESP_MODE_03" ;
+VAL_ 325 ESP_lateralAccelQF 1 "IN_SPEC" 0 "UNDEFINABLE_ACCURACY" ;
+VAL_ 325 ESP_longitudinalAccelQF 1 "IN_SPEC" 0 "UNDEFINABLE_ACCURACY" ;
+VAL_ 325 ESP_ptcTargetState 1 "BACKUP" 0 "FAULT" 2 "ON" 3 "SNA" ;
+VAL_ 325 ESP_stabilityControlSts2 2 "ENGAGED" 3 "FAULTED" 0 "INIT" 1 "ON" ;
+VAL_ 325 ESP_steeringAngleQF 1 "IN_SPEC" 0 "UNDEFINABLE_ACCURACY" ;
+VAL_ 325 ESP_yawRateQF 1 "IN_SPEC" 0 "UNDEFINABLE_ACCURACY" ;
 VAL_ 522 HVP_fcContNegativeState 3 "CONTACTOR_STATE_BLOCKED" 6 "CONTACTOR_STATE_ECONOMIZED" 1 "CONTACTOR_STATE_OPEN" 5 "CONTACTOR_STATE_OPENING" 2 "CONTACTOR_STATE_PRECHARGE" 4 "CONTACTOR_STATE_PULLED_IN" 0 "CONTACTOR_STATE_SNA" 7 "CONTACTOR_STATE_WELDED" ;
 VAL_ 522 HVP_fcContPositiveState 3 "CONTACTOR_STATE_BLOCKED" 6 "CONTACTOR_STATE_ECONOMIZED" 1 "CONTACTOR_STATE_OPEN" 5 "CONTACTOR_STATE_OPENING" 2 "CONTACTOR_STATE_PRECHARGE" 4 "CONTACTOR_STATE_PULLED_IN" 0 "CONTACTOR_STATE_SNA" 7 "CONTACTOR_STATE_WELDED" ;
 VAL_ 522 HVP_fcContactorSetState 3 "CONTACTOR_SET_STATE_BLOCKED" 5 "CONTACTOR_SET_STATE_CLOSED" 2 "CONTACTOR_SET_STATE_CLOSING" 9 "CONTACTOR_SET_STATE_NEGATIVE_CLOSED" 1 "CONTACTOR_SET_STATE_OPEN" 4 "CONTACTOR_SET_STATE_OPENING" 6 "CONTACTOR_SET_STATE_PARTIAL_WELD" 8 "CONTACTOR_SET_STATE_POSITIVE_CLOSED" 0 "CONTACTOR_SET_STATE_SNA" 7 "CONTACTOR_SET_STATE_WELDED" ;
@@ -3012,6 +3430,46 @@ VAL_ 522 HVP_packContNegativeState 3 "CONTACTOR_STATE_BLOCKED" 6 "CONTACTOR_STAT
 VAL_ 522 HVP_packContPositiveState 3 "CONTACTOR_STATE_BLOCKED" 6 "CONTACTOR_STATE_ECONOMIZED" 1 "CONTACTOR_STATE_OPEN" 5 "CONTACTOR_STATE_OPENING" 2 "CONTACTOR_STATE_PRECHARGE" 4 "CONTACTOR_STATE_PULLED_IN" 0 "CONTACTOR_STATE_SNA" 7 "CONTACTOR_STATE_WELDED" ;
 VAL_ 522 HVP_packContactorSetState 3 "CONTACTOR_SET_STATE_BLOCKED" 5 "CONTACTOR_SET_STATE_CLOSED" 2 "CONTACTOR_SET_STATE_CLOSING" 9 "CONTACTOR_SET_STATE_NEGATIVE_CLOSED" 1 "CONTACTOR_SET_STATE_OPEN" 4 "CONTACTOR_SET_STATE_OPENING" 6 "CONTACTOR_SET_STATE_PARTIAL_WELD" 8 "CONTACTOR_SET_STATE_POSITIVE_CLOSED" 0 "CONTACTOR_SET_STATE_SNA" 7 "CONTACTOR_SET_STATE_WELDED" ;
 VAL_ 522 HVP_packCtrsRequestStatus 1 "REQUEST_ACTIVE" 2 "REQUEST_COMPLETED" 0 "REQUEST_NOT_ACTIVE" ;
+VAL_ 526 PARK_sdiSensor1RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 526 PARK_sdiSensor2RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 526 PARK_sdiSensor3RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 526 PARK_sdiSensor4RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 526 PARK_sdiSensor5RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 526 PARK_sdiSensor6RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 537 VCSEC_TPMSDataIndex 0 "TPMS_DATA_SENSOR_0" 1 "TPMS_DATA_SENSOR_1" 2 "TPMS_DATA_SENSOR_2" 3 "TPMS_DATA_SENSOR_3" ;
+VAL_ 537 VCSEC_TPMSBatVoltage0 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSBatVoltage1 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSBatVoltage2 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSBatVoltage3 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSPressure0 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSPressure1 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSPressure2 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSPressure3 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSSensorState0 3 "SENSOR_CONNECTED" 4 "SENSOR_DISCONNECTING" 0 "SENSOR_NOT_PAIRED" 1 "SENSOR_WAIT_FOR_ADV" 2 "SENSOR_WAIT_FOR_CONN" ;
+VAL_ 537 VCSEC_TPMSSensorState1 3 "SENSOR_CONNECTED" 4 "SENSOR_DISCONNECTING" 0 "SENSOR_NOT_PAIRED" 1 "SENSOR_WAIT_FOR_ADV" 2 "SENSOR_WAIT_FOR_CONN" ;
+VAL_ 537 VCSEC_TPMSSensorState2 3 "SENSOR_CONNECTED" 4 "SENSOR_DISCONNECTING" 0 "SENSOR_NOT_PAIRED" 1 "SENSOR_WAIT_FOR_ADV" 2 "SENSOR_WAIT_FOR_CONN" ;
+VAL_ 537 VCSEC_TPMSSensorState3 3 "SENSOR_CONNECTED" 4 "SENSOR_DISCONNECTING" 0 "SENSOR_NOT_PAIRED" 1 "SENSOR_WAIT_FOR_ADV" 2 "SENSOR_WAIT_FOR_CONN" ;
+VAL_ 537 VCSEC_TPMSTemperature0 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSTemperature1 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSTemperature2 255 "SNA" ;
+VAL_ 537 VCSEC_TPMSTemperature3 255 "SNA" ;
+VAL_ 558 PARK_sdiSensor10RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 558 PARK_sdiSensor11RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 558 PARK_sdiSensor12RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 558 PARK_sdiSensor7RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 558 PARK_sdiSensor8RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 558 PARK_sdiSensor9RawDistData 0 "BLOCKED" 1 "NEAR_DETECTION" 500 "NO_OBJECT_DETECTED" 511 "SNA" ;
+VAL_ 568 UI_countryCode 1023 "SNA" 0 "UNKNOWN" ;
+VAL_ 568 UI_mapSpeedLimit 3 "LESS_OR_EQ_10" 21 "LESS_OR_EQ_100" 22 "LESS_OR_EQ_105" 23 "LESS_OR_EQ_110" 24 "LESS_OR_EQ_115" 25 "LESS_OR_EQ_120" 26 "LESS_OR_EQ_130" 27 "LESS_OR_EQ_140" 4 "LESS_OR_EQ_15" 28 "LESS_OR_EQ_150" 29 "LESS_OR_EQ_160" 5 "LESS_OR_EQ_20" 6 "LESS_OR_EQ_25" 7 "LESS_OR_EQ_30" 8 "LESS_OR_EQ_35" 9 "LESS_OR_EQ_40" 10 "LESS_OR_EQ_45" 1 "LESS_OR_EQ_5" 11 "LESS_OR_EQ_50" 12 "LESS_OR_EQ_55" 13 "LESS_OR_EQ_60" 14 "LESS_OR_EQ_65" 2 "LESS_OR_EQ_7" 15 "LESS_OR_EQ_70" 16 "LESS_OR_EQ_75" 17 "LESS_OR_EQ_80" 18 "LESS_OR_EQ_85" 19 "LESS_OR_EQ_90" 20 "LESS_OR_EQ_95" 31 "SNA" 0 "UNKNOWN" 30 "UNLIMITED" ;
+VAL_ 568 UI_mapSpeedLimitDependency 6 "LANE" 0 "NONE" 2 "RAIN" 1 "SCHOOL" 5 "SEASON" 7 "SNA" 3 "SNOW" 4 "TIME" ;
+VAL_ 568 UI_mapSpeedLimitType 2 "ADVISORY" 4 "BUMPS" 3 "DEPENDENT" 1 "REGULAR" 7 "UNKNOWN_SNA" ;
+VAL_ 568 UI_mapSpeedUnits 1 "KPH" 0 "MPH" ;
+VAL_ 568 UI_nextBranchDist 31 "SNA" ;
+VAL_ 568 UI_roadClass 1 "CLASS_1_MAJOR" 2 "CLASS_2" 3 "CLASS_3" 4 "CLASS_4" 5 "CLASS_5" 6 "CLASS_6_MINOR" 0 "UNKNOWN_INVALID_SNA" ;
+VAL_ 569 DAS_leftFork 1 "LEFT_FORK_AVAILABLE" 0 "LEFT_FORK_NONE" 2 "LEFT_FORK_SELECTED" 3 "LEFT_FORK_UNAVAILABLE" ;
+VAL_ 569 DAS_leftLineUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
+VAL_ 569 DAS_rightFork 1 "RIGHT_FORK_AVAILABLE" 0 "RIGHT_FORK_NONE" 2 "RIGHT_FORK_SELECTED" 3 "RIGHT_FORK_UNAVAILABLE" ;
+VAL_ 569 DAS_rightLineUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
 VAL_ 583 DAS_alcInternalState 2 "ALC_ABORTING" 8 "ALC_ACTIVE_ACC_LEFT" 9 "ALC_ACTIVE_ACC_RIGHT" 6 "ALC_ACTIVE_LEFT" 7 "ALC_ACTIVE_RIGHT" 3 "ALC_BEHAVIOR_CHECK" 0 "ALC_DISABLED" 1 "ALC_IDLE" 4 "ALC_PRE_ACTIVE_LEFT" 5 "ALC_PRE_ACTIVE_RIGHT" 12 "ALC_RETRY" 10 "ALC_SOFT_ABORTING_LEFT" 11 "ALC_SOFT_ABORTING_RIGHT" ;
 VAL_ 583 DAS_autopilotAbortReason 21 "ABORT_ACC_CANCEL_GENERIC" 22 "ABORT_ACC_CANCEL_SILENT" 23 "ABORT_ACC_FAULT" 33 "ABORT_AEB" 18 "ABORT_CAMERA_CALIBRATION" 17 "ABORT_CAMERA_FAILSAFES" 32 "ABORT_CONTROLLER_BAD_REF_UPDATE" 27 "ABORT_CONTROLLER_NOT_ALLOWED" 25 "ABORT_CONTROLLER_REFERENCE" 34 "ABORT_CONTROLLER_REF_TOO_SHORT" 26 "ABORT_CONTROLLER_SOLVER" 31 "ABORT_CONTROLLER_STALE_LOCALIZATION" 30 "ABORT_CONTROLLER_STALE_REFERENCE" 10 "ABORT_CRUISE_FAULT" 11 "ABORT_CRUISE_NOT_ACTIVE" 2 "ABORT_DI_MIA" 16 "ABORT_EPAS_EAC_ERROR" 15 "ABORT_EPAS_EAC_NOT_ACTIVE" 4 "ABORT_EPAS_MIA" 39 "ABORT_EPAS_STEERING_ANGLE_INVALID" 3 "ABORT_ESP_MIA" 36 "ABORT_GORE_INCURSION" 5 "ABORT_GTW_MIA" 46 "ABORT_INTEGRATOR_HEALTH_CRITICAL" 41 "ABORT_INVALID_DI_PEDAL_POS" 42 "ABORT_INVALID_VEHICLE_SPEED" 29 "ABORT_MAP_HEALTH" 35 "ABORT_MISSION_PLANNER_NO_VISION_LANES_FOUND" 0 "ABORT_NONE" 43 "ABORT_PERCEPTION_HEALTH_VISION" 19 "ABORT_RADAR_BLIND" 20 "ABORT_RADAR_FAULT" 7 "ABORT_RADAR_MIA" 37 "ABORT_REACHED_END_OF_NAV_STOP" 63 "ABORT_REASON_MAX" 24 "ABORT_ROAD_ESTIMATOR_HEALTH" 6 "ABORT_SCCM_MIA" 44 "ABORT_SEATBELT_UNBUCKLED" 38 "ABORT_STEERING_SATURATED_LANE_DEPARTURE" 28 "ABORT_THERMAL_ISSUE" 13 "ABORT_TRAILER_MODE_ACTIVE" 12 "ABORT_USER_DISABLED" 45 "ABORT_USER_OVERRIDE_STRIKEOUT" 8 "ABORT_VCFRONT_MIA" 9 "ABORT_VCRIGHT_MIA" 14 "ABORT_VEHICLE_SPEED_ABOVE_MAX" 40 "ABORT_W048_FEATURES_DISABLED" 1 "ABORT_WATCHDOG_HEALTH" ;
 VAL_ 583 DAS_behaviorReport 30 "BEHAVIOR_ACTIVE_SAFETY_SLOWDOWN" 2 "BEHAVIOR_CURVE_SPEED_ADAPTATION" 35 "BEHAVIOR_CUTIN_VEHICLE" 21 "BEHAVIOR_CUTIN_VEHICLE_LEFT" 22 "BEHAVIOR_CUTIN_VEHICLE_RIGHT" 14 "BEHAVIOR_DRIVABLE_SPACE_VIOLATION" 32 "BEHAVIOR_END_OF_NAV_ROUTE" 5 "BEHAVIOR_FLEET_SPEEDS" 8 "BEHAVIOR_IN_LANE_VEHICLE" 4 "BEHAVIOR_KEEP_CALM" 33 "BEHAVIOR_LANE_SPEED_DIFF" 13 "BEHAVIOR_MAP_LANE_GEOMETRY" 19 "BEHAVIOR_MERGE_VEHICLE_LEFT" 20 "BEHAVIOR_MERGE_VEHICLE_RIGHT" 29 "BEHAVIOR_MP_AP_INACTIVE" 23 "BEHAVIOR_MP_AP_RESTRICTION" 26 "BEHAVIOR_MP_AP_STATE_MACHINE" 27 "BEHAVIOR_MP_DI_CRUISE" 25 "BEHAVIOR_MP_DRIVER_MONITOR" 24 "BEHAVIOR_MP_NOT_BUCKLED" 28 "BEHAVIOR_MP_ULC" 17 "BEHAVIOR_NAV_FLEET_SPEEDS" 18 "BEHAVIOR_NAV_PATH_CSA" 3 "BEHAVIOR_RADAR_ONLY_BRAKING" 38 "BEHAVIOR_RISK_MANAGER" 15 "BEHAVIOR_SLOWING_FOR_TARGET_LANE" 34 "BEHAVIOR_STATIC_OBJECT" 36 "BEHAVIOR_STATIC_OBJECT_MERGE_LEFT" 37 "BEHAVIOR_STATIC_OBJECT_MERGE_RIGHT" 31 "BEHAVIOR_STEERING_SATURATED" 9 "BEHAVIOR_TARGET_LANE_VEHICLE" 11 "BEHAVIOR_TRAFFIC_CONTROL" 6 "BEHAVIOR_TRAFFIC_CONTROL_STOPPED_STATE" 7 "BEHAVIOR_UNDERTAKE_ASSIST_KEEP_CALM" 10 "BEHAVIOR_UNDERTAKE_VEHICLE" 1 "BEHAVIOR_VIEW_RANGE" 12 "BEHAVIOR_VISION_LANE_GEOMETRY" 16 "BEHAVIOR_VISION_SPEEDS" ;
@@ -3025,6 +3483,126 @@ VAL_ 583 DAS_mapAvailability 1 "APM_MAP_AVAILABLE" 0 "APM_MAP_NOT_AVAILABLE" ;
 VAL_ 583 DAS_missionPlan 3 "MISSION_PLAN_INVALID" 2 "MISSION_PLAN_MAP_AND_VISION" 0 "MISSION_PLAN_MAP_ONLY" 1 "MISSION_PLAN_VISION_ONLY" ;
 VAL_ 583 DAS_roadEstimator 3 "ROAD_ESTIMATOR_CRITICAL" 2 "ROAD_ESTIMATOR_DEGRADED" 0 "ROAD_ESTIMATOR_HEALTHY" 1 "ROAD_ESTIMATOR_UNSTABLE_MEASUREMENTS" ;
 VAL_ 583 DAS_rqstedBehaviorStatus 19 "RQST_BEHAVIOR_BAD_ORIGIN_UPDATE" 9 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_INVALID_L" 14 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_INVALID_R" 8 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_L" 13 "RQST_BEHAVIOR_BLOCKED_BY_BLINDSPOT_CAMERA_R" 11 "RQST_BEHAVIOR_BLOCKED_BY_LANE_TYPE_L" 16 "RQST_BEHAVIOR_BLOCKED_BY_LANE_TYPE_R" 20 "RQST_BEHAVIOR_BLOCKED_BY_SLOW_TARGET_L" 21 "RQST_BEHAVIOR_BLOCKED_BY_SLOW_TARGET_R" 10 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_AND_CAMERA_L" 15 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_AND_CAMERA_R" 7 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_L" 12 "RQST_BEHAVIOR_BLOCKED_BY_ULTRASOUND_R" 6 "RQST_BEHAVIOR_BUILD_ARGUMENT_FAIL" 22 "RQST_BEHAVIOR_INVALID_PLAN" 3 "RQST_BEHAVIOR_MAP_NOT_INITIALIZED" 2 "RQST_BEHAVIOR_NO_DEST_POLYLANE" 4 "RQST_BEHAVIOR_NO_SOURCE_LANE_ON_MAP" 1 "RQST_BEHAVIOR_NO_SRC_POLYLANE" 5 "RQST_BEHAVIOR_NO_TARGET_LANE_ON_MAP" 18 "RQST_BEHAVIOR_OUT_OF_DATE" 17 "RQST_BEHAVIOR_ROAD_NOT_APPROPRIATE" 0 "RQST_BEHAVIOR_VALID" ;
+VAL_ 586 DAS_accSmartSpeedState 2 "ACTIVE_INTEGRATING" 1 "ACTIVE_OFFRAMP" 3 "ACTIVE_ONRAMP" 0 "NOT_ACTIVE" 5 "OFFRAMP_DELAY" 4 "SET_SPEED_SET_REQUESTED" 7 "SNA" ;
+VAL_ 586 DAS_autosteerBottsDotsUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
+VAL_ 586 DAS_autosteerHPPUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
+VAL_ 586 DAS_autosteerHealthState 4 "HEALTH_ABORTING" 2 "HEALTH_DEGRADED" 5 "HEALTH_FAULT" 1 "HEALTH_NOMINAL" 3 "HEALTH_SEVERELY_DEGRADED" 0 "HEALTH_UNAVAILABLE" ;
+VAL_ 586 DAS_autosteerModelUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
+VAL_ 586 DAS_autosteerNavigationUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
+VAL_ 586 DAS_autosteerVehiclesUsage 1 "AVAILABLE" 3 "BLACKLISTED" 2 "FUSED" 0 "REJECTED_UNAVAILABLE" ;
+VAL_ 586 DAS_behaviorType 0 "DAS_BEHAVIOR_INVALID" 1 "DAS_BEHAVIOR_IN_LANE" 2 "DAS_BEHAVIOR_LANE_CHANGE_LEFT" 3 "DAS_BEHAVIOR_LANE_CHANGE_RIGHT" ;
+VAL_ 586 DAS_lastAutosteerAbortReason 29 "UI_ABORT_REASON_ACC_CANCEL" 32 "UI_ABORT_REASON_AEB" 14 "UI_ABORT_REASON_APP_ME_STATE_NOT_VISION" 30 "UI_ABORT_REASON_CAMERA_FAILSAFES" 16 "UI_ABORT_REASON_CAM_MSG_MIA" 17 "UI_ABORT_REASON_CAM_WATCHDOG" 23 "UI_ABORT_REASON_CID_SWITCH_DISABLED" 21 "UI_ABORT_REASON_COMPONENT_MIA" 22 "UI_ABORT_REASON_CRUISE_FAULT" 24 "UI_ABORT_REASON_DRIVING_OFF_NAV" 20 "UI_ABORT_REASON_EPAS_EAC_DENIED" 28 "UI_ABORT_REASON_EPAS_ERROR_CODE" 26 "UI_ABORT_REASON_FOLLOWER_OUTPUT_INVALID" 0 "UI_ABORT_REASON_HM_LANE_VIEW_RANGE" 2 "UI_ABORT_REASON_HM_STEERING_ERROR" 1 "UI_ABORT_REASON_HM_VIRTUAL_LANE_NO_INPUTS" 15 "UI_ABORT_REASON_ME_MAIN_STATE_NOT_VISION" 31 "UI_ABORT_REASON_NO_ABORT" 27 "UI_ABORT_REASON_PLANNER_OUTPUT_INVALID" 33 "UI_ABORT_REASON_SEATBELT_UNBUCKLED" 19 "UI_ABORT_REASON_SIDE_COLLISION_IMMINENT" 18 "UI_ABORT_REASON_TRAILER_MODE" 34 "UI_ABORT_REASON_USER_OVERRIDE_STRIKEOUT" 25 "UI_ABORT_REASON_VEHICLE_SPEED_ABOVE_MAX" ;
+VAL_ 586 DAS_lastLinePreferenceReason 1 "AGREEMENT_WITH_NEIGHBOR_LANES" 4 "AVOID_ONCOMING_LANES" 5 "COUNTRY_DRIVING_SIDE" 3 "NAVIGATION_BRANCH" 2 "NEIGHBOR_LANE_PROBABILIY" 15 "NONE" 0 "OTHER_LANE_DISAGREES_WITH_MODEL" ;
+VAL_ 586 DAS_navAvailable 1 "DAS_NAV_AVAILABLE" 0 "DAS_NAV_UNAVAILABLE" ;
+VAL_ 586 DAS_offsetSide 0 "NO_OFFSET" 3 "OFFSET_BOTH_OBJECTS" 2 "OFFSET_LEFT_OBJECT" 1 "OFFSET_RIGHT_OBJECT" ;
+VAL_ 586 DAS_plannerState 0 "TP_EXTSTATE_DISABLED" 2 "TP_EXTSTATE_FOLLOW" 7 "TP_EXTSTATE_LANECHANGE_ABORT" 4 "TP_EXTSTATE_LANECHANGE_IN_PROGRESS" 3 "TP_EXTSTATE_LANECHANGE_REQUESTED" 6 "TP_EXTSTATE_LANECHANGE_WAIT_FOR_FWD_OBSTACLE" 5 "TP_EXTSTATE_LANECHANGE_WAIT_FOR_SIDE_OBSTACLE" 1 "TP_EXTSTATE_VL" ;
+VAL_ 586 DAS_rearLeftVehDetectedCurrent 1 "VEHICLE_DETECTED" 0 "VEHICLE_NOT_DETECTED" ;
+VAL_ 586 DAS_rearLeftVehDetectedTrip 1 "VEHICLE_DETECTED" 0 "VEHICLE_NOT_DETECTED" ;
+VAL_ 586 DAS_rearRightVehDetectedTrip 1 "VEHICLE_DETECTED" 0 "VEHICLE_NOT_DETECTED" ;
+VAL_ 586 DAS_rearVehDetectedThisCycle 1 "VEHICLE_DETECTED" 0 "VEHICLE_NOT_DETECTED" ;
+VAL_ 586 DAS_roadSurfaceType 2 "ROAD_SURFACE_ENHANCED" 1 "ROAD_SURFACE_NORMAL" 0 "ROAD_SURFACE_SNA" ;
+VAL_ 586 DAS_ulcInProgress 1 "ULC_ACTIVE" 0 "ULC_INACTIVE" ;
+VAL_ 586 DAS_ulcType 1 "ULC_TYPE_NAV" 0 "ULC_TYPE_NONE" 2 "ULC_TYPE_SPEED" ;
+VAL_ 697 DAS_accState 1 "ACC_CANCEL_CAMERA_BLIND" 0 "ACC_CANCEL_GENERIC" 13 "ACC_CANCEL_GENERIC_SILENT" 14 "ACC_CANCEL_OUT_OF_CALIBRATION" 12 "ACC_CANCEL_PATH_NOT_CLEAR" 2 "ACC_CANCEL_RADAR_BLIND" 3 "ACC_HOLD" 4 "ACC_ON" 8 "APC_ABORT" 5 "APC_BACKWARD" 7 "APC_COMPLETE" 6 "APC_FORWARD" 9 "APC_PAUSE" 11 "APC_SELFPARK_START" 10 "APC_UNPARK_COMPLETE" 15 "FAULT_SNA" ;
+VAL_ 697 DAS_accelMax 511 "SNA" ;
+VAL_ 697 DAS_accelMin 511 "SNA" ;
+VAL_ 697 DAS_aebEvent 1 "AEB_ACTIVE" 2 "AEB_FAULT" 0 "AEB_NOT_ACTIVE" 3 "AEB_SNA" ;
+VAL_ 697 DAS_jerkMax 255 "SNA" ;
+VAL_ 697 DAS_jerkMin 511 "SNA" ;
+VAL_ 697 DAS_setSpeed 4095 "SNA" ;
+VAL_ 723 UI_isSunUp 0 "SUN_DOWN" 3 "SUN_SNA" 1 "SUN_UP" ;
+VAL_ 723 UI_solarAzimuthAngle -32768 "SNA" ;
+VAL_ 723 UI_solarAzimuthAngleCarRef 255 "SNA" ;
+VAL_ 723 UI_solarElevationAngle 127 "SNA" ;
+VAL_ 777 DAS_objectId 3 "CUTIN_VEHICLE" 0 "LEAD_VEHICLES" 1 "LEFT_VEHICLES" 2 "RIGHT_VEHICLES" 4 "ROAD_SIGN" 5 "VEHICLE_HEADINGS" ;
+VAL_ 777 DAS_cutinVehDx 255 "SNA" ;
+VAL_ 777 DAS_cutinVehHeading 255 "SNA" ;
+VAL_ 777 DAS_cutinVehId 127 "SNA" ;
+VAL_ 777 DAS_cutinVehType 4 "BICYCLE" 2 "CAR" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_cutinVehVxRel 15 "SNA" ;
+VAL_ 777 DAS_leadVeh2Dx 255 "SNA" ;
+VAL_ 777 DAS_leadVeh2Heading 255 "SNA" ;
+VAL_ 777 DAS_leadVeh2Id 0 "SNA" ;
+VAL_ 777 DAS_leadVeh2Type 4 "BICYCLE" 2 "CAR" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_leadVeh2VxRel 15 "SNA" ;
+VAL_ 777 DAS_leadVehDx 255 "SNA" ;
+VAL_ 777 DAS_leadVehHeading 255 "SNA" ;
+VAL_ 777 DAS_leadVehId 127 "SNA" ;
+VAL_ 777 DAS_leadVehType 4 "BICYCLE" 2 "CAR" 6 "IPSO" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_leadVehVxRel 15 "SNA" ;
+VAL_ 777 DAS_leftVeh2Dx 255 "SNA" ;
+VAL_ 777 DAS_leftVeh2Heading 255 "SNA" ;
+VAL_ 777 DAS_leftVeh2Id 0 "SNA" ;
+VAL_ 777 DAS_leftVeh2Type 4 "BICYCLE" 2 "CAR" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_leftVeh2VxRel 15 "SNA" ;
+VAL_ 777 DAS_leftVehDx 255 "SNA" ;
+VAL_ 777 DAS_leftVehHeading 255 "SNA" ;
+VAL_ 777 DAS_leftVehId 127 "SNA" ;
+VAL_ 777 DAS_leftVehType 4 "BICYCLE" 2 "CAR" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_leftVehVxRel 15 "SNA" ;
+VAL_ 777 DAS_rightVeh2Dx 255 "SNA" ;
+VAL_ 777 DAS_rightVeh2Heading 255 "SNA" ;
+VAL_ 777 DAS_rightVeh2Id 0 "SNA" ;
+VAL_ 777 DAS_rightVeh2Type 4 "BICYCLE" 2 "CAR" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_rightVeh2VxRel 15 "SNA" ;
+VAL_ 777 DAS_rightVehDx 255 "SNA" ;
+VAL_ 777 DAS_rightVehHeading 255 "SNA" ;
+VAL_ 777 DAS_rightVehId 127 "SNA" ;
+VAL_ 777 DAS_rightVehType 4 "BICYCLE" 2 "CAR" 3 "MOTORCYCLE" 5 "PEDESTRIAN" 1 "TRUCK" 0 "UNKNOWN" ;
+VAL_ 777 DAS_rightVehVxRel 15 "SNA" ;
+VAL_ 777 DAS_roadSignArrow 0 "CIRCLE" 1 "LEFT" 2 "RIGHT" 3 "STRAIGHT" 4 "UNKNOWN" ;
+VAL_ 777 DAS_roadSignColor 3 "GREEN" 0 "NONE" 1 "RED" 4 "RED_YELLOW" 2 "YELLOW" ;
+VAL_ 777 DAS_roadSignId 255 "SNA" 0 "STOP_SIGN" 1 "TRAFFIC_LIGHT" ;
+VAL_ 777 DAS_roadSignOrientation 2 "HORIZONTAL_3_LIGHT" 0 "UNKNOWN" 1 "VERTICAL_3_LIGHT" ;
+VAL_ 777 DAS_roadSignSource 1 "NAV" 0 "NONE" 2 "VISION" ;
+VAL_ 777 DAS_roadSignStopLineDist 1023 "SNA" ;
+VAL_ 905 DAS_ACC_report 24 "ACC_REPORT_BEHAVIOR_REPORT" 23 "ACC_REPORT_CAMERA_ONLY" 21 "ACC_REPORT_CIPV_CUTTING_OUT" 10 "ACC_REPORT_CSA" 18 "ACC_REPORT_FLEET_SPEEDS" 13 "ACC_REPORT_LC_EXTERNAL_STATE_ABORTED" 12 "ACC_REPORT_LC_EXTERNAL_STATE_ABORTING" 14 "ACC_REPORT_LC_EXTERNAL_STATE_ACTIVE_RESTRICTED" 11 "ACC_REPORT_LC_HANDS_ON_REQD_STRUCK_OUT" 19 "ACC_REPORT_MCVLR_DPP" 20 "ACC_REPORT_MCVLR_IN_PATH" 22 "ACC_REPORT_RADAR_OBJ_FIVE" 15 "ACC_REPORT_RADAR_OBJ_ONE" 16 "ACC_REPORT_RADAR_OBJ_TWO" 1 "ACC_REPORT_TARGET_CIPV" 5 "ACC_REPORT_TARGET_CUTIN" 2 "ACC_REPORT_TARGET_IN_FRONT_OF_CIPV" 17 "ACC_REPORT_TARGET_MCP" 3 "ACC_REPORT_TARGET_MCVL" 4 "ACC_REPORT_TARGET_MCVR" 0 "ACC_REPORT_TARGET_NONE" 9 "ACC_REPORT_TARGET_TYPE_FAULT" 8 "ACC_REPORT_TARGET_TYPE_IPSO" 6 "ACC_REPORT_TARGET_TYPE_STOP_SIGN" 7 "ACC_REPORT_TARGET_TYPE_TRAFFIC_LIGHT" ;
+VAL_ 905 DAS_accSpeedLimit 0 "NONE" 1023 "SNA" ;
+VAL_ 905 DAS_activationFailureStatus 1 "LC_ACTIVATION_FAILED_1" 2 "LC_ACTIVATION_FAILED_2" 0 "LC_ACTIVATION_IDLE" ;
+VAL_ 905 DAS_csaState 1 "CSA_EXTERNAL_STATE_AVAILABLE" 2 "CSA_EXTERNAL_STATE_ENABLE" 3 "CSA_EXTERNAL_STATE_HOLD" 0 "CSA_EXTERNAL_STATE_UNAVAILABLE" ;
+VAL_ 905 DAS_driverInteractionLevel 2 "CONTINUED_DRIVER_NOT_INTERACTING" 0 "DRIVER_INTERACTING" 1 "DRIVER_NOT_INTERACTING" ;
+VAL_ 905 DAS_longCollisionWarning 3 "FCM_LONG_COLLISION_WARNING_IPSO" 0 "FCM_LONG_COLLISION_WARNING_NONE" 2 "FCM_LONG_COLLISION_WARNING_PEDESTRIAN" 15 "FCM_LONG_COLLISION_WARNING_SNA" 4 "FCM_LONG_COLLISION_WARNING_STOPSIGN_STOPLINE" 5 "FCM_LONG_COLLISION_WARNING_TFL_STOPLINE" 6 "FCM_LONG_COLLISION_WARNING_VEHICLE_CIPV" 12 "FCM_LONG_COLLISION_WARNING_VEHICLE_CIPV2" 7 "FCM_LONG_COLLISION_WARNING_VEHICLE_CUTIN" 8 "FCM_LONG_COLLISION_WARNING_VEHICLE_MCVL" 9 "FCM_LONG_COLLISION_WARNING_VEHICLE_MCVL2" 10 "FCM_LONG_COLLISION_WARNING_VEHICLE_MCVR" 11 "FCM_LONG_COLLISION_WARNING_VEHICLE_MCVR2" 1 "FCM_LONG_COLLISION_WARNING_VEHICLE_UNKNOWN" ;
+VAL_ 905 DAS_pmmCameraFaultReason 1 "PMM_CAMERA_BLOCKED_FRONT" 2 "PMM_CAMERA_INVALID_MIA" 0 "PMM_CAMERA_NO_FAULT" ;
+VAL_ 905 DAS_pmmLoggingRequest 0 "FALSE" 1 "TRUE" ;
+VAL_ 905 DAS_pmmObstacleSeverity 6 "PMM_ACCEL_LIMIT" 3 "PMM_BRAKE_REQUEST" 5 "PMM_CRASH_FRONT" 4 "PMM_CRASH_REAR" 2 "PMM_IMMINENT_FRONT" 1 "PMM_IMMINENT_REAR" 0 "PMM_NONE" 7 "PMM_SNA" ;
+VAL_ 905 DAS_pmmRadarFaultReason 1 "PMM_RADAR_BLOCKED_FRONT" 2 "PMM_RADAR_INVALID_MIA" 0 "PMM_RADAR_NO_FAULT" ;
+VAL_ 905 DAS_pmmSysFaultReason 7 "PMM_FAULT_BRAKE_PEDAL_INHIBIT" 1 "PMM_FAULT_DAS_DISABLED" 5 "PMM_FAULT_DISABLED_BY_USER" 3 "PMM_FAULT_DI_FAULT" 0 "PMM_FAULT_NONE" 6 "PMM_FAULT_ROAD_TYPE" 2 "PMM_FAULT_SPEED" 4 "PMM_FAULT_STEERING_ANGLE_RATE" ;
+VAL_ 905 DAS_pmmUltrasonicsFaultReason 3 "PMM_ULTRASONICS_BLOCKED_BOTH" 1 "PMM_ULTRASONICS_BLOCKED_FRONT" 2 "PMM_ULTRASONICS_BLOCKED_REAR" 4 "PMM_ULTRASONICS_INVALID_MIA" 0 "PMM_ULTRASONICS_NO_FAULT" ;
+VAL_ 905 DAS_ppOffsetDesiredRamp 128 "PP_NO_OFFSET" ;
+VAL_ 905 DAS_radarTelemetry 0 "RADAR_TELEMETRY_IDLE" 1 "RADAR_TELEMETRY_NORMAL" 2 "RADAR_TELEMETRY_URGENT" ;
+VAL_ 905 DAS_robState 2 "ROB_STATE_ACTIVE" 0 "ROB_STATE_INHIBITED" 3 "ROB_STATE_MAPLESS" 1 "ROB_STATE_MEASURE" ;
+VAL_ 921 DAS_autoLaneChangeState 19 "ALC_ABORT_BLINKER_TURNED_OFF" 18 "ALC_ABORT_LC_HEALTH_BAD" 30 "ALC_ABORT_MISSION_PLAN_INVALID" 20 "ALC_ABORT_OTHER_REASON" 17 "ALC_ABORT_POOR_VIEW_RANGE" 15 "ALC_ABORT_SIDE_OBSTACLE_PRESENT_L" 16 "ALC_ABORT_SIDE_OBSTACLE_PRESENT_R" 29 "ALC_ABORT_TIMEOUT" 8 "ALC_AVAILABLE_BOTH" 6 "ALC_AVAILABLE_ONLY_L" 7 "ALC_AVAILABLE_ONLY_R" 26 "ALC_BLOCKED_LANE_TYPE_L" 27 "ALC_BLOCKED_LANE_TYPE_R" 23 "ALC_BLOCKED_VEH_TTC_AND_USS_L" 25 "ALC_BLOCKED_VEH_TTC_AND_USS_R" 22 "ALC_BLOCKED_VEH_TTC_L" 24 "ALC_BLOCKED_VEH_TTC_R" 9 "ALC_IN_PROGRESS_L" 10 "ALC_IN_PROGRESS_R" 31 "ALC_SNA" 0 "ALC_UNAVAILABLE_DISABLED" 4 "ALC_UNAVAILABLE_EXITING_HIGHWAY" 1 "ALC_UNAVAILABLE_NO_LANES" 21 "ALC_UNAVAILABLE_SOLID_LANE_LINE" 2 "ALC_UNAVAILABLE_SONICS_INVALID" 3 "ALC_UNAVAILABLE_TP_FOLLOW" 5 "ALC_UNAVAILABLE_VEHICLE_SPEED" 13 "ALC_WAITING_FOR_FWD_OBST_TO_PASS_L" 14 "ALC_WAITING_FOR_FWD_OBST_TO_PASS_R" 11 "ALC_WAITING_FOR_SIDE_OBST_TO_PASS_L" 12 "ALC_WAITING_FOR_SIDE_OBST_TO_PASS_R" 28 "ALC_WAITING_HANDS_ON" ;
+VAL_ 921 DAS_autoparkReady 1 "AUTOPARK_READY" 0 "AUTOPARK_UNAVAILABLE" ;
+VAL_ 921 DAS_autopilotHandsOnState 0 "LC_HANDS_ON_NOT_REQD" 4 "LC_HANDS_ON_REQD_CHIME_1" 5 "LC_HANDS_ON_REQD_CHIME_2" 1 "LC_HANDS_ON_REQD_DETECTED" 9 "LC_HANDS_ON_REQD_ESCALATED_CHIME_1" 10 "LC_HANDS_ON_REQD_ESCALATED_CHIME_2" 2 "LC_HANDS_ON_REQD_NOT_DETECTED" 6 "LC_HANDS_ON_REQD_SLOWING" 7 "LC_HANDS_ON_REQD_STRUCK_OUT" 3 "LC_HANDS_ON_REQD_VISUAL" 15 "LC_HANDS_ON_SNA" 8 "LC_HANDS_ON_SUSPENDED" ;
+VAL_ 921 DAS_autopilotState 9 "ABORTED" 8 "ABORTING" 5 "ACTIVE_NAV" 3 "ACTIVE_NOMINAL" 4 "ACTIVE_RESTRICTED" 2 "AVAILABLE" 0 "DISABLED" 14 "FAULT" 15 "SNA" 1 "UNAVAILABLE" ;
+VAL_ 921 DAS_blindSpotRearLeft 0 "NO_WARNING" 3 "SNA" 1 "WARNING_LEVEL_1" 2 "WARNING_LEVEL_2" ;
+VAL_ 921 DAS_blindSpotRearRight 0 "NO_WARNING" 3 "SNA" 1 "WARNING_LEVEL_1" 2 "WARNING_LEVEL_2" ;
+VAL_ 921 DAS_fleetSpeedState 2 "FLEETSPEED_ACTIVE" 1 "FLEETSPEED_AVAILABLE" 3 "FLEETSPEED_HOLD" 0 "FLEETSPEED_UNAVAILABLE" ;
+VAL_ 921 DAS_forwardCollisionWarning 1 "FORWARD_COLLISION_WARNING" 0 "NONE" 3 "SNA" ;
+VAL_ 921 DAS_fusedSpeedLimit 31 "NONE" 0 "UNKNOWN_SNA" ;
+VAL_ 921 DAS_heaterState 0 "HEATER_OFF_SNA" 1 "HEATER_ON" ;
+VAL_ 921 DAS_laneDepartureWarning 1 "LEFT_WARNING" 3 "LEFT_WARNING_SEVERE" 0 "NONE" 2 "RIGHT_WARNING" 4 "RIGHT_WARNING_SEVERE" 5 "SNA" ;
+VAL_ 921 DAS_lssState 6 "LSS_STATE_ABORT" 5 "LSS_STATE_BLINDSPOT" 3 "LSS_STATE_ELK" 0 "LSS_STATE_FAULT" 1 "LSS_STATE_LDW" 2 "LSS_STATE_LKA" 4 "LSS_STATE_MONITOR" 7 "LSS_STATE_OFF" ;
+VAL_ 921 DAS_sideCollisionAvoid 1 "AVOID_LEFT" 2 "AVOID_RIGHT" 0 "NONE" 3 "SNA" ;
+VAL_ 921 DAS_sideCollisionInhibit 1 "INHIBIT" 0 "NO_INHIBIT" ;
+VAL_ 921 DAS_sideCollisionWarning 0 "NONE" 1 "WARN_LEFT" 3 "WARN_LEFT_RIGHT" 2 "WARN_RIGHT" ;
+VAL_ 921 DAS_suppressSpeedWarning 0 "Do_Not_Suppress" 1 "Suppress_Speed_Warning" ;
+VAL_ 921 DAS_visionOnlySpeedLimit 31 "NONE" 0 "UNKNOWN_SNA" ;
+VAL_ 925 IBST_driverBrakeApply 1 "BRAKES_NOT_APPLIED" 2 "DRIVER_APPLYING_BRAKES" 3 "FAULT" 0 "NOT_INIT_OR_OFF" ;
+VAL_ 925 IBST_iBoosterStatus 4 "IBOOSTER_ACTIVE_GOOD_CHECK" 6 "IBOOSTER_ACTUATION" 3 "IBOOSTER_DIAGNOSTIC" 2 "IBOOSTER_FAILURE" 1 "IBOOSTER_INIT" 0 "IBOOSTER_OFF" 5 "IBOOSTER_READY" ;
+VAL_ 925 IBST_internalState 4 "DIAGNOSTIC" 3 "EXTERNAL_BRAKE_REQUEST" 2 "LOCAL_BRAKE_REQUEST" 0 "NO_MODE_ACTIVE" 6 "POST_DRIVE_CHECK" 1 "PRE_DRIVE_CHECK" 5 "TRANSITION_TO_IDLE" ;
+VAL_ 985 UI_conditionalSpeedLimit 31 "SNA" ;
+VAL_ 985 UI_mapSpeedLimitUnits 1 "KPH" 0 "MPH" ;
+VAL_ 985 UI_userSpeedOffsetUnits 1 "KPH" 0 "MPH" ;
+VAL_ 1001 DAS_hazardLightRequest 0 "DAS_REQUEST_HAZARDS_OFF" 1 "DAS_REQUEST_HAZARDS_ON" 3 "DAS_REQUEST_HAZARDS_SNA" 2 "DAS_REQUEST_HAZARDS_UNUSED" ;
+VAL_ 1001 DAS_headlightRequest 3 "DAS_HEADLIGHT_REQUEST_INVALID" 0 "DAS_HEADLIGHT_REQUEST_OFF" 1 "DAS_HEADLIGHT_REQUEST_ON" ;
+VAL_ 1001 DAS_heaterRequest 1 "DAS_HEATER_OFF" 2 "DAS_HEATER_ON" 0 "DAS_HEATER_SNA" ;
+VAL_ 1001 DAS_highLowBeamDecision 1 "DAS_HIGH_BEAM_OFF" 2 "DAS_HIGH_BEAM_ON" 3 "DAS_HIGH_BEAM_SNA" 0 "DAS_HIGH_BEAM_UNDECIDED" ;
+VAL_ 1001 DAS_highLowBeamOffReason 3 "HIGH_BEAM_OFF_REASON_AMBIENT_LIGHT" 4 "HIGH_BEAM_OFF_REASON_HEAD_LIGHT" 2 "HIGH_BEAM_OFF_REASON_MOVING_RADAR_TARGET" 1 "HIGH_BEAM_OFF_REASON_MOVING_VISION_TARGET" 5 "HIGH_BEAM_OFF_REASON_SNA" 0 "HIGH_BEAM_ON" ;
+VAL_ 1001 DAS_turnIndicatorRequest 3 "DAS_TURN_INDICATOR_CANCEL" 4 "DAS_TURN_INDICATOR_DEFER" 1 "DAS_TURN_INDICATOR_LEFT" 0 "DAS_TURN_INDICATOR_NONE" 2 "DAS_TURN_INDICATOR_RIGHT" ;
+VAL_ 1001 DAS_turnIndicatorRequestReason 8 "DAS_ACTIVE_COMMANDED_LANE_CHANGE" 3 "DAS_ACTIVE_FORK" 9 "DAS_ACTIVE_INTERSECTION" 6 "DAS_ACTIVE_MERGE" 1 "DAS_ACTIVE_NAV_LANE_CHANGE" 2 "DAS_ACTIVE_SPEED_LANE_CHANGE" 11 "DAS_ACTIVE_SUMMMON" 5 "DAS_CANCEL_FORK" 10 "DAS_CANCEL_INTERSECTION" 4 "DAS_CANCEL_LANE_CHANGE" 7 "DAS_CANCEL_MERGE" 12 "DAS_CANCEL_SUMMMON" 0 "DAS_NONE" ;
+VAL_ 1001 DAS_wiperSpeed 1 "DAS_WIPER_SPEED_1" 10 "DAS_WIPER_SPEED_10" 11 "DAS_WIPER_SPEED_11" 12 "DAS_WIPER_SPEED_12" 13 "DAS_WIPER_SPEED_13" 14 "DAS_WIPER_SPEED_14" 2 "DAS_WIPER_SPEED_2" 3 "DAS_WIPER_SPEED_3" 4 "DAS_WIPER_SPEED_4" 5 "DAS_WIPER_SPEED_5" 6 "DAS_WIPER_SPEED_6" 7 "DAS_WIPER_SPEED_7" 8 "DAS_WIPER_SPEED_8" 9 "DAS_WIPER_SPEED_9" 15 "DAS_WIPER_SPEED_INVALID" 0 "DAS_WIPER_SPEED_OFF" ;
+VAL_ 1011 UI_odometer 16777215 "SNA" ;
 VAL_ 1013 VCFRONT_DRLLeftStatus 2 "LIGHT_FAULT" 0 "LIGHT_OFF" 1 "LIGHT_ON" 3 "LIGHT_SNA" ;
 VAL_ 1013 VCFRONT_DRLRightStatus 2 "LIGHT_FAULT" 0 "LIGHT_OFF" 1 "LIGHT_ON" 3 "LIGHT_SNA" ;
 VAL_ 1013 VCFRONT_ambientLightingBrightnes 255 "SNA" ;
@@ -3046,14 +3624,45 @@ VAL_ 1013 VCFRONT_simLatchingStalk 0 "SIMULATED_LATCHING_STALK_IDLE" 1 "SIMULATE
 VAL_ 1013 VCFRONT_switchLightingBrightness 255 "SNA" ;
 VAL_ 1013 VCFRONT_turnSignalLeftStatus 2 "LIGHT_FAULT" 0 "LIGHT_OFF" 1 "LIGHT_ON" 3 "LIGHT_SNA" ;
 VAL_ 1013 VCFRONT_turnSignalRightStatus 2 "LIGHT_FAULT" 0 "LIGHT_OFF" 1 "LIGHT_ON" 3 "LIGHT_SNA" ;
-VAL_ 1001 DAS_hazardLightRequest 0 "DAS_REQUEST_HAZARDS_OFF" 1 "DAS_REQUEST_HAZARDS_ON" 3 "DAS_REQUEST_HAZARDS_SNA" 2 "DAS_REQUEST_HAZARDS_UNUSED" ;
-VAL_ 1001 DAS_headlightRequest 3 "DAS_HEADLIGHT_REQUEST_INVALID" 0 "DAS_HEADLIGHT_REQUEST_OFF" 1 "DAS_HEADLIGHT_REQUEST_ON" ;
-VAL_ 1001 DAS_heaterRequest 1 "DAS_HEATER_OFF" 2 "DAS_HEATER_ON" 0 "DAS_HEATER_SNA" ;
-VAL_ 1001 DAS_highLowBeamDecision 1 "DAS_HIGH_BEAM_OFF" 2 "DAS_HIGH_BEAM_ON" 3 "DAS_HIGH_BEAM_SNA" 0 "DAS_HIGH_BEAM_UNDECIDED" ;
-VAL_ 1001 DAS_highLowBeamOffReason 3 "HIGH_BEAM_OFF_REASON_AMBIENT_LIGHT" 4 "HIGH_BEAM_OFF_REASON_HEAD_LIGHT" 2 "HIGH_BEAM_OFF_REASON_MOVING_RADAR_TARGET" 1 "HIGH_BEAM_OFF_REASON_MOVING_VISION_TARGET" 5 "HIGH_BEAM_OFF_REASON_SNA" 0 "HIGH_BEAM_ON" ;
-VAL_ 1001 DAS_turnIndicatorRequest 3 "DAS_TURN_INDICATOR_CANCEL" 4 "DAS_TURN_INDICATOR_DEFER" 1 "DAS_TURN_INDICATOR_LEFT" 0 "DAS_TURN_INDICATOR_NONE" 2 "DAS_TURN_INDICATOR_RIGHT" ;
-VAL_ 1001 DAS_turnIndicatorRequestReason 8 "DAS_ACTIVE_COMMANDED_LANE_CHANGE" 3 "DAS_ACTIVE_FORK" 9 "DAS_ACTIVE_INTERSECTION" 6 "DAS_ACTIVE_MERGE" 1 "DAS_ACTIVE_NAV_LANE_CHANGE" 2 "DAS_ACTIVE_SPEED_LANE_CHANGE" 11 "DAS_ACTIVE_SUMMMON" 5 "DAS_CANCEL_FORK" 10 "DAS_CANCEL_INTERSECTION" 4 "DAS_CANCEL_LANE_CHANGE" 7 "DAS_CANCEL_MERGE" 12 "DAS_CANCEL_SUMMMON" 0 "DAS_NONE" ;
-VAL_ 1001 DAS_wiperSpeed 1 "DAS_WIPER_SPEED_1" 10 "DAS_WIPER_SPEED_10" 11 "DAS_WIPER_SPEED_11" 12 "DAS_WIPER_SPEED_12" 13 "DAS_WIPER_SPEED_13" 14 "DAS_WIPER_SPEED_14" 2 "DAS_WIPER_SPEED_2" 3 "DAS_WIPER_SPEED_3" 4 "DAS_WIPER_SPEED_4" 5 "DAS_WIPER_SPEED_5" 6 "DAS_WIPER_SPEED_6" 7 "DAS_WIPER_SPEED_7" 8 "DAS_WIPER_SPEED_8" 9 "DAS_WIPER_SPEED_9" 15 "DAS_WIPER_SPEED_INVALID" 0 "DAS_WIPER_SPEED_OFF" ;
+VAL_ 1016 UI_accFollowDistanceSetting 0 "DISTANCE_SETTING_1" 1 "DISTANCE_SETTING_2" 2 "DISTANCE_SETTING_3" 3 "DISTANCE_SETTING_4" 4 "DISTANCE_SETTING_5" 5 "DISTANCE_SETTING_6" 6 "DISTANCE_SETTING_7" 7 "DISTANCE_SETTING_SNA" ;
+VAL_ 1016 UI_autopilotControlRequest 0 "LEGACY_LAT_CTRL" 1 "NEXT_GEN_CTRL" ;
+VAL_ 1016 UI_curvSpeedAdaptDisable 1 "CSA_OFF" 0 "CSA_ON" ;
+VAL_ 1016 UI_curvatureDatabaseOnly 0 "OFF" 1 "ON" ;
+VAL_ 1016 UI_driveOnMapsEnable 0 "DOM_OFF" 1 "DOM_ON" ;
+VAL_ 1016 UI_drivingSide 0 "DRIVING_SIDE_LEFT" 1 "DRIVING_SIDE_RIGHT" 2 "DRIVING_SIDE_UNKNOWN" ;
+VAL_ 1016 UI_exceptionListEnable 0 "EXCEPTION_LIST_OFF" 1 "EXCEPTION_LIST_ON" ;
+VAL_ 1016 UI_followNavRouteEnable 0 "NAV_ROUTE_OFF" 1 "NAV_ROUTE_ON" ;
+VAL_ 1016 UI_fuseHPPDisable 1 "FUSE_HPP_OFF" 0 "FUSE_HPP_ON" ;
+VAL_ 1016 UI_fuseLanesDisable 1 "FUSE_LANES_OFF" 0 "FUSE_LANES_ON" ;
+VAL_ 1016 UI_fuseVehiclesDisable 1 "FUSE_VEH_OFF" 0 "FUSE_VEH_ON" ;
+VAL_ 1016 UI_handsOnRequirementDisable 1 "HANDS_ON_REQ_OFF" 0 "HANDS_ON_REQ_ON" ;
+VAL_ 1016 UI_lssElkEnabled 0 "ELK_OFF" 1 "ELK_ON" ;
+VAL_ 1016 UI_lssLdwEnabled 0 "LDW_OFF" 1 "LDW_ON" ;
+VAL_ 1016 UI_lssLkaEnabled 0 "LKA_OFF" 1 "LKA_ON" ;
+VAL_ 1016 UI_roadCheckDisable 1 "RC_OFF" 0 "RC_ON" ;
+VAL_ 1016 UI_selfParkRequest 3 "ABORT" 9 "AUTO_SUMMON_CANCEL" 7 "AUTO_SUMMON_FORWARD" 10 "AUTO_SUMMON_PRIMED" 8 "AUTO_SUMMON_REVERSE" 0 "NONE" 5 "PAUSE" 4 "PRIME" 6 "RESUME" 1 "SELF_PARK_FORWARD" 2 "SELF_PARK_REVERSE" 11 "SMART_SUMMON" 12 "SMART_SUMMON_NO_OP" 15 "SNA" ;
+VAL_ 1016 UI_smartSummonType 1 "FIND_ME" 0 "PIN_DROP" 2 "SMART_AUTOPARK" ;
+VAL_ 1016 UI_source3D 2 "XYZ_PREDICTION" 0 "Z_FROM_MAP" 1 "Z_FROM_PATH_PREDICTION" ;
+VAL_ 1016 UI_summonEntryType 3 "SNA" 0 "STRAIGHT" 2 "TURN_LEFT" 1 "TURN_RIGHT" ;
+VAL_ 1016 UI_summonExitType 3 "SNA" 0 "STRAIGHT" 2 "TURN_LEFT" 1 "TURN_RIGHT" ;
+VAL_ 1016 UI_summonReverseDist 63 "SNA" ;
+VAL_ 1016 UI_ulcBlindSpotConfig 1 "AGGRESSIVE" 2 "MAD_MAX" 0 "STANDARD" ;
+VAL_ 1016 UI_ulcSpeedConfig 2 "SPEED_BASED_ULC_AVERAGE" 0 "SPEED_BASED_ULC_DISABLED" 3 "SPEED_BASED_ULC_MAD_MAX" 1 "SPEED_BASED_ULC_MILD" ;
+VAL_ 1016 UI_visionSpeedType 0 "VISION_SPEED_DISABLED" 1 "VISION_SPEED_ONE_SECOND" 3 "VISION_SPEED_OPTIMIZED" 2 "VISION_SPEED_TWO_SECOND" ;
+VAL_ 1021 UI_autopilotControlIndex 0 "AUTOPILOT_CONTROL_0" 1 "AUTOPILOT_CONTROL_1" 2 "AUTOPILOT_CONTROL_2" 3 "AUTOPILOT_CONTROL_3" 4 "AUTOPILOT_CONTROL_4" 5 "AUTOPILOT_CONTROL_5" 6 "AUTOPILOT_CONTROL_6" 7 "AUTOPILOT_CONTROL_7" ;
+VAL_ 1021 UI_apmv3Branch 5 "DEMO" 2 "DEV" 4 "EAP" 0 "LIVE" 1 "STAGE" 3 "STAGE2" ;
+VAL_ 1021 UI_blindspotDistance 1 "BLINDSPOT_DISTANCE_0P5_M" 2 "BLINDSPOT_DISTANCE_1_M" 3 "BLINDSPOT_DISTANCE_2_M" 4 "BLINDSPOT_DISTANCE_4_M" 0 "BLINDSPOT_DISTANCE_DEFAULT" 5 "BLINDSPOT_DISTANCE_OFF" ;
+VAL_ 1021 UI_blindspotMinSpeed 2 "BLINDSPOT_MIN_SPEED_10_KPH" 3 "BLINDSPOT_MIN_SPEED_15_KPH" 4 "BLINDSPOT_MIN_SPEED_20_KPH" 5 "BLINDSPOT_MIN_SPEED_25_KPH" 6 "BLINDSPOT_MIN_SPEED_30_KPH" 7 "BLINDSPOT_MIN_SPEED_35_KPH" 8 "BLINDSPOT_MIN_SPEED_40_KPH" 9 "BLINDSPOT_MIN_SPEED_45_KPH" 1 "BLINDSPOT_MIN_SPEED_5_KPH" 0 "BLINDSPOT_MIN_SPEED_DEFAULT" 10 "BLINDSPOT_MIN_SPEED_OFF" ;
+VAL_ 1021 UI_blindspotTTC 1 "BLINDSPOT_TTC_0P5_S" 2 "BLINDSPOT_TTC_1_S" 3 "BLINDSPOT_TTC_2_S" 5 "BLINDSPOT_TTC_3_S" 4 "BLINDSPOT_TTC_4_S" 6 "BLINDSPOT_TTC_5_S" 0 "BLINDSPOT_TTC_DEFAULT" 7 "BLINDSPOT_TTC_OFF" ;
+VAL_ 1021 UI_donAlcProgGoreAbortThres 1 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P00" 2 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P05" 3 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P10" 4 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P15" 5 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P20" 6 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P25" 7 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P30" 8 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P35" 9 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_0P40" 0 "DON_ALC_PROGRESS_GORE_ABORT_THRESHOLD_DEFAULT" ;
+VAL_ 1021 UI_donDisableAutoWiperDuration 5 "DON_DISABLE_AUTO_WIPER_DURATION_120_S" 2 "DON_DISABLE_AUTO_WIPER_DURATION_15_S" 3 "DON_DISABLE_AUTO_WIPER_DURATION_30_S" 1 "DON_DISABLE_AUTO_WIPER_DURATION_5_S" 4 "DON_DISABLE_AUTO_WIPER_DURATION_60_S" 0 "DON_DISABLE_AUTO_WIPER_DURATION_DEFAULT" 6 "DON_DISABLE_AUTO_WIPER_DURATION_OFF" ;
+VAL_ 1021 UI_donDisableCutin 0 "DON_DISABLE_CUTIN_OFF" 1 "DON_DISABLE_CUTIN_ON" ;
+VAL_ 1021 UI_donDisableOnAutoWiperSpeed 1 "DAS_WIPER_SPEED_1" 10 "DAS_WIPER_SPEED_10" 11 "DAS_WIPER_SPEED_11" 12 "DAS_WIPER_SPEED_12" 13 "DAS_WIPER_SPEED_13" 14 "DAS_WIPER_SPEED_14" 2 "DAS_WIPER_SPEED_2" 3 "DAS_WIPER_SPEED_3" 4 "DAS_WIPER_SPEED_4" 5 "DAS_WIPER_SPEED_5" 6 "DAS_WIPER_SPEED_6" 7 "DAS_WIPER_SPEED_7" 8 "DAS_WIPER_SPEED_8" 9 "DAS_WIPER_SPEED_9" 15 "DAS_WIPER_SPEED_INVALID" 0 "DAS_WIPER_SPEED_OFF" ;
+VAL_ 1021 UI_donMinGoreWidthForAbortMap 2 "DON_MIN_GORE_WIDTH_FOR_ABORT_0P5_M" 1 "DON_MIN_GORE_WIDTH_FOR_ABORT_0_M" 4 "DON_MIN_GORE_WIDTH_FOR_ABORT_1P5_M" 3 "DON_MIN_GORE_WIDTH_FOR_ABORT_1_M" 6 "DON_MIN_GORE_WIDTH_FOR_ABORT_2P5_M" 5 "DON_MIN_GORE_WIDTH_FOR_ABORT_2_M" 8 "DON_MIN_GORE_WIDTH_FOR_ABORT_3P5_M" 7 "DON_MIN_GORE_WIDTH_FOR_ABORT_3_M" 10 "DON_MIN_GORE_WIDTH_FOR_ABORT_4P5_M" 9 "DON_MIN_GORE_WIDTH_FOR_ABORT_4_M" 11 "DON_MIN_GORE_WIDTH_FOR_ABORT_5_M" 0 "DON_MIN_GORE_WIDTH_FOR_ABORT_DEFAULT" ;
+VAL_ 1021 UI_donMinGoreWidthForAbortNotMap 2 "DON_MIN_GORE_WIDTH_FOR_ABORT_0P5_M" 1 "DON_MIN_GORE_WIDTH_FOR_ABORT_0_M" 4 "DON_MIN_GORE_WIDTH_FOR_ABORT_1P5_M" 3 "DON_MIN_GORE_WIDTH_FOR_ABORT_1_M" 6 "DON_MIN_GORE_WIDTH_FOR_ABORT_2P5_M" 5 "DON_MIN_GORE_WIDTH_FOR_ABORT_2_M" 8 "DON_MIN_GORE_WIDTH_FOR_ABORT_3P5_M" 7 "DON_MIN_GORE_WIDTH_FOR_ABORT_3_M" 10 "DON_MIN_GORE_WIDTH_FOR_ABORT_4P5_M" 9 "DON_MIN_GORE_WIDTH_FOR_ABORT_4_M" 11 "DON_MIN_GORE_WIDTH_FOR_ABORT_5_M" 0 "DON_MIN_GORE_WIDTH_FOR_ABORT_DEFAULT" ;
+VAL_ 1021 UI_donStopEndOfRampBuffer 1 "DON_STOP_END_OF_RAMP_BUFFER_15_M" 2 "DON_STOP_END_OF_RAMP_BUFFER_30_M" 3 "DON_STOP_END_OF_RAMP_BUFFER_45_M" 0 "DON_STOP_END_OF_RAMP_BUFFER_DEFAULT" 4 "DON_STOP_END_OF_RAMP_BUFFER_OFF" ;
+VAL_ 1021 UI_homelinkNearby 1 "HOMELINK_NEARBY" 0 "HOMELINK_NOT_NEARBY" ;
+VAL_ 1021 UI_hovEnabled 0 "HOV_OFF" 1 "HOV_ON" ;
 VAL_ 611 VCRIGHT_logging10HzIndex 3 "END" 1 "HVAC_ACTUATOR_POSITIONS" 2 "HVAC_ACTUATOR_STATE" 0 "HVAC_ACTUATOR_TARGETS" ;
 VAL_ 611 VCRIGHT_hvacIntakeActuatorState 0 "HVACACTUATOR_STATE_BRAKING" 2 "HVACACTUATOR_STATE_COASTING" 1 "HVACACTUATOR_STATE_RUNNING" ;
 VAL_ 611 VCRIGHT_hvacIntakeOperationMode 1 "HVACACTUATOR_OPERATION_MODE_CALIBRATION" 0 "HVACACTUATOR_OPERATION_MODE_NORMAL" ;
@@ -3629,3 +4238,23 @@ VAL_ 2047 GTW_windshieldType 1 "EASTMAN_ACOUSTIC" 0 "SEKISUI_ACOUSTIC" ;
 VAL_ 2047 GTW_xcpESP 0 "FALSE" 1 "TRUE" ;
 VAL_ 2047 GTW_xcpIbst 0 "FALSE" 1 "TRUE" ;
 
+SG_MUL_VAL_ 537 VCSEC_TPMSBatVoltage0 VCSEC_TPMSDataIndex 0-0;
+SG_MUL_VAL_ 537 VCSEC_TPMSBatVoltage1 VCSEC_TPMSDataIndex 1-1;
+SG_MUL_VAL_ 537 VCSEC_TPMSBatVoltage2 VCSEC_TPMSDataIndex 2-2;
+SG_MUL_VAL_ 537 VCSEC_TPMSBatVoltage3 VCSEC_TPMSDataIndex 3-3;
+SG_MUL_VAL_ 537 VCSEC_TPMSPressure0 VCSEC_TPMSDataIndex 0-0;
+SG_MUL_VAL_ 537 VCSEC_TPMSPressure1 VCSEC_TPMSDataIndex 1-1;
+SG_MUL_VAL_ 537 VCSEC_TPMSPressure2 VCSEC_TPMSDataIndex 2-2;
+SG_MUL_VAL_ 537 VCSEC_TPMSPressure3 VCSEC_TPMSDataIndex 3-3;
+SG_MUL_VAL_ 537 VCSEC_TPMSRSSI0 VCSEC_TPMSDataIndex 0-0;
+SG_MUL_VAL_ 537 VCSEC_TPMSRSSI1 VCSEC_TPMSDataIndex 1-1;
+SG_MUL_VAL_ 537 VCSEC_TPMSRSSI2 VCSEC_TPMSDataIndex 2-2;
+SG_MUL_VAL_ 537 VCSEC_TPMSRSSI3 VCSEC_TPMSDataIndex 3-3;
+SG_MUL_VAL_ 537 VCSEC_TPMSSensorState0 VCSEC_TPMSDataIndex 0-0;
+SG_MUL_VAL_ 537 VCSEC_TPMSSensorState1 VCSEC_TPMSDataIndex 1-1;
+SG_MUL_VAL_ 537 VCSEC_TPMSSensorState2 VCSEC_TPMSDataIndex 2-2;
+SG_MUL_VAL_ 537 VCSEC_TPMSSensorState3 VCSEC_TPMSDataIndex 3-3;
+SG_MUL_VAL_ 537 VCSEC_TPMSTemperature0 VCSEC_TPMSDataIndex 0-0;
+SG_MUL_VAL_ 537 VCSEC_TPMSTemperature1 VCSEC_TPMSDataIndex 1-1;
+SG_MUL_VAL_ 537 VCSEC_TPMSTemperature2 VCSEC_TPMSDataIndex 2-2;
+SG_MUL_VAL_ 537 VCSEC_TPMSTemperature3 VCSEC_TPMSDataIndex 3-3;
