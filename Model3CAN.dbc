@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: Receiver ChassisBus VehicleBus PartyBus apb ui app aps bms gtwu odin cc cmp cp das dif dir di epas3p epas3s epbl epbr esp fc gtw hvp ibst ocs1p park pcs pmf pmr pm ptc radc rcm2 rcm sccm scm scs tas tpms umc vcfront vcleft vcright vcsec
+BU_: Receiver ChassisBus VehicleBus PartyBus apb ui app aps bms gtwu odin cc cmp cp das dif dir di epas3p epas3s epbl epbr esp fc gtw hvp ibst ocs1p park pcs pmf pmr pm ptc radc rcm2 rcm sccm scm scs tas tpms umc vcfront vcleft vcright vcsec GTW
 
 
 BO_ 12 ID00CUI_status: 8 VehicleBus
@@ -448,7 +448,7 @@ BO_ 605 ID25DCP_status: 8 VehicleBus
  SG_ CP_type : 0|2@1+ (1,0) [0|3] ""  Receiver
  SG_ CP_vehicleUnlockRequest : 52|1@1+ (1,0) [0|1] ""  Receiver
 
-BO_ 669 CP_dcChargeStatus: 4 VehicleBus
+BO_ 669 ID29DCP_dcChargeStatus: 4 VehicleBus
  SG_ CP_evseOutputDcCurrent : 0|15@1- (0.0732467,0) [-1200|1200] "A"  Receiver
  SG_ CP_evseOutputDcCurrentStale : 29|1@1+ (1,0) [0|1] ""  Receiver
  SG_ CP_evseOutputDcVoltage : 16|13@1+ (0.0732422,0) [0|599.927] "V"  Receiver
@@ -1713,15 +1713,25 @@ BO_ 955 ID3BBUI_power: 2 VehicleBus
  SG_ UI_powerExpected : 0|8@1+ (1,0) [0|100] "kW"  Receiver
  SG_ UI_powerIdeal : 8|8@1+ (1,0) [0|100] "kW"  Receiver
 
-BO_ 1493 ID5D5RearTBD: 5 VehicleBus
- SG_ RearFlow5D5 : 24|8@1+ (0.2,0) [0|0] "LPM"  Receiver
- SG_ RearTemp5D5B : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
- SG_ TestTemp5D5A : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
+BO_ 1493 ID5D5RearDItemps: 5 VehicleBus
+ SG_ DI_ph1Temp : 0|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DI_ph2Temp : 8|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DI_ph3Temp : 16|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DI_pcbTemp2 : 24|8@1+ (1,-40) [-40|150] "C"  Receiver
+ SG_ DI_IGBTJunctTemp : 32|8@1+ (1,-40) [-40|200] "C"  Receiver
+ SG_ DI_lashAngle : 40|10@1+ (0.06,0) [0|60] "Deg"  Receiver
+ SG_ DI_lashCheckCount : 50|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DI_torqueWearTotal : 56|8@1+ (0.02,0) [0|5.08] "1"  Receiver
 
-BO_ 1366 ID556FrontTBD: 5 VehicleBus
- SG_ FrontFlow556 : 24|8@1+ (0.2,0) [0|0] "LPM"  Receiver
- SG_ FrontTemp556B : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
- SG_ FrontTemp556A : 0|8@1+ (1,-40) [-40|215] "C"  Receiver
+BO_ 1366 ID556FrontDItemps: 5 VehicleBus
+ SG_ DIF_ph1Temp : 0|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DIF_ph2Temp : 8|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DIF_ph3Temp : 16|8@1+ (1,-40) [-40|120] "C"  Receiver
+ SG_ DIF_pcbTemp2 : 24|8@1+ (1,-40) [-40|150] "C"  Receiver
+ SG_ DIF_IGBTJunctTemp : 32|8@1+ (1,-40) [-40|200] "C"  Receiver
+ SG_ DIF_lashAngle : 40|10@1+ (0.06,0) [0|60] "Deg"  Receiver
+ SG_ DIF_lashCheckCount : 50|6@1+ (1,0) [0|63] ""  Receiver
+ SG_ DIF_torqueWearTotal : 56|8@1+ (0.02,0) [0|5.08] "1"  Receiver
 
 BO_ 1367 ID557FrontThermalControl: 4 VehicleBus
  SG_ DIS_activeInletTempReq : 8|8@1+ (1,-40) [-40|120] "C"  Receiver
@@ -2678,7 +2688,7 @@ BO_ 585 ID249SCCMLeftStalk: 4 VehicleBus
  SG_ SCCM_turnIndicatorStalkStatus : 16|4@1+ (1,0) [0|9] ""  Receiver
  SG_ SCCM_washWipeButtonStatus : 14|2@1+ (1,0) [0|3] ""  Receiver
 
-BO_ 1577 ID628UDSPCStoMCU: 8 VehicleBus
+BO_ 1577 ID629UDSPCStoMCU: 8 VehicleBus
 
 BO_ 1576 ID628UDSMCUtoPCS: 8 VehicleBus
 
@@ -2705,7 +2715,7 @@ BO_ 918 ID396FrontOilPump: 8 VehicleBus
 BO_ 917 ID395DIR_oilPump: 8 VehicleBus
  SG_ DIR_oilPumpFlowActual : 16|8@1+ (0.06,0) [0|15] "LPM"  Receiver
  SG_ DIR_oilPumpFlowTarget : 8|8@1+ (0.06,0) [0|15] "LPM"  Receiver
- SG_ DIR_oilPumpFluidT : 24|8@1+ (1,-40) [-40|214] "DegC"  Receiver
+ SG_ DIR_oilPumpFluidT : 24|8@1+ (1,-40) [-40|214] "C"  Receiver
  SG_ DIR_oilPumpFluidTQF : 3|1@1+ (1,0) [0|1] ""  Receiver
  SG_ DIR_oilPumpLeadAngle : 4|4@1+ (1.875,0) [0|28.125] "deg"  Receiver
  SG_ DIR_oilPumpPhaseCurrent : 32|8@1+ (0.1,0) [0|25.4] "A"  Receiver
@@ -2726,12 +2736,32 @@ BO_ 341 ID155WheelAngles: 8 ChassisBus
  SG_ WheelAngleTicsRL155 : 16|8@1+ (1.40625,0) [0|358.59375] "deg"  Receiver
  SG_ WheelAngleTicsFR155 : 8|8@1+ (1.40625,0) [0|358.59375] "deg"  Receiver
  SG_ WheelAngleTicsFL155 : 0|8@1+ (1.40625,0) [0|358.59375] "deg"  Receiver
+ SG_ ESP_WheelRotationReR : 32|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_WheelRotationReL : 34|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_WheelRotationFrR : 36|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_WheelRotationFrL : 38|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ ESP_wheelSpeedsQF : 40|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_vehicleStandstillSts : 41|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_vehicleSpeed : 42|10@1+ (0.5,0) [0|511] "kph"  Receiver
+ SG_ ESP_wheelRotationCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ ESP_wheelRotationChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
 
 BO_ 373 ID175WheelSpeed: 8 ChassisBus
- SG_ WheelSpeedRR175 : 39|13@1+ (0.04,0) [0|327.64] "rpm"  Receiver
- SG_ WheelSpeedRL175 : 26|13@1+ (0.04,0) [0|327.64] "rpm"  Receiver
- SG_ WheelSpeedFR175 : 13|13@1+ (0.04,0) [0|327.64] "rpm"  Receiver
- SG_ WheelSpeedFL175 : 0|13@1+ (0.04,0) [0|327.64] "rpm"  Receiver
+ SG_ WheelSpeedRR175 : 39|13@1+ (0.04,0) [0|327.64] "KPH"  Receiver
+ SG_ WheelSpeedRL175 : 26|13@1+ (0.04,0) [0|327.64] "KPH"  Receiver
+ SG_ WheelSpeedFR175 : 13|13@1+ (0.04,0) [0|327.64] "KPH"  Receiver
+ SG_ WheelSpeedFL175 : 0|13@1+ (0.04,0) [0|327.64] "KPH"  Receiver
+ SG_ ESP_wheelSpeedsCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ ESP_wheelSpeedsChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
+
+BO_ 389 ESP_brakeTorque: 8 ChassisBus
+ SG_ ESP_brakeTorqueFrL : 0|12@1+ (2,0) [0|8190] "Nm"  Receiver
+ SG_ ESP_brakeTorqueFrR : 12|12@1+ (2,0) [0|8190] "Nm"  Receiver
+ SG_ ESP_brakeTorqueReL : 24|12@1+ (2,0) [0|8190] "Nm"  Receiver
+ SG_ ESP_brakeTorqueReR : 36|12@1+ (2,0) [0|8190] "Nm"  Receiver
+ SG_ ESP_brakeTorqueQF : 50|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ ESP_brakeTorqueCounter : 52|4@1+ (1,0) [0|15] ""  Receiver
+ SG_ ESP_brakeTorqueChecksum : 56|8@1+ (1,0) [0|255] ""  Receiver
 
 BO_ 468 ID1D4FrontTorqueOld: 8 VehicleBus
  SG_ RAWTorqueFront1D4 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
@@ -2739,6 +2769,12 @@ BO_ 468 ID1D4FrontTorqueOld: 8 VehicleBus
 BO_ 469 ID1D5FrontTorque: 8 VehicleBus
  SG_ FrontTorqueRequest1D5 : 8|15@1- (0.1,0) [-1638.4|1638.3] "NM"  Receiver
  SG_ FrontTorque1D5 : 24|13@1- (0.25,0) [-1024|1023.75] "NM"  Receiver
+
+BO_ 641 ID281VCFRONT_CMPRequest: 8 VehicleBus
+ SG_ VCFRONT_CMPTargetDuty : 0|16@1+ (0.1,0) [0|100] "%"  Receiver
+ SG_ VCFRONT_CMPPowerLimit : 16|16@1+ (1,0) [0|65534] "W"  Receiver
+ SG_ VCFRONT_CMPReset : 32|8@1+ (1,0) [0|255] ""  Receiver
+ SG_ VCFRONT_CMPEnable : 40|1@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 741 ID2E5FrontInverterPower: 8 VehicleBus
  SG_ FrontHeatPowerOptimal2E5 : 16|8@1+ (0.08,0) [0|20.4] "kW"  Receiver
@@ -3470,9 +3506,21 @@ BO_ 1025 ID401CellVoltages: 8 VehicleBus
 
 
 
+CM_ SG_ 130 UI_tripPlanningActive "Navigation Active";
+CM_ SG_ 257 RCM_pitchRate "Pitch";
+CM_ SG_ 257 RCM_rollRate "Roll";
+CM_ SG_ 257 RCM_yawRate "Yaw";
+CM_ SG_ 273 RCM_lateralAccel "L/R Acceleration";
+CM_ SG_ 273 RCM_longitudinalAccel "F/B Acceleration";
+CM_ SG_ 273 RCM_verticalAccel "Vertical Acceleration";
 CM_ SG_ 692 PCS_dcdcHvBusVolt "DCDC HV Voltage";
 CM_ SG_ 692 PCS_dcdcLvBusVolt "DCDC 12v Voltage";
 CM_ SG_ 692 PCS_dcdcLvOutputCurrent "DCDC 12v Output Current";
+CM_ SG_ 985 UI_gpsVehicleHeading "GPS Heading";
+CM_ SG_ 985 UI_gpsVehicleSpeed "GPS Speed";
+CM_ SG_ 1011 UI_odometer "UI Odometer";
+CM_ SG_ 615 DI_gradeEst "Estimated Grade";
+CM_ SG_ 615 DI_mass "Estimated Mass";
 CM_ SG_ 642 VCLEFT_hvacBlowerRPMActual "HVAC Blower Speed";
 CM_ SG_ 647 PTC_leftCurrentHV "Heater Left Current";
 CM_ SG_ 647 PTC_rightCurrentHV "Heater Right Current";
@@ -3480,6 +3528,7 @@ CM_ SG_ 647 PTC_voltageHV "Heater Voltage";
 CM_ SG_ 819 UI_acChargeCurrentLimit "UI Charge Current Limit";
 CM_ SG_ 826 UI_Range "Range";
 CM_ SG_ 826 UI_SOC "State of Charge UI";
+CM_ SG_ 826 UI_uSOE "UI fine SOC";
 CM_ SG_ 826 UI_ratedWHpM "WHM Rating";
 CM_ SG_ 577 VCFRONT_coolantFlowBatActual "Battery Coolant Flow";
 CM_ SG_ 577 VCFRONT_coolantFlowPTActual "Powertrain Coolant Flow";
@@ -3499,6 +3548,7 @@ CM_ SG_ 792 UTCseconds318 "Seconds";
 CM_ SG_ 792 UTChour318 "Hour";
 CM_ SG_ 792 UTCday318 "Day";
 CM_ SG_ 792 UTCminutes318 "Minute";
+CM_ SG_ 1320 UnixTimeSeconds528 "Unix Time";
 CM_ SG_ 390 DIF_axleSpeed "Front Axle Speed";
 CM_ SG_ 390 DIF_torqueActual "Front Axle Torque";
 CM_ SG_ 390 DIF_torqueCommand "Front Axle Torque Request";
@@ -3526,6 +3576,8 @@ CM_ SG_ 722 MinVoltage2D2 "BMS Min Voltage";
 CM_ SG_ 722 MaxDischargeCurrent2D2 "BMS Max Discharge Current";
 CM_ SG_ 722 MaxChargeCurrent2D2 "BMS Max Charge Current";
 CM_ SG_ 722 MaxVoltage2D2 "BMS Max Voltage";
+CM_ SG_ 1345 FCMaxPowerLimit541 "Supercharger Power Limit";
+CM_ SG_ 1345 FCMaxCurrentLimit541 "Supercharger Current Limit";
 CM_ SG_ 580 FCMinVlimit244 "Supercharger Min Voltage";
 CM_ SG_ 580 FCMaxVlimit244 "Supercharger Max Voltage";
 CM_ SG_ 580 FCCurrentLimit244 "Supercharger Max Current";
@@ -3535,6 +3587,7 @@ CM_ SG_ 801 VCFRONT_tempCoolantBatInlet "Battery Coolant Temp";
 CM_ SG_ 801 VCFRONT_tempCoolantPTInlet "Powertrain Coolant Temp";
 CM_ SG_ 984 Elevation3D8 "Elevation";
 CM_ SG_ 609 v12vBattTemp261 "12V Battery Temp";
+CM_ SG_ 609 v12vBattAH261 "12V Battery Capacity";
 CM_ SG_ 609 v12vBattCurrent261 "12V Battery Current";
 CM_ SG_ 609 v12vBattVoltage261 "12V Battery Voltage";
 CM_ SG_ 297 SteeringSpeed129 "Steering Speed";
@@ -3570,6 +3623,7 @@ CM_ SG_ 658 SOCmin292 "BMS Min SOC";
 CM_ SG_ 599 UIspeedUnits257 "Speed Units, 0-mph 1-kph";
 CM_ SG_ 599 UIspeed_signed257 "Vehicle Speed, .05 -25 for mph";
 CM_ SG_ 599 UIspeed_abs257 "UI Speed";
+CM_ SG_ 599 UISpeedHighSpeed257 "UIHi Speed";
 CM_ SG_ 1029 VINB405 "VIN3, last 7 of VIN (ASCII)";
 CM_ SG_ 1029 VINC405 "VIN2, part two of VIN (ASCII)";
 CM_ SG_ 1029 VINA405 "VIN1, four zeros then first 3 characters of VIN";
@@ -3594,6 +3648,8 @@ CM_ SG_ 421 FrontMotorCurrent1A5 "Front Motor Current";
 CM_ BO_ 1022 "Brake Temps Estimated";
 CM_ SG_ 2047 GTW_chassisType "Model";
 CM_ SG_ 2047 GTW_packEnergy "Battery Pack Size";
+CM_ SG_ 818 BattCellTempMax332 "Max Batt Brick Temp";
+CM_ SG_ 818 BattCellTempMin332 "Min Batt Brick Temp";
 CM_ SG_ 818 BattCellBrickVoltageMax332 "Max Batt Brick V";
 CM_ SG_ 818 BattCellBrickVoltageMin332 "Min Batt Brick V";
 BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","SendType1","SendType2","SendType3","SendType4","SendType5","SendType6","SendType7","SendType8","SendType9";
@@ -3645,23 +3701,23 @@ BA_DEF_DEF_  "GenNodAutoGenDsp" "Yes";
 BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp";
 BA_DEF_DEF_  "GenEnvVarEndingSnd" "Snd";
 BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
-BA_DEF_DEF_  "Modified" "JW2020July14";
+BA_DEF_DEF_  "Modified" "JW2020Jul22";
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_DEF_DEF_  "SystemMessageLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 100;
 BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
-BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgSendType" BO_ 468 0;
+BA_ "GenMsgCycleTime" BO_ 468 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 79 1000;
+BA_ "GenMsgSendType" BO_ 79 0;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -3673,12 +3729,12 @@ BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "SystemMessageLongSymbol" BO_ 513 "ID201VCFRONT_loggingAndVitals10Hz";
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 297 10;
+BA_ "GenMsgSendType" BO_ 297 0;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 280 10;
+BA_ "GenMsgSendType" BO_ 280 0;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -3686,20 +3742,20 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgSendType" BO_ 340 0;
+BA_ "GenMsgCycleTime" BO_ 340 10;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
-BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgCycleTime" BO_ 264 10;
-BA_ "GenMsgCycleTime" BO_ 306 10;
+BA_ "GenMsgSendType" BO_ 264 0;
 BA_ "GenMsgSendType" BO_ 306 0;
-BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 306 10;
 BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 294 0;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
-BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
+BA_ "GenMsgSendType" BO_ 2047 0;
 BA_ "SystemSignalLongSymbol" SG_ 291 UI_a037_AudioWatchdogXrunStormEr "UI_a037_AudioWatchdogXrunStormError";
 BA_ "SystemSignalLongSymbol" SG_ 291 UI_a038_AudioWatchdogA2bI2cLocku "UI_a038_AudioWatchdogA2bI2cLockupError";
 BA_ "SystemSignalLongSymbol" SG_ 291 UI_a048_AudioPremiumAmpCheckFail "UI_a048_AudioPremiumAmpCheckFailed";
@@ -4343,6 +4399,10 @@ VAL_ 708 PCS_dLogPhCChannel2Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT
 VAL_ 708 PCS_dLogPhCChannel3Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
 VAL_ 708 PCS_dLogPhCChannel4Content 1 "PCS_DLOG_INPUT_CURRENT" 0 "PCS_DLOG_INPUT_VOLTAGE" 3 "PCS_DLOG_INT_BUS_VOLTAGE" 2 "PCS_DLOG_OUTPUT_CURRENT" ;
 VAL_ 708 PCS_dcdcTankVoltage -1024 "TANK_VOLTAGE_SNA" ;
+VAL_ 1493 DI_IGBTJunctTemp 255 "SNA" ;
+VAL_ 1493 DI_torqueWearTotal 255 "SNA" ;
+VAL_ 1366 DIF_IGBTJunctTemp 255 "SNA" ;
+VAL_ 1366 DIF_torqueWearTotal 255 "SNA" ;
 VAL_ 2005 DIR_aebFaultReason 9 "DI_AEB_FAULT_ACCEL_OUT_OF_BOUNDS" 14 "DI_AEB_FAULT_ACCEL_REQ_INVALID" 5 "DI_AEB_FAULT_DAS_CONTROL_MIA" 15 "DI_AEB_FAULT_DAS_REQ_DI_UNAVAIL" 6 "DI_AEB_FAULT_DAS_SNA" 3 "DI_AEB_FAULT_EBR_FAULT" 1 "DI_AEB_FAULT_EPB_MIA" 10 "DI_AEB_FAULT_EPB_NOT_PARKED" 11 "DI_AEB_FAULT_ESP_FAULT" 12 "DI_AEB_FAULT_ESP_MIA" 13 "DI_AEB_FAULT_MIN_TIME_BTWN_EVENTS" 0 "DI_AEB_FAULT_NONE" 2 "DI_AEB_FAULT_PM_MIA" 8 "DI_AEB_FAULT_PM_REQUEST" 4 "DI_AEB_FAULT_SPEED_DELTA" 7 "DI_AEB_FAULT_VEL_EST_ABNORMAL" ;
 VAL_ 2005 DIR_aebUnavailableReason 1 "DI_AEB_UNAVAILABLE_CLOSURE" 5 "DI_AEB_UNAVAILABLE_DI_STATE" 6 "DI_AEB_UNAVAILABLE_EBR_UNAVAILABLE" 7 "DI_AEB_UNAVAILABLE_EPB" 2 "DI_AEB_UNAVAILABLE_GEAR" 8 "DI_AEB_UNAVAILABLE_HYSTERESIS" 4 "DI_AEB_UNAVAILABLE_NEGATIVE_SPEED" 0 "DI_AEB_UNAVAILABLE_NONE" 10 "DI_AEB_UNAVAILABLE_REVERSE_SPEED" 3 "DI_AEB_UNAVAILABLE_SKID" 9 "DI_AEB_UNAVAILABLE_TRACK_MODE" ;
 VAL_ 2005 DIR_brkStState 6 "BRKST_STATE_FINISHED" 1 "BRKST_STATE_IDLE" 5 "BRKST_STATE_INTERRUPTED" 4 "BRKST_STATE_RUNNING_PRESSED" 3 "BRKST_STATE_RUNNING_PRESSING" 2 "BRKST_STATE_RUNNING_UNPRESSED" 0 "BRKST_STATE_UNAVAILABLE" ;
@@ -4563,6 +4623,22 @@ VAL_ 390 DIF_torqueCommand -4096 "SNA" ;
 VAL_ 918 FrontOilPumpState396 7 "OIL_PUMP_SNA" 6 "OIL_PUMP_FAULTED" 2 "OIL_PUMP_COLD_STARTUP" 1 "OIL_PUMP_ENABLE" 0 "OIL_PUMP_STANDBY" ;
 VAL_ 917 DIR_oilPumpFluidTQF 1 "OIL_PUMP_FLUIDT_HIGH_CONFIDENCE" 0 "OIL_PUMP_FLUIDT_LOW_CONFIDENCE" ;
 VAL_ 917 DIR_oilPumpState 2 "OIL_PUMP_COLD_STARTUP" 1 "OIL_PUMP_ENABLE" 6 "OIL_PUMP_FAULTED" 7 "OIL_PUMP_SNA" 0 "OIL_PUMP_STANDBY" ;
+VAL_ 341 ESP_WheelRotationReR 3 "WR_NOT_DEFINABLE" 2 "WR_STANDSTILL" 1 "WR_BACKWARD" 0 "WR_FORWARD" ;
+VAL_ 341 ESP_WheelRotationReL 3 "WR_NOT_DEFINABLE" 2 "WR_STANDSTILL" 1 "WR_BACKWARD" 0 "WR_FORWARD" ;
+VAL_ 341 ESP_WheelRotationFrR 3 "WR_NOT_DEFINABLE" 2 "WR_STANDSTILL" 1 "WR_BACKWARD" 0 "WR_FORWARD" ;
+VAL_ 341 ESP_WheelRotationFrL 3 "WR_NOT_DEFINABLE" 2 "WR_STANDSTILL" 1 "WR_BACKWARD" 0 "WR_FORWARD" ;
+VAL_ 341 ESP_wheelSpeedsQF 1 "ALL_WSS_VALID" 0 "ONE_OR_MORE_WSS_INVALID" ;
+VAL_ 341 ESP_vehicleStandstillSts 1 "STANDSTILL" 0 "NOT_STANDSTILL" ;
+VAL_ 341 ESP_vehicleSpeed 1023 "ESP_VEHICLE_SPEED_SNA" ;
+VAL_ 373 WheelSpeedRR175 8191 "SNA" ;
+VAL_ 373 WheelSpeedRL175 8191 "SNA" ;
+VAL_ 373 WheelSpeedFR175 8191 "SNA" ;
+VAL_ 373 WheelSpeedFL175 8191 "SNA" ;
+VAL_ 389 ESP_brakeTorqueFrL 4095 "SNA" ;
+VAL_ 389 ESP_brakeTorqueFrR 4095 "SNA" ;
+VAL_ 389 ESP_brakeTorqueReL 4095 "SNA" ;
+VAL_ 389 ESP_brakeTorqueReR 4095 "SNA" ;
+VAL_ 389 ESP_brakeTorqueQF 1 "IN_SPEC" 0 "UNDEFINABLE_ACCURACY" ;
 VAL_ 962 VCLEFT_switchStatusIndex 0 "VCLEFT_SWITCH_STATUS_INDEX_0" 1 "VCLEFT_SWITCH_STATUS_INDEX_1" 2 "VCLEFT_SWITCH_STATUS_INDEX_INVALID" ;
 VAL_ 962 VCLEFT_frontBuckleSwitch 3 "SWITCH_FAULT" 1 "SWITCH_OFF" 2 "SWITCH_ON" 0 "SWITCH_SNA" ;
 VAL_ 962 VCLEFT_frontOccupancySwitch 3 "SWITCH_FAULT" 1 "SWITCH_OFF" 2 "SWITCH_ON" 0 "SWITCH_SNA" ;
