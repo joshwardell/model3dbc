@@ -912,7 +912,7 @@ BO_ 821 ID335RearDIinfo: 8 VehicleBus
 
 BO_ 899 ID383VCRIGHT_thsStatus: 8 VehicleBus
  SG_ VCRIGHT_estimatedThsSolarLoad : 53|10@1+ (1,0) [0|1022] "W/m2"  Receiver
- SG_ VCRIGHT_estimatedVehicleSituatio : 31|2@1+ (1,0) [0|2] ""  Receiver
+ SG_ VCRIGHT_estimatedVehicleSituation : 31|2@1+ (1,0) [0|2] ""  Receiver
  SG_ VCRIGHT_thsActive : 0|1@1+ (1,0) [0|1] ""  Receiver
  SG_ VCRIGHT_thsHumidity : 17|8@1+ (1,0) [0|100] "%"  Receiver
  SG_ VCRIGHT_thsSolarLoadInfrared : 33|10@1+ (1,0) [0|1022] "W/m2"  Receiver
